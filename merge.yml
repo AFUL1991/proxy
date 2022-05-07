@@ -5,460 +5,23 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-- name: 0-US-vmess
-  server: 172.67.114.2
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-- name: 1-GB-ss
-  server: 152.89.210.84
-  port: 9032
-  type: ss
-  cipher: aes-256-cfb
-  password: UWZQeLRWnkqgkseq
-- name: 2-CZ-trojan
-  server: v2cross.com.03.v2ce.com
-  port: 443
-  type: trojan
-  password: ZD4dLSBXiMrmzdLd
-  skip-cert-verify: true
-- name: 3-US-ss
-  server: 38.114.114.67
-  port: 8009
-  type: ss
-  country: 🇺🇸_US_美国_7
-  cipher: aes-256-gcm
-  password: XKFKl2rULjIp74
-- name: 4-US-vmess
-  server: 192.96.204.250
-  port: 443
-  type: vmess
-  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
-  alterId: 4
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: usa-washington.lvuft.com
-  network: ws
-  ws-opts:
-    path: /ws
-- name: 5-BG-ss
-  server: 213.183.63.218
-  port: 9060
-  type: ss
-  cipher: aes-256-cfb
-  password: ueLXVkvh4hckhErQ
-- name: 6-US-vmess
-  server: vps.gpdsm.top
-  port: 443
-  type: vmess
-  uuid: 8c99d825-821d-4999-a1ac-9276c38e8c58
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: vps.gpdsm.top
-- name: 7-SG-ss
-  server: flzz-hk.yixuedianzishu.com
-  port: 38303
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 8-HK-trojan
-  server: hkcn2.doubledou.win
-  port: 4588
-  type: trojan
-  password: 3c91d857-2d40-39b9-81c0-f6adde8037ff
-  skip-cert-verify: true
-- name: 9-DE-ss
-  server: 5.183.179.140
-  port: 9026
-  type: ss
-  cipher: aes-256-cfb
-  password: QWDDvVE9npNurQfA
-- name: 10-SG-ss
-  server: aflzz-hk.yixuedianzishu.com
-  port: 38001
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-  udp: true
-- name: 11-NOWHERE-vmess
-  server: 141.101.120.0
-  port: 443
-  type: vmess
-  uuid: 4ccd4c69-f1de-4eef-b7ff-89548e3e1232
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: 4ruuus.liuwei.gq
-- name: 12-US-vmess
-  server: 104.16.104.126
-  port: 443
-  type: vmess
-  uuid: 24b4b1e1-7a89-45f6-858c-242cf53b5bdb
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: 104.16.104.126
-- name: 13-US-vmess
-  server: fukyo.ssff666.workers.dev
-  port: 443
-  type: vmess
-  uuid: ad806487-2d26-4636-98b6-ab85cc8521f7
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: fukyo.ssff666.workers.dev
-- name: 14-SG-vmess
-  server: sg04.xqkj.cloud
-  port: 1416
-  type: vmess
-  uuid: 518f28fc-4d66-4b89-81a0-0e43c4d7f7e3
-  alterId: 1
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: sg04.xqkj.cloud
-- name: 15-NL-ss
-  server: 213.183.51.172
-  port: 9070
-  type: ss
-  cipher: aes-256-cfb
-  password: bf7v334KKDV3YDhH
-- name: 16-AU-ss
-  server: 185.167.116.253
-  port: 9037
-  type: ss
-  cipher: aes-256-cfb
-  password: TN2YqghxeFDKZfLU
-- name: 17-US-vmess
-  server: jp03-vm0.entry.ikuuu.casa
-  port: 448
-  type: vmess
-  uuid: e1241a61-e533-3aa0-a25e-ad86cf34cd64
-  alterId: 1
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /hls/cctv5phd.m3u8
-    headers:
-      Host: jp03-vm0.entry.ikuuu.casa
-- name: 18-US-vmess
-  server: inapus.mooncloud.bike
-  port: 8443
-  type: vmess
-  uuid: 2c42a34e-5f88-492b-8a59-3531090578f8
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: inapus1.mooncloud.bike
-- name: 19-SG-vmess
-  server: sg03.xqkj.cloud
-  port: 1416
-  type: vmess
-  uuid: 518f28fc-4d66-4b89-81a0-0e43c4d7f7e3
-  alterId: 1
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: sg03.xqkj.cloud
-- name: 20-US-ss
-  server: 64.112.41.25
-  port: 80
-  type: ss
-  cipher: aes-256-gcm
-  password: we123456.
-- name: 21-US-vmess
-  server: 104.20.60.210
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  skip-cert-vertify: false
-  network: ws
-  ws-path: /
-  tls: true
-  host: cdnde.irteyz.today
-  allowinsecure: true
-- name: 22-SG-ss
-  server: flzzul.yixuedianzishu.com
-  port: 38005
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 23-US-vmess
-  server: icook.tw
-  port: 443
-  type: vmess
-  uuid: f9fb81eb-1dca-4aa9-8446-b558dddf921c
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /f9fb81eb-1dca-4aa9-8446-b558dddf921c-vmess
-    headers:
-      Host: purple-meadow-dea9.lkymqj04732.workers.dev
-- name: 24-RU-vmess
-  server: 331tw.fans8.xyz
-  port: 443
-  type: vmess
-  uuid: 93bdaed5-13c5-3927-93d7-a6877c5ac8d2
-  alterId: 2
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /ray
-    headers:
-      Host: 331tw.fans8.xyz
-- name: 25-JP-vmess
-  server: jp-b.vmess.top
-  port: 39133
-  type: vmess
-  uuid: 503d4597-04ad-4818-aa1e-4de137ddb4e8
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /asdasdxasdaexsadi
-    headers:
-      Host: jp-b.vmess.top
-- name: 26-NL-vmess
-  server: ublubeu.fly.dev
-  port: 443
-  type: vmess
-  uuid: 18656003-e8b6-49e4-90f7-85fe53fcf7c7
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: ublubeu.fly.dev
-- name: 27-CA-ss
-  server: 134.195.196.155
-  port: 8881
-  type: ss
-  cipher: aes-256-gcm
-  password: kDWvXYZoTBcGkC4
-- name: 28-CA-ss
-  server: 134.195.196.24
-  port: 3389
-  type: ss
-  country: 🇨🇦_CA_加拿大_81
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- alterId: 0
-  cipher: auto
-  country: mattkaydiary.com|美国(US)USA/LosAngeles_11
-  name: 29-US-vmess
-  network: ws
-  port: 46983
-  server: 45.76.71.233
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  uuid: 69099258-1476-46dd-a51b-84e915e941be
-  ws-opts:
-    headers:
-      host: 45.76.71.233
-    path: /1tGK82lU/
-- name: 30-PL-ss
+- name: 0-PL-ss
   server: 217.30.10.66
-  port: 9001
+  port: 9008
   type: ss
   cipher: aes-256-cfb
-  password: UkXRsXvR6buDMG2Y
-- name: 31-SG-ss
-  server: aflzz-sg.yixuedianzishu.com
-  port: 38607
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 32-US-vmess
-  server: 104.21.195.250
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-- name: 33-JP-ss
-  type: ss
-  server: 45.66.134.176
-  password: G!yBwPWH3Vao
-  port: 805
-  cipher: chacha20-ietf-poly1305
-- name: 34-SG-ss
-  server: fliplc.getxlx.com
-  port: 38503
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 35-US-vmess
-  server: 104.21.97.139
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-- name: 36-SG-trojan
-  server: sgp001.laxiyun.com
-  port: 10086
-  type: trojan
-  password: 5efe3c05-b123-4688-92b9-f6dc5099811f
-  skip-cert-verify: true
-- name: 37-US-vmess
-  server: 104.27.6.150
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-- name: 38-US-vmess
-  server: dpus.xsus.xyz
-  port: 443
-  type: vmess
-  uuid: 6da48240-b59a-4e11-98a7-c18458fbe178
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: grpc
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: dpus.xsus.xyz
-- name: 39-DE-ss
-  server: 5.183.179.166
-  port: 9019
+  password: y9VURyNzJWNRYEGQ
+- name: 1-BG-ss
+  server: 213.183.63.218
+  port: 9031
   type: ss
   cipher: aes-256-cfb
-  password: GA9KzeEgvfxNrgmM
-- name: 40-CA-ss
-  server: 198.57.27.225
-  port: 8888
-  type: ss
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 41-GB-vmess
-  server: 51.89.125.137
+  password: BwcAUZk8hUFAkDGN
+- name: 2-NL-vmess
+  server: 46.182.107.144
   port: 443
   type: vmess
-  uuid: 178e9184-70e8-4174-9ea2-3b1f49fe4cba
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /path/120211331422
-    headers:
-      Host: 51.89.125.137
-- name: 42-DE-trojan
-  server: deu001.laxiyun.com
-  port: 10086
-  type: trojan
-  password: 5efe3c05-b123-4688-92b9-f6dc5099811f
-  skip-cert-verify: true
-- name: 43-SG-ss
-  server: aflzz-tw.yixuedianzishu.com
-  port: 38503
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-  udp: true
-- name: 44-US-vmess
-  server: 198.211.30.163
-  port: 443
-  type: vmess
-  uuid: 6aaa2f9f-7c91-4b51-aa77-05a83a5d6a4d
-  alterId: 64
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /path/310910211916
-    headers:
-      Host: www.93289686.xyz
-- name: 45-US-vmess
-  server: 23.224.8.92
-  port: 443
-  type: vmess
-  uuid: bef6f470-d961-4419-a0df-d9c2dcafaefa
+  uuid: acedd8e0-e654-4a40-935d-5594c6c114bd
   alterId: 64
   cipher: auto
   skip-cert-verify: true
@@ -467,35 +30,96 @@ proxies:
   ws-opts:
     path: /footers
     headers:
-      Host: www.10925848.xyz
-- name: 46-US-vmess
-  server: bbs.sysucc.ga
+      Host: www.61020861.xyz
+- name: 3-RU-ssr
+  server: 213.183.53.202
+  port: 9064
+  type: ssr
+  cipher: aes-256-cfb
+  password: cp8pRSUAyLhTfVWH
+  protocol: origin
+  obfs: plain
+  protocol-param: ''
+  obfs-param: ''
+- name: 4-US-ss
+  type: ss
+  server: 169.197.142.99
+  password: TEzjfAYq2IjtuoS
+  port: 6679
+  cipher: aes-256-gcm
+- name: 5-SG-ss
+  server: fliplc.getxlx.com
+  port: 38004
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+- name: 6-NL-vmess
+  server: 46.182.107.39
   port: 443
   type: vmess
-  uuid: d3d55742-2313-456e-864c-1aa4d1d6c57e
-  alterId: 0
+  uuid: d3133484-f2bf-4b0c-8d38-f8e645b67947
+  alterId: 64
   cipher: auto
   skip-cert-verify: true
   network: ws
-  tls: true
+  tls: false
   ws-opts:
-    path: /c9461fbce/
+    path: /footers
     headers:
-      Host: bbs.sysucc.ga
-- name: 47-NL-ss
-  server: 213.183.51.171
-  port: 9008
+      Host: www.49696760.xyz
+- name: 7-US-ss
+  server: azzz2.mayiyun.vip
+  port: 20003
+  type: ss
+  cipher: aes-256-gcm
+  password: c7378697-b358-43cd-bd61-c34907a13dbf
+- name: 8-GB-ss
+  server: 172.99.190.61
+  port: 8882
+  type: ss
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+  udp: true
+- name: 9-CA-ss
+  server: 134.195.196.205
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: 10-SG-ss
+  server: v4zx.v6speed.com
+  port: 38503
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+- name: 11-PL-ss
+  server: 217.30.10.66
+  port: 9000
   type: ss
   cipher: aes-256-cfb
-  password: y9VURyNzJWNRYEGQ
-- name: 48-PL-ss
-  server: 217.30.10.67
-  port: 9042
+  password: a3GFYt36Sm82Vys9
+- name: 12-HK-vmess
+  server: 33.ssrj.xyz
+  port: 65133
+  type: vmess
+  uuid: 24ea3f63-d495-3a0a-a7de-f92a4e6fb9ae
+  alterId: 2
+  cipher: auto
+  skip-cert-verify: true
+  network: tcp
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: 33.ssrj.xyz
+- name: 13-US-ss
+  server: 38.91.100.208
+  port: 5001
   type: ss
-  cipher: aes-256-cfb
-  password: S7KwUu7yBy58S3Ga
-- name: 49-US-vmess
-  server: 104.24.158.46
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 14-US-vmess
+  server: 104.27.111.95
   port: 443
   type: vmess
   uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
@@ -508,12 +132,73 @@ proxies:
     path: /
     headers:
       Host: cdnde.irteyz.today
-- name: 50-US-vmess
-  server: us03.xqkj.cloud
-  port: 1113
+- name: 15-US-vmess
+  server: sj-02.linkstar.icu
+  port: 51115
   type: vmess
-  uuid: 3bd498ab-4983-4bd9-b4a2-f93c016090ef
-  alterId: 1
+  uuid: 820924a5-f512-436b-b62d-be471b2e48ec
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: tcp
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: sj-02.linkstar.icu
+- name: 16-US-vmess
+  server: viibah6u.com
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: viibah6u.com
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: viibah6u.com
+- name: 17-US-ss
+  server: 38.75.137.88
+  port: 5004
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: 18-CA-ss
+  server: 198.57.27.225
+  port: 8009
+  type: ss
+  cipher: aes-256-gcm
+  password: XKFKl2rULjIp74
+- name: 19-SG-trojan
+  server: sg1-trojan.bonds.id
+  port: 443
+  type: trojan
+  password: 5c5ceb40-902b-11eb-945a-1239d0255272
+  skip-cert-verify: true
+- name: 20-SG-vmess
+  server: aflcn.yixuedianzishu.com
+  port: 51519
+  type: vmess
+  uuid: 559b002a-4e59-3d60-9414-03603f3894da
+  alterId: 2
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /564dfa20/
+    headers:
+      Host: aflcn.yixuedianzishu.com
+- name: 21-US-vmess
+  server: az.gzfxd.xyz
+  port: 16650
+  type: vmess
+  uuid: 04bc191c-aeb8-453a-ba80-fac958363a68
+  alterId: 0
   cipher: auto
   skip-cert-verify: true
   network: ws
@@ -521,85 +206,267 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: us03.xqkj.cloud
-- name: 51-US-vmess
-  server: 198.2.200.218
+      Host: az.gzfxd.xyz
+- name: 22-US-ss
+  server: 167.88.63.71
+  port: 443
+  type: ss
+  country: 🇺🇸_US_美国_98
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 23-DE-ss
+  server: 5.183.179.166
+  port: 9041
+  type: ss
+  cipher: aes-256-cfb
+  password: U6qnYRhfyDmn8sgn
+- name: 24-JP-trojan
+  server: 139.162.124.250
+  port: 28443
+  type: trojan
+  password: 486dd7e4-24bc-498a-b4f0-ecd704f8d8cd
+  skip-cert-verify: true
+- name: 25-US-vmess
+  server: app.ssfree.ru
   port: 443
   type: vmess
-  uuid: 2a23dbd5-09cf-4aa8-a835-3230728c4973
+  uuid: 2b4a9452-cdba-11ec-a17b-000017022008
   alterId: 64
   cipher: auto
   skip-cert-verify: true
   network: ws
   tls: true
   ws-opts:
-    path: /path/310910211916
+    path: /getweather
     headers:
-      Host: www.48168443.xyz
-- name: 52-NL-ss
-  server: 213.183.51.172
-  port: 9025
+      Host: app.ssfree.ru
+- name: 26-GB-ss
+  server: kr1.mayiyun.vip
+  port: 10014
   type: ss
-  cipher: aes-256-cfb
-  password: XPtzA9sCug3SPR4c
-- name: 53-GB-ssr
-  server: 152.89.210.105
-  port: 9038
-  type: ssr
-  protocol: origin
-  cipher: aes-256-cfb
-  obfs: plain
-  password: gYCYXfkUQEs2TaJQ
-  protocol-param: ''
-  obfs-param: ''
-- name: 54-SG-ss
-  server: flzz-us.yixuedianzishu.com
-  port: 38001
+  cipher: aes-256-gcm
+  password: c7378697-b358-43cd-bd61-c34907a13dbf
+- name: 27-HK-trojan
+  server: hkbn.okvpn.xyz
+  port: 12000
+  type: trojan
+  password: dbf0d1a6-e81e-4f1b-8d46-e929c05f380f
+  skip-cert-verify: true
+- name: 28-US-ss
+  server: 167.88.63.44
+  port: 6679
   type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
   udp: true
-- name: 55-PL-ss
-  server: 217.30.10.67
-  port: 9026
-  type: ss
-  cipher: aes-256-cfb
-  password: QWDDvVE9npNurQfA
-  udp: true
-- name: 56-SG-ss
-  server: flzz-hk.yixuedianzishu.com
-  port: 38003
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-  udp: true
-- name: 57-SG-ss
-  server: flzz-hk.yixuedianzishu.com
-  port: 38105
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 58-DE-ss
-  server: 5.183.179.167
-  port: 9003
-  type: ss
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-- name: 59-US-vmess
-  server: 104.21.62.193
-  port: 443
+- name: 29-US-vmess
+  server: zz1.qiushi.buzz
+  port: 35443
   type: vmess
-  uuid: 6a7f559d-5401-44c0-b737-bb9f8820681f
-  alterId: 233
+  uuid: c6b99e31-2521-3e19-915d-ab54efddee0f
+  alterId: 0
   cipher: auto
   skip-cert-verify: true
   network: ws
   tls: true
   ws-opts:
-    path: /2993fe/
+    path: /v2ray
     headers:
-      Host: free-russian01-cdn.xiaohouzi.club
-- name: 60-GB-vmess
+      Host: zz1.qiushi.buzz
+- name: 30-HK-vmess
+  server: 4.v2-ray.cyou
+  port: 36104
+  type: vmess
+  uuid: 047184b7-6da2-3d3f-ac27-6a1a8701daf8
+  alterId: 2
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: 4.v2-ray.cyou
+- name: 31-US-vmess
+  server: 208.98.48.2
+  port: 443
+  type: vmess
+  uuid: aba50dd4-5484-3b05-b14a-4661caf862d5
+  alterId: 4
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: iesei1ei.com
+  network: ws
+  ws-opts:
+    path: /ws
+- name: 32-JP-ss
+  type: ss
+  server: 45.66.134.176
+  password: G!yBwPWH3Vao
+  port: 805
+  cipher: chacha20-ietf-poly1305
+- name: 33-US-trojan
+  server: usmax03.170809.xyz
+  port: 443
+  type: trojan
+  password: 09d2d2b3-dfce-4912-b943-e4b88f2de92c
+- name: 34-SG-ss
+  server: flcn.yixuedianzishu.com
+  port: 38102
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+  udp: true
+- name: 35-SG-trojan
+  server: 0001.sg.genzpn.com
+  port: 443
+  type: trojan
+  password: 85a173a6-cbac-44b7-83b7-0c53d4aadf93
+  skip-cert-verify: true
+- name: 36-BG-ss
+  server: 213.183.63.219
+  port: 9079
+  type: ss
+  cipher: aes-256-cfb
+  password: TPqX8edgbAURcAMb
+- name: 37-US-vmess
+  server: 172.67.209.58
+  port: 443
+  type: vmess
+  uuid: 8e8b5097-1d75-47c4-ff28-eef6609916c1
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /The-Great-Awakening_vws?ed=2048
+    headers:
+      Host: vincent-jackson2021.cf
+- name: 38-US-vmess
+  server: cf.rutracker-cn.com
+  port: 443
+  type: vmess
+  uuid: 55dc4077-3fed-4903-9c39-a3b12cb979db
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /cdwOCfZC
+    headers:
+      Host: cf.rutracker-cn.com
+- name: 39-US-ss
+  server: 167.88.63.59
+  port: 6697
+  type: ss
+  country: 🇺🇸_US_美国_73
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+- name: 40-US-vmess
+  server: 23.224.31.211
+  port: 443
+  type: vmess
+  uuid: 61161e41-a8ce-4007-a7af-807e1a536347
+  alterId: 64
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /path/292026011205
+    headers:
+      Host: www.53933374.xyz
+- name: 41-TR-vmess
+  server: tr01.v2net.top
+  port: 443
+  type: vmess
+  uuid: 61D52763-487F-4FE4-B0AC-8BB6AD47C917
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /ray
+    headers:
+      Host: tr01.v2net.top
+- name: 42-IN-trojan
+  server: doin.node003.insnow.xyz
+  port: 9933
+  type: trojan
+  password: 9a057015-6dfb-4b57-9f69-877423598741
+  skip-cert-verify: true
+- name: 43-US-ss
+  server: 167.88.61.70
+  port: 8118
+  type: ss
+  country: 🇺🇸_US_美国_9
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: 44-SG-ss
+  server: aflcn.yixuedianzishu.com
+  port: 38504
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+- name: 45-JP-vmess
+  server: V2-NODE-4.GFWAIRPORT.NET
+  port: 50001
+  type: vmess
+  uuid: 94663697-512d-47fe-ad13-14984e1ebffa
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: V2-NODE-4.GFWAIRPORT.NET
+- name: 46-CA-ss
+  server: 134.195.196.64
+  port: 3389
+  type: ss
+  country: 🇨🇦_CA_加拿大_89
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 47-US-ss
+  server: 38.75.136.135
+  port: 8080
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: 48-US-vmess
+  server: 152.69.228.136
+  port: 8080
+  type: vmess
+  uuid: 31450666-802b-4138-a328-14d60f837883
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.69.228.136
+- server: inapus.mooncloud.bike
+  v: 2
+  name: 49-US-vmess
+  port: 443
+  uuid: 2c42a34e-5f88-492b-8a59-3531090578f8
+  alterId: 0
+  network: ws
+  type: vmess
+  host: inapus1.mooncloud.bike
+  ws-path: /
+  tls: true
+  cipher: auto
+  allowinsecure: true
+- name: 50-GB-vmess
   server: 51.89.115.72
   port: 443
   type: vmess
@@ -613,125 +480,71 @@ proxies:
     path: /path/310910211916
     headers:
       Host: www.969983021.xyz
-- name: 61-SG-ss
-  server: aflcn.yixuedianzishu.com
-  port: 38009
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-  udp: true
-- name: 62-DE-ss
-  server: 5.183.179.140
-  port: 9011
-  type: ss
-  cipher: aes-256-cfb
-  password: M3t2ZEQcMGRWBjRa
-- name: 63-CA-vmess
-  server: ca2.qingchengjisu.ltd
-  port: 80
-  type: vmess
-  uuid: 70fec762-51ee-4a95-ae09-ff32804fecc9
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: ca2.qingchengjisu.ltd
-- name: 64-US-ss
-  server: 38.91.101.14
-  port: 8119
-  type: ss
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-- name: 65-DE-ss
-  server: 5.183.179.170
-  port: 9097
-  type: ss
-  cipher: aes-256-cfb
-  password: Sn5B7jTqr76aCJT8
-- name: 66-US-ss
-  server: 38.68.135.19
-  port: 7001
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 67-SG-ss
-  server: flzzul.yixuedianzishu.com
-  port: 38301
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 68-US-vmess
-  server: 104.wowogg.cyou
-  port: 11222
-  type: vmess
-  uuid: 08103798-414e-32b6-8748-2507732d2c51
-  alterId: 2
-  cipher: auto
-  skip-cert-verify: true
-  network: tcp
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: 104.wowogg.cyou
-- name: 69-RU-ssr
-  server: 213.183.53.200
-  port: 9020
-  type: ssr
-  protocol: origin
-  cipher: aes-256-cfb
-  obfs: plain
-  password: BNmAXXxAHYpTRdzu
-  protocol-param: ''
-  obfs-param: ''
-- name: 70-HK-vmess
-  server: hk2.qingchengjisu.ltd
-  port: 80
-  type: vmess
-  uuid: 70fec762-51ee-4a95-ae09-ff32804fecc9
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: hk2.qingchengjisu.ltd
-- name: 71-SG-ss
-  server: 157.230.41.220
-  port: 29596
-  type: ss
-  cipher: aes-256-cfb
-  password: e6c1cf51375c407d92d110881a825acb
-- name: 72-SG-ss
-  server: flzziplc.yixuedianzishu.com
-  port: 38005
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-  udp: true
-- name: 73-SG-ss
-  server: flzz-hk.yixuedianzishu.com
-  port: 38601
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 74-US-ss
-  server: 38.91.100.208
-  port: 7001
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 75-US-vmess
-  server: 23.224.69.18
+- name: 51-US-vmess
+  server: 104.18.75.162
   port: 443
   type: vmess
-  uuid: fb7a6094-a99b-4b91-a70d-25244f5f6ac8
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 64
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: cdnde.irteyz.today
+- name: 52-US-vmess
+  server: 104.27.7.236
+  port: 443
+  type: vmess
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 64
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: cdnde.irteyz.today
+- name: 53-CA-ss
+  server: 134.195.196.245
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 54-AU-trojan
+  server: hk-server-02.selfupay.com
+  port: 443
+  type: trojan
+  password: a3fa58b581353bb375d2ddad0f327938
+  skip-cert-verify: true
+- name: 55-NL-ss
+  server: 213.183.51.171
+  port: 9040
+  type: ss
+  cipher: aes-256-cfb
+  password: p9z5BVADH2YFs3MN
+- name: 56-KR-vmess
+  server: www.sszhegeba.ml
+  port: 443
+  type: vmess
+  uuid: b4627c3c-3ea0-42d7-8f58-e4e417ed0d36
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /056dbf9?ed=2048
+    headers:
+      Host: www.sszhegeba.ml
+- name: 57-NL-vmess
+  server: 46.182.107.97
+  port: 443
+  type: vmess
+  uuid: 6e79eea4-5f72-4683-ad0e-5339f077621b
   alterId: 64
   cipher: auto
   skip-cert-verify: true
@@ -740,210 +553,104 @@ proxies:
   ws-opts:
     path: /footers
     headers:
-      Host: www.76126449.xyz
-- name: 76-IN-ssr
-  server: in-am2.eqnode.net
-  port: 8080
-  type: ssr
-  protocol: origin
-  cipher: aes-256-cfb
-  obfs: tls1.2_ticket_auth
-  password: fD0KP8PWA
-  protocol-param: ''
-  obfs-param: ''
-- name: 77-BG-ss
-  server: 213.183.63.219
-  port: 9003
-  type: ss
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-- name: 78-JP-ss
-  server: 172.105.230.112
-  port: 5003
-  type: ss
-  cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
-- name: 79-SG-ss
-  server: fliplc.getxlx.com
-  port: 38607
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 80-PL-ss
-  server: 217.30.10.67
-  port: 9059
-  type: ss
-  cipher: aes-256-cfb
-  password: 9XwYyZsK8SNzQDtY
-- name: 81-HK-vmess
-  server: 43.129.221.110
+      Host: www.08538470.xyz
+- name: 58-US-vmess
+  server: 23.224.8.93
   port: 443
   type: vmess
-  uuid: 1ab2ba2c-1b6e-41a2-e03f-dbf75dc3f782
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /
-    headers:
-      Host: jp.sayuri.cf
-- name: 82-US-vmess
-  server: v4.ssrsub.com
-  port: 8443
-  type: vmess
-  uuid: b7c70df3-f92f-4800-a8e1-67e6dc833256
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /ssrsub
-    headers:
-      Host: v4.ssrsub.com
-  udp: true
-- name: 83-US-trojan
-  server: aling.gq
-  port: 443
-  type: trojan
-  password: f727337d-52af-4cf9-b260-26ac9a23ddc2
-  skip-cert-verify: true
-  udp: true
-- server: 172.67.197.254
-  v: 2
-  name: 84-US-vmess
-  port: 443
-  uuid: d0ce51d5-b4de-4f99-ac7c-c5c1a123bd94
-  alterId: 0
-  network: ws
-  type: vmess
-  host: www.ltzs.buzz
-  ws-path: /bb2b34a1
-  tls: true
-  cipher: auto
-  allowinsecure: true
-- name: 85-DE-ss
-  server: 5.183.179.166
-  port: 9020
-  type: ss
-  cipher: aes-256-cfb
-  password: BNmAXXxAHYpTRdzu
-- name: 86-NO-ss
-  server: 194.68.32.29
-  port: 989
-  type: ss
-  cipher: aes-256-cfb
-  password: f8f7aCzcPKbsF8p3
-- name: 87-NL-ss
-  server: 213.183.51.171
-  port: 9093
-  type: ss
-  cipher: aes-256-cfb
-  password: wfLC2y7rzZyCmuyt
-- name: 88-US-ss
-  type: ss
-  server: 38.75.137.187
-  password: Y6R9pAtvxxzmGC
-  port: 5001
-  cipher: aes-256-gcm
-- name: 89-TW-vmess
-  server: tw.jjzgy.live
-  port: 18888
-  type: vmess
-  uuid: c84f0639-8f50-3cc3-98ee-9ca5b7809705
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /cocksucker
-    headers:
-      Host: tw.jjzgy.live
-- name: 90-US-vmess
-  server: mf-do-ua-03.xncloud.xyz
-  port: 80
-  type: vmess
-  uuid: c407f3e3-d302-3e51-a13e-b4d91c53739c
-  alterId: 1
+  uuid: bef6f470-d961-4419-a0df-d9c2dcafaefa
+  alterId: 64
   cipher: auto
   skip-cert-verify: true
   network: ws
   tls: false
   ws-opts:
-    path: /
+    path: /footers
     headers:
-      Host: t.me/vpnhat
-- name: 91-GB-ss
-  server: 152.89.210.84
-  port: 9038
+      Host: www.10925848.xyz
+- name: 59-DE-ss
+  server: 5.183.179.170
+  port: 9033
   type: ss
   cipher: aes-256-cfb
-  password: gYCYXfkUQEs2TaJQ
-- name: 92-SG-ss
-  server: fliplc.getxlx.com
-  port: 38105
+  password: UTJA57ypk2XKQpnm
+- name: 60-PL-ss
+  server: 217.30.10.66
+  port: 9097
+  type: ss
+  cipher: aes-256-cfb
+  password: Sn5B7jTqr76aCJT8
+- name: 61-FR-ss
+  server: 145.239.1.100
+  port: 5003
+  type: ss
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: 62-PL-ss
+  server: 217.30.10.66
+  port: 9094
+  type: ss
+  cipher: aes-256-cfb
+  password: rpgbNnU9rDDU4aWZ
+- name: 63-US-ss
+  server: 38.114.114.67
+  port: 5001
+  type: ss
+  country: 🇺🇸_US_美国_93
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 64-US-ss
+  server: 38.91.101.14
+  port: 6379
+  type: ss
+  country: 🇺🇸_US_美国_69
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+- name: 65-CA-ss
+  server: 134.195.196.168
+  port: 5500
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+- name: 66-SG-ss
+  server: flzzul.yixuedianzishu.com
+  port: 38402
   type: ss
   cipher: chacha20-ietf-poly1305
   password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 93-CA-ss
-  server: 134.195.196.205
-  port: 3306
+- name: 67-CA-ss
+  server: 134.195.196.206
+  port: 5601
   type: ss
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: 94-SG-ss
-  server: flzz-hk.yixuedianzishu.com
-  port: 38101
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
-- name: 95-US-ss
-  type: ss
-  server: 167.88.63.99
-  password: FoOiGlkAA9yPEGP
-  port: 7307
-  cipher: aes-256-gcm
-- name: 96-CA-ss
-  server: 134.195.196.155
-  port: 7002
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 97-AU-trojan
-  server: jgwxn4.gaox.ml
-  port: 443
-  type: trojan
-  password: e8c1ab3c-89b3-4933-92df-682e6dce7819
-  skip-cert-verify: true
-- name: 98-RU-ssr
-  server: 213.183.53.202
-  port: 9033
+  udp: true
+- name: 68-RU-ssr
   type: ssr
-  cipher: aes-256-cfb
-  password: UTJA57ypk2XKQpnm
-  protocol: origin
+  server: 213.183.53.177
+  password: BNmAXXxAHYpTRdzu
   obfs: plain
+  protocol: origin
+  port: 9020
+  cipher: aes-256-cfb
   protocol-param: ''
   obfs-param: ''
-- name: 99-US-vmess
-  server: snode-1.nmp.pw
-  port: 8001
+- name: 69-TR-vmess
+  server: rq.nodrop.bike
+  port: 443
   type: vmess
-  uuid: b5bc5ccc-bf5f-4bd5-99d5-5c79f6b57548
+  uuid: 2f57c29a-cf45-4dc0-985b-86b6f6dd1db4
   alterId: 0
   cipher: auto
   skip-cert-verify: true
   network: ws
   tls: true
   ws-opts:
-    path: /cctv13/hd.m3u8
+    path: /onefall.top
     headers:
-      Host: snode-1.nmp.pw
-- name: 100-SE-vmess
-  server: ger4.mayiyun.vip
+      Host: rq.nodrop.bike
+- name: 70-CA-vmess
+  server: can3.mayiyun.vip
   port: 80
   type: vmess
   uuid: c7378697-b358-43cd-bd61-c34907a13dbf
@@ -956,645 +663,932 @@ proxies:
     path: /
     headers:
       Host: shoutingtoutiao3.10010.com
+- name: 71-NL-vmess
+  server: 46.182.107.36
+  port: 443
+  type: vmess
+  uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f68
+  alterId: 64
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /footers
+    headers:
+      Host: www.28735975.xyz
+- name: 72-US-vmess
+  server: 172.67.167.103
+  port: 443
+  type: vmess
+  uuid: df0a43ca-19b2-5a69-5213-9cba4f2e2c5e
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /kgnpvws
+    headers:
+      Host: l.olex.cf
+- name: 73-US-ss
+  server: 169.197.142.99
+  port: 5500
+  type: ss
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+  udp: true
+- name: 74-HK-trojan
+  server: 210.0.159.90
+  port: 38888
+  type: trojan
+  password: 750d0abb-06d8-49c1-8a75-cecfb84d0e98
+  sni: huayun.xyz
+  skip-cert-verify: true
+- name: 75-US-vmess
+  server: 63.ssrj.xyz
+  port: 65163
+  type: vmess
+  uuid: 24ea3f63-d495-3a0a-a7de-f92a4e6fb9ae
+  alterId: 2
+  cipher: auto
+  skip-cert-verify: true
+  network: tcp
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: 63.ssrj.xyz
+- name: 76-SG-ss
+  server: v4zx.v6speed.com
+  port: 38102
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+- name: 77-US-vmess
+  server: v4.ssrsub.com
+  type: vmess
+  country: 🇺🇸US
+  port: 443
+  uuid: b3f4826a-01e1-438a-8cb4-becb9e8b140c
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-path: /ssrsub
+  http-opts: null
+  h2-opts: null
+  tls: true
+  skip-cert-verify: true
+  allowinsecure: true
+- name: 78-SG-ss
+  server: aflcn.yixuedianzishu.com
+  port: 38402
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+  udp: true
+- name: 79-US-vmess
+  server: anzhuo-hezi1.herokuapp.com
+  port: 443
+  type: vmess
+  uuid: 05b8441f-3c76-4af1-b5b9-dd60d27e5ef8
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /05b8441f-3c76-4af1-b5b9-dd60d27e5ef8-vmess
+    headers:
+      Host: anzhuo-hezi1.herokuapp.com
+- name: 80-US-ss
+  server: 38.75.136.135
+  port: 6697
+  type: ss
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+- name: 81-US-ss
+  type: ss
+  server: 38.75.137.187
+  password: Y6R9pAtvxxzmGC
+  port: 3306
+  cipher: aes-256-gcm
+- name: 82-CA-ss
+  server: 134.195.196.205
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 83-US-ss
+  server: 38.91.101.14
+  port: 5601
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 84-DE-ss
+  server: 5.183.179.170
+  port: 9093
+  type: ss
+  cipher: aes-256-cfb
+  password: wfLC2y7rzZyCmuyt
+- name: 85-US-vmess
+  server: 4.ezydfdd.com
+  port: 443
+  type: vmess
+  uuid: c0cb6989-5967-447d-ea34-b4b0aa70b9f7
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: 4.ezydfdd.com
+- name: 86-SG-vmess
+  server: rm003.zhuan666.top
+  port: 80
+  type: vmess
+  uuid: 392d4a06-69cd-4c8f-ad70-f9a145d2d834
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: rm003.zhuan666.top
+- name: 87-GB-ssr
+  server: 152.89.210.105
+  port: 9093
+  type: ssr
+  protocol: origin
+  cipher: aes-256-cfb
+  obfs: plain
+  password: wfLC2y7rzZyCmuyt
+  protocol-param: ''
+  obfs-param: ''
+- name: 88-US-ss
+  server: 38.75.136.135
+  port: 6379
+  type: ss
+  cipher: aes-256-gcm
+  password: zDNVedRFPQexG9v
+- name: 89-RU-ss
+  server: 213.183.53.200
+  port: 9057
+  type: ss
+  cipher: aes-256-cfb
+  password: wjTugX3ZtHMB9c3Z
+- name: 90-TW-vmess
+  server: c27821f.rc.cloudflare.systems
+  port: 80
+  type: vmess
+  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /s/c27821f.fm.icloud.com:16708
+    headers:
+      Host: c27821f.rc.cloudflare.systems
+- name: 91-HK-vmess
+  server: 119.28.89.163
+  port: 443
+  type: vmess
+  uuid: f613af75-f9eb-3d84-9357-7c3b00d950a2
+  alterId: 1
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: 119.28.89.163
+- name: 92-CA-ss
+  server: 198.57.27.225
+  port: 7001
+  type: ss
+  country: 🇨🇦_CA_加拿大_59
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+- name: 93-SG-trojan
+  server: sgp001.laxiyun.com
+  port: 10086
+  type: trojan
+  password: 5efe3c05-b123-4688-92b9-f6dc5099811f
+  skip-cert-verify: true
+- name: 94-NL-ss
+  server: 213.183.51.171
+  port: 9010
+  type: ss
+  cipher: aes-256-cfb
+  password: f63gg8EruDnUrmz4
+- name: 95-CA-ss
+  server: 134.195.196.64
+  port: 5001
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: 96-US-vmess
+  server: 104.19.3.23
+  port: 443
+  type: vmess
+  uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+  alterId: 1
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /chaug
+    headers:
+      Host: v2fly.samrt.website
+- name: 97-US-vmess
+  server: 67.21.72.38
+  port: 443
+  type: vmess
+  uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724
+  alterId: 64
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /path/310910211916
+    headers:
+      Host: www.17080100.xyz
+- name: 98-JP-vmess
+  server: jp2.qingchengjisu.ltd
+  port: 80
+  type: vmess
+  uuid: 70fec762-51ee-4a95-ae09-ff32804fecc9
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: jp2.qingchengjisu.ltd
+- name: 99-SG-ss
+  server: v4zx.v6speed.com
+  port: 38501
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+- name: 100-SG-ss
+  server: flzz-us.yixuedianzishu.com
+  port: 38105
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 71e5c050-aea8-42ab-b6d4-8255172dd3be
+  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 - name: 🌍 国外媒体
   type: select
   proxies:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 - name: 📲 电报信息
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1617,107 +1611,107 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 0-US-vmess
-  - 1-GB-ss
-  - 2-CZ-trojan
-  - 3-US-ss
-  - 4-US-vmess
-  - 5-BG-ss
-  - 6-US-vmess
-  - 7-SG-ss
-  - 8-HK-trojan
-  - 9-DE-ss
+  - 0-PL-ss
+  - 1-BG-ss
+  - 2-NL-vmess
+  - 3-RU-ssr
+  - 4-US-ss
+  - 5-SG-ss
+  - 6-NL-vmess
+  - 7-US-ss
+  - 8-GB-ss
+  - 9-CA-ss
   - 10-SG-ss
-  - 11-NOWHERE-vmess
-  - 12-US-vmess
-  - 13-US-vmess
-  - 14-SG-vmess
-  - 15-NL-ss
-  - 16-AU-ss
-  - 17-US-vmess
-  - 18-US-vmess
-  - 19-SG-vmess
-  - 20-US-ss
+  - 11-PL-ss
+  - 12-HK-vmess
+  - 13-US-ss
+  - 14-US-vmess
+  - 15-US-vmess
+  - 16-US-vmess
+  - 17-US-ss
+  - 18-CA-ss
+  - 19-SG-trojan
+  - 20-SG-vmess
   - 21-US-vmess
-  - 22-SG-ss
-  - 23-US-vmess
-  - 24-RU-vmess
-  - 25-JP-vmess
-  - 26-NL-vmess
-  - 27-CA-ss
-  - 28-CA-ss
+  - 22-US-ss
+  - 23-DE-ss
+  - 24-JP-trojan
+  - 25-US-vmess
+  - 26-GB-ss
+  - 27-HK-trojan
+  - 28-US-ss
   - 29-US-vmess
-  - 30-PL-ss
-  - 31-SG-ss
-  - 32-US-vmess
-  - 33-JP-ss
+  - 30-HK-vmess
+  - 31-US-vmess
+  - 32-JP-ss
+  - 33-US-trojan
   - 34-SG-ss
-  - 35-US-vmess
-  - 36-SG-trojan
+  - 35-SG-trojan
+  - 36-BG-ss
   - 37-US-vmess
   - 38-US-vmess
-  - 39-DE-ss
-  - 40-CA-ss
-  - 41-GB-vmess
-  - 42-DE-trojan
-  - 43-SG-ss
-  - 44-US-vmess
-  - 45-US-vmess
-  - 46-US-vmess
-  - 47-NL-ss
-  - 48-PL-ss
+  - 39-US-ss
+  - 40-US-vmess
+  - 41-TR-vmess
+  - 42-IN-trojan
+  - 43-US-ss
+  - 44-SG-ss
+  - 45-JP-vmess
+  - 46-CA-ss
+  - 47-US-ss
+  - 48-US-vmess
   - 49-US-vmess
-  - 50-US-vmess
+  - 50-GB-vmess
   - 51-US-vmess
-  - 52-NL-ss
-  - 53-GB-ssr
-  - 54-SG-ss
-  - 55-PL-ss
-  - 56-SG-ss
-  - 57-SG-ss
-  - 58-DE-ss
-  - 59-US-vmess
-  - 60-GB-vmess
-  - 61-SG-ss
-  - 62-DE-ss
-  - 63-CA-vmess
+  - 52-US-vmess
+  - 53-CA-ss
+  - 54-AU-trojan
+  - 55-NL-ss
+  - 56-KR-vmess
+  - 57-NL-vmess
+  - 58-US-vmess
+  - 59-DE-ss
+  - 60-PL-ss
+  - 61-FR-ss
+  - 62-PL-ss
+  - 63-US-ss
   - 64-US-ss
-  - 65-DE-ss
-  - 66-US-ss
-  - 67-SG-ss
-  - 68-US-vmess
-  - 69-RU-ssr
-  - 70-HK-vmess
-  - 71-SG-ss
-  - 72-SG-ss
-  - 73-SG-ss
-  - 74-US-ss
+  - 65-CA-ss
+  - 66-SG-ss
+  - 67-CA-ss
+  - 68-RU-ssr
+  - 69-TR-vmess
+  - 70-CA-vmess
+  - 71-NL-vmess
+  - 72-US-vmess
+  - 73-US-ss
+  - 74-HK-trojan
   - 75-US-vmess
-  - 76-IN-ssr
-  - 77-BG-ss
-  - 78-JP-ss
-  - 79-SG-ss
-  - 80-PL-ss
-  - 81-HK-vmess
-  - 82-US-vmess
-  - 83-US-trojan
-  - 84-US-vmess
-  - 85-DE-ss
-  - 86-NO-ss
-  - 87-NL-ss
+  - 76-SG-ss
+  - 77-US-vmess
+  - 78-SG-ss
+  - 79-US-vmess
+  - 80-US-ss
+  - 81-US-ss
+  - 82-CA-ss
+  - 83-US-ss
+  - 84-DE-ss
+  - 85-US-vmess
+  - 86-SG-vmess
+  - 87-GB-ssr
   - 88-US-ss
-  - 89-TW-vmess
-  - 90-US-vmess
-  - 91-GB-ss
-  - 92-SG-ss
-  - 93-CA-ss
-  - 94-SG-ss
-  - 95-US-ss
-  - 96-CA-ss
-  - 97-AU-trojan
-  - 98-RU-ssr
-  - 99-US-vmess
-  - 100-SE-vmess
+  - 89-RU-ss
+  - 90-TW-vmess
+  - 91-HK-vmess
+  - 92-CA-ss
+  - 93-SG-trojan
+  - 94-NL-ss
+  - 95-CA-ss
+  - 96-US-vmess
+  - 97-US-vmess
+  - 98-JP-vmess
+  - 99-SG-ss
+  - 100-SG-ss
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
