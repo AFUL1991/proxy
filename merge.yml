@@ -5,8 +5,30 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
+- name: 🇻🇳VN-0001
+  server: vn04v2.vpnsieure.com
+  port: 80
+  type: vmess
+  uuid: 330efbdb-7171-4fd1-a524-d7b7d8e76732
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vpnsieure
+    headers:
+      Host: vn04v2.vpnsieure.com
+  udp: true
+- name: 🇳🇱NL-0001
+  server: 213.183.59.190
+  port: 9008
+  type: ss
+  cipher: aes-256-cfb
+  password: y9VURyNzJWNRYEGQ
+  udp: true
 - name: 🇺🇸US-0001
-  server: 104.25.187.6
+  server: 172.67.110.89
   port: 443
   type: vmess
   uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
@@ -20,113 +42,443 @@ proxies:
     headers:
       Host: cdnde.irteyz.today
   udp: true
-- name: 🇳🇱NL-0001
-  server: 213.183.51.172
-  port: 9001
-  type: ss
-  cipher: aes-256-cfb
-  password: UkXRsXvR6buDMG2Y
-  udp: true
-- name: 🇸🇬SG-0001
-  server: fliplc.getxlx.com
-  port: 59934
-  type: vmess
-  uuid: 3a9e460c-2f70-3688-9602-ad67a1f5efbe
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
 - name: 🇺🇸US-0002
-  server: powerservice.com
+  server: 170.178.190.153
   port: 443
   type: vmess
-  uuid: 0764a598-82c4-4b41-ba10-551a625beed5
+  uuid: 6bda8dab-38db-4cce-877b-3bd27fbc8e5b
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/310910211916
+    headers:
+      Host: www.62371655.xyz
+  udp: true
+- name: 🇺🇸US-0003
+  server: 1.ezydfdd.com
+  port: 443
+  type: vmess
+  uuid: 4ee48ad8-178c-40a2-9c52-a14e90a06e49
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /nmsl
+    headers:
+      Host: 1.ezydfdd.com
+  udp: true
+- name: 🇭🇰HK-0001
+  server: hk.aqvpn.me
+  port: 80
+  type: vmess
+  uuid: fc1905c5-8a19-4948-9f0d-e6e5427bc72f
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hk.aqvpn.me
+  udp: true
+- name: 🇳🇱NL-0002
+  server: 46.182.107.144
+  port: 443
+  type: vmess
+  uuid: acedd8e0-e654-4a40-935d-5594c6c114bd
   alterId: 64
   cipher: auto
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /sshocean
+    path: /
     headers:
-      Host: powerservice.com
-  udp: true
-- name: 🇳🇱NL-0002
-  server: 213.183.51.172
-  port: 9020
-  type: ss
-  cipher: aes-256-cfb
-  password: BNmAXXxAHYpTRdzu
+      Host: www.61020861.xyz
   udp: true
 - name: 🇳🇱NL-0003
   server: 213.183.51.171
-  port: 9070
+  port: 9032
   type: ss
   cipher: aes-256-cfb
-  password: bf7v334KKDV3YDhH
+  password: UWZQeLRWnkqgkseq
   udp: true
-- name: 🇭🇰HK-0001
-  server: 43.129.221.110
+- name: 🇰🇷KR-0001
+  server: jgwcc3.gaox.ml
   port: 443
-  type: vmess
-  uuid: 1ab2ba2c-1b6e-41a2-e03f-dbf75dc3f782
-  alterId: 0
-  cipher: auto
-  tls: false
+  type: trojan
+  password: b291d129-ee55-4801-a9b8-b5316e5c37b7
+  sni: jgwcc3.gaox.ml
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /free
   udp: true
-- name: 🇺🇸US-0003
-  server: gz1.52168.org
-  port: 11117
-  type: ssr
+- name: 🇷🇺RU-0001
+  server: 213.183.53.221
+  port: 9006
+  type: ss
   cipher: aes-256-cfb
-  password: epChJS35fV
-  protocol: auth_aes128_sha1
-  obfs: tls1.2_ticket_auth
-  protocol-param: 149:gt9img0d2jp
-  obfs-param: ee821149.baidu.com
+  password: FAdUvMJUq5vDgKEq
   udp: true
 - name: 🇺🇸US-0004
-  server: 104.25.52.187
+  server: 167.88.63.79
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  udp: true
+- name: 🇺🇸US-0005
+  server: api.ssfree.ru
   port: 443
   type: vmess
-  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
-  alterId: 1
+  uuid: 648cd206-5f52-11ec-b30c-000017022008
+  alterId: 64
   cipher: auto
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /y475
+    path: /getweather
     headers:
-      Host: 104.25.52.187
+      Host: api.ssfree.ru
   udp: true
-- name: 🇦🇺AU-0001
-  server: 185.167.116.253
-  port: 9080
-  type: ss
-  cipher: aes-256-cfb
-  password: VP8ZPxQpJtZRCjfZ
-  udp: true
-- name: 🇺🇸US-0005
-  server: streaming-1-route.teacher2050.com
-  port: 31222
+- name: 🇺🇸US-0007
+  server: 138.197.236.77
+  port: 443
   type: vmess
-  uuid: B8AAA6E1-F0B3-B9EC-3DFC-BB226C167B33
+  uuid: 3579436c-b37e-11eb-8529-0242ac130003
   alterId: 0
   cipher: auto
   tls: false
   skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /ray
+    headers:
+      Host: 138.197.236.77
+  udp: true
+- name: 🇸🇬SG-0001
+  server: 103.172.116.9
+  port: 9027
+  type: ss
+  cipher: aes-256-cfb
+  password: EXN3S3eQpjE7EJu8
   udp: true
 - name: 🇳🇱NL-0004
-  server: 46.182.107.165
+  server: 213.183.59.190
+  port: 9088
+  type: ss
+  cipher: aes-256-cfb
+  password: f8npKgNzdkss2ytn
+  udp: true
+- name: 🇺🇸US-0008
+  server: weixin.babazhuji.com
   port: 443
   type: vmess
-  uuid: d3133484-f2bf-4b0c-8d38-f8e645b65687
+  uuid: 27848739-7e62-4138-9fd3-098a63964b6b
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /mp
+    headers:
+      Host: weixin.babazhuji.com
+  udp: true
+- name: 🏁RELAY-0001
+  server: 104.17.36.178
+  port: 443
+  type: vmess
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdnde.irteyz.today
+  udp: true
+- name: 🇯🇵JP-0001
+  server: jgwdj3.gaox.ml
+  port: 443
+  type: trojan
+  password: da777aae-defb-41d0-a183-2c27da2b4677
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸US-0009
+  server: 172.67.106.0
+  port: 443
+  type: vmess
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 64
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdnde.irteyz.today
+  udp: true
+- name: 🇺🇸US-0010
+  server: 169.197.142.187
+  port: 7306
+  type: ss
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+  udp: true
+- name: 🇷🇺RU-0002
+  server: 213.183.53.207
+  port: 9050
+  type: ss
+  cipher: aes-256-cfb
+  password: FG5ddLsMPbV5CutE
+  udp: true
+- name: 🏁RELAY-0002
+  server: hax2.hax01.ml
+  port: 443
+  type: vmess
+  uuid: 25af03c3-27ff-4c14-c142-ad7694ec42f9
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: hax2.hax01.ml
+  udp: true
+- name: 🇯🇵JP-0002
+  server: 152.69.206.209
+  port: 1212
+  type: vmess
+  uuid: fb908160-9697-4bfd-f5b7-f1fbc53e60fa
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+  udp: true
+- name: 🇺🇸US-0011
+  server: 167.88.63.99
+  port: 8090
+  type: ss
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+  udp: true
+- name: 🏁RELAY-0003
+  server: 104.16.241.127
+  port: 443
+  type: vmess
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdnde.irteyz.today
+  udp: true
+- name: 🇳🇱NL-0005
+  server: 213.183.59.211
+  port: 9057
+  type: ss
+  cipher: aes-256-cfb
+  password: wjTugX3ZtHMB9c3Z
+  udp: true
+- name: 🏁RELAY-0004
+  server: 162.159.129.84
+  port: 443
+  type: vmess
+  uuid: d96e0bc9-e1d9-4715-ae3f-39dac55b9e44
+  alterId: 34
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /9e1cb04e/
+    headers:
+      Host: edozvpn.xyz
+  udp: true
+- name: 🏁RELAY-0005
+  server: 104.16.162.16
+  port: 2053
+  type: vmess
+  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /eisasqa
+    headers:
+      Host: foxus.fovi.tk
+  udp: true
+- name: 🇺🇸US-0012
+  server: 170.178.165.233
+  port: 443
+  type: vmess
+  uuid: ee954308-5990-4914-b74f-b7be76963fde
+  alterId: 64
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/310910211916
+    headers:
+      Host: www.55916573.xyz
+  udp: true
+- name: 🇺🇸US-0013
+  server: bbs.sysucc.cf
+  port: 443
+  type: vmess
+  uuid: 258fc42e-e186-48a2-a9a7-9cc0a12fec90
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /ad05447fdd8fb/
+    headers:
+      Host: bbs.sysucc.cf
+  udp: true
+- name: 🇳🇱NL-0006
+  server: 213.183.59.214
+  port: 9064
+  type: ss
+  cipher: aes-256-cfb
+  password: cp8pRSUAyLhTfVWH
+  udp: true
+- name: 🇺🇸US-0014
+  server: 172.67.68.58
+  port: 443
+  type: vmess
+  uuid: f2f578e4-692d-40b5-af99-9f1dd712eb32
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /shuier
+    headers:
+      Host: xc1.v2rie.pp.ua
+  udp: true
+- name: 🏁RELAY-0006
+  server: lu1.gogogoo.cyou
+  port: 443
+  type: vmess
+  uuid: db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /go
+    headers:
+      Host: lu1.gogogoo.cyou
+  udp: true
+- name: 🇳🇱NL-0007
+  server: 213.183.59.206
+  port: 9057
+  type: ss
+  cipher: aes-256-cfb
+  password: wjTugX3ZtHMB9c3Z
+  udp: true
+- name: 🇷🇺RU-0003
+  server: 213.183.53.179
+  port: 9008
+  type: ss
+  cipher: aes-256-cfb
+  password: y9VURyNzJWNRYEGQ
+  udp: true
+- name: 🇨🇿CZ-0001
+  server: cz5.v2ce.com
+  port: 443
+  type: trojan
+  password: HTrovQkamDxNfaD5
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱NL-0008
+  server: 213.183.59.191
+  port: 9073
+  type: ss
+  cipher: aes-256-cfb
+  password: daFYagqDdBdA6VTX
+  udp: true
+- name: 🇺🇸US-0015
+  server: 23.224.30.36
+  port: 443
+  type: vmess
+  uuid: e4494518-74e8-4d6b-942a-6b332cce09ef
+  alterId: 64
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /path/310910211916
+    headers:
+      Host: www.01902367.xyz
+  udp: true
+- name: 🇭🇰HK-0002
+  server: nn02.nfeng6.pp.ua
+  port: 60017
+  type: vmess
+  uuid: 5b44b8de-2f75-3b34-bf41-584cd89e937a
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: nn02.nfeng6.pp.ua
+  udp: true
+- name: 🇷🇺RU-0004
+  server: 213.183.53.221
+  port: 9042
+  type: ss
+  cipher: aes-256-cfb
+  password: S7KwUu7yBy58S3Ga
+  udp: true
+- name: 🇧🇬BG-0001
+  server: 213.183.63.218
+  port: 9098
+  type: ss
+  cipher: aes-256-cfb
+  password: aLpQtfEZe445QyHk
+  udp: true
+- name: 🇺🇸US-0016
+  server: 169.197.142.187
+  port: 8888
+  type: ss
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  udp: true
+- name: 🇳🇱NL-0009
+  server: 46.182.107.146
+  port: 443
+  type: vmess
+  uuid: acedd8e0-e654-4a40-935d-5594c6c114bd
   alterId: 64
   cipher: auto
   tls: true
@@ -135,48 +487,56 @@ proxies:
   ws-opts:
     path: /footers
     headers:
-      Host: www.07890885.xyz
+      Host: www.61020861.xyz
   udp: true
-- name: 🇺🇸US-0006
-  server: 167.88.61.50
-  port: 3389
+- name: 🇳🇱NL-0010
+  server: 213.183.51.172
+  port: 9010
+  type: ss
+  cipher: aes-256-cfb
+  password: f63gg8EruDnUrmz4
+  udp: true
+- name: 🇺🇸US-0017
+  server: 167.88.61.175
+  port: 7306
   type: ss
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
+  password: FoOiGlkAA9yPEGP
   udp: true
-- name: 🇳🇱NL-0005
-  server: 154.84.1.214
+- name: 🇺🇸US-0018
+  server: 107.167.2.186
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: 93310e8db124
+  udp: true
+- name: 🇺🇸US-0019
+  server: 38.114.114.67
+  port: 443
+  type: ss
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+  udp: true
+- name: 🇺🇸US-0020
+  server: 107.167.12.245
   port: 443
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca4690dd24
+  uuid: 88c52927-7779-489b-b476-20a7398f5fef
   alterId: 64
   cipher: auto
   tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /path/080331123005
-  udp: true
-- name: 🇮🇷IR-0001
-  server: srvf.myandroidplus1.ir
-  port: 80
-  type: vmess
-  uuid: c1214c26-f0fc-2f0a-81b0-84d10f8d14dc
-  alterId: 4
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /apiws
+    path: /path/310910211916
     headers:
-      Host: srvf.myandroidplus1.ir
+      Host: www.55922120.xyz
   udp: true
-- name: 🇺🇸US-0007
+- name: 🇺🇸US-0021
   server: app.ssfree.ru
   port: 443
   type: vmess
-  uuid: 40443576-d07a-11ec-a5e8-000017022008
+  uuid: 8b603b96-ae4b-11ec-bb21-000017022008
   alterId: 64
   cipher: auto
   tls: true
@@ -187,436 +547,30 @@ proxies:
     headers:
       Host: app.ssfree.ru
   udp: true
-- name: 🇭🇰HK-0002
-  server: hk.aqvpn.me
-  port: 80
-  type: vmess
-  uuid: d00083c7-e3db-4707-a24d-5662912368ff
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hk.aqvpn.me
-  udp: true
-- name: 🇨🇦CA-0001
-  server: 134.195.198.95
-  port: 443
-  type: ss
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-  udp: true
-- name: 🇺🇸US-0008
-  server: la-dmit-mini013.xc188.net
+- name: 🇺🇸US-0022
+  server: 172.67.77.167
   port: 443
   type: vmess
-  uuid: 204f41ff-117d-46ae-85cd-4edf7f7bee4d
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /clientarea
-    headers:
-      Host: la-dmit-mini013.xc188.net
-  udp: true
-- name: 🇳🇱NL-0006
-  server: 46.182.107.96
-  port: 443
-  type: vmess
-  uuid: 6e79eea4-5f72-4683-ad0e-5339f013421b
+  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
   alterId: 64
   cipher: auto
   tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /path/181012123433
-    headers:
-      Host: www.77555071.xyz
-  udp: true
-- name: 🇺🇸US-0010
-  server: jsdx.v2cy.com
-  port: 80
-  type: vmess
-  uuid: 586fb889-61ee-42d9-b374-c1440b0a0664
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
     path: /
     headers:
-      Host: dn-7dp8osc1.cn2.run.gxu.edu.cn
-  udp: true
-- name: 🏁RELAY-0001
-  server: 104.17.21.243
-  port: 443
-  type: vmess
-  uuid: 4cdb016f-f14e-30b3-97d6-453c741a5c80
-  alterId: 1
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /y475
-    headers:
-      Host: free.frli.xyz
+      Host: cdnde.irteyz.today
   udp: true
 - name: 🇭🇰HK-0003
-  server: hk01.xniuniu888.club
-  port: 30104
+  server: 165.154.225.230
+  port: 33080
   type: vmess
-  uuid: ef41958c-c145-3363-a332-20e9ec5e8a5c
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇭🇰HK-0004
-  server: 43.154.109.219
-  port: 443
-  type: vmess
-  uuid: e5af0cad-295c-37b2-b601-f35d13f6b1bb
-  alterId: 64
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 43.154.109.219
-  udp: true
-- name: 🇺🇸US-0011
-  server: 104.27.89.125
-  port: 443
-  type: vmess
-  uuid: 24b4b1e1-7a89-45f6-858c-242cf53b5bdb
+  uuid: b8aaa6e1-f0b3-b9ec-3dfc-bb226c167b33
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: 24b4b1e1-7a89-45f6-858c-242cf53b5bdb-vmess
-    headers:
-      Host: xiaochen.chenyingjie5201314.workers.dev
-  udp: true
-- name: 🇺🇸US-0012
-  server: 38.114.114.143
-  port: 2376
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: 🇸🇬SG-0002
-  server: 129.150.61.170
-  port: 29493
-  type: vmess
-  uuid: ac0d0076-93d2-48ad-ba6e-ea5c8d7b0132
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-  udp: true
-- name: 🇷🇺RU-0001
-  server: 213.183.53.221
-  port: 9033
-  type: ss
-  cipher: aes-256-cfb
-  password: UTJA57ypk2XKQpnm
-  udp: true
-- name: 🏁RELAY-0002
-  server: 104.18.1.240
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-  udp: true
-- name: 🇳🇱NL-0007
-  server: 213.183.59.190
-  port: 9019
-  type: ss
-  cipher: aes-256-cfb
-  password: GA9KzeEgvfxNrgmM
-  udp: true
-- name: 🇷🇺RU-0002
-  server: 213.183.53.221
-  port: 9006
-  type: ss
-  cipher: aes-256-cfb
-  password: FAdUvMJUq5vDgKEq
-  udp: true
-- name: 🇳🇱NL-0008
-  server: 213.183.59.206
-  port: 9003
-  type: ss
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-  udp: true
-- name: 🇰🇷KR-0001
-  server: kr5.mayiyun.vip
-  port: 80
-  type: vmess
-  uuid: 54b3ef87-0084-4362-af57-2fb494d8ca15
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: kr5.mayiyun.vip
-  udp: true
-- name: 🇳🇱NL-0009
-  server: 46.182.107.45
-  port: 443
-  type: vmess
-  uuid: fe5f69e7-e183-439b-950b-8221ef0651f2
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /footers
-    headers:
-      Host: 46.182.107.45
-  udp: true
-- name: 🇻🇳VN-0001
-  server: 0001.hn.genzpn.com
-  port: 80
-  type: vmess
-  uuid: 85a173a6-cbac-44b7-83b7-0c53d4aadf93
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: livestream2.tv360.vn
-  udp: true
-- name: 🇺🇸US-0013
-  server: 45.58.145.212
-  port: 443
-  type: vmess
-  uuid: 5f3d2caf-55b6-4af2-9183-329602a3fee0
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/310910211916
-    headers:
-      Host: www.12387703.xyz
-  udp: true
-- name: 🇳🇱NL-0010
-  server: 213.183.59.190
-  port: 9088
-  type: ss
-  cipher: aes-256-cfb
-  password: f8npKgNzdkss2ytn
-  udp: true
-- name: 🇦🇺AU-0002
-  server: 1.0.0.1
-  port: 443
-  type: vmess
-  uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 1.0.0.1
-  udp: true
-- name: 🇺🇸US-0014
-  server: 142.4.127.67
-  port: 443
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path/310910211916
-    headers:
-      Host: 142.4.127.67
-  udp: true
-- name: 🇺🇸US-0015
-  server: api.ssfree.ru
-  port: 443
-  type: vmess
-  uuid: f84e9b80-646d-11ec-a8d7-000017022008
-  alterId: 64
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: api.ssfree.ru
-  udp: true
-- name: 🇳🇱NL-0011
-  server: 46.182.107.39
-  port: 443
-  type: vmess
-  uuid: d3133484-f2bf-4b0c-8d38-f8e645b67947
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /footers
-    headers:
-      Host: 46.182.107.39
-  udp: true
-- name: 🇷🇺RU-0003
-  server: 213.183.53.221
-  port: 9018
-  type: ss
-  cipher: aes-256-cfb
-  password: fG2artUmHfNT2cX7
-  udp: true
-- name: 🇷🇺RU-0004
-  server: 213.183.53.198
-  port: 9031
-  type: ss
-  cipher: aes-256-cfb
-  password: BwcAUZk8hUFAkDGN
-  udp: true
-- name: 🇭🇰HK-0005
-  server: gy.moonfree.top
-  port: 17253
-  type: vmess
-  uuid: 6e9eeae6-c3d1-439e-9f7a-213fe09b2dbe
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ocrb2.moonfree.top
-  udp: true
-- name: 🏁RELAY-0003
-  server: 104.19.238.59
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-  udp: true
-- name: 🇺🇸US-0017
-  server: 104.27.77.8
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
-  udp: true
-- name: 🇺🇸US-0018
-  server: bvus.xsus.xyz
-  port: 443
-  type: vmess
-  uuid: a1874ec0-83e1-4e0c-adfd-975e81098a32
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /xsus
-    headers:
-      Host: bvus.xsus.xyz
-  udp: true
-- name: 🇳🇱NL-0012
-  server: 213.183.59.214
-  port: 9003
-  type: ss
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-  udp: true
-- name: 🇳🇱NL-0013
-  server: 213.183.59.214
-  port: 9060
-  type: ss
-  cipher: aes-256-cfb
-  password: ueLXVkvh4hckhErQ
-  udp: true
-- name: 🇺🇸US-0019
-  server: oz.moonfree.top
-  port: 443
-  type: vmess
-  uuid: 6e9eeae6-c3d1-439e-9f7a-213fe09b2dbe
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: oz.moonfree.top
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: oz.moonfree.top
-  udp: true
-- name: 🇺🇸US-0020
-  server: 104.24.211.83
-  port: 443
-  type: vmess
-  uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2
-  alterId: 64
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdnde.irteyz.today
   udp: true
 proxy-groups:
 - name: 🚀 节点选择
@@ -624,339 +578,339 @@ proxy-groups:
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 - name: ♻️ 自动选择
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
   proxies:
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 - name: 🌍 国外媒体
   type: select
   proxies:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 - name: 📲 电报信息
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -979,57 +933,57 @@ proxy-groups:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 🇺🇸US-0001
+  - 🇻🇳VN-0001
   - 🇳🇱NL-0001
-  - 🇸🇬SG-0001
+  - 🇺🇸US-0001
   - 🇺🇸US-0002
+  - 🇺🇸US-0003
+  - 🇭🇰HK-0001
   - 🇳🇱NL-0002
   - 🇳🇱NL-0003
-  - 🇭🇰HK-0001
-  - 🇺🇸US-0003
-  - 🇺🇸US-0004
-  - 🇦🇺AU-0001
-  - 🇺🇸US-0005
-  - 🇳🇱NL-0004
-  - 🇺🇸US-0006
-  - 🇳🇱NL-0005
-  - 🇮🇷IR-0001
-  - 🇺🇸US-0007
-  - 🇭🇰HK-0002
-  - 🇨🇦CA-0001
-  - 🇺🇸US-0008
-  - 🇳🇱NL-0006
-  - 🇺🇸US-0010
-  - 🏁RELAY-0001
-  - 🇭🇰HK-0003
-  - 🇭🇰HK-0004
-  - 🇺🇸US-0011
-  - 🇺🇸US-0012
-  - 🇸🇬SG-0002
-  - 🇷🇺RU-0001
-  - 🏁RELAY-0002
-  - 🇳🇱NL-0007
-  - 🇷🇺RU-0002
-  - 🇳🇱NL-0008
   - 🇰🇷KR-0001
-  - 🇳🇱NL-0009
-  - 🇻🇳VN-0001
-  - 🇺🇸US-0013
-  - 🇳🇱NL-0010
-  - 🇦🇺AU-0002
-  - 🇺🇸US-0014
-  - 🇺🇸US-0015
-  - 🇳🇱NL-0011
-  - 🇷🇺RU-0003
-  - 🇷🇺RU-0004
-  - 🇭🇰HK-0005
+  - 🇷🇺RU-0001
+  - 🇺🇸US-0004
+  - 🇺🇸US-0005
+  - 🇺🇸US-0007
+  - 🇸🇬SG-0001
+  - 🇳🇱NL-0004
+  - 🇺🇸US-0008
+  - 🏁RELAY-0001
+  - 🇯🇵JP-0001
+  - 🇺🇸US-0009
+  - 🇺🇸US-0010
+  - 🇷🇺RU-0002
+  - 🏁RELAY-0002
+  - 🇯🇵JP-0002
+  - 🇺🇸US-0011
   - 🏁RELAY-0003
+  - 🇳🇱NL-0005
+  - 🏁RELAY-0004
+  - 🏁RELAY-0005
+  - 🇺🇸US-0012
+  - 🇺🇸US-0013
+  - 🇳🇱NL-0006
+  - 🇺🇸US-0014
+  - 🏁RELAY-0006
+  - 🇳🇱NL-0007
+  - 🇷🇺RU-0003
+  - 🇨🇿CZ-0001
+  - 🇳🇱NL-0008
+  - 🇺🇸US-0015
+  - 🇭🇰HK-0002
+  - 🇷🇺RU-0004
+  - 🇧🇬BG-0001
+  - 🇺🇸US-0016
+  - 🇳🇱NL-0009
+  - 🇳🇱NL-0010
   - 🇺🇸US-0017
   - 🇺🇸US-0018
-  - 🇳🇱NL-0012
-  - 🇳🇱NL-0013
   - 🇺🇸US-0019
   - 🇺🇸US-0020
+  - 🇺🇸US-0021
+  - 🇺🇸US-0022
+  - 🇭🇰HK-0003
 rules:
 - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
 - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
