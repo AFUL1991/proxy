@@ -7,7 +7,7 @@ external-controller: 127.0.0.1:9090
 proxies:
 - alterId: "0"
   cipher: none
-  name: 更新于:04-21 00:00 -by BuLink.xyz- 以下节点不计流量
+  name: 更新于:04-21 04:00 -by BuLink.xyz- 以下节点不计流量
   port: "0"
   server: 使用前记得更新订阅
   type: vmess
@@ -15,47 +15,57 @@ proxies:
   ws-opts: {}
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 1
+  name: github.com/freefq - 美国惠普HP 1
   network: ws
   port: 443
-  server: new3.hucloud-dns.xyz
+  server: hk3.af49c4e4c2ef.sanfen004.me
   tls: true
   type: vmess
-  uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+  uuid: 1172d7fe-4a5d-4d07-92f6-aefa4212347f
   ws-opts:
-    path: /
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 2
+    path: /zh-cn
+- alterId: 0
+  name: github.com/freefq - 广东省广州市移动 2
   network: ws
-  port: "2096"
-  server: lsb-gy.heinu.cf
+  port: 63078
+  server: 120.232.179.161
   tls: true
   type: vmess
-  uuid: d793c013-f596-4af9-de0a-2062bb864dd7
-  ws-opts:
-    path: /@heinuhome
+  uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
+  ws-opts: {}
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 美国CloudFlare节点 3
+  name: github.com/freefq - 美国惠普HP 3
   network: ws
-  port: 80
-  server: 172.67.217.222
+  port: 443
+  server: 16.162.74.222
+  tls: true
   type: vmess
-  uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+  uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
   ws-opts:
-    path: /shirker
+    path: /zh-cn
 - alterId: "0"
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 4
+  cipher: none
+  name: github.com/freefq - 美国加利福尼亚州洛杉矶Dedipath数据中心 4
   network: ws
-  port: 80
-  server: 104.17.3.81
+  port: "80"
+  server: flos.ydnode.us
   type: vmess
-  uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+  uuid: db0af0f2-a278-3019-9ef8-f064d7a0726c
   ws-opts:
-    path: /worryfree
+    path: /v2ray
 - alterId: "0"
-  name: github.com/freefq - 美国  5
+  name: github.com/freefq - 美国惠普HP 5
+  network: ws
+  port: 443
+  server: hk2.c2bfe79372be.sanfen001.pics
+  tls: true
+  type: vmess
+  uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+  ws-opts:
+    path: /zh-cn
+- alterId: "0"
+  name: github.com/freefq - 美国  6
   network: ws
   port: "80"
   server: flos1.ydnode.us
@@ -64,17 +74,18 @@ proxies:
   ws-opts:
     path: /v2ray
 - alterId: 0
-  name: github.com/freefq - 广东省广州市移动 6
+  cipher: auto
+  name: github.com/freefq - 美国CloudFlare节点 7
   network: ws
-  port: 63078
-  server: 120.232.179.161
-  tls: true
+  port: 80
+  server: 172.67.217.222
   type: vmess
-  uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
-  ws-opts: {}
+  uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+  ws-opts:
+    path: /shirker
 - alterId: "2"
   cipher: none
-  name: github.com/freefq - 广东省佛山市移动 7
+  name: github.com/freefq - 广东省佛山市移动 8
   network: ws
   port: "23625"
   server: 25.v2-ray.cyou
@@ -89,14 +100,15 @@ proxy-groups:
   - ✈ 手动选择
   - ✈ 故障切换
   - DIRECT
-  - 更新于:04-21 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 美国CloudFlare公司CDN节点 4
-  - github.com/freefq - 美国  5
-  - github.com/freefq - 广东省广州市移动 6
-  - github.com/freefq - 广东省佛山市移动 7
+  - 更新于:04-21 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国惠普HP 1
+  - github.com/freefq - 广东省广州市移动 2
+  - github.com/freefq - 美国惠普HP 3
+  - github.com/freefq - 美国加利福尼亚州洛杉矶Dedipath数据中心 4
+  - github.com/freefq - 美国惠普HP 5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 广东省佛山市移动 8
   type: select
 - name: 广告拦截
   proxies:
@@ -113,39 +125,42 @@ proxy-groups:
   type: select
 - name: ✈ 手动选择
   proxies:
-  - 更新于:04-21 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 美国CloudFlare公司CDN节点 4
-  - github.com/freefq - 美国  5
-  - github.com/freefq - 广东省广州市移动 6
-  - github.com/freefq - 广东省佛山市移动 7
+  - 更新于:04-21 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国惠普HP 1
+  - github.com/freefq - 广东省广州市移动 2
+  - github.com/freefq - 美国惠普HP 3
+  - github.com/freefq - 美国加利福尼亚州洛杉矶Dedipath数据中心 4
+  - github.com/freefq - 美国惠普HP 5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 广东省佛山市移动 8
   type: select
 - interval: 500
   name: ✈ 延迟最低
   proxies:
-  - 更新于:04-21 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 美国CloudFlare公司CDN节点 4
-  - github.com/freefq - 美国  5
-  - github.com/freefq - 广东省广州市移动 6
-  - github.com/freefq - 广东省佛山市移动 7
+  - 更新于:04-21 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国惠普HP 1
+  - github.com/freefq - 广东省广州市移动 2
+  - github.com/freefq - 美国惠普HP 3
+  - github.com/freefq - 美国加利福尼亚州洛杉矶Dedipath数据中心 4
+  - github.com/freefq - 美国惠普HP 5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 广东省佛山市移动 8
   type: url-test
   url: http://www.gstatic.com/generate_204
 - interval: 500
   name: ✈ 故障切换
   proxies:
-  - 更新于:04-21 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 美国CloudFlare公司CDN节点 4
-  - github.com/freefq - 美国  5
-  - github.com/freefq - 广东省广州市移动 6
-  - github.com/freefq - 广东省佛山市移动 7
+  - 更新于:04-21 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国惠普HP 1
+  - github.com/freefq - 广东省广州市移动 2
+  - github.com/freefq - 美国惠普HP 3
+  - github.com/freefq - 美国加利福尼亚州洛杉矶Dedipath数据中心 4
+  - github.com/freefq - 美国惠普HP 5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 广东省佛山市移动 8
   type: fallback
   url: http://www.gstatic.com/generate_204
 rules:
