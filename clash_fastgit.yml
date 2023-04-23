@@ -7,34 +7,74 @@ external-controller: 127.0.0.1:9090
 proxies:
 - alterId: "0"
   cipher: none
-  name: 更新于:04-23 16:00 -by BuLink.xyz- 以下节点不计流量
+  name: 更新于:04-23 20:00 -by BuLink.xyz- 以下节点不计流量
   port: "0"
   server: 使用前记得更新订阅
   type: vmess
   uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
   ws-opts: {}
+- alterId: 64
+  cipher: auto
+  name: github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+  port: 51986
+  server: 170.178.194.14
+  type: vmess
+  uuid: 3023981b-0431-4bff-8a10-0f986ba86c73
+  ws-opts: {}
+- name: github.com/freefq - 加拿大  2
+  password: 60fa7666-06a5-46eb-8e22-742e029117b2
+  port: "80"
+  server: jp1117.ljydw.top
+  type: trojan
 - alterId: "64"
-  name: github.com/freefq - 广东省揭阳市移动 1
+  name: github.com/freefq - 广东省揭阳市移动 3
   port: 53173
   server: 120.240.163.51
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts: {}
-- name: github.com/freefq - 法国  2
-  password: f0a9a2e2-0b62-4d46-a97c-c16eb25a88c7
-  port: "2087"
-  server: fc.hk03.fp-dns.xyz
+- name: github.com/freefq - 英国  4
+  password: 41oia27jYy
+  port: "23706"
+  server: mahsa2081p5k.mahsaaminivpn.com
+  type: trojan
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 欧盟  5
+  network: ws
+  port: 10000
+  server: 45.95.203.252
+  type: vmess
+  uuid: 42071f5a-ddd4-11ed-9684-17f9e573b56f
+  ws-opts:
+    path: /vpnjantit
+- name: github.com/freefq - 美国  6
+  password: 21ra5sH0EZ
+  port: "24930"
+  server: mahsa8.mahsaaminivpn.com
   type: trojan
 - alterId: "0"
   cipher: none
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 3
+  name: github.com/freefq - 美国CloudFlare节点 7
   network: ws
-  port: "8080"
-  server: cf.noaries.de
+  port: "443"
+  server: cf-lt.sharecentre.online
+  tls: true
   type: vmess
-  uuid: 6f1d968e-7f41-41fd-931d-73cf35a9f26b
+  uuid: 2e496758-950e-4549-8842-d5eec98d9fde
   ws-opts:
-    path: /aries?ed=2048
+    path: /shirker
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 8
+  network: ws
+  port: "443"
+  server: www.codepen.io
+  tls: true
+  type: vmess
+  uuid: 2cd39102-0799-4c61-abb6-2e7a258f0397
+  ws-opts:
+    path: /vmess
 proxy-groups:
 - name: 节点选择
   proxies:
@@ -42,10 +82,15 @@ proxy-groups:
   - ✈ 手动选择
   - ✈ 故障切换
   - DIRECT
-  - 更新于:04-23 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 广东省揭阳市移动 1
-  - github.com/freefq - 法国  2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - 更新于:04-23 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+  - github.com/freefq - 加拿大  2
+  - github.com/freefq - 广东省揭阳市移动 3
+  - github.com/freefq - 英国  4
+  - github.com/freefq - 欧盟  5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点 8
   type: select
 - name: 广告拦截
   proxies:
@@ -62,27 +107,42 @@ proxy-groups:
   type: select
 - name: ✈ 手动选择
   proxies:
-  - 更新于:04-23 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 广东省揭阳市移动 1
-  - github.com/freefq - 法国  2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - 更新于:04-23 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+  - github.com/freefq - 加拿大  2
+  - github.com/freefq - 广东省揭阳市移动 3
+  - github.com/freefq - 英国  4
+  - github.com/freefq - 欧盟  5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点 8
   type: select
 - interval: 500
   name: ✈ 延迟最低
   proxies:
-  - 更新于:04-23 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 广东省揭阳市移动 1
-  - github.com/freefq - 法国  2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - 更新于:04-23 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+  - github.com/freefq - 加拿大  2
+  - github.com/freefq - 广东省揭阳市移动 3
+  - github.com/freefq - 英国  4
+  - github.com/freefq - 欧盟  5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点 8
   type: url-test
   url: http://www.gstatic.com/generate_204
 - interval: 500
   name: ✈ 故障切换
   proxies:
-  - 更新于:04-23 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 广东省揭阳市移动 1
-  - github.com/freefq - 法国  2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - 更新于:04-23 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+  - github.com/freefq - 加拿大  2
+  - github.com/freefq - 广东省揭阳市移动 3
+  - github.com/freefq - 英国  4
+  - github.com/freefq - 欧盟  5
+  - github.com/freefq - 美国  6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点 8
   type: fallback
   url: http://www.gstatic.com/generate_204
 rules:
