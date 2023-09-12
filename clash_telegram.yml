@@ -5,143 +5,183 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 瑞士-9.26MB/s, server: zzzz.meiyiss.club, port: 32701, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
+  - {name: 俄罗斯联邦-2.70MB/s, server: ru-02.feitucloud.com, port: 10112, type: ss, cipher: chacha20-ietf-poly1305, password: f7c4898b-fd50-43e8-9c71-8c6a9c12eb1e, udp: true}
+  - {name: 俄罗斯联邦-3.77MB/s, server: ru-03.feitucloud.com, port: 10203, type: ss, cipher: chacha20-ietf-poly1305, password: f7c4898b-fd50-43e8-9c71-8c6a9c12eb1e, udp: true}
   - {name: 德国-3.65MB/s, server: 18.159.80.125, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-7.06MB/s, server: xxx1.meiyiss.club, port: 33102, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
+  - {name: 新加坡-1.51MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 2a5ccc8198d4af09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 美国-2.66MB/s, server: 35.92.39.120, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 俄罗斯联邦-1.53MB/s, server: nl-01.feitucloud.com, port: 20131, type: ss, cipher: chacha20-ietf-poly1305, password: f7c4898b-fd50-43e8-9c71-8c6a9c12eb1e, udp: true}
+  - {name: 新加坡-922.5KB/s, server: 5.44.249.43, port: 3306, type: trojan, password: 7ac49a893e0bd10c, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 瑞士-5.33MB/s, server: zzzz.meiyiss.club, port: 32501, type: ss, cipher: aes-128-gcm, password: 58e7de52-1b8f-493c-9820-a963541439c7, udp: true}
+  - {name: 爱尔兰-621.7KB/s, server: 34.242.16.112, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
   - {name: 德国-4.05MB/s, server: 3.66.240.21, port: 22222, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-4.19MB/s, server: xxx3.meiyiss.club, port: 34103, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
   - {name: 美国-2.92MB/s, server: 45.55.2.232, port: 14293, type: ss, cipher: aes-256-cfb, password: 2170f8, udp: true}
+  - {name: 新加坡-1.60MB/s, server: 5.44.249.43, port: 3306, type: trojan, password: faf42aa0a9ad4c1e, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 台湾-611.9KB/s, server: 60.248.114.188, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-4.49MB/s, server: 101.91.184.2, port: 13118, type: ss, cipher: chacha20-ietf-poly1305, password: 8e5beafa-f98e-47c5-961f-593a24fc8c76, udp: true}
+  - {name: 中转节点-188.7KB/s, server: 183.232.170.32, port: 30005, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
+  - {name: 中转节点-13.45MB/s, server: gg.58n.net, port: 20279, type: trojan, password: b09d514d-0773-34b5-a969-e906671ee8b6, sni: z279.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 俄罗斯联邦-1.19MB/s, server: ru-33.feitucloud.com, port: 20233, type: ss, cipher: chacha20-ietf-poly1305, password: f7c4898b-fd50-43e8-9c71-8c6a9c12eb1e, udp: true}
+  - {name: 爱尔兰-413.1KB/s, server: 54.77.29.125, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
   - {name: 中转节点-12.12MB/s, server: sg-gy.115cloud.link, port: 26768, type: vmess, uuid: 50332682-a68a-3b18-9164-f21660f29459, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-13.23MB/s, server: 36.137.19.45, port: 55106, type: ss, cipher: aes-128-gcm, password: edfcc7a5-a469-4e4a-9520-84b8f9a31bbe, udp: true}
-  - {name: 中转节点-188.7KB/s, server: 183.232.170.32, port: 30005, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 新加坡-1.51MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 2a5ccc8198d4af09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-13.45MB/s, server: gg.58n.net, port: 20279, type: trojan, password: b09d514d-0773-34b5-a969-e906671ee8b6, sni: z279.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-922.5KB/s, server: 5.44.249.43, port: 3306, type: trojan, password: 7ac49a893e0bd10c, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 新加坡-1.31MB/s, server: 5.44.249.43, port: 3306, type: trojan, password: 6c8b18adb11737af, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 台湾-611.9KB/s, server: 60.248.114.188, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 法国-1.51MB/s, server: 13.39.166.62, port: 22222, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, udp: true}
-  - {name: 瑞士-9.30MB/s, server: zzzz.meiyiss.club, port: 32602, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
-  - {name: 中转节点-4.49MB/s, server: 101.91.184.2, port: 13118, type: ss, cipher: chacha20-ietf-poly1305, password: 8e5beafa-f98e-47c5-961f-593a24fc8c76, udp: true}
-  - {name: 爱尔兰-751.7KB/s, server: 99.81.6.243, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-14.37MB/s, server: 36.137.19.45, port: 55107, type: ss, cipher: aes-128-gcm, password: edfcc7a5-a469-4e4a-9520-84b8f9a31bbe, udp: true}
   - {name: 新加坡-1.38MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 71bb6fb9141f3618, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-10.96MB/s, server: gg.58n.net, port: 20076, type: trojan, password: cd2ee18b-6ce7-3afc-a303-38c0ecc062d8, sni: x76.flybar.work, skip-cert-verify: true, udp: true}
+  - {name: 爱尔兰-751.7KB/s, server: 99.81.6.243, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.86MB/s, server: gg.58n.net, port: 25238, type: trojan, password: cd2ee18b-6ce7-3afc-a303-38c0ecc062d8, sni: z267.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 瑞士-9.30MB/s, server: zzzz.meiyiss.club, port: 32602, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
   - {name: 法国-4.35MB/s, server: 13.36.106.62, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
   - {name: 爱尔兰-3.56MB/s, server: 3.254.29.59, port: 22222, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-14.37MB/s, server: 36.137.19.45, port: 55107, type: ss, cipher: aes-128-gcm, password: edfcc7a5-a469-4e4a-9520-84b8f9a31bbe, udp: true}
-  - {name: 新加坡-1.60MB/s, server: 5.44.249.43, port: 3306, type: trojan, password: faf42aa0a9ad4c1e, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 美国-2.66MB/s, server: 35.92.39.120, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-11.28MB/s, server: fzrb.magicby.top, port: 56057, type: ss, cipher: chacha20-ietf-poly1305, password: 0d5c035c-e0c5-4c7e-83aa-acc3d2bef0fd, udp: true}
   - {name: 美国-689.9KB/s, server: 37.9.35.46, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: 3X5vJRL67HGCVmnzgubQk, udp: true}
-  - {name: 瑞士-8.97MB/s, server: zzzz.meiyiss.club, port: 32702, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
-  - {name: 爱尔兰-621.7KB/s, server: 34.242.16.112, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-7.06MB/s, server: xxx1.meiyiss.club, port: 33102, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
-  - {name: 德国-2.16MB/s, server: 3.64.50.75, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
-  - {name: 瑞士-9.26MB/s, server: zzzz.meiyiss.club, port: 32701, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
-  - {name: 爱尔兰-413.1KB/s, server: 54.77.29.125, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-4.19MB/s, server: xxx3.meiyiss.club, port: 34103, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
+  - {name: 法国-1.51MB/s, server: 13.39.166.62, port: 22222, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, udp: true}
   - {name: 德国-3.68MB/s, server: 18.159.80.125, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
+  - {name: 德国-2.16MB/s, server: 3.64.50.75, port: 22222, type: trojan, password: telegram-id-privatevpns, skip-cert-verify: true, udp: true}
+  - {name: 俄罗斯联邦-1.85MB/s, server: ru-55.feitucloud.com, port: 10125, type: ss, cipher: chacha20-ietf-poly1305, password: f7c4898b-fd50-43e8-9c71-8c6a9c12eb1e, udp: true}
+  - {name: 新加坡-1.03MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 182228812d1e0f23, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 新加坡-1.31MB/s, server: 5.44.249.43, port: 3306, type: trojan, password: 6c8b18adb11737af, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 瑞士-8.97MB/s, server: zzzz.meiyiss.club, port: 32702, type: ss, cipher: aes-128-gcm, password: 1a93a19f-bc74-415c-8bd4-c300bc3b5b58, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -160,36 +200,46 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -201,107 +251,137 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -317,36 +397,46 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 瑞士-9.26MB/s
+      - 俄罗斯联邦-2.70MB/s
+      - 俄罗斯联邦-3.77MB/s
       - 德国-3.65MB/s
+      - 中转节点-7.06MB/s
+      - 新加坡-1.51MB/s
+      - 美国-2.66MB/s
+      - 俄罗斯联邦-1.53MB/s
+      - 新加坡-922.5KB/s
+      - 瑞士-5.33MB/s
+      - 爱尔兰-621.7KB/s
       - 德国-4.05MB/s
+      - 中转节点-4.19MB/s
       - 美国-2.92MB/s
+      - 新加坡-1.60MB/s
+      - 台湾-611.9KB/s
+      - 中转节点-4.49MB/s
+      - 中转节点-188.7KB/s
+      - 中转节点-13.45MB/s
+      - 俄罗斯联邦-1.19MB/s
+      - 爱尔兰-413.1KB/s
       - 中转节点-12.12MB/s
       - 中转节点-13.23MB/s
-      - 中转节点-188.7KB/s
-      - 新加坡-1.51MB/s
-      - 中转节点-13.45MB/s
-      - 新加坡-922.5KB/s
-      - 新加坡-1.31MB/s
-      - 台湾-611.9KB/s
-      - 法国-1.51MB/s
-      - 瑞士-9.30MB/s
-      - 中转节点-4.49MB/s
-      - 爱尔兰-751.7KB/s
+      - 中转节点-14.37MB/s
       - 新加坡-1.38MB/s
+      - 中转节点-10.96MB/s
+      - 爱尔兰-751.7KB/s
+      - 中转节点-2.86MB/s
+      - 瑞士-9.30MB/s
       - 法国-4.35MB/s
       - 爱尔兰-3.56MB/s
-      - 中转节点-14.37MB/s
-      - 新加坡-1.60MB/s
-      - 美国-2.66MB/s
+      - 中转节点-11.28MB/s
       - 美国-689.9KB/s
-      - 瑞士-8.97MB/s
-      - 爱尔兰-621.7KB/s
-      - 中转节点-7.06MB/s
-      - 德国-2.16MB/s
-      - 瑞士-9.26MB/s
-      - 爱尔兰-413.1KB/s
-      - 中转节点-4.19MB/s
+      - 法国-1.51MB/s
       - 德国-3.68MB/s
+      - 德国-2.16MB/s
+      - 俄罗斯联邦-1.85MB/s
+      - 新加坡-1.03MB/s
+      - 新加坡-1.31MB/s
+      - 瑞士-8.97MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
