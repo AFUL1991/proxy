@@ -7,20 +7,22 @@ external-controller: 127.0.0.1:9090
 proxies:
 - alterId: "0"
   cipher: none
-  name: 更新于:09-14 08:00 -by BuLink.xyz- 以下节点不计流量
+  name: 更新于:09-14 12:00 -by BuLink.xyz- 以下节点不计流量
   port: "0"
   server: 使用前记得更新订阅
   type: vmess
   uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
   ws-opts: {}
-- alterId: 64
-  cipher: auto
-  name: github.com/freefq - 美国加利福尼亚州圣何塞MULTACOM机房 1
-  port: 49922
-  server: 45.199.138.161
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 北美地区  1
+  network: ws
+  port: "80"
+  server: 23.158.72.131
   type: vmess
-  uuid: 9549a2cf-129b-43a1-88db-ef7f648de74a
-  ws-opts: {}
+  uuid: 593fa280-5229-11ee-b538-205c6d5f5d78
+  ws-opts:
+    path: /
 - alterId: "0"
   name: github.com/freefq - 美国CloudFlare节点 2
   network: ws
@@ -30,16 +32,12 @@ proxies:
   uuid: 00d3cc1c-1af0-4f52-8410-6fad778111e3
   ws-opts:
     path: /
-- alterId: 0
-  name: github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 3
-  network: ws
-  port: 443
-  server: 23.227.38.81
-  tls: true
-  type: vmess
-  uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
-  ws-opts:
-    path: /dongtaiwang.com
+- cipher: aes-256-gcm
+  name: github.com/freefq - 美国Microsoft数据中心 3
+  password: 6EQ2ezT3Ui
+  port: "8443"
+  server: 20.205.4.27
+  type: ss
 - alterId: 0
   cipher: auto
   name: github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 4
@@ -51,8 +49,23 @@ proxies:
   uuid: 87a95522-985c-4a17-afea-9b7d7208bce5
   ws-opts:
     path: /dongtaiwang.com
+- alterId: 0
+  name: github.com/freefq - 亚太地区  5
+  network: ws
+  port: 80
+  server: 103.160.204.108
+  type: vmess
+  uuid: 7ca21098-691c-4c12-8aac-934b21635423
+  ws-opts:
+    path: /TG:@hkaa0
+- cipher: chacha20-ietf-poly1305
+  name: github.com/freefq - 安徽省移动 6
+  password: 51239bce-01ab-454d-baa5-c0940c9f1751
+  port: "10718"
+  server: yidong.liulangdiqiu.cyou
+  type: ss
 - alterId: "0"
-  name: github.com/freefq - 美国CloudFlare节点 5
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 7
   network: ws
   port: "80"
   server: asb3.shabijichang.com
@@ -61,58 +74,27 @@ proxies:
   ws-opts:
     path: /
 - alterId: 0
-  cipher: auto
-  name: github.com/freefq - 美国CloudFlare节点 6
+  name: github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 8
   network: ws
-  port: 80
-  server: dg1aaa.qwqa.link
-  type: vmess
-  uuid: fc29c3a7-58e2-46b3-bf71-811249716ca6
-  ws-opts:
-    path: /
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 7
-  network: ws
-  port: "80"
-  server: us01.runba.gq
-  type: vmess
-  uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
-  ws-opts:
-    path: /v1893298323Py
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 8
-  network: ws
-  port: "80"
-  server: asb3.shabijichang.com
-  type: vmess
-  uuid: 4d10e7d8-31ad-4bff-8885-bc87ac942db3
-  ws-opts:
-    path: /
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 9
-  network: ws
-  port: "80"
-  server: cf-lt.sharecentre.online
-  type: vmess
-  uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-  ws-opts:
-    path: /shirker
-- alterId: "0"
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 10
-  network: ws
-  port: "443"
-  server: 104.25.227.40
+  port: 443
+  server: 23.227.38.81
   tls: true
   type: vmess
-  uuid: 927094d3-d678-4763-8591-e240d0bcae87
+  uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
   ws-opts:
-    path: /vus3.0bad.com/chat
+    path: /dongtaiwang.com
+- alterId: "0"
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 9
+  network: ws
+  port: "2052"
+  server: 104.27.19.105
+  type: vmess
+  uuid: 345d8dde-084b-478e-aa8d-5fb062652889
+  ws-opts:
+    path: /public?ed=4096
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 美国CloudFlare节点 11
+  name: github.com/freefq - 美国CloudFlare节点 10
   network: ws
   port: 8443
   server: 172.67.184.53
@@ -123,37 +105,27 @@ proxies:
     path: /cloudconebbb
 - alterId: "0"
   cipher: none
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 12
+  name: github.com/freefq - 美国CloudFlare节点 11
   network: ws
   port: "80"
-  server: fhc.shabijichang.com
+  server: cf-lt.sharecentre.online
   type: vmess
-  uuid: 53701585-591f-48a3-9515-8831ed0524ac
+  uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
   ws-opts:
-    path: /
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 13
-  network: ws
-  port: "443"
-  server: 104.31.16.196
-  tls: true
-  type: vmess
-  uuid: 6abfe33a-1894-4f62-8879-83b71a35e5fd
-  ws-opts:
-    path: /
+    path: /shirker
 - alterId: 0
-  name: github.com/freefq - 美国CloudFlare节点 14
+  cipher: auto
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 12
   network: ws
   port: 80
-  server: fd.shabijichang.com
+  server: sbl3.shabijichang.com
   type: vmess
-  uuid: dc42deba-1458-450e-938d-4d5ff4ab0f92
+  uuid: f1865e50-2510-46d1-bcb2-e00b4b656305
   ws-opts:
     path: /
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 15
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 13
   network: ws
   port: 80
   server: v117.runba.gq
@@ -163,17 +135,26 @@ proxies:
     path: /v117DEcxDXxxOvD
 - alterId: "0"
   cipher: none
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 16
+  name: github.com/freefq - 美国CloudFlare节点 14
   network: ws
-  port: "443"
-  server: 104.27.193.64
-  tls: true
+  port: "80"
+  server: asb3.shabijichang.com
   type: vmess
-  uuid: 8bb01190-f127-4a5a-9845-e6adf93eccc1
+  uuid: 4d10e7d8-31ad-4bff-8885-bc87ac942db3
   ws-opts:
-    path: /pDDgT3v8NaAJHFPuEaDfC8t
+    path: /
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 15
+  network: ws
+  port: "80"
+  server: hdlb2.shabijichang.com
+  type: vmess
+  uuid: 52cce261-ff53-439a-b97d-f36201842cdb
+  ws-opts:
+    path: /
 - alterId: 0
-  name: github.com/freefq - 美国CloudFlare节点 17
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 16
   network: ws
   port: 80
   server: sg1.wyhkaa0.cf
@@ -182,17 +163,17 @@ proxies:
   ws-opts:
     path: /TG:@hkaa0
 - alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 18
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 17
   network: ws
-  port: "80"
-  server: hdlb2.shabijichang.com
+  port: "443"
+  server: 104.25.227.40
+  tls: true
   type: vmess
-  uuid: 52cce261-ff53-439a-b97d-f36201842cdb
+  uuid: 927094d3-d678-4763-8591-e240d0bcae87
   ws-opts:
-    path: /
+    path: /vus3.0bad.com/chat
 - alterId: "0"
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 19
+  name: github.com/freefq - 美国CloudFlare节点 18
   network: ws
   port: "80"
   server: sg.wyhkaa0.cf
@@ -200,9 +181,24 @@ proxies:
   uuid: 0ba28c05-7bd9-4cad-c329-482386a8e7a3
   ws-opts:
     path: /TG:@hkaa0
+- cipher: chacha20-ietf-poly1305
+  name: github.com/freefq - 安徽省移动 19
+  password: 51239bce-01ab-454d-baa5-c0940c9f1751
+  port: "10701"
+  server: yidong.liulangdiqiu.cyou
+  type: ss
+- alterId: 0
+  name: github.com/freefq - 美国CloudFlare节点 20
+  network: ws
+  port: 80
+  server: fd.shabijichang.com
+  type: vmess
+  uuid: dc42deba-1458-450e-938d-4d5ff4ab0f92
+  ws-opts:
+    path: /
 - alterId: "0"
   cipher: none
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 20
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 21
   network: ws
   port: "2082"
   server: 104.31.16.46
@@ -211,7 +207,7 @@ proxies:
   ws-opts:
     path: /IOebhLMhl1CTbFHbL95myfRX2
 - alterId: 0
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 21
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 22
   network: ws
   port: 8080
   server: us1.mianfenyun012.eu.org
@@ -221,27 +217,7 @@ proxies:
     path: /jdbp606
 - alterId: "0"
   cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 22
-  network: ws
-  port: "2052"
-  server: Tokyo.mfa.ee
-  type: vmess
-  uuid: 992889a7-296e-4a44-98c2-0eb89af4411d
-  ws-opts:
-    path: /
-- alterId: "0"
-  cipher: none
   name: github.com/freefq - 美国CloudFlare节点 23
-  network: ws
-  port: "80"
-  server: 162.159.60.89
-  type: vmess
-  uuid: 7a60c15e-cbcd-486d-aee6-07a494f403e3
-  ws-opts:
-    path: /
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 24
   network: ws
   port: "8880"
   server: ns1.v2-vip.fun
@@ -250,35 +226,7 @@ proxies:
   ws-opts:
     path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
 - alterId: "0"
-  name: github.com/freefq - 美国CloudFlare节点 25
-  network: ws
-  port: "80"
-  server: fd.shabijichang.com
-  type: vmess
-  uuid: 81fc114e-44d7-44c7-9912-942453b03154
-  ws-opts:
-    path: /
-- alterId: 0
-  cipher: auto
-  name: github.com/freefq - 美国CloudFlare节点 26
-  network: ws
-  port: 80
-  server: 172.64.199.158
-  type: vmess
-  uuid: 2e495227-58e3-4bea-a273-7a17bd8a804b
-  ws-opts:
-    path: /
-- alterId: "0"
-  name: github.com/freefq - 美国CloudFlare节点 27
-  network: ws
-  port: "80"
-  server: 172.64.101.98
-  type: vmess
-  uuid: f4d9baa8-9115-4f2a-8c29-d49993174bef
-  ws-opts:
-    path: /
-- alterId: "0"
-  name: github.com/freefq - 美国CloudFlare节点 28
+  name: github.com/freefq - 美国CloudFlare节点 24
   network: ws
   port: "8880"
   server: yd1.992688.xyz
@@ -286,9 +234,118 @@ proxies:
   uuid: 27998387-fc3b-4237-9ac9-aba5d00bbd6e
   ws-opts:
     path: /
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 25
+  network: ws
+  port: "80"
+  server: hdlb3.shabijichang.com
+  type: vmess
+  uuid: 392053a2-c18f-4914-890c-fd326ee27b4f
+  ws-opts:
+    path: /
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 26
+  network: ws
+  port: "80"
+  server: fhc.shabijichang.com
+  type: vmess
+  uuid: 53701585-591f-48a3-9515-8831ed0524ac
+  ws-opts:
+    path: /
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 广东省深圳市移动 29
+  name: github.com/freefq - 美国CloudFlare节点 27
+  network: ws
+  port: 80
+  server: dg1aaa.qwqa.link
+  type: vmess
+  uuid: fc29c3a7-58e2-46b3-bf71-811249716ca6
+  ws-opts:
+    path: /
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare节点 28
+  network: ws
+  port: "80"
+  server: us01.runba.gq
+  type: vmess
+  uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f
+  ws-opts:
+    path: /v1893298323Py
+- alterId: "0"
+  name: github.com/freefq - 美国CloudFlare节点 29
+  network: ws
+  port: "80"
+  server: 172.64.199.158
+  type: vmess
+  uuid: 28645c6e-8ad9-44c0-8ecd-d76f8a285262
+  ws-opts:
+    path: /?ed=14501
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 30
+  network: ws
+  port: "443"
+  server: 104.27.193.64
+  tls: true
+  type: vmess
+  uuid: 8bb01190-f127-4a5a-9845-e6adf93eccc1
+  ws-opts:
+    path: /pDDgT3v8NaAJHFPuEaDfC8t
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 31
+  network: ws
+  port: 443
+  server: bobbykotick.rip
+  tls: true
+  type: vmess
+  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
+  ws-opts:
+    path: /speedtest
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare节点 32
+  network: ws
+  port: "80"
+  server: 162.159.60.89
+  type: vmess
+  uuid: 7a60c15e-cbcd-486d-aee6-07a494f403e3
+  ws-opts:
+    path: /
+- alterId: 0
+  name: github.com/freefq - 美国CloudFlare节点 33
+  network: ws
+  port: 80
+  server: sg2.wyhkaa0.cf
+  type: vmess
+  uuid: fc426675-5daa-46c0-d998-61f9f5323e3f
+  ws-opts:
+    path: /TG:@hkaa0
+- alterId: "0"
+  name: github.com/freefq - 美国CloudFlare节点 34
+  network: ws
+  port: "80"
+  server: fd.shabijichang.com
+  type: vmess
+  uuid: 81fc114e-44d7-44c7-9912-942453b03154
+  ws-opts:
+    path: /
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare节点 35
+  network: ws
+  port: "2052"
+  server: Tokyo.mfa.ee
+  type: vmess
+  uuid: 992889a7-296e-4a44-98c2-0eb89af4411d
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 广东省深圳市移动 36
   network: ws
   port: 29938
   server: rbaun-1079-v2-1.r-kcd-c.iote.bond
@@ -298,14 +355,24 @@ proxies:
   ws-opts:
     path: /je5x3pBN1vez3NQudNkB
 - alterId: "0"
-  name: github.com/freefq - 美国CloudFlare节点 30
+  name: github.com/freefq - 美国CloudFlare节点 37
   network: ws
   port: "80"
+  server: 172.64.101.98
+  type: vmess
+  uuid: f4d9baa8-9115-4f2a-8c29-d49993174bef
+  ws-opts:
+    path: /
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 美国CloudFlare节点 38
+  network: ws
+  port: 80
   server: 172.64.199.158
   type: vmess
-  uuid: 28645c6e-8ad9-44c0-8ecd-d76f8a285262
+  uuid: 2e495227-58e3-4bea-a273-7a17bd8a804b
   ws-opts:
-    path: /?ed=14501
+    path: /
 proxy-groups:
 - name: 节点选择
   proxies:
@@ -313,37 +380,45 @@ proxy-groups:
   - ✈ 手动选择
   - ✈ 故障切换
   - DIRECT
-  - 更新于:09-14 08:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞MULTACOM机房 1
+  - 更新于:09-14 12:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 北美地区  1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 3
+  - github.com/freefq - 美国Microsoft数据中心 3
   - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 4
-  - github.com/freefq - 美国CloudFlare节点 5
-  - github.com/freefq - 美国CloudFlare节点 6
-  - github.com/freefq - 美国CloudFlare节点 7
-  - github.com/freefq - 美国CloudFlare公司CDN节点 8
-  - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 美国CloudFlare公司CDN节点 10
+  - github.com/freefq - 亚太地区  5
+  - github.com/freefq - 安徽省移动 6
+  - github.com/freefq - 美国CloudFlare公司CDN节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 美国CloudFlare节点 10
   - github.com/freefq - 美国CloudFlare节点 11
   - github.com/freefq - 美国CloudFlare公司CDN节点 12
   - github.com/freefq - 美国CloudFlare公司CDN节点 13
   - github.com/freefq - 美国CloudFlare节点 14
   - github.com/freefq - 美国CloudFlare公司CDN节点 15
   - github.com/freefq - 美国CloudFlare公司CDN节点 16
-  - github.com/freefq - 美国CloudFlare节点 17
+  - github.com/freefq - 美国CloudFlare公司CDN节点 17
   - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 美国CloudFlare公司CDN节点 19
-  - github.com/freefq - 美国CloudFlare公司CDN节点 20
+  - github.com/freefq - 安徽省移动 19
+  - github.com/freefq - 美国CloudFlare节点 20
   - github.com/freefq - 美国CloudFlare公司CDN节点 21
-  - github.com/freefq - 美国CloudFlare节点 22
+  - github.com/freefq - 美国CloudFlare公司CDN节点 22
   - github.com/freefq - 美国CloudFlare节点 23
   - github.com/freefq - 美国CloudFlare节点 24
-  - github.com/freefq - 美国CloudFlare节点 25
-  - github.com/freefq - 美国CloudFlare节点 26
+  - github.com/freefq - 美国CloudFlare公司CDN节点 25
+  - github.com/freefq - 美国CloudFlare公司CDN节点 26
   - github.com/freefq - 美国CloudFlare节点 27
   - github.com/freefq - 美国CloudFlare节点 28
-  - github.com/freefq - 广东省深圳市移动 29
-  - github.com/freefq - 美国CloudFlare节点 30
+  - github.com/freefq - 美国CloudFlare节点 29
+  - github.com/freefq - 美国CloudFlare公司CDN节点 30
+  - github.com/freefq - 美国CloudFlare公司CDN节点 31
+  - github.com/freefq - 美国CloudFlare节点 32
+  - github.com/freefq - 美国CloudFlare节点 33
+  - github.com/freefq - 美国CloudFlare节点 34
+  - github.com/freefq - 美国CloudFlare节点 35
+  - github.com/freefq - 广东省深圳市移动 36
+  - github.com/freefq - 美国CloudFlare节点 37
+  - github.com/freefq - 美国CloudFlare节点 38
   type: select
 - name: 广告拦截
   proxies:
@@ -360,108 +435,132 @@ proxy-groups:
   type: select
 - name: ✈ 手动选择
   proxies:
-  - 更新于:09-14 08:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞MULTACOM机房 1
+  - 更新于:09-14 12:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 北美地区  1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 3
+  - github.com/freefq - 美国Microsoft数据中心 3
   - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 4
-  - github.com/freefq - 美国CloudFlare节点 5
-  - github.com/freefq - 美国CloudFlare节点 6
-  - github.com/freefq - 美国CloudFlare节点 7
-  - github.com/freefq - 美国CloudFlare公司CDN节点 8
-  - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 美国CloudFlare公司CDN节点 10
+  - github.com/freefq - 亚太地区  5
+  - github.com/freefq - 安徽省移动 6
+  - github.com/freefq - 美国CloudFlare公司CDN节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 美国CloudFlare节点 10
   - github.com/freefq - 美国CloudFlare节点 11
   - github.com/freefq - 美国CloudFlare公司CDN节点 12
   - github.com/freefq - 美国CloudFlare公司CDN节点 13
   - github.com/freefq - 美国CloudFlare节点 14
   - github.com/freefq - 美国CloudFlare公司CDN节点 15
   - github.com/freefq - 美国CloudFlare公司CDN节点 16
-  - github.com/freefq - 美国CloudFlare节点 17
+  - github.com/freefq - 美国CloudFlare公司CDN节点 17
   - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 美国CloudFlare公司CDN节点 19
-  - github.com/freefq - 美国CloudFlare公司CDN节点 20
+  - github.com/freefq - 安徽省移动 19
+  - github.com/freefq - 美国CloudFlare节点 20
   - github.com/freefq - 美国CloudFlare公司CDN节点 21
-  - github.com/freefq - 美国CloudFlare节点 22
+  - github.com/freefq - 美国CloudFlare公司CDN节点 22
   - github.com/freefq - 美国CloudFlare节点 23
   - github.com/freefq - 美国CloudFlare节点 24
-  - github.com/freefq - 美国CloudFlare节点 25
-  - github.com/freefq - 美国CloudFlare节点 26
+  - github.com/freefq - 美国CloudFlare公司CDN节点 25
+  - github.com/freefq - 美国CloudFlare公司CDN节点 26
   - github.com/freefq - 美国CloudFlare节点 27
   - github.com/freefq - 美国CloudFlare节点 28
-  - github.com/freefq - 广东省深圳市移动 29
-  - github.com/freefq - 美国CloudFlare节点 30
+  - github.com/freefq - 美国CloudFlare节点 29
+  - github.com/freefq - 美国CloudFlare公司CDN节点 30
+  - github.com/freefq - 美国CloudFlare公司CDN节点 31
+  - github.com/freefq - 美国CloudFlare节点 32
+  - github.com/freefq - 美国CloudFlare节点 33
+  - github.com/freefq - 美国CloudFlare节点 34
+  - github.com/freefq - 美国CloudFlare节点 35
+  - github.com/freefq - 广东省深圳市移动 36
+  - github.com/freefq - 美国CloudFlare节点 37
+  - github.com/freefq - 美国CloudFlare节点 38
   type: select
 - interval: 500
   name: ✈ 延迟最低
   proxies:
-  - 更新于:09-14 08:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞MULTACOM机房 1
+  - 更新于:09-14 12:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 北美地区  1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 3
+  - github.com/freefq - 美国Microsoft数据中心 3
   - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 4
-  - github.com/freefq - 美国CloudFlare节点 5
-  - github.com/freefq - 美国CloudFlare节点 6
-  - github.com/freefq - 美国CloudFlare节点 7
-  - github.com/freefq - 美国CloudFlare公司CDN节点 8
-  - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 美国CloudFlare公司CDN节点 10
+  - github.com/freefq - 亚太地区  5
+  - github.com/freefq - 安徽省移动 6
+  - github.com/freefq - 美国CloudFlare公司CDN节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 美国CloudFlare节点 10
   - github.com/freefq - 美国CloudFlare节点 11
   - github.com/freefq - 美国CloudFlare公司CDN节点 12
   - github.com/freefq - 美国CloudFlare公司CDN节点 13
   - github.com/freefq - 美国CloudFlare节点 14
   - github.com/freefq - 美国CloudFlare公司CDN节点 15
   - github.com/freefq - 美国CloudFlare公司CDN节点 16
-  - github.com/freefq - 美国CloudFlare节点 17
+  - github.com/freefq - 美国CloudFlare公司CDN节点 17
   - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 美国CloudFlare公司CDN节点 19
-  - github.com/freefq - 美国CloudFlare公司CDN节点 20
+  - github.com/freefq - 安徽省移动 19
+  - github.com/freefq - 美国CloudFlare节点 20
   - github.com/freefq - 美国CloudFlare公司CDN节点 21
-  - github.com/freefq - 美国CloudFlare节点 22
+  - github.com/freefq - 美国CloudFlare公司CDN节点 22
   - github.com/freefq - 美国CloudFlare节点 23
   - github.com/freefq - 美国CloudFlare节点 24
-  - github.com/freefq - 美国CloudFlare节点 25
-  - github.com/freefq - 美国CloudFlare节点 26
+  - github.com/freefq - 美国CloudFlare公司CDN节点 25
+  - github.com/freefq - 美国CloudFlare公司CDN节点 26
   - github.com/freefq - 美国CloudFlare节点 27
   - github.com/freefq - 美国CloudFlare节点 28
-  - github.com/freefq - 广东省深圳市移动 29
-  - github.com/freefq - 美国CloudFlare节点 30
+  - github.com/freefq - 美国CloudFlare节点 29
+  - github.com/freefq - 美国CloudFlare公司CDN节点 30
+  - github.com/freefq - 美国CloudFlare公司CDN节点 31
+  - github.com/freefq - 美国CloudFlare节点 32
+  - github.com/freefq - 美国CloudFlare节点 33
+  - github.com/freefq - 美国CloudFlare节点 34
+  - github.com/freefq - 美国CloudFlare节点 35
+  - github.com/freefq - 广东省深圳市移动 36
+  - github.com/freefq - 美国CloudFlare节点 37
+  - github.com/freefq - 美国CloudFlare节点 38
   type: url-test
   url: http://www.gstatic.com/generate_204
 - interval: 500
   name: ✈ 故障切换
   proxies:
-  - 更新于:09-14 08:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞MULTACOM机房 1
+  - 更新于:09-14 12:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 北美地区  1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 3
+  - github.com/freefq - 美国Microsoft数据中心 3
   - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 4
-  - github.com/freefq - 美国CloudFlare节点 5
-  - github.com/freefq - 美国CloudFlare节点 6
-  - github.com/freefq - 美国CloudFlare节点 7
-  - github.com/freefq - 美国CloudFlare公司CDN节点 8
-  - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 美国CloudFlare公司CDN节点 10
+  - github.com/freefq - 亚太地区  5
+  - github.com/freefq - 安徽省移动 6
+  - github.com/freefq - 美国CloudFlare公司CDN节点 7
+  - github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 美国CloudFlare节点 10
   - github.com/freefq - 美国CloudFlare节点 11
   - github.com/freefq - 美国CloudFlare公司CDN节点 12
   - github.com/freefq - 美国CloudFlare公司CDN节点 13
   - github.com/freefq - 美国CloudFlare节点 14
   - github.com/freefq - 美国CloudFlare公司CDN节点 15
   - github.com/freefq - 美国CloudFlare公司CDN节点 16
-  - github.com/freefq - 美国CloudFlare节点 17
+  - github.com/freefq - 美国CloudFlare公司CDN节点 17
   - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 美国CloudFlare公司CDN节点 19
-  - github.com/freefq - 美国CloudFlare公司CDN节点 20
+  - github.com/freefq - 安徽省移动 19
+  - github.com/freefq - 美国CloudFlare节点 20
   - github.com/freefq - 美国CloudFlare公司CDN节点 21
-  - github.com/freefq - 美国CloudFlare节点 22
+  - github.com/freefq - 美国CloudFlare公司CDN节点 22
   - github.com/freefq - 美国CloudFlare节点 23
   - github.com/freefq - 美国CloudFlare节点 24
-  - github.com/freefq - 美国CloudFlare节点 25
-  - github.com/freefq - 美国CloudFlare节点 26
+  - github.com/freefq - 美国CloudFlare公司CDN节点 25
+  - github.com/freefq - 美国CloudFlare公司CDN节点 26
   - github.com/freefq - 美国CloudFlare节点 27
   - github.com/freefq - 美国CloudFlare节点 28
-  - github.com/freefq - 广东省深圳市移动 29
-  - github.com/freefq - 美国CloudFlare节点 30
+  - github.com/freefq - 美国CloudFlare节点 29
+  - github.com/freefq - 美国CloudFlare公司CDN节点 30
+  - github.com/freefq - 美国CloudFlare公司CDN节点 31
+  - github.com/freefq - 美国CloudFlare节点 32
+  - github.com/freefq - 美国CloudFlare节点 33
+  - github.com/freefq - 美国CloudFlare节点 34
+  - github.com/freefq - 美国CloudFlare节点 35
+  - github.com/freefq - 广东省深圳市移动 36
+  - github.com/freefq - 美国CloudFlare节点 37
+  - github.com/freefq - 美国CloudFlare节点 38
   type: fallback
   url: http://www.gstatic.com/generate_204
 rules:
