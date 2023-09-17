@@ -5,431 +5,471 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-637.5KB/s, server: 36.137.179.162, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-173.3KB/s, server: dosg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202309302355000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
-  - {name: 中转节点-4.13MB/s, server: us1.fxzbjs.xyz, port: 15001, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 中转节点-1.33MB/s, server: m.iqiyi.win, port: 28809, type: ss, cipher: aes-256-gcm, password: 896c2e57-f594-4f30-8574-380cb516941d, udp: true}
-  - {name: 未知国家-2.09MB/s, server: vn5.4gspeed.me, port: 80, type: vmess, uuid: ab54d924-ac83-435e-b560-6b7eb66a114f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn5.4gspeed.me}}, udp: true}
   - {name: 新加坡-2.44MB/s, server: 5.44.249.42, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: BG 保加利亚, server: 91.247.37.149, port: 10631, type: vmess, uuid: af6307bc-ab48-4bcf-c575-57755aeb56f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-2.39MB/s, server: 5.44.249.43, port: 3306, type: trojan, password: 8b475d9e868e43e0, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 新加坡-346.1KB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 7ac49a893e0bd10c, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 香港-3.49MB/s, server: 8.210.128.146, port: 36788, type: vmess, uuid: 34ae890c-eada-4160-f7ba-a2d9fba215af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 中转节点-2.33MB/s, server: 16.kccic2pa.xyz, port: 50016, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-2.60MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 70face6dd320ea29, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 新加坡-2.62MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 2a5ccc8198d4af09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-3.25MB/s, server: gg.58n.net, port: 21247, type: trojan, password: 4c8f4d81-79b5-31da-b2f9-fe6fb26326f0, sni: x91.flybar.work, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-915.4KB/s, server: yd.559xp5.cn, port: 18828, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yd.559xp5.cn}}, udp: true}
-  - {name: 中转节点-9.28MB/s, server: aca-ct-gz-2g-1.cfprefer1.xyz, port: 14337, type: ss, cipher: aes-256-gcm, password: a845f902-f4d2-44e8-b774-aea733ae3e48, udp: true}
-  - {name: 中转节点-10.02MB/s, server: icu.cloudff.top, port: 45715, type: vmess, uuid: bf12177e-0920-4efc-ae60-19ff9a660dc7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-1.35MB/s, server: 45.11.104.94, port: 3306, type: trojan, password: 182228812d1e0f23, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 香港-3.53MB/s, server: 45.11.104.94, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%2Fgateway%2Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-6.94MB/s, server: sg2.fxzbjs.xyz, port: 15018, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 美国-257.0KB/s, server: 156.225.67.23, port: 51181, type: vmess, uuid: 375e70f0-5d46-476f-8d69-0fb35c5548a9, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-7.83MB/s, server: hk3.fxzbjs.xyz, port: 15015, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 中转节点-4.38MB/s, server: gg.58n.net, port: 45168, type: trojan, password: bbd45e13-173f-395b-a25a-3ce693bc4693, sni: z263.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 未知国家-340.8KB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: lv3.sharecentrepro.org}}, udp: true}
-  - {name: 未知国家-2.12MB/s, server: vn3.4gspeed.me, port: 443, type: vmess, uuid: ab54d924-ac83-435e-b560-6b7eb66a114f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn3.4gspeed.me}}, udp: true}
-  - {name: 中转节点-16.31MB/s, server: icu.cloudff.top, port: 45715, type: vmess, uuid: bb3390fc-9830-4a51-8a27-606097a61582, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 未知国家-2.35MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: de.ilovescp.com}}, udp: true}
-  - {name: 韩国-269.8KB/s, server: fell.gougouvpn.xyz, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: f73092f3-6a42-46a3-8953-c629620b8ef8, udp: true}
-  - {name: 中转节点-535.7KB/s, server: 183.232.170.32, port: 30005, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 美国-1.39MB/s, server: 134.195.101.33, port: 3306, type: trojan, password: 7b06d22a8a7c764f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 新加坡-1.86MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 8b475d9e868e43e0, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 美国-2.02MB/s, server: 216.52.183.244, port: 443, type: ss, cipher: aes-128-gcm, password: 83XvX4Vo%*3a, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-5.57MB/s, server: yd.qianggewangluo.buzz, port: 10806, type: ss, cipher: chacha20-ietf-poly1305, password: 2144790a-2ec5-4388-b56f-4edcfb14cda4, udp: true}
-  - {name: 新加坡-470.2KB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 0cc6b4268dea0ba8, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 美国-926.1KB/s, server: 45.199.138.145, port: 49922, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 未知国家-5.23MB/s, server: v157.runba.gq, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /frfrfffvmn01N, headers: {Host: v157.runba.gq}}, udp: true}
-  - {name: 香港-241.6KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 新加坡-930.6KB/s, server: 5.44.249.52, port: 3306, type: trojan, password: 0cc6b4268dea0ba8, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-11.57MB/s, server: gg.58n.net, port: 33323, type: trojan, password: 4c8f4d81-79b5-31da-b2f9-fe6fb26326f0, sni: z261.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-823.9KB/s, server: 36.137.179.162, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-3.00MB/s, server: mall.iqiyi.win, port: 28829, type: ss, cipher: aes-256-gcm, password: 46b4e640-903e-4ad5-a8b9-0c6ed7ceaf8e, udp: true}
-  - {name: 中转节点-5.23MB/s, server: gg.58n.net, port: 20288, type: trojan, password: bbd45e13-173f-395b-a25a-3ce693bc4693, sni: z288.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.17MB/s, server: icu.cloudff.top, port: 37313, type: vmess, uuid: 61975684-acee-4f18-9648-f6bf757a5325, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 韩国-401.1KB/s, server: 13.124.195.108, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-691.4KB/s, server: yd.559xp5.cn, port: 18812, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yd.559xp5.cn}}, udp: true}
-  - {name: 新加坡-1.04MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 8b475d9e868e43e0, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-1.67MB/s, server: gg.58n.net, port: 20076, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: x76.flybar.work, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-2.24MB/s, server: 5.44.249.44, port: 3306, type: trojan, password: 7ac49a893e0bd10c, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 美国-3.12MB/s, server: do.us.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202309302355000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
-  - {name: 日本-578.8KB/s, server: 1gzdx2.156786.xyz, port: 37905, type: trojan, password: 98bae868-4f00-40e0-9603-8d848644ec44, sni: hkmax06.170203.xyz, skip-cert-verify: true, udp: true}
-  - {name: 韩国-3.50MB/s, server: 13.124.195.108, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-10.99MB/s, server: gg.58n.net, port: 36821, type: trojan, password: bbd45e13-173f-395b-a25a-3ce693bc4693, sni: z262.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-3.19MB/s, server: gg.58n.net, port: 25238, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z267.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-1.20MB/s, server: 07.kccic2pa.xyz, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-887.9KB/s, server: 5.44.249.44, port: 3306, type: trojan, password: 2a5ccc8198d4af09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-2.48MB/s, server: gg.58n.net, port: 11215, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z268.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 台湾-1.19MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: b09d2aaa443af97a, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 香港-361.7KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 美国-1.09MB/s, server: sg.wyhkaa0.cf, port: 80, type: vmess, uuid: 0ba28c05-7bd9-4cad-c329-482386a8e7a3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /TG:@hkaa0, headers: {Host: sg.wyhkaa0.cf}}, udp: true}
   - {name: 中转节点-10.31MB/s, server: aca-ct-js-2g-1.cfprefer1.xyz, port: 12994, type: ss, cipher: aes-256-gcm, password: a845f902-f4d2-44e8-b774-aea733ae3e48, udp: true}
-  - {name: 美国-2.32MB/s, server: sbl3.shabijichang.com, port: 80, type: vmess, uuid: 52cce261-ff53-439a-b97d-f36201842cdb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sbl3.shabijichang.com}}, udp: true}
-  - {name: 未知国家-6.59MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: buyvm5.ilovescp.com}}, udp: true}
-  - {name: 新加坡-2.48MB/s, server: 5.44.249.52, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-4.79MB/s, server: hk1.fxzbjs.xyz, port: 15013, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 香港-361.7KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-789.0KB/s, server: us1.fxzbjs.xyz, port: 15001, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 美国-644.5KB/s, server: wi.saintink.eu.org, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /vuk2.0bad.com/chat, headers: {Host: sub2.saintink.eu.org}}, udp: true}
+  - {name: 中转节点-10.99MB/s, server: gg.58n.net, port: 36821, type: trojan, password: bbd45e13-173f-395b-a25a-3ce693bc4693, sni: z262.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 香港-1.55MB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-1.67MB/s, server: gg.58n.net, port: 20076, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: x76.flybar.work, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-956.2KB/s, server: dx.559xp5.cn, port: 18805, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dx.559xp5.cn}}, udp: true}
+  - {name: BG 保加利亚, server: 91.247.37.149, port: 10631, type: vmess, uuid: af6307bc-ab48-4bcf-c575-57755aeb56f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 未知国家-5.23MB/s, server: v157.runba.gq, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /frfrfffvmn01N, headers: {Host: v157.runba.gq}}, udp: true}
+  - {name: 台湾-4.49MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-5.66MB/s, server: aca-ct-js-2g-1.cfprefer1.xyz, port: 25818, type: ss, cipher: aes-256-gcm, password: a845f902-f4d2-44e8-b774-aea733ae3e48, udp: true}
+  - {name: 台湾-2.01MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-3.66MB/s, server: gg.58n.net, port: 28678, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z143.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-1.04MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 8b475d9e868e43e0, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 美国-1.09MB/s, server: sg.wyhkaa0.cf, port: 80, type: vmess, uuid: 0ba28c05-7bd9-4cad-c329-482386a8e7a3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /TG:@hkaa0, headers: {Host: sg.wyhkaa0.cf}}, udp: true}
+  - {name: 香港-241.6KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-5.51MB/s, server: 134.195.101.33, port: 3306, type: trojan, password: 7b06d22a8a7c764f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 美国-257.0KB/s, server: 156.225.67.23, port: 51181, type: vmess, uuid: 375e70f0-5d46-476f-8d69-0fb35c5548a9, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 美国-1.39MB/s, server: 134.195.101.33, port: 3306, type: trojan, password: 7b06d22a8a7c764f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 新加坡-2.24MB/s, server: 5.44.249.44, port: 3306, type: trojan, password: 7ac49a893e0bd10c, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 日本-347.2KB/s, server: tg_mfbpn.52vpn.eu.org, port: 61016, type: trojan, password: 2ffcc777-9342-32ea-a0dc-c2e4ea8dd3eb, sni: tg_mfbpn.52vpn.eu.org, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-5.23MB/s, server: gg.58n.net, port: 20288, type: trojan, password: bbd45e13-173f-395b-a25a-3ce693bc4693, sni: z288.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-2.62MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 2a5ccc8198d4af09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-1.20MB/s, server: 07.kccic2pa.xyz, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 未知国家-2.11MB/s, server: vn3.4gspeed.me, port: 80, type: vmess, uuid: ab54d924-ac83-435e-b560-6b7eb66a114f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn3.4gspeed.me}}, udp: true}
+  - {name: 中转节点-4.13MB/s, server: us1.fxzbjs.xyz, port: 15001, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 中转节点-5.69MB/s, server: us1.linghun3.xyz, port: 40006, type: ss, cipher: aes-128-gcm, password: 6ad81499-6512-422b-afdf-6ec26ba6d703, udp: true}
+  - {name: 中转节点-9.46MB/s, server: jp4.fxzbjs.xyz, port: 15010, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 香港-1.35MB/s, server: 45.11.104.94, port: 3306, type: trojan, password: 182228812d1e0f23, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 香港-759.0KB/s, server: 43.240.12.20, port: 443, type: ss, cipher: aes-256-gcm, password: f43b83c417bf, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jye45.jncqhjd.com, path: /ryhxoftxyra, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 新加坡-930.6KB/s, server: 5.44.249.52, port: 3306, type: trojan, password: 0cc6b4268dea0ba8, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-823.9KB/s, server: 36.137.179.162, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.17MB/s, server: icu.cloudff.top, port: 37313, type: vmess, uuid: 61975684-acee-4f18-9648-f6bf757a5325, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-3.53MB/s, server: 45.11.104.94, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%2Fgateway%2Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 新加坡-887.9KB/s, server: 5.44.249.44, port: 3306, type: trojan, password: 2a5ccc8198d4af09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 新加坡-2.60MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 70face6dd320ea29, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 美国-926.1KB/s, server: 45.199.138.145, port: 49922, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-1.07MB/s, server: 36.140.102.11, port: 50016, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.33MB/s, server: 16.kccic2pa.xyz, port: 50016, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 美国-1.56MB/s, server: 192.74.234.210, port: 41015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-470.2KB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 0cc6b4268dea0ba8, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-511.3KB/s, server: 07.kccic2pa.xyz, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-7.00MB/s, server: jp3.fxzbjs.xyz, port: 15009, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 中转节点-5.57MB/s, server: yd.qianggewangluo.buzz, port: 10806, type: ss, cipher: chacha20-ietf-poly1305, password: 2144790a-2ec5-4388-b56f-4edcfb14cda4, udp: true}
+  - {name: 中转节点-3.25MB/s, server: gg.58n.net, port: 21247, type: trojan, password: 4c8f4d81-79b5-31da-b2f9-fe6fb26326f0, sni: x91.flybar.work, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-1.33MB/s, server: m.iqiyi.win, port: 28809, type: ss, cipher: aes-256-gcm, password: 896c2e57-f594-4f30-8574-380cb516941d, udp: true}
+  - {name: 未知国家-2.12MB/s, server: vn3.4gspeed.me, port: 443, type: vmess, uuid: ab54d924-ac83-435e-b560-6b7eb66a114f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn3.4gspeed.me}}, udp: true}
+  - {name: 香港-6.15MB/s, server: ap-east-hkt.lnaspiring.com, port: 7053, type: trojan, password: 02b0a9df-2961-4a95-8136-613f1adb9135, sni: ap-east-cht.lnaspiring.com, skip-cert-verify: true, udp: true}
+  - {name: 美国-2.02MB/s, server: 216.52.183.244, port: 443, type: ss, cipher: aes-128-gcm, password: 83XvX4Vo%*3a, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 中转节点-5.24MB/s, server: sg2.fxzbjs.xyz, port: 15018, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 中转节点-504.4KB/s, server: 36.140.102.11, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 韩国-2.29MB/s, server: fell.gougouvpn.xyz, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: f73092f3-6a42-46a3-8953-c629620b8ef8, udp: true}
+  - {name: 美国-2.92MB/s, server: 45.199.138.145, port: 49922, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-9.28MB/s, server: aca-ct-gz-2g-1.cfprefer1.xyz, port: 14337, type: ss, cipher: aes-256-gcm, password: a845f902-f4d2-44e8-b774-aea733ae3e48, udp: true}
+  - {name: 新加坡-2.52MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 7b06d22a8a7c764f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 台湾-3.51MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: b84d16a244460e09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 新加坡-346.1KB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 7ac49a893e0bd10c, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 美国-2.32MB/s, server: sbl3.shabijichang.com, port: 80, type: vmess, uuid: 52cce261-ff53-439a-b97d-f36201842cdb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sbl3.shabijichang.com}}, udp: true}
+  - {name: 香港-686.1KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 未知国家-2.51MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: buyvm5.ilovescp.com}}, udp: true}
+  - {name: 中转节点-3.68MB/s, server: gg.58n.net, port: 20279, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z279.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-173.3KB/s, server: dosg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202309302355000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
+  - {name: 新加坡-2.48MB/s, server: 5.44.249.52, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 美国-690.1KB/s, server: 107.148.6.53, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/143534141104, headers: {Host: www.56628205.xyz}}, udp: true}
+  - {name: 美国-1.26MB/s, server: 45.199.138.145, port: 49922, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-1.86MB/s, server: 5.44.249.53, port: 3306, type: trojan, password: 8b475d9e868e43e0, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 台湾-1.19MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: b09d2aaa443af97a, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 未知国家-2.09MB/s, server: vn5.4gspeed.me, port: 80, type: vmess, uuid: ab54d924-ac83-435e-b560-6b7eb66a114f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn5.4gspeed.me}}, udp: true}
+  - {name: 中转节点-433.0KB/s, server: yd.559xp5.cn, port: 18831, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yd.559xp5.cn}}, udp: true}
+  - {name: 新加坡-490.7KB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 5227e84e4f026b71, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 未知国家-2.35MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: de.ilovescp.com}}, udp: true}
+  - {name: 中转节点-6.94MB/s, server: sg2.fxzbjs.xyz, port: 15018, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 新加坡-1.95MB/s, server: 5.44.249.44, port: 3306, type: trojan, password: b09d2aaa443af97a, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-10.02MB/s, server: icu.cloudff.top, port: 45715, type: vmess, uuid: bf12177e-0920-4efc-ae60-19ff9a660dc7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 韩国-3.50MB/s, server: 13.124.195.108, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 韩国-401.1KB/s, server: 13.124.195.108, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 韩国-269.8KB/s, server: fell.gougouvpn.xyz, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: f73092f3-6a42-46a3-8953-c629620b8ef8, udp: true}
+  - {name: 新加坡-212.5KB/s, server: 5.44.249.42, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%2Fgateway%2Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
   - {name: 未知国家-4.92MB/s, server: sg1.wyhkaa0.cf, port: 80, type: vmess, uuid: f4575c03-8145-4612-a1b2-7a48117f6fc2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /TG:@hkaa0, headers: {Host: sg1.wyhkaa0.cf}}, udp: true}
   - {name: 台湾-3.43MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: 182228812d1e0f23, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 香港-403.6KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 未知国家-823.1KB/s, server: vn3.4gspeed.me, port: 80, type: vmess, uuid: a707096e-2eed-4556-8ced-f2801c0ca8c3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn3.4gspeed.me}}, udp: true}
-  - {name: 美国-5.51MB/s, server: 134.195.101.33, port: 3306, type: trojan, password: 7b06d22a8a7c764f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 新加坡-1008.9KB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 3febb05ea76a940f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-956.2KB/s, server: dx.559xp5.cn, port: 18805, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dx.559xp5.cn}}, udp: true}
-  - {name: 新加坡-1.95MB/s, server: 5.44.249.44, port: 3306, type: trojan, password: b09d2aaa443af97a, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 台湾-4.49MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-7.00MB/s, server: jp3.fxzbjs.xyz, port: 15009, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 中转节点-5.69MB/s, server: us1.linghun3.xyz, port: 40006, type: ss, cipher: aes-128-gcm, password: 6ad81499-6512-422b-afdf-6ec26ba6d703, udp: true}
-  - {name: 香港-6.15MB/s, server: ap-east-hkt.lnaspiring.com, port: 7053, type: trojan, password: 02b0a9df-2961-4a95-8136-613f1adb9135, sni: ap-east-cht.lnaspiring.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-2.40MB/s, server: 5.44.249.42, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: BG 保加利亚 2, server: 91.247.37.149, port: 10631, type: vmess, uuid: af6307bc-ab48-4bcf-c575-57755aeb56f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-686.1KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-1.07MB/s, server: 36.140.102.11, port: 50016, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-4.79MB/s, server: hk1.fxzbjs.xyz, port: 15013, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 台湾-3.51MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: b84d16a244460e09, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-3.68MB/s, server: gg.58n.net, port: 20279, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z279.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-9.46MB/s, server: jp4.fxzbjs.xyz, port: 15010, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 新加坡-2.52MB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 7b06d22a8a7c764f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 中转节点-433.0KB/s, server: yd.559xp5.cn, port: 18831, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yd.559xp5.cn}}, udp: true}
-  - {name: 美国-1.26MB/s, server: 45.199.138.145, port: 49922, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-212.5KB/s, server: 5.44.249.42, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%2Fgateway%2Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 新加坡-490.7KB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 5227e84e4f026b71, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 未知国家-3.79MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: buyvm3.ilovescp.com}}, udp: true}
-  - {name: 中转节点-511.3KB/s, server: 07.kccic2pa.xyz, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.39MB/s, server: 07.kccic2pa.xyz, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-11.57MB/s, server: gg.58n.net, port: 33323, type: trojan, password: 4c8f4d81-79b5-31da-b2f9-fe6fb26326f0, sni: z261.hongkongnode.top, skip-cert-verify: true, udp: true}
   - {name: 中转节点-12.59MB/s, server: gg.58n.net, port: 20129, type: trojan, password: 4c8f4d81-79b5-31da-b2f9-fe6fb26326f0, sni: x129.flybar.work, skip-cert-verify: true, udp: true}
-  - {name: 美国-644.5KB/s, server: wi.saintink.eu.org, port: 443, type: vmess, uuid: 927094d3-d678-4763-8591-e240d0bcae87, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /vuk2.0bad.com/chat, headers: {Host: sub2.saintink.eu.org}}, udp: true}
-  - {name: 中转节点-789.0KB/s, server: us1.fxzbjs.xyz, port: 15001, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
-  - {name: 中转节点-3.66MB/s, server: gg.58n.net, port: 28678, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z143.hongkongnode.top, skip-cert-verify: true, udp: true}
-  - {name: 台湾-2.01MB/s, server: 60.248.114.188, port: 3306, type: trojan, password: d02058f4f819dced, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
-  - {name: 韩国-2.29MB/s, server: fell.gougouvpn.xyz, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: f73092f3-6a42-46a3-8953-c629620b8ef8, udp: true}
+  - {name: 新加坡-2.39MB/s, server: 5.44.249.43, port: 3306, type: trojan, password: 8b475d9e868e43e0, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-16.31MB/s, server: icu.cloudff.top, port: 45715, type: vmess, uuid: bb3390fc-9830-4a51-8a27-606097a61582, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-403.6KB/s, server: 8.210.119.75, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-730.6KB/s, server: 80.92.205.254, port: 80, type: ss, cipher: chacha20-ietf-poly1305, password: RbFACM4jlr9OVR1z2dnO8I, udp: true}
+  - {name: 中转节点-535.7KB/s, server: 183.232.170.32, port: 30005, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
+  - {name: 未知国家-823.1KB/s, server: vn3.4gspeed.me, port: 80, type: vmess, uuid: a707096e-2eed-4556-8ced-f2801c0ca8c3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4gspeed.me, headers: {Host: vn3.4gspeed.me}}, udp: true}
+  - {name: 中转节点-691.4KB/s, server: yd.559xp5.cn, port: 18812, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yd.559xp5.cn}}, udp: true}
+  - {name: 香港-3.49MB/s, server: 8.210.128.146, port: 36788, type: vmess, uuid: 34ae890c-eada-4160-f7ba-a2d9fba215af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美国-3.19MB/s, server: 198.200.56.82, port: 47862, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.39MB/s, server: 07.kccic2pa.xyz, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 未知国家-6.59MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: buyvm5.ilovescp.com}}, udp: true}
+  - {name: 中转节点-2.48MB/s, server: gg.58n.net, port: 11215, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z268.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-2.40MB/s, server: 5.44.249.42, port: 3306, type: trojan, password: 36fe28a331638747, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
+  - {name: 中转节点-3.19MB/s, server: gg.58n.net, port: 25238, type: trojan, password: f9dbd9fa-4801-389b-b8c9-6249fbedd16b, sni: z267.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-504.4KB/s, server: 36.140.102.11, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-3.26MB/s, server: 110.72.99.118, port: 3306, type: trojan, password: 3febb05ea76a940f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
   - {name: 未知国家-3.45MB/s, server: sg1.wyhkaa0.cf, port: 80, type: vmess, uuid: f4575c03-8145-4612-a1b2-7a48117f6fc2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /TG:@hkaa0, headers: {Host: sg1.wyhkaa0.cf}}, udp: true}
-  - {name: 未知国家-2.51MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: buyvm5.ilovescp.com}}, udp: true}
+  - {name: 未知国家-3.79MB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: buyvm3.ilovescp.com}}, udp: true}
+  - {name: 未知国家-340.8KB/s, server: cf-lt.sharecentre.online, port: 80, type: vmess, uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: lv3.sharecentrepro.org}}, udp: true}
+  - {name: 中转节点-3.00MB/s, server: mall.iqiyi.win, port: 28829, type: ss, cipher: aes-256-gcm, password: 46b4e640-903e-4ad5-a8b9-0c6ed7ceaf8e, udp: true}
+  - {name: 日本-578.8KB/s, server: 1gzdx2.156786.xyz, port: 37905, type: trojan, password: 98bae868-4f00-40e0-9603-8d848644ec44, sni: hkmax06.170203.xyz, skip-cert-verify: true, udp: true}
+  - {name: 美国-3.12MB/s, server: do.us.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202309302355000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
+  - {name: BG 保加利亚 2, server: 91.247.37.149, port: 10631, type: vmess, uuid: af6307bc-ab48-4bcf-c575-57755aeb56f6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-637.5KB/s, server: 36.137.179.162, port: 50007, type: vmess, uuid: 5d4da405-51e6-4fc9-906f-e5fdd66ef72b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-7.83MB/s, server: hk3.fxzbjs.xyz, port: 15015, type: ss, cipher: chacha20-ietf-poly1305, password: e698fbda-78cc-4daf-926c-3f2742974683, udp: true}
+  - {name: 中转节点-4.38MB/s, server: gg.58n.net, port: 45168, type: trojan, password: bbd45e13-173f-395b-a25a-3ce693bc4693, sni: z263.hongkongnode.top, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-915.4KB/s, server: yd.559xp5.cn, port: 18828, type: vmess, uuid: 24adcbe4-b1ba-3821-a65d-8cf1d3d74ae5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yd.559xp5.cn}}, udp: true}
+  - {name: 新加坡-1008.9KB/s, server: 5.44.249.50, port: 3306, type: trojan, password: 3febb05ea76a940f, sni: n2.gladns.com, skip-cert-verify: true, network: ws, ws-opts: {path: "%252Fgateway%252Fconnect", headers: {Host: n2.gladns.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -448,448 +488,490 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-3.49MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 香港-241.6KB/s
-      - 台湾-1.19MB/s
       - 香港-361.7KB/s
+      - 香港-1.55MB/s
+      - 台湾-4.49MB/s
+      - 台湾-2.01MB/s
+      - 香港-241.6KB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 香港-3.53MB/s
+      - 香港-6.15MB/s
+      - 台湾-3.51MB/s
+      - 香港-686.1KB/s
+      - 台湾-1.19MB/s
       - 台湾-3.43MB/s
       - 香港-403.6KB/s
-      - 台湾-4.49MB/s
-      - 香港-6.15MB/s
-      - 香港-686.1KB/s
-      - 台湾-3.51MB/s
-      - 台湾-2.01MB/s
+      - 香港-3.49MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -905,108 +987,118 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-637.5KB/s
-      - 新加坡-173.3KB/s
-      - 中转节点-4.13MB/s
-      - 中转节点-1.33MB/s
-      - 未知国家-2.09MB/s
       - 新加坡-2.44MB/s
-      - BG 保加利亚
-      - 新加坡-2.39MB/s
-      - 新加坡-346.1KB/s
-      - 香港-3.49MB/s
-      - 中转节点-2.33MB/s
-      - 新加坡-2.60MB/s
-      - 新加坡-2.62MB/s
-      - 中转节点-3.25MB/s
-      - 中转节点-915.4KB/s
-      - 中转节点-9.28MB/s
-      - 中转节点-10.02MB/s
-      - 香港-1.35MB/s
-      - 香港-3.53MB/s
-      - 中转节点-6.94MB/s
-      - 美国-257.0KB/s
-      - 中转节点-7.83MB/s
-      - 中转节点-4.38MB/s
-      - 未知国家-340.8KB/s
-      - 未知国家-2.12MB/s
-      - 中转节点-16.31MB/s
-      - 未知国家-2.35MB/s
-      - 韩国-269.8KB/s
-      - 中转节点-535.7KB/s
-      - 美国-1.39MB/s
-      - 新加坡-1.86MB/s
-      - 美国-2.02MB/s
-      - 中转节点-5.57MB/s
-      - 新加坡-470.2KB/s
-      - 美国-926.1KB/s
-      - 未知国家-5.23MB/s
-      - 香港-241.6KB/s
-      - 新加坡-930.6KB/s
-      - 中转节点-11.57MB/s
-      - 中转节点-823.9KB/s
-      - 中转节点-3.00MB/s
-      - 中转节点-5.23MB/s
-      - 中转节点-2.17MB/s
-      - 韩国-401.1KB/s
-      - 中转节点-691.4KB/s
-      - 新加坡-1.04MB/s
-      - 中转节点-1.67MB/s
-      - 新加坡-2.24MB/s
-      - 美国-3.12MB/s
-      - 日本-578.8KB/s
-      - 韩国-3.50MB/s
-      - 中转节点-10.99MB/s
-      - 中转节点-3.19MB/s
-      - 中转节点-1.20MB/s
-      - 新加坡-887.9KB/s
-      - 中转节点-2.48MB/s
-      - 台湾-1.19MB/s
-      - 香港-361.7KB/s
-      - 美国-1.09MB/s
       - 中转节点-10.31MB/s
-      - 美国-2.32MB/s
-      - 未知国家-6.59MB/s
-      - 新加坡-2.48MB/s
+      - 中转节点-4.79MB/s
+      - 香港-361.7KB/s
+      - 中转节点-789.0KB/s
+      - 美国-644.5KB/s
+      - 中转节点-10.99MB/s
+      - 香港-1.55MB/s
+      - 中转节点-1.67MB/s
+      - 中转节点-956.2KB/s
+      - BG 保加利亚
+      - 未知国家-5.23MB/s
+      - 台湾-4.49MB/s
+      - 中转节点-5.66MB/s
+      - 台湾-2.01MB/s
+      - 中转节点-3.66MB/s
+      - 新加坡-1.04MB/s
+      - 美国-1.09MB/s
+      - 香港-241.6KB/s
+      - 美国-5.51MB/s
+      - 美国-257.0KB/s
+      - 美国-1.39MB/s
+      - 新加坡-2.24MB/s
+      - 日本-347.2KB/s
+      - 中转节点-5.23MB/s
+      - 新加坡-2.62MB/s
+      - 中转节点-1.20MB/s
+      - 未知国家-2.11MB/s
+      - 中转节点-4.13MB/s
+      - 中转节点-5.69MB/s
+      - 中转节点-9.46MB/s
+      - 香港-1.35MB/s
+      - 香港-759.0KB/s
+      - 新加坡-930.6KB/s
+      - 中转节点-823.9KB/s
+      - 中转节点-2.17MB/s
+      - 香港-3.53MB/s
+      - 新加坡-887.9KB/s
+      - 新加坡-2.60MB/s
+      - 美国-926.1KB/s
+      - 中转节点-1.07MB/s
+      - 中转节点-2.33MB/s
       - 美国-1.56MB/s
+      - 新加坡-470.2KB/s
+      - 中转节点-511.3KB/s
+      - 中转节点-7.00MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-3.25MB/s
+      - 中转节点-1.33MB/s
+      - 未知国家-2.12MB/s
+      - 香港-6.15MB/s
+      - 美国-2.02MB/s
       - 中转节点-5.24MB/s
-      - 中转节点-504.4KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.92MB/s
+      - 中转节点-9.28MB/s
+      - 新加坡-2.52MB/s
+      - 台湾-3.51MB/s
+      - 新加坡-346.1KB/s
+      - 美国-2.32MB/s
+      - 香港-686.1KB/s
+      - 未知国家-2.51MB/s
+      - 中转节点-3.68MB/s
+      - 新加坡-173.3KB/s
+      - 新加坡-2.48MB/s
+      - 美国-690.1KB/s
+      - 美国-1.26MB/s
+      - 新加坡-1.86MB/s
+      - 台湾-1.19MB/s
+      - 未知国家-2.09MB/s
+      - 中转节点-433.0KB/s
+      - 新加坡-490.7KB/s
+      - 未知国家-2.35MB/s
+      - 中转节点-6.94MB/s
+      - 新加坡-1.95MB/s
+      - 中转节点-10.02MB/s
+      - 韩国-3.50MB/s
+      - 韩国-401.1KB/s
+      - 韩国-269.8KB/s
+      - 新加坡-212.5KB/s
       - 未知国家-4.92MB/s
       - 台湾-3.43MB/s
-      - 香港-403.6KB/s
-      - 未知国家-823.1KB/s
-      - 美国-5.51MB/s
-      - 新加坡-1008.9KB/s
-      - 中转节点-956.2KB/s
-      - 新加坡-1.95MB/s
-      - 台湾-4.49MB/s
-      - 中转节点-7.00MB/s
-      - 中转节点-5.69MB/s
-      - 香港-6.15MB/s
-      - 新加坡-2.40MB/s
-      - BG 保加利亚 2
-      - 香港-686.1KB/s
-      - 中转节点-1.07MB/s
-      - 中转节点-4.79MB/s
-      - 台湾-3.51MB/s
-      - 中转节点-3.68MB/s
-      - 中转节点-9.46MB/s
-      - 新加坡-2.52MB/s
-      - 中转节点-433.0KB/s
-      - 美国-1.26MB/s
-      - 新加坡-212.5KB/s
-      - 新加坡-490.7KB/s
-      - 未知国家-3.79MB/s
-      - 中转节点-511.3KB/s
-      - 中转节点-2.39MB/s
+      - 中转节点-11.57MB/s
       - 中转节点-12.59MB/s
-      - 美国-644.5KB/s
-      - 中转节点-789.0KB/s
-      - 中转节点-3.66MB/s
-      - 台湾-2.01MB/s
-      - 韩国-2.29MB/s
+      - 新加坡-2.39MB/s
+      - 中转节点-16.31MB/s
+      - 香港-403.6KB/s
+      - 美国-730.6KB/s
+      - 中转节点-535.7KB/s
+      - 未知国家-823.1KB/s
+      - 中转节点-691.4KB/s
+      - 香港-3.49MB/s
+      - 美国-3.19MB/s
+      - 中转节点-2.39MB/s
+      - 未知国家-6.59MB/s
+      - 中转节点-2.48MB/s
+      - 新加坡-2.40MB/s
+      - 中转节点-3.19MB/s
+      - 中转节点-504.4KB/s
+      - 中转节点-3.26MB/s
       - 未知国家-3.45MB/s
-      - 未知国家-2.51MB/s
+      - 未知国家-3.79MB/s
+      - 未知国家-340.8KB/s
+      - 中转节点-3.00MB/s
+      - 日本-578.8KB/s
+      - 美国-3.12MB/s
+      - BG 保加利亚 2
+      - 中转节点-637.5KB/s
+      - 中转节点-7.83MB/s
+      - 中转节点-4.38MB/s
+      - 中转节点-915.4KB/s
+      - 新加坡-1008.9KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
