@@ -5,35 +5,45 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-4.48MB/s, server: 36.137.198.90, port: 10826, type: trojan, password: f69fc884-44f6-4ff1-939b-e34a55d49a4d, sni: alibaba-node.cn, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-5.58MB/s, server: 27055f76.ens4.buzz, port: 34856, type: ss, cipher: aes-256-gcm, password: b69dc5bf-dfb1-43b3-b6c1-6bb154cf1b0e, udp: true}
-  - {name: 中转节点-137.0KB/s, server: 39.164.141.104, port: 40350, type: trojan, password: ff0675b0-c665-3d69-800b-f7fc29e1ead8, sni: chaosujp.ccoo520.xyz, skip-cert-verify: true, udp: true}
   - {name: 日本-274.3KB/s, server: cfzzo.starnetcn.top, port: 30092, type: vmess, uuid: 95e3c4c4-5540-4b2e-ac07-a7505f4a9313, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /1c1123, headers: {Host: 127.0.0.1}}, udp: true}
   - {name: 日本-179.2KB/s, server: pqawsjp1.aiopen.cfd, port: 443, type: trojan, password: 36606545-bc8b-4152-a751-3f0957318bd9, sni: 18-140-66-207.nhost.00cdn.com, skip-cert-verify: true, udp: true}
   - {name: 中转节点-4.87MB/s, server: 36.137.198.8, port: 10819, type: trojan, password: 642e54bf-542f-4c30-9c29-e110587266d8, sni: alibaba-node.cn, skip-cert-verify: true, udp: true}
-  - {name: 韩国-574.3KB/s, server: 152.67.201.73, port: 443, type: vmess, uuid: 3b86c4fa-bc53-4067-8d1c-275cff02d91b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sometimesnaive, headers: {Host: 3.wuxianliulianng.xyz}}, udp: true}
-  - {name: 日本-2.31MB/s, server: 18.181.214.171, port: 443, type: trojan, password: 36606545-bc8b-4152-a751-3f0957318bd9, sni: 18-140-66-207.nhost.00cdn.com, skip-cert-verify: true, udp: true}
-  - {name: 英国-146.3KB/s, server: 141.147.65.92, port: 80, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gb-one.1234585.xyz}}, udp: true}
-  - {name: 韩国-485.0KB/s, server: 146.56.104.210, port: 443, type: vmess, uuid: 3b86c4fa-bc53-4067-8d1c-275cff02d91b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /mp4, headers: {Host: 5.wuxianliulianng.xyz}}, udp: true}
-  - {name: 未知国家-154.8KB/s, server: 104.16.68.38, port: 2052, type: vmess, uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: lu.wx.alue.link}}, udp: true}
-  - {name: 韩国-2.29MB/s, server: 146.56.135.32, port: 26961, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: xiongda006.daxiongda.top}}, udp: true}
-  - {name: 英国-270.4KB/s, server: 18.168.51.228, port: 22222, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-141.8KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: bc230344-14d9-4922-9fb7-2e6513c5593e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
-  - {name: 中转节点-115.5KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: a824a85c-4bb0-4ab3-9d8a-bf9b02d9b20c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
-  - {name: 中转节点-306.2KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: bc230344-14d9-4922-9fb7-2e6513c5593e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
-  - {name: 台湾-631.6KB/s, server: 36.233.234.108, port: 443, type: vmess, uuid: 7bcd1b11-ac49-40f7-9197-4df867192564, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /vbub3, headers: {Host: ub3.kq1.dynu.net}}, udp: true}
-  - {name: 中转节点-2.50MB/s, server: 183.232.170.32, port: 30007, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-11.32MB/s, server: e556d09a.ens4.buzz, port: 27274, type: ss, cipher: aes-256-gcm, password: b69dc5bf-dfb1-43b3-b6c1-6bb154cf1b0e, udp: true}
-  - {name: 美国-1.19MB/s, server: 24.199.111.70, port: 22222, type: vmess, uuid: 2ef8e4ba-187d-4d50-d1eb-99ae641e3df8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 美国-3.47MB/s, server: 139.28.232.223, port: 80, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us-one.1234585.xyz}}, udp: true}
-  - {name: 日本-171.6KB/s, server: cfzzo.starnetcn.top, port: 30091, type: vmess, uuid: 95e3c4c4-5540-4b2e-ac07-a7505f4a9313, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /1c1123, headers: {Host: 168.138.47.178}}, udp: true}
-  - {name: 美国-170.1KB/s, server: 104.31.16.120, port: 8880, type: vmess, uuid: 67a341a7-5ae7-4d92-edad-9e8db87ce165, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: vcus1.vpn66.eu.org}}, udp: true}
-  - {name: 美国-2.36MB/s, server: 216.52.183.243, port: 1001, type: ss, cipher: aes-128-gcm, password: 83XvX4Vo%*3a, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-2.12MB/s, server: 112.29.94.22, port: 53300, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 新加坡-1.24MB/s, server: 18.142.229.222, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-2.36MB/s, server: 216.52.183.243, port: 1001, type: ss, cipher: aes-128-gcm, password: 83XvX4Vo%*3a, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 台湾-631.6KB/s, server: 36.233.234.108, port: 443, type: vmess, uuid: 7bcd1b11-ac49-40f7-9197-4df867192564, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /vbub3, headers: {Host: ub3.kq1.dynu.net}}, udp: true}
+  - {name: 中转节点-306.2KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: bc230344-14d9-4922-9fb7-2e6513c5593e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
+  - {name: 中转节点-4.48MB/s, server: 36.137.198.90, port: 10826, type: trojan, password: f69fc884-44f6-4ff1-939b-e34a55d49a4d, sni: alibaba-node.cn, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-11.32MB/s, server: e556d09a.ens4.buzz, port: 27274, type: ss, cipher: aes-256-gcm, password: b69dc5bf-dfb1-43b3-b6c1-6bb154cf1b0e, udp: true}
+  - {name: 美国-170.1KB/s, server: 104.31.16.120, port: 8880, type: vmess, uuid: 67a341a7-5ae7-4d92-edad-9e8db87ce165, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: vcus1.vpn66.eu.org}}, udp: true}
+  - {name: 英国-270.4KB/s, server: 18.168.51.228, port: 22222, type: trojan, password: telegram-id-directvpn, skip-cert-verify: true, udp: true}
+  - {name: 韩国-5.15MB/s, server: 131.186.23.94, port: 443, type: vmess, uuid: 3b86c4fa-bc53-4067-8d1c-275cff02d91b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sometimesnaive, headers: {Host: 3.wuxianliulianng.xyz}}, udp: true}
+  - {name: 未知国家-154.8KB/s, server: 104.16.68.38, port: 2052, type: vmess, uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: lu.wx.alue.link}}, udp: true}
+  - {name: 美国-1.19MB/s, server: 24.199.111.70, port: 22222, type: vmess, uuid: 2ef8e4ba-187d-4d50-d1eb-99ae641e3df8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美国-14.03MB/s, server: 23.106.131.229, port: 25467, type: vmess, uuid: 9916c646-57b8-454d-9a29-f8823378c242, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 美国-2.56MB/s, server: cdg.asoul-diana.xyz, port: 443, type: vmess, uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /acetaffy, headers: {Host: cdg.asoul-diana.xyz}}, udp: true}
+  - {name: 中转节点-561.5KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: bc230344-14d9-4922-9fb7-2e6513c5593e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
+  - {name: 美国-226.9KB/s, server: 57.180.44.62, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-2.50MB/s, server: 183.232.170.32, port: 30007, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-101.1KB/s, server: 67.21.90.5, port: 443, type: vmess, uuid: 28dd6c26-05a5-4bba-8a5d-052b70ac13b2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1694429908748, headers: {Host: www.75409854.xyz}}, udp: true}
+  - {name: 日本-171.6KB/s, server: cfzzo.starnetcn.top, port: 30091, type: vmess, uuid: 95e3c4c4-5540-4b2e-ac07-a7505f4a9313, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /1c1123, headers: {Host: 168.138.47.178}}, udp: true}
+  - {name: 中转节点-132.3KB/s, server: 39.164.141.104, port: 40350, type: trojan, password: ff0675b0-c665-3d69-800b-f7fc29e1ead8, sni: chaosujp.ccoo520.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-115.5KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: a824a85c-4bb0-4ab3-9d8a-bf9b02d9b20c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
+  - {name: 韩国-2.29MB/s, server: 146.56.135.32, port: 26961, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: xiongda006.daxiongda.top}}, udp: true}
+  - {name: 美国-2.64MB/s, server: 209.141.51.75, port: 443, type: trojan, password: dff63263-4499-4f43-a0ff-8f141576acb7, sni: www.visa.cn, skip-cert-verify: true, udp: true}
+  - {name: 英国-146.3KB/s, server: 141.147.65.92, port: 80, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: gb-one.1234585.xyz}}, udp: true}
+  - {name: 台湾-5.35MB/s, server: 46caadb.f2.gladns.com, port: 3331, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /s/46caadb.fm.apple.com:60980, headers: {Host: 46caadb.f2.gladns.com}}, udp: true}
+  - {name: 中转节点-137.0KB/s, server: 39.164.141.104, port: 40350, type: trojan, password: ff0675b0-c665-3d69-800b-f7fc29e1ead8, sni: chaosujp.ccoo520.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-5.58MB/s, server: 27055f76.ens4.buzz, port: 34856, type: ss, cipher: aes-256-gcm, password: b69dc5bf-dfb1-43b3-b6c1-6bb154cf1b0e, udp: true}
+  - {name: 韩国-485.0KB/s, server: 146.56.104.210, port: 443, type: vmess, uuid: 3b86c4fa-bc53-4067-8d1c-275cff02d91b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /mp4, headers: {Host: 5.wuxianliulianng.xyz}}, udp: true}
   - {name: 中转节点-153.3KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: a824a85c-4bb0-4ab3-9d8a-bf9b02d9b20c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
-  - {name: 新加坡-132.1KB/s, server: 52.221.219.171, port: 80, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg-one.1234585.xyz}}, udp: true}
+  - {name: 新加坡-415.0KB/s, server: 103.172.116.79, port: 9044, type: ss, cipher: aes-256-cfb, password: KBGjZYcy4SyRShmA, udp: true}
+  - {name: 中转节点-141.8KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: bc230344-14d9-4922-9fb7-2e6513c5593e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
+  - {name: 日本-2.31MB/s, server: 18.181.214.171, port: 443, type: trojan, password: 36606545-bc8b-4152-a751-3f0957318bd9, sni: 18-140-66-207.nhost.00cdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.12MB/s, server: 112.29.94.22, port: 53300, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 韩国-574.3KB/s, server: 152.67.201.73, port: 443, type: vmess, uuid: 3b86c4fa-bc53-4067-8d1c-275cff02d91b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sometimesnaive, headers: {Host: 3.wuxianliulianng.xyz}}, udp: true}
+  - {name: 美国-3.47MB/s, server: 139.28.232.223, port: 80, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us-one.1234585.xyz}}, udp: true}
   - {name: 中转节点-608.6KB/s, server: mf01fx.micloud.buzz, port: 46001, type: vmess, uuid: a824a85c-4bb0-4ab3-9d8a-bf9b02d9b20c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: mf01fx.micloud.buzz}}, udp: true}
+  - {name: 新加坡-132.1KB/s, server: 52.221.219.171, port: 80, type: vmess, uuid: f81385ea-b823-4116-9973-4e9a58443679, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg-one.1234585.xyz}}, udp: true}
   - {name: 中转节点-154.4KB/s, server: 39.164.141.104, port: 40350, type: trojan, password: ff0675b0-c665-3d69-800b-f7fc29e1ead8, sni: chaosujp.ccoo520.xyz, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -41,70 +51,90 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: 🎥 NETFLIX
     type: select
@@ -112,35 +142,45 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -160,111 +200,142 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 台湾-631.6KB/s
+      - 台湾-5.35MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: 🍎 苹果服务
     type: select
@@ -272,35 +343,45 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
   - name: 🎯 全球直连
     type: select
@@ -317,35 +398,45 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-4.48MB/s
-      - 中转节点-5.58MB/s
-      - 中转节点-137.0KB/s
       - 日本-274.3KB/s
       - 日本-179.2KB/s
       - 中转节点-4.87MB/s
-      - 韩国-574.3KB/s
-      - 日本-2.31MB/s
-      - 英国-146.3KB/s
-      - 韩国-485.0KB/s
-      - 未知国家-154.8KB/s
-      - 韩国-2.29MB/s
-      - 英国-270.4KB/s
-      - 中转节点-141.8KB/s
-      - 中转节点-115.5KB/s
-      - 中转节点-306.2KB/s
-      - 台湾-631.6KB/s
-      - 中转节点-2.50MB/s
-      - 中转节点-11.32MB/s
-      - 美国-1.19MB/s
-      - 美国-3.47MB/s
-      - 日本-171.6KB/s
-      - 美国-170.1KB/s
-      - 美国-2.36MB/s
-      - 中转节点-2.12MB/s
       - 新加坡-1.24MB/s
+      - 美国-2.36MB/s
+      - 台湾-631.6KB/s
+      - 中转节点-306.2KB/s
+      - 中转节点-4.48MB/s
+      - 中转节点-11.32MB/s
+      - 美国-170.1KB/s
+      - 英国-270.4KB/s
+      - 韩国-5.15MB/s
+      - 未知国家-154.8KB/s
+      - 美国-1.19MB/s
+      - 美国-14.03MB/s
+      - 美国-2.56MB/s
+      - 中转节点-561.5KB/s
+      - 美国-226.9KB/s
+      - 中转节点-2.50MB/s
+      - 美国-101.1KB/s
+      - 日本-171.6KB/s
+      - 中转节点-132.3KB/s
+      - 中转节点-115.5KB/s
+      - 韩国-2.29MB/s
+      - 美国-2.64MB/s
+      - 英国-146.3KB/s
+      - 台湾-5.35MB/s
+      - 中转节点-137.0KB/s
+      - 中转节点-5.58MB/s
+      - 韩国-485.0KB/s
       - 中转节点-153.3KB/s
-      - 新加坡-132.1KB/s
+      - 新加坡-415.0KB/s
+      - 中转节点-141.8KB/s
+      - 日本-2.31MB/s
+      - 中转节点-2.12MB/s
+      - 韩国-574.3KB/s
+      - 美国-3.47MB/s
       - 中转节点-608.6KB/s
+      - 新加坡-132.1KB/s
       - 中转节点-154.4KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
