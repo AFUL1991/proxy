@@ -5,51 +5,71 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-735.5KB/s, server: www.lp-airdrop.top, port: 12580, type: vmess, uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.17MB/s, server: 183.232.170.32, port: 30015, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 美国-138.3KB/s, server: 45.199.138.186, port: 30000, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1697376782879, headers: {Host: www.19229362.xyz}}, udp: true}
   - {name: 中转节点-1.62MB/s, server: 223.95.40.85, port: 20201, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 香港-448.1KB/s, server: 47.243.182.168, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 美国-127.1KB/s, server: 156.225.67.104, port: 30000, type: vmess, uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1696944806961, headers: {Host: www.41758112.xyz}}, udp: true}
+  - {name: 中转节点-735.5KB/s, server: www.lp-airdrop.top, port: 12580, type: vmess, uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 美国-207.1KB/s, server: 45.199.138.186, port: 30000, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1697376782879, headers: {Host: www.19229362.xyz}}, udp: true}
+  - {name: 美国-216.4KB/s, server: 45.199.138.191, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1696251522438, headers: {Host: www.42077230.xyz}}, udp: true}
+  - {name: 香港-448.1KB/s, server: 47.243.182.168, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 美国-159.2KB/s, server: 45.199.138.191, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1696251522438}, udp: true}
+  - {name: 英国-186.9KB/s, server: 172.99.190.109, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: linkvws}, udp: true}
+  - {name: 中转节点-2.17MB/s, server: 183.232.170.32, port: 30015, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-2.61MB/s, server: 146.190.90.54, port: 39749, type: vmess, uuid: cbe7755b-0190-4d6d-eaf7-cf746e6288b6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 美国-138.3KB/s, server: 45.199.138.186, port: 30000, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1697376782879, headers: {Host: www.19229362.xyz}}, udp: true}
+  - {name: 香港-1.65MB/s, server: 8.217.90.160, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -68,56 +88,77 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 香港-448.1KB/s
+      - 香港-1.65MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -133,13 +174,18 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-735.5KB/s
-      - 中转节点-2.17MB/s
-      - 美国-138.3KB/s
       - 中转节点-1.62MB/s
-      - 香港-448.1KB/s
       - 美国-127.1KB/s
+      - 中转节点-735.5KB/s
+      - 美国-207.1KB/s
+      - 美国-216.4KB/s
+      - 香港-448.1KB/s
       - 美国-159.2KB/s
+      - 英国-186.9KB/s
+      - 中转节点-2.17MB/s
+      - 美国-2.61MB/s
+      - 美国-138.3KB/s
+      - 香港-1.65MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
