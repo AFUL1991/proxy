@@ -7,34 +7,26 @@ external-controller: 127.0.0.1:9090
 proxies:
 - alterId: "0"
   cipher: none
-  name: 更新于:11-17 16:00 -by BuLink.xyz- 以下节点不计流量
+  name: 更新于:11-17 20:00 -by BuLink.xyz- 以下节点不计流量
   port: "0"
   server: 使用前记得更新订阅
   type: vmess
   uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
   ws-opts: {}
-- alterId: "0"
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 1
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 美国CloudFlare节点 1
   network: ws
-  port: "2052"
-  server: 104.18.239.202
+  port: 443
+  server: 162.159.192.133
+  tls: true
   type: vmess
-  uuid: 375ae503-faca-4bc6-a1d5-50c23b083768
+  uuid: 5f2ea531-29e4-4836-c60a-a739b8e6b0a3
   ws-opts:
-    path: /public
+    path: /5f2ea531-29e4-4836-c60a-a739b8e6b0a3
 - alterId: 0
   cipher: auto
   name: github.com/freefq - 美国CloudFlare节点 2
-  network: ws
-  port: 2086
-  server: 172.67.229.34
-  type: vmess
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-  ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-- alterId: 0
-  cipher: auto
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 3
   network: ws
   port: 443
   server: de-1.8080.eu.org
@@ -45,26 +37,24 @@ proxies:
     path: /xwdn8sj2aw
 - alterId: "0"
   cipher: none
+  name: github.com/freefq - 美国CloudFlare节点 3
+  network: ws
+  port: "80"
+  server: ml2.shabijichang.com
+  type: vmess
+  uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+  ws-opts:
+    path: /
+- alterId: "0"
+  cipher: none
   name: github.com/freefq - 美国CloudFlare节点 4
   network: ws
-  port: "443"
-  server: cdn.yifenjichang.top
-  tls: true
+  port: "8080"
+  server: hytron.io
   type: vmess
-  uuid: ffde06d3-f952-4ee7-f09f-e587b7fb1558
+  uuid: 010c265f-5455-4141-ca23-4d69357ded0d
   ws-opts:
-    path: /fsasdsad
-- alterId: 0
-  cipher: auto
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 5
-  network: ws
-  port: 443
-  server: bobbykotick.rip
-  tls: true
-  type: vmess
-  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-  ws-opts:
-    path: /speedtest
+    path: /
 proxy-groups:
 - name: 节点选择
   proxies:
@@ -72,12 +62,11 @@ proxy-groups:
   - ✈ 手动选择
   - ✈ 故障切换
   - DIRECT
-  - 更新于:11-17 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
+  - 更新于:11-17 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国CloudFlare节点 1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 3
   - github.com/freefq - 美国CloudFlare节点 4
-  - github.com/freefq - 美国CloudFlare公司CDN节点 5
   type: select
 - name: 广告拦截
   proxies:
@@ -94,33 +83,30 @@ proxy-groups:
   type: select
 - name: ✈ 手动选择
   proxies:
-  - 更新于:11-17 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
+  - 更新于:11-17 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国CloudFlare节点 1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 3
   - github.com/freefq - 美国CloudFlare节点 4
-  - github.com/freefq - 美国CloudFlare公司CDN节点 5
   type: select
 - interval: 500
   name: ✈ 延迟最低
   proxies:
-  - 更新于:11-17 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
+  - 更新于:11-17 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国CloudFlare节点 1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 3
   - github.com/freefq - 美国CloudFlare节点 4
-  - github.com/freefq - 美国CloudFlare公司CDN节点 5
   type: url-test
   url: http://www.gstatic.com/generate_204
 - interval: 500
   name: ✈ 故障切换
   proxies:
-  - 更新于:11-17 16:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
+  - 更新于:11-17 20:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 美国CloudFlare节点 1
   - github.com/freefq - 美国CloudFlare节点 2
-  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 3
   - github.com/freefq - 美国CloudFlare节点 4
-  - github.com/freefq - 美国CloudFlare公司CDN节点 5
   type: fallback
   url: http://www.gstatic.com/generate_204
 rules:
