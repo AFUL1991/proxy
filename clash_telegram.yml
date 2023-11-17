@@ -5,43 +5,59 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-1.37MB/s, server: 183.237.20.148, port: 50707, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-183.1KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 台湾-1.61MB/s, server: fn300mtw015.flybirdline.xyz, port: 443, type: ss, cipher: aes-256-gcm, password: d7570e231c78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn300mtw015.flybirdline.xyz, path: /uanrmeers, tls: true, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 中转节点-260.4KB/s, server: 139.227.182.207, port: 10014, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 香港-824.0KB/s, server: hk3.visaapp.top, port: 49487, type: trojan, password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f, skip-cert-verify: true, udp: true}
+  - {name: 香港-183.1KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
   - {name: 韩国-309.7KB/s, server: 43.201.149.200, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-2.40MB/s, server: 139.227.182.207, port: 10016, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-1.37MB/s, server: 183.237.20.148, port: 50707, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 台湾-1.61MB/s, server: fn300mtw015.flybirdline.xyz, port: 443, type: ss, cipher: aes-256-gcm, password: d7570e231c78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn300mtw015.flybirdline.xyz, path: /uanrmeers, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-303.7KB/s, server: 183.237.20.148, port: 50707, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.89MB/s, server: 112.29.94.23, port: 49223, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,15 +76,20 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 香港-824.0KB/s
       - 香港-183.1KB/s
       - 台湾-1.61MB/s
       - 🔰 节点选择
@@ -77,32 +98,44 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,11 +151,15 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-1.37MB/s
-      - 香港-183.1KB/s
-      - 台湾-1.61MB/s
       - 中转节点-260.4KB/s
+      - 香港-824.0KB/s
+      - 香港-183.1KB/s
       - 韩国-309.7KB/s
+      - 中转节点-2.40MB/s
+      - 中转节点-1.37MB/s
+      - 台湾-1.61MB/s
+      - 中转节点-303.7KB/s
+      - 中转节点-2.89MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
