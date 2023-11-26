@@ -5,147 +5,187 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-5.57MB/s, server: service.ouluyun9803.com, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
-  - {name: 香港-859.3KB/s, server: 8.210.85.62, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 日本-394.4KB/s, server: jp2.djjsvip.cfd, port: 443, type: trojan, password: d33df23a-8b9e-468e-bc33-dd3643008ced, sni: download.xn--mes358a9urctx.com, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-293.7KB/s, server: cm01.newcome.xyz, port: 7704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: 中转节点-197.2KB/s, server: service.ouluyun9803.com, port: 20009, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
-  - {name: 未知国家-1.81MB/s, server: snmxw.qkhbyf.tech, port: 2052, type: vmess, uuid: 6da3e574-52f1-4690-a53b-2847ce756456, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /lonanhis, headers: {Host: bx.qkhbyf.tech}}, udp: true}
-  - {name: 中转节点-2.03MB/s, server: 112.29.94.23, port: 43526, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-710.8KB/s, server: 8.210.85.62, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 美国-2.54MB/s, server: 38.54.185.111, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1700571207277, headers: {Host: www.73664999.xyz}}, udp: true}
-  - {name: 台湾-4.80MB/s, server: 111.243.94.97, port: 443, type: trojan, password: d33df23a-8b9e-468e-bc33-dd3643008ced, sni: download.xn--mes358a9urctx.com, skip-cert-verify: true, udp: true}
-  - {name: (已存活1天)台湾-8.80MB/s, server: fn300mtw015.flybirdline.xyz, port: 443, type: ss, cipher: aes-256-gcm, password: d7570e231c78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn300mtw015.flybirdline.xyz, path: /uanrmeers, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 新加坡-1.73MB/s, server: 47.128.76.42, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-584.3KB/s, server: n1700303376.izwhvan.cn, port: 443, type: vmess, uuid: ee65c32d-afc8-4d54-b91e-b334354fa5c2, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: n1700303376.izwhvan.cn}}, udp: true}
-  - {name: 新加坡-157.7KB/s, server: 146.190.108.227, port: 1, type: trojan, password: !<str> 1, sni: m.zoom.us, skip-cert-verify: true, udp: true}
-  - {name: 台湾-1.19MB/s, server: nbq13.ntbq.dynu.net, port: 443, type: vmess, uuid: 2af2770b-0a8c-42bc-ac2b-331bba84e7eb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /b13, headers: {Host: nbq13.ntbq.dynu.net}}, udp: true}
   - {name: 法国-132.2KB/s, server: 51.158.195.96, port: 80, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true}
-  - {name: 日本-219.9KB/s, server: 43.206.224.156, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 香港-276.8KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转节点-140.0KB/s, server: cm01.newcome.xyz, port: 7703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: 中转节点-230.3KB/s, server: service.ouluyun9803.com, port: 20001, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
+  - {name: 法国-677.5KB/s, server: 162.19.18.105, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true}
   - {name: 中转节点-158.0KB/s, server: 139.227.182.207, port: 10014, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-301.7KB/s, server: cm01.newcome.xyz, port: 7708, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: _FR_法国_3, server: 51.158.195.96, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true}
-  - {name: 中转节点-566.9KB/s, server: 120.240.88.111, port: 7706, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
   - {name: 中转节点-507.2KB/s, server: cm01.newcome.xyz, port: 7709, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 台湾-1.19MB/s, server: nbq13.ntbq.dynu.net, port: 443, type: vmess, uuid: 2af2770b-0a8c-42bc-ac2b-331bba84e7eb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /b13, headers: {Host: nbq13.ntbq.dynu.net}}, udp: true}
+  - {name: 台湾-4.80MB/s, server: 111.243.94.97, port: 443, type: trojan, password: d33df23a-8b9e-468e-bc33-dd3643008ced, sni: download.xn--mes358a9urctx.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.09MB/s, server: 112.29.94.23, port: 43526, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-859.3KB/s, server: 8.210.85.62, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
+  - {name: 香港-128.0KB/s, server: download1hkt.windowsupdatea.com, port: 443, type: trojan, password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff, sni: glc-hkt1.windowsupdatea.com, skip-cert-verify: true, udp: true}
+  - {name: 台湾-4.65MB/s, server: nbq13.ntbq.dynu.net, port: 443, type: vmess, uuid: 2af2770b-0a8c-42bc-ac2b-331bba84e7eb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /b13, headers: {Host: nbq13.ntbq.dynu.net}}, udp: true}
+  - {name: 中转节点-5.57MB/s, server: service.ouluyun9803.com, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
+  - {name: 中转节点-230.3KB/s, server: service.ouluyun9803.com, port: 20001, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
+  - {name: 日本-219.9KB/s, server: 43.206.224.156, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 台湾-24.70MB/s, server: fn300mtw015.flybirdline.xyz, port: 443, type: ss, cipher: aes-256-gcm, password: d7570e231c78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn300mtw015.flybirdline.xyz, path: /uanrmeers, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-301.7KB/s, server: cm01.newcome.xyz, port: 7708, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 中转节点-130.4KB/s, server: service.ouluyun9803.com, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
+  - {name: 中转节点-140.0KB/s, server: cm01.newcome.xyz, port: 7703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 未知国家-1.81MB/s, server: snmxw.qkhbyf.tech, port: 2052, type: vmess, uuid: 6da3e574-52f1-4690-a53b-2847ce756456, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /lonanhis, headers: {Host: bx.qkhbyf.tech}}, udp: true}
+  - {name: _FR_法国_3, server: 51.158.195.96, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true}
+  - {name: 美国-2.54MB/s, server: 38.54.185.111, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1700571207277, headers: {Host: www.73664999.xyz}}, udp: true}
+  - {name: 新加坡-1.73MB/s, server: 47.128.76.42, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-1.85MB/s, server: service.ouluyun9803.com, port: 21001, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
+  - {name: 美国-136.1KB/s, server: 192.74.244.1, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1700403634984}, udp: true}
+  - {name: 中转节点-293.7KB/s, server: cm01.newcome.xyz, port: 7704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 日本-394.4KB/s, server: jp2.djjsvip.cfd, port: 443, type: trojan, password: d33df23a-8b9e-468e-bc33-dd3643008ced, sni: download.xn--mes358a9urctx.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.03MB/s, server: 112.29.94.23, port: 43526, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-11.80MB/s, server: xg_grpcthree.yunjisuan.cf, port: 15835, type: vmess, uuid: c75b345e-bb05-4a44-88e1-ca026ffe965d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: grpc, servername: xg_grpcthree.yunjisuan.cf, grpc-opts: {grpc-service-name: xg_grpcthree.yunjisuan.cf}, udp: true}
+  - {name: 香港-710.8KB/s, server: 8.210.85.62, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
+  - {name: 法国-120.6KB/s, server: 51.158.195.96, port: 80, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true}
+  - {name: 新加坡-157.7KB/s, server: 146.190.108.227, port: 1, type: trojan, password: !<str> 1, sni: m.zoom.us, skip-cert-verify: true, udp: true}
   - {name: 中转节点-1.43MB/s, server: 112.29.94.23, port: 59137, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-2.33MB/s, server: 120.240.88.111, port: 7704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@ccbaohe, udp: true}
+  - {name: 中转节点-566.9KB/s, server: 120.240.88.111, port: 7706, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
   - {name: 中转节点-740.0KB/s, server: cm01.newcome.xyz, port: 7703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: 台湾-4.65MB/s, server: nbq13.ntbq.dynu.net, port: 443, type: vmess, uuid: 2af2770b-0a8c-42bc-ac2b-331bba84e7eb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /b13, headers: {Host: nbq13.ntbq.dynu.net}}, udp: true}
-  - {name: 中转节点-136.1KB/s, server: cm01.newcome.xyz, port: 7704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: (已存活1天)台湾-8.80MB/s, server: fn300mtw015.flybirdline.xyz, port: 443, type: ss, cipher: aes-256-gcm, password: d7570e231c78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: fn300mtw015.flybirdline.xyz, path: /uanrmeers, tls: true, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 中转节点-231.7KB/s, server: 139.227.182.207, port: 10016, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-136.1KB/s, server: cm01.newcome.xyz, port: 7704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 香港-276.8KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 美国-584.3KB/s, server: n1700303376.izwhvan.cn, port: 443, type: vmess, uuid: ee65c32d-afc8-4d54-b91e-b334354fa5c2, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: n1700303376.izwhvan.cn}}, udp: true}
+  - {name: 中转节点-197.2KB/s, server: service.ouluyun9803.com, port: 20009, type: ss, cipher: chacha20-ietf-poly1305, password: a58024d9-e277-49df-91aa-2fdad751f76d, udp: true}
+  - {name: 法国-160.8KB/s, server: 51.158.195.96, port: 443, type: ss, cipher: aes-256-cfb, password: asdKkaskJKfnsa, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -164,158 +204,201 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-859.3KB/s
-      - 香港-710.8KB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
       - 台湾-1.19MB/s
-      - 香港-276.8KB/s
+      - 台湾-4.80MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
       - 台湾-4.65MB/s
+      - 台湾-24.70MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - (已存活1天)台湾-8.80MB/s
+      - 香港-276.8KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -331,37 +414,47 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-5.57MB/s
-      - 香港-859.3KB/s
-      - 日本-394.4KB/s
-      - 中转节点-293.7KB/s
-      - 中转节点-197.2KB/s
-      - 未知国家-1.81MB/s
-      - 中转节点-2.03MB/s
-      - 香港-710.8KB/s
-      - 美国-2.54MB/s
-      - 台湾-4.80MB/s
-      - (已存活1天)台湾-8.80MB/s
-      - 新加坡-1.73MB/s
-      - 美国-584.3KB/s
-      - 新加坡-157.7KB/s
-      - 台湾-1.19MB/s
       - 法国-132.2KB/s
-      - 日本-219.9KB/s
-      - 香港-276.8KB/s
-      - 中转节点-140.0KB/s
-      - 中转节点-230.3KB/s
+      - 法国-677.5KB/s
       - 中转节点-158.0KB/s
-      - 中转节点-301.7KB/s
-      - _FR_法国_3
-      - 中转节点-566.9KB/s
       - 中转节点-507.2KB/s
+      - 台湾-1.19MB/s
+      - 台湾-4.80MB/s
+      - 中转节点-2.09MB/s
+      - 香港-859.3KB/s
+      - 香港-128.0KB/s
+      - 台湾-4.65MB/s
+      - 中转节点-5.57MB/s
+      - 中转节点-230.3KB/s
+      - 日本-219.9KB/s
+      - 台湾-24.70MB/s
+      - 中转节点-301.7KB/s
+      - 中转节点-130.4KB/s
+      - 中转节点-140.0KB/s
+      - 未知国家-1.81MB/s
+      - _FR_法国_3
+      - 美国-2.54MB/s
+      - 新加坡-1.73MB/s
+      - 中转节点-1.85MB/s
+      - 美国-136.1KB/s
+      - 中转节点-293.7KB/s
+      - 日本-394.4KB/s
+      - 中转节点-2.03MB/s
+      - 香港-11.80MB/s
+      - 香港-710.8KB/s
+      - 法国-120.6KB/s
+      - 新加坡-157.7KB/s
       - 中转节点-1.43MB/s
       - 中转节点-2.33MB/s
+      - 中转节点-566.9KB/s
       - 中转节点-740.0KB/s
-      - 台湾-4.65MB/s
-      - 中转节点-136.1KB/s
+      - (已存活1天)台湾-8.80MB/s
       - 中转节点-231.7KB/s
+      - 中转节点-136.1KB/s
+      - 香港-276.8KB/s
+      - 美国-584.3KB/s
+      - 中转节点-197.2KB/s
+      - 法国-160.8KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
