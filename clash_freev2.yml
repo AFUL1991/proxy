@@ -7,32 +7,26 @@ external-controller: 127.0.0.1:9090
 proxies:
 - alterId: "0"
   cipher: none
-  name: 更新于:12-03 20:00 -by BuLink.xyz- 以下节点不计流量
+  name: 更新于:12-04 00:00 -by BuLink.xyz- 以下节点不计流量
   port: "0"
   server: 使用前记得更新订阅
   type: vmess
   uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
   ws-opts: {}
-- alterId: "64"
-  name: github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 1
-  network: ws
-  port: 30000
-  server: 142.4.97.65
-  tls: true
+- cipher: chacha20-ietf-poly1305
+  name: github.com/freefq - 黎巴嫩  1
+  password: w6ScrxpP51shOFhPdbsdS8
+  port: "61519"
+  server: 84.54.44.220
+  type: ss
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 香港ADCDATA数据中心 2
+  port: 80
+  server: 194.156.98.179
   type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    path: /path/1699624723213
-- alterId: "64"
-  name: github.com/freefq - 美国华盛顿Cogent通信公司 2
-  network: ws
-  port: 30000
-  server: 38.54.185.112
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    path: /path/1701091133409
+  uuid: 0855b410-0e96-4d0a-9b6e-80830edec462
+  ws-opts: {}
 - alterId: 0
   cipher: auto
   name: github.com/freefq - 台湾省彰化县中华电信 3
@@ -46,12 +40,15 @@ proxies:
     path: /vbub1
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 香港ADCDATA数据中心 4
-  port: 80
-  server: 194.156.98.179
+  name: github.com/freefq - 台湾省台北市中华电信 4
+  network: ws
+  port: 443
+  server: b24.ntbq.dynu.net
+  tls: true
   type: vmess
-  uuid: 0855b410-0e96-4d0a-9b6e-80830edec462
-  ws-opts: {}
+  uuid: 54f3bbea-3524-40db-b576-7cf02aea4562
+  ws-opts:
+    path: /b24
 - alterId: 0
   cipher: auto
   name: github.com/freefq - 美国  5
@@ -64,7 +61,28 @@ proxies:
     path: /
 - alterId: 0
   cipher: auto
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 6
+  name: github.com/freefq - 捷克  6
+  network: ws
+  port: 80
+  server: jp.takeshi.wiki
+  type: vmess
+  uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
+  ws-opts:
+    path: /takeshi.wiki
+- alterId: 0
+  cipher: none
+  name: github.com/freefq - 台湾省彰化县中华电信 7
+  network: ws
+  port: "443"
+  server: tc11.twtc.dynu.net
+  tls: true
+  type: vmess
+  uuid: b0912b17-b2d2-4c53-9d53-710f6c88251a
+  ws-opts:
+    path: /vbub1
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 美国CloudFlare节点 8
   network: ws
   port: 443
   server: hexsen.com
@@ -73,22 +91,6 @@ proxies:
   uuid: de04add9-5c68-8bab-950c-08cd5320df18
   ws-opts:
     path: /argo-vmess?ed=2048
-- alterId: 0
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 7
-  network: ws
-  port: 443
-  server: 104.21.40.162
-  tls: true
-  type: vmess
-  uuid: d196ccc9-db42-475d-a7e4-7c27a6a326d1
-  ws-opts:
-    path: /vmess
-- cipher: chacha20-ietf-poly1305
-  name: github.com/freefq - 广东省广州市移动 8
-  password: 97b2338c-7390-4810-847f-7028d17ff938
-  port: "20001"
-  server: service.ouluyun9803.com
-  type: ss
 - alterId: "0"
   cipher: none
   name: github.com/freefq - 美国CloudFlare节点 9
@@ -99,64 +101,78 @@ proxies:
   uuid: 9edb5c77-8818-4780-9cef-d81b7e2d932b
   ws-opts:
     path: /
-- alterId: 0
-  cipher: auto
-  name: github.com/freefq - 捷克  10
-  network: ws
-  port: 80
-  server: jp.takeshi.wiki
-  type: vmess
-  uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
-  ws-opts:
-    path: /takeshi.wiki
-- alterId: 0
-  cipher: auto
-  name: github.com/freefq - 俄罗斯  11
-  network: ws
-  port: 80
-  server: de1-vmess.greenssh.xyz
-  type: vmess
-  uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
-  ws-opts: {}
+- cipher: chacha20-ietf-poly1305
+  name: github.com/freefq - 广东省广州市移动 10
+  password: 97b2338c-7390-4810-847f-7028d17ff938
+  port: "20001"
+  server: service.ouluyun9803.com
+  type: ss
+- cipher: aes-256-gcm
+  name: github.com/freefq - 法国格拉沃利讷OVH数据中心 11
+  password: Y6R9pAtvxxzmGC
+  port: "5600"
+  server: ak1751.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+  type: ss
 - cipher: aes-256-gcm
   name: github.com/freefq - 法国格拉沃利讷OVH数据中心 12
   password: g5MeD6Ft3CWlJId
   port: "5004"
   server: 54.36.174.181
   type: ss
+- cipher: aes-256-gcm
+  name: github.com/freefq - 法国格拉沃利讷OVH数据中心 13
+  password: KixLvKzwjekG00rm
+  port: "8000"
+  server: 54.36.174.181
+  type: ss
 - alterId: 0
-  cipher: auto
-  name: github.com/freefq - 台湾省台北市中华电信 13
-  network: ws
-  port: 443
-  server: b24.ntbq.dynu.net
-  tls: true
-  type: vmess
-  uuid: 54f3bbea-3524-40db-b576-7cf02aea4562
-  ws-opts:
-    path: /b24
-- alterId: 0
-  cipher: auto
   name: github.com/freefq - 美国CloudFlare公司CDN节点 14
   network: ws
-  port: 80
-  server: 104.31.16.28
+  port: 443
+  server: 104.21.40.162
+  tls: true
   type: vmess
-  uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+  uuid: d196ccc9-db42-475d-a7e4-7c27a6a326d1
   ws-opts:
-    path: /IOebhLMhl1CTbFHbL95myfRX2
-- alterId: "0"
-  name: github.com/freefq - 美国爱荷华州得梅因Microsoft数据中心 15
+    path: /vmess
+- cipher: aes-256-gcm
+  name: github.com/freefq - 法国格拉沃利讷OVH数据中心 15
+  password: Y6R9pAtvxxzmGC
+  port: "5600"
+  server: 54.36.174.181
+  type: ss
+- alterId: "64"
+  name: github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 16
   network: ws
-  port: 2083
-  server: 23.95.67.188
+  port: 30000
+  server: 142.4.97.65
+  tls: true
   type: vmess
-  uuid: 75333f4c-ece5-4f93-e49c-0e0a9f902ce5
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
-    path: /
+    path: /path/1699624723213
+- alterId: "64"
+  name: github.com/freefq - 美国华盛顿Cogent通信公司 17
+  network: ws
+  port: 30000
+  server: 38.54.185.112
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-opts:
+    path: /path/1701091133409
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 俄罗斯  18
+  network: ws
+  port: 80
+  server: de1-vmess.greenssh.xyz
+  type: vmess
+  uuid: 12612b4e-e426-4b7c-84bd-4a02850abb1e
+  ws-opts: {}
 - alterId: "64"
   cipher: none
-  name: github.com/freefq - 美国华盛顿Cogent通信公司 16
+  name: github.com/freefq - 美国华盛顿Cogent通信公司 19
   network: ws
   port: "30000"
   server: 38.54.185.111
@@ -165,41 +181,15 @@ proxies:
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-opts:
     path: /path/1700571207277
-- alterId: 0
-  cipher: none
-  name: github.com/freefq - 台湾省彰化县中华电信 17
-  network: ws
-  port: "443"
-  server: tc11.twtc.dynu.net
-  tls: true
-  type: vmess
-  uuid: b0912b17-b2d2-4c53-9d53-710f6c88251a
-  ws-opts:
-    path: /vbub1
+- cipher: aes-256-gcm
+  name: github.com/freefq - 法国格拉沃利讷OVH数据中心 20
+  password: RexnBgU7EV5ADxG
+  port: "7001"
+  server: www.outline.network.ak1941.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+  type: ss
 - alterId: "0"
   cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 18
-  network: ws
-  port: "80"
-  server: cf-lt.sharecentre.online
-  type: vmess
-  uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
-  ws-opts:
-    path: /api/v3/download.getFile
-- alterId: 0
-  cipher: chacha20-poly1305
-  name: github.com/freefq - 荷兰阿姆斯特丹Choopa数据中心 19
-  network: ws
-  port: 443
-  server: hdfy4s2d1.foriran.trade
-  tls: true
-  type: vmess
-  uuid: dfbbc8de-8a4f-407d-8069-6de38d83c4e1
-  ws-opts:
-    path: /WgCmp8pxRWBtLTlTL
-- alterId: "0"
-  cipher: none
-  name: github.com/freefq - 美国CloudFlare节点 20
+  name: github.com/freefq - 美国CloudFlare节点 21
   network: ws
   port: "8080"
   server: cf1.openxai.link
@@ -207,15 +197,16 @@ proxies:
   uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
   ws-opts:
     path: /
-- alterId: 0
-  cipher: auto
-  name: github.com/freefq - 法国上法兰西大区鲁贝OVH 21
+- alterId: "0"
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare节点 22
   network: ws
-  port: 80
-  server: fr1.c8898496-adb6-4073-9ee4-ff4e4984415b.polycdn.com
+  port: "80"
+  server: cf-lt.sharecentre.online
   type: vmess
-  uuid: da89a49f-3a20-4de1-94b9-06690121e926
-  ws-opts: {}
+  uuid: 2a683a54-f098-4d98-92fc-762b85d907b9
+  ws-opts:
+    path: /api/v3/download.getFile
 proxy-groups:
 - name: 节点选择
   proxies:
@@ -223,28 +214,29 @@ proxy-groups:
   - ✈ 手动选择
   - ✈ 故障切换
   - DIRECT
-  - 更新于:12-03 20:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 1
-  - github.com/freefq - 美国华盛顿Cogent通信公司 2
+  - 更新于:12-04 00:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 黎巴嫩  1
+  - github.com/freefq - 香港ADCDATA数据中心 2
   - github.com/freefq - 台湾省彰化县中华电信 3
-  - github.com/freefq - 香港ADCDATA数据中心 4
+  - github.com/freefq - 台湾省台北市中华电信 4
   - github.com/freefq - 美国  5
-  - github.com/freefq - 美国CloudFlare公司CDN节点 6
-  - github.com/freefq - 美国CloudFlare公司CDN节点 7
-  - github.com/freefq - 广东省广州市移动 8
+  - github.com/freefq - 捷克  6
+  - github.com/freefq - 台湾省彰化县中华电信 7
+  - github.com/freefq - 美国CloudFlare节点 8
   - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 捷克  10
-  - github.com/freefq - 俄罗斯  11
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 11
   - github.com/freefq - 法国格拉沃利讷OVH数据中心 12
-  - github.com/freefq - 台湾省台北市中华电信 13
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 13
   - github.com/freefq - 美国CloudFlare公司CDN节点 14
-  - github.com/freefq - 美国爱荷华州得梅因Microsoft数据中心 15
-  - github.com/freefq - 美国华盛顿Cogent通信公司 16
-  - github.com/freefq - 台湾省彰化县中华电信 17
-  - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 荷兰阿姆斯特丹Choopa数据中心 19
-  - github.com/freefq - 美国CloudFlare节点 20
-  - github.com/freefq - 法国上法兰西大区鲁贝OVH 21
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 15
+  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 16
+  - github.com/freefq - 美国华盛顿Cogent通信公司 17
+  - github.com/freefq - 俄罗斯  18
+  - github.com/freefq - 美国华盛顿Cogent通信公司 19
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 20
+  - github.com/freefq - 美国CloudFlare节点 21
+  - github.com/freefq - 美国CloudFlare节点 22
   type: select
 - name: 广告拦截
   proxies:
@@ -261,81 +253,84 @@ proxy-groups:
   type: select
 - name: ✈ 手动选择
   proxies:
-  - 更新于:12-03 20:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 1
-  - github.com/freefq - 美国华盛顿Cogent通信公司 2
+  - 更新于:12-04 00:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 黎巴嫩  1
+  - github.com/freefq - 香港ADCDATA数据中心 2
   - github.com/freefq - 台湾省彰化县中华电信 3
-  - github.com/freefq - 香港ADCDATA数据中心 4
+  - github.com/freefq - 台湾省台北市中华电信 4
   - github.com/freefq - 美国  5
-  - github.com/freefq - 美国CloudFlare公司CDN节点 6
-  - github.com/freefq - 美国CloudFlare公司CDN节点 7
-  - github.com/freefq - 广东省广州市移动 8
+  - github.com/freefq - 捷克  6
+  - github.com/freefq - 台湾省彰化县中华电信 7
+  - github.com/freefq - 美国CloudFlare节点 8
   - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 捷克  10
-  - github.com/freefq - 俄罗斯  11
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 11
   - github.com/freefq - 法国格拉沃利讷OVH数据中心 12
-  - github.com/freefq - 台湾省台北市中华电信 13
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 13
   - github.com/freefq - 美国CloudFlare公司CDN节点 14
-  - github.com/freefq - 美国爱荷华州得梅因Microsoft数据中心 15
-  - github.com/freefq - 美国华盛顿Cogent通信公司 16
-  - github.com/freefq - 台湾省彰化县中华电信 17
-  - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 荷兰阿姆斯特丹Choopa数据中心 19
-  - github.com/freefq - 美国CloudFlare节点 20
-  - github.com/freefq - 法国上法兰西大区鲁贝OVH 21
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 15
+  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 16
+  - github.com/freefq - 美国华盛顿Cogent通信公司 17
+  - github.com/freefq - 俄罗斯  18
+  - github.com/freefq - 美国华盛顿Cogent通信公司 19
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 20
+  - github.com/freefq - 美国CloudFlare节点 21
+  - github.com/freefq - 美国CloudFlare节点 22
   type: select
 - interval: 500
   name: ✈ 延迟最低
   proxies:
-  - 更新于:12-03 20:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 1
-  - github.com/freefq - 美国华盛顿Cogent通信公司 2
+  - 更新于:12-04 00:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 黎巴嫩  1
+  - github.com/freefq - 香港ADCDATA数据中心 2
   - github.com/freefq - 台湾省彰化县中华电信 3
-  - github.com/freefq - 香港ADCDATA数据中心 4
+  - github.com/freefq - 台湾省台北市中华电信 4
   - github.com/freefq - 美国  5
-  - github.com/freefq - 美国CloudFlare公司CDN节点 6
-  - github.com/freefq - 美国CloudFlare公司CDN节点 7
-  - github.com/freefq - 广东省广州市移动 8
+  - github.com/freefq - 捷克  6
+  - github.com/freefq - 台湾省彰化县中华电信 7
+  - github.com/freefq - 美国CloudFlare节点 8
   - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 捷克  10
-  - github.com/freefq - 俄罗斯  11
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 11
   - github.com/freefq - 法国格拉沃利讷OVH数据中心 12
-  - github.com/freefq - 台湾省台北市中华电信 13
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 13
   - github.com/freefq - 美国CloudFlare公司CDN节点 14
-  - github.com/freefq - 美国爱荷华州得梅因Microsoft数据中心 15
-  - github.com/freefq - 美国华盛顿Cogent通信公司 16
-  - github.com/freefq - 台湾省彰化县中华电信 17
-  - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 荷兰阿姆斯特丹Choopa数据中心 19
-  - github.com/freefq - 美国CloudFlare节点 20
-  - github.com/freefq - 法国上法兰西大区鲁贝OVH 21
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 15
+  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 16
+  - github.com/freefq - 美国华盛顿Cogent通信公司 17
+  - github.com/freefq - 俄罗斯  18
+  - github.com/freefq - 美国华盛顿Cogent通信公司 19
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 20
+  - github.com/freefq - 美国CloudFlare节点 21
+  - github.com/freefq - 美国CloudFlare节点 22
   type: url-test
   url: http://www.gstatic.com/generate_204
 - interval: 500
   name: ✈ 故障切换
   proxies:
-  - 更新于:12-03 20:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 1
-  - github.com/freefq - 美国华盛顿Cogent通信公司 2
+  - 更新于:12-04 00:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 黎巴嫩  1
+  - github.com/freefq - 香港ADCDATA数据中心 2
   - github.com/freefq - 台湾省彰化县中华电信 3
-  - github.com/freefq - 香港ADCDATA数据中心 4
+  - github.com/freefq - 台湾省台北市中华电信 4
   - github.com/freefq - 美国  5
-  - github.com/freefq - 美国CloudFlare公司CDN节点 6
-  - github.com/freefq - 美国CloudFlare公司CDN节点 7
-  - github.com/freefq - 广东省广州市移动 8
+  - github.com/freefq - 捷克  6
+  - github.com/freefq - 台湾省彰化县中华电信 7
+  - github.com/freefq - 美国CloudFlare节点 8
   - github.com/freefq - 美国CloudFlare节点 9
-  - github.com/freefq - 捷克  10
-  - github.com/freefq - 俄罗斯  11
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 11
   - github.com/freefq - 法国格拉沃利讷OVH数据中心 12
-  - github.com/freefq - 台湾省台北市中华电信 13
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 13
   - github.com/freefq - 美国CloudFlare公司CDN节点 14
-  - github.com/freefq - 美国爱荷华州得梅因Microsoft数据中心 15
-  - github.com/freefq - 美国华盛顿Cogent通信公司 16
-  - github.com/freefq - 台湾省彰化县中华电信 17
-  - github.com/freefq - 美国CloudFlare节点 18
-  - github.com/freefq - 荷兰阿姆斯特丹Choopa数据中心 19
-  - github.com/freefq - 美国CloudFlare节点 20
-  - github.com/freefq - 法国上法兰西大区鲁贝OVH 21
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 15
+  - github.com/freefq - 美国加利福尼亚州圣何塞PEG TECH 16
+  - github.com/freefq - 美国华盛顿Cogent通信公司 17
+  - github.com/freefq - 俄罗斯  18
+  - github.com/freefq - 美国华盛顿Cogent通信公司 19
+  - github.com/freefq - 法国格拉沃利讷OVH数据中心 20
+  - github.com/freefq - 美国CloudFlare节点 21
+  - github.com/freefq - 美国CloudFlare节点 22
   type: fallback
   url: http://www.gstatic.com/generate_204
 rules:
