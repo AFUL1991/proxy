@@ -5,415 +5,455 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-1.32MB/s, server: nc.cm.go002.xyz, port: 19582, type: ss, cipher: chacha20-ietf-poly1305, password: dcbc1c7f-c323-4365-bd48-cf767f9081ce, udp: true}
-  - {name: 中转节点-4.50MB/s, server: nc.cm.go002.xyz, port: 19511, type: ss, cipher: chacha20-ietf-poly1305, password: dcbc1c7f-c323-4365-bd48-cf767f9081ce, udp: true}
-  - {name: 中转节点-6.52MB/s, server: cm01.newcome.xyz, port: 5705, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: 日本-3.03MB/s, server: 64.176.58.15, port: 46154, type: vmess, uuid: adcbe160-3010-483d-b438-d6057f465b1d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-508.2KB/s, server: hk04.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 越南-4.14MB/s, server: hanoi4.5gsieutocdo.com, port: 443, type: trojan, password: c95357eb-2869-4511-8940-f0dc5e1ec9b1, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 韩国-5.83MB/s, server: muran-kr.qrfly.me, port: 20254, type: vmess, uuid: 007be9ad-8db6-4164-fc49-49989bbcba96, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: muran-kr.qrfly.me}}, udp: true}
-  - {name: 菲律宾-123.5KB/s, server: 38.54.36.149, port: 25189, type: vmess, uuid: 3b9cc000-59ea-4cd2-f10e-91de3e69fe1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 越南-790.9KB/s, server: 103.179.173.233, port: 443, type: trojan, password: mothai34, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 俄罗斯联邦-981.6KB/s, server: 45.144.30.202, port: 28490, type: ss, cipher: chacha20-ietf-poly1305, password: yZdRgske85Hou96z2dRdtH, udp: true}
-  - {name: 美国-1.27MB/s, server: vps-837611db.vps.ovh.us, port: 443, type: vmess, uuid: 3e1c1355-ffb5-48c3-8e7d-f6be7b8fece4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 韩国-10.33MB/s, server: unlk5.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 25002, type: trojan, password: e498c261-cabb-4b2c-810b-995d0bd8d049, sni: ip3691376078.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
-  - {name: 芬兰-1.85MB/s, server: 45.159.249.231, port: 38584, type: ss, cipher: chacha20-ietf-poly1305, password: zIPjynKNVVaBnKK0UZ5zu2, udp: true}
-  - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
-  - {name: 韩国-14.13MB/s, server: unlk3.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 21852, type: trojan, password: 7ea8830e-3120-4973-a0b6-4c25219eadfc, sni: ip3691376078.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
-  - {name: 爱尔兰-152.4KB/s, server: 95.164.44.21, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: OTI5ZDhk, udp: true}
-  - {name: 英国-8.28MB/s, server: tw02.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 俄罗斯联邦-143.3KB/s, server: 45.8.159.66, port: 19966, type: ss, cipher: aes-256-ctr, password: lncn.org h8g, udp: true}
-  - {name: 乌克兰-240.6KB/s, server: 193.238.153.14, port: 8443, type: vmess, uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 俄罗斯联邦-2.73MB/s, server: ru-v2ray.ipracevpn.com, port: 8443, type: vmess, uuid: 6b65926e-110d-4728-a807-5670d8829e09, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-14.63MB/s, server: cm03.newcome.xyz, port: 6705, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
-  - {name: 印度-3.25MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 韩国-3.89MB/s, server: unlk1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 20152, type: trojan, password: e498c261-cabb-4b2c-810b-995d0bd8d049, sni: 13-231-155-134.nhost.00cdn.com, skip-cert-verify: true, udp: true}
-  - {name: 加拿大-810.1KB/s, server: 38.91.107.37, port: 4444, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: 英国-465.1KB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 台湾-4.51MB/s, server: tj-tw02.yiyo2way.xyz, port: 9980, type: trojan, password: e8d23f6d-b1b3-3bec-a67a-b8b3df55aa95, skip-cert-verify: true, udp: true}
-  - {name: 台湾-6.35MB/s, server: 3gzdx1.233235.xyz, port: 42311, type: trojan, password: ac0a45fa-d23d-4c44-bfba-371cc52f8267, skip-cert-verify: true, udp: true}
-  - {name: 美国-1.73MB/s, server: 47.76.185.9, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 台湾-7.57MB/s, server: 3gzdx1.233235.xyz, port: 42311, type: trojan, password: ac0a45fa-d23d-4c44-bfba-371cc52f8267, sni: 3gzdx1.233235.xyz, skip-cert-verify: true, udp: true}
-  - {name: 日本-257.8KB/s, server: 54.95.21.57, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-122.9KB/s, server: 144.202.81.122, port: 25514, type: vmess, uuid: 13bf827e-55cd-4b46-e9f1-b7f9ffbe7955, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 香港-3.19MB/s, server: sk01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, sni: sk01.trojanyyds.xyz, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-1.30MB/s, server: 52.221.240.143, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 加拿大-830.2KB/s, server: 38.91.107.37, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: 印度-180.1KB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 韩国-188.2KB/s, server: 43.201.253.32, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 香港-2.96MB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 印度-3.14MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坡-2.91MB/s, server: 158.178.227.16, port: 30839, type: vmess, uuid: 19bf4866-54ce-4fc9-8903-db7e160c5b81, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.84MB/s, server: cm01.newcome.xyz, port: 5703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: 美国-3.81MB/s, server: 15.181.201.80, port: 443, type: trojan, password: pjdnqv, sni: aws-us-dallas-1.f1rocketnode.com, skip-cert-verify: true, udp: true}
-  - {name: 韩国-2.42MB/s, server: 13.124.93.250, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 德国-204.9KB/s, server: 172.104.228.14, port: 443, type: trojan, password: 6883bd5e-6fb6-4746-a46e-9969fb0b9dc4, skip-cert-verify: true, udp: true}
-  - {name: US2, server: 172.67.84.174, port: 443, type: vmess, uuid: D8813DCB-426C-4952-B384-8951B0444EC1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/speedtest?ed=2048", headers: {Host: kansas.Kotick.site}}, udp: true}
   - {name: 韩国-4.11MB/s, server: unlk5.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 25002, type: trojan, password: e498c261-cabb-4b2c-810b-995d0bd8d049, sni: ip3691376078.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
   - {name: 香港-4.98MB/s, server: us01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 美国-606.5KB/s, server: 47.76.185.9, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 台湾-7.56MB/s, server: 3gzdx1.233235.xyz, port: 42311, type: trojan, password: ac0a45fa-d23d-4c44-bfba-371cc52f8267, sni: 3gzdx1.233235.xyz, skip-cert-verify: true, udp: true}
-  - {name: 韩国-4.22MB/s, server: 3.36.92.179, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-165.8KB/s, server: cm01.newcome.xyz, port: 5704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: JP2, server: 36.139.61.145, port: 80, type: vmess, uuid: 42032450-0af0-4ab7-be1b-a7ce51554953, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
-  - {name: 越南-396.5KB/s, server: hanoi4.speed4g.click, port: 443, type: trojan, password: b379fd8e-75c6-4bd6-8a5b-88f3e64bb3fa, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 越南-1.90MB/s, server: 58.187.206.121, port: 443, type: trojan, password: 522NIIFovz, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-17.88MB/s, server: zx01.endhigh.xyz, port: 2404, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: c75be84263.microsoft.com, udp: true}
-  - {name: 俄罗斯联邦-2.82MB/s, server: 103.113.68.233, port: 80, type: vmess, uuid: 61cf7313-1503-4bab-beeb-ba69fd5843ae, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
+  - {name: 印度-3.14MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
   - {name: 加拿大-826.7KB/s, server: 38.91.107.37, port: 4444, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: 中转节点-3.11MB/s, server: yes.cnmjcn.net, port: 16626, type: vmess, uuid: c2c76420-257f-492a-b20f-6560f3bfa78d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com}}, udp: true}
-  - {name: 日本-1.59MB/s, server: 64.176.58.7, port: 14431, type: vmess, uuid: ff681ba6-55f5-4e79-8f40-ad6bbdf14044, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.27MB/s, server: yes.cnmjcn.net, port: 16626, type: vmess, uuid: c2c76420-257f-492a-b20f-6560f3bfa78d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com}}, udp: true}
-  - {name: 越南-1.23MB/s, server: 5sao.5gtocdocao.com, port: 443, type: trojan, password: 7a2c5296-683d-48db-9856-373cafac48b5, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-543.7KB/s, server: cm03.newcome.xyz, port: 6706, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
-  - {name: 美国-491.8KB/s, server: 47.76.185.99, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 澳大利亚-345.7KB/s, server: 154.26.157.244, port: 80, type: vmess, uuid: 877aa2a8-5854-4cb2-9aba-4a1413a6b2de, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /takeshi.wiki}, udp: true}
-  - {name: 美国-5.06MB/s, server: 198.2.200.37, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1702215223320}, udp: true}
-  - {name: 美国-292.1KB/s, server: 47.76.189.253, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-2.81MB/s, server: zx01.endhigh.xyz, port: 2401, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
-  - {name: 香港-329.6KB/s, server: tw01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, sni: tw01.trojanyyds.xyz, skip-cert-verify: true, udp: true}
-  - {name: 英国-3.18MB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: HK, server: 120.233.43.29, port: 11001, type: vmess, uuid: 703e2cfe-23ce-391a-bc76-f46348254d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 俄罗斯联邦-3.22MB/s, server: 89.221.224.94, port: 80, type: trojan, password: 28c79056-ccfd-4cc1-93d4-c337cc782e65, sni: is2-t.sshmax.xyz, skip-cert-verify: true, udp: true}
-  - {name: 爱沙尼亚-2.89MB/s, server: ee1-vmess.sshmax.xyz, port: 80, type: vmess, uuid: 34d4f393-ead9-48df-9370-ca8b52e6aabd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: ee1-vmess.sshmax.xyz}}, udp: true}
-  - {name: 英国-8.02MB/s, server: in01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, sni: in01.trojanyyds.xyz, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-3.93MB/s, server: cm03.newcome.xyz, port: 6706, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
-  - {name: 美国-425.4KB/s, server: 47.76.185.99, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
-  - {name: 越南-882.1KB/s, server: hanoi4.speed4g.click, port: 443, type: trojan, password: b379fd8e-75c6-4bd6-8a5b-88f3e64bb3fa, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 韩国-5.83MB/s, server: muran-kr.qrfly.me, port: 20254, type: vmess, uuid: 007be9ad-8db6-4164-fc49-49989bbcba96, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: muran-kr.qrfly.me}}, udp: true}
+  - {name: 越南-396.5KB/s, server: hanoi4.speed4g.click, port: 443, type: trojan, password: b379fd8e-75c6-4bd6-8a5b-88f3e64bb3fa, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-1.32MB/s, server: nc.cm.go002.xyz, port: 19582, type: ss, cipher: chacha20-ietf-poly1305, password: dcbc1c7f-c323-4365-bd48-cf767f9081ce, udp: true}
+  - {name: 爱尔兰-152.4KB/s, server: 95.164.44.21, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: OTI5ZDhk, udp: true}
+  - {name: 美国-1.73MB/s, server: 47.76.185.9, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
   - {name: _US_美国_18, server: goodbooks.gygjggf7654e1.repl.co, port: 443, type: vmess, uuid: 0e42ab26-2273-4a85-9b47-bd11b9140d0d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/0e42ab26-2273-4a85-9b47-bd11b9140d0d-vm?ed=2048", headers: {Host: goodbooks.gygjggf7654e1.repl.co}}, udp: true}
+  - {name: 美国-3.89MB/s, server: aws-us-dallas-1.f1rocketnode.com, port: 443, type: trojan, password: pjdnqv, sni: aws-us-dallas-1.f1rocketnode.com, skip-cert-verify: true, udp: true}
+  - {name: 香港-2.96MB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
+  - {name: 香港-9.44MB/s, server: hk01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
+  - {name: 越南-1.90MB/s, server: 58.187.206.121, port: 443, type: trojan, password: 522NIIFovz, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 英国-8.02MB/s, server: in01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, sni: in01.trojanyyds.xyz, skip-cert-verify: true, udp: true}
+  - {name: 日本-3.03MB/s, server: 64.176.58.15, port: 46154, type: vmess, uuid: adcbe160-3010-483d-b438-d6057f465b1d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-19.23MB/s, server: zx01.endhigh.xyz, port: 2404, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
-  - {name: 中转节点-9.68MB/s, server: cm03.newcome.xyz, port: 6703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
-  - {name: 越南-971.0KB/s, server: vip.zinok.pro, port: 443, type: trojan, password: mothai3456789080898, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-16.97MB/s, server: nc.cm.go002.xyz, port: 19511, type: ss, cipher: chacha20-ietf-poly1305, password: dcbc1c7f-c323-4365-bd48-cf767f9081ce, udp: true}
-  - {name: 日本-2.67MB/s, server: 109.123.230.157, port: 80, type: vmess, uuid: 877aa2a8-5854-4cb2-9aba-4a1413a6b2de, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /takeshi.wiki, headers: {Host: dl.kgvn.garenanow.com}}, udp: true}
-  - {name: JP, server: 120.233.43.29, port: 11019, type: vmess, uuid: 703e2cfe-23ce-391a-bc76-f46348254d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 美国-939.2KB/s, server: 47.76.189.253, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 印度-3.24MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
-  - {name: _US_美国_18 2, server: goodbooks.gygjggf7654e1.repl.co, port: 443, type: vmess, uuid: 0e42ab26-2273-4a85-9b47-bd11b9140d0d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/0e42ab26-2273-4a85-9b47-bd11b9140d0d-vm?ed=2048", headers: {Host: goodbooks.gygjggf7654e1.repl.co}}, udp: true}
-  - {name: 中转节点-500.1KB/s, server: any.hmbiplc-02.com, port: 30374, type: ss, cipher: aes-128-gcm, password: 00266df31ee542f397068800c1b91e57, udp: true}
+  - {name: 俄罗斯联邦-2.82MB/s, server: 103.113.68.233, port: 80, type: vmess, uuid: 61cf7313-1503-4bab-beeb-ba69fd5843ae, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
+  - {name: 台湾-1.68MB/s, server: 61.224.81.248, port: 10016, type: ss, cipher: aes-128-gcm, password: g12sQi#ss#&1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-4.94MB/s, server: 142.171.202.130, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1702650992491}, udp: true}
+  - {name: 俄罗斯联邦-3.22MB/s, server: 89.221.224.94, port: 80, type: trojan, password: 28c79056-ccfd-4cc1-93d4-c337cc782e65, sni: is2-t.sshmax.xyz, skip-cert-verify: true, udp: true}
+  - {name: 英国-3.18MB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
+  - {name: 台湾-7.57MB/s, server: 3gzdx1.233235.xyz, port: 42311, type: trojan, password: ac0a45fa-d23d-4c44-bfba-371cc52f8267, sni: 3gzdx1.233235.xyz, skip-cert-verify: true, udp: true}
   - {name: 新加坡-554.3KB/s, server: 52.221.240.143, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-3.98MB/s, server: 15.181.201.80, port: 443, type: trojan, password: pjdnqv, sni: aws-us-dallas-1.f1rocketnode.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-9.68MB/s, server: cm03.newcome.xyz, port: 6703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 俄罗斯联邦-3.46MB/s, server: 89.221.224.94, port: 80, type: trojan, password: 28c79056-ccfd-4cc1-93d4-c337cc782e65, sni: is2-t.sshmax.xyz, skip-cert-verify: true, udp: true}
+  - {name: 越南-790.9KB/s, server: 103.179.173.233, port: 443, type: trojan, password: mothai34, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 德国-204.9KB/s, server: 172.104.228.14, port: 443, type: trojan, password: 6883bd5e-6fb6-4746-a46e-9969fb0b9dc4, skip-cert-verify: true, udp: true}
+  - {name: 台湾-6.35MB/s, server: 3gzdx1.233235.xyz, port: 42311, type: trojan, password: ac0a45fa-d23d-4c44-bfba-371cc52f8267, skip-cert-verify: true, udp: true}
+  - {name: 加拿大-830.2KB/s, server: 38.91.107.37, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: 韩国-12.91MB/s, server: unlk5.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 25002, type: trojan, password: 92d3e5b6-6e8c-483b-a72b-000568d2e814, skip-cert-verify: true, udp: true}
+  - {name: 瑞士-2.84MB/s, server: 94.131.12.245, port: 37726, type: ss, cipher: chacha20-ietf-poly1305, password: AK4J1sRt2v3dLDUVC2P5lj, udp: true}
+  - {name: 中转节点-6.10MB/s, server: cm03.newcome.xyz, port: 6708, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 菲律宾-123.5KB/s, server: 38.54.36.149, port: 25189, type: vmess, uuid: 3b9cc000-59ea-4cd2-f10e-91de3e69fe1c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 中转节点-16.97MB/s, server: nc.cm.go002.xyz, port: 19511, type: ss, cipher: chacha20-ietf-poly1305, password: dcbc1c7f-c323-4365-bd48-cf767f9081ce, udp: true}
+  - {name: 香港-167.6KB/s, server: download2hkt.windowsupdatea.com, port: 443, type: trojan, password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff, sni: glc-hkt2.windowsupdatea.com, skip-cert-verify: true, udp: true}
+  - {name: 印度-3.25MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-17.88MB/s, server: zx01.endhigh.xyz, port: 2404, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: c75be84263.microsoft.com, udp: true}
+  - {name: 美国-3.81MB/s, server: 15.181.201.80, port: 443, type: trojan, password: pjdnqv, sni: aws-us-dallas-1.f1rocketnode.com, skip-cert-verify: true, udp: true}
+  - {name: 韩国-3.89MB/s, server: unlk1.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 20152, type: trojan, password: e498c261-cabb-4b2c-810b-995d0bd8d049, sni: 13-231-155-134.nhost.00cdn.com, skip-cert-verify: true, udp: true}
+  - {name: 瑞典-2.82MB/s, server: 172.234.99.161, port: 443, type: trojan, password: 5f610684-118f-46cf-aa34-9951475b75ad, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.27MB/s, server: yes.cnmjcn.net, port: 16626, type: vmess, uuid: c2c76420-257f-492a-b20f-6560f3bfa78d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com}}, udp: true}
+  - {name: 香港-508.2KB/s, server: hk04.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
+  - {name: 美国-292.1KB/s, server: 47.76.189.253, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 韩国-10.33MB/s, server: unlk5.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 25002, type: trojan, password: e498c261-cabb-4b2c-810b-995d0bd8d049, sni: ip3691376078.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
+  - {name: 芬兰-1.85MB/s, server: 45.159.249.231, port: 38584, type: ss, cipher: chacha20-ietf-poly1305, password: zIPjynKNVVaBnKK0UZ5zu2, udp: true}
+  - {name: 中转节点-543.7KB/s, server: cm03.newcome.xyz, port: 6706, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 爱沙尼亚-2.89MB/s, server: ee1-vmess.sshmax.xyz, port: 80, type: vmess, uuid: 34d4f393-ead9-48df-9370-ca8b52e6aabd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: ee1-vmess.sshmax.xyz}}, udp: true}
+  - {name: 俄罗斯联邦-981.6KB/s, server: 45.144.30.202, port: 28490, type: ss, cipher: chacha20-ietf-poly1305, password: yZdRgske85Hou96z2dRdtH, udp: true}
+  - {name: 日本-257.8KB/s, server: 54.95.21.57, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 韩国-14.13MB/s, server: unlk3.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 21852, type: trojan, password: 7ea8830e-3120-4973-a0b6-4c25219eadfc, sni: ip3691376078.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
+  - {name: 韩国-3.69MB/s, server: 43.201.53.4, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 英国-3.47MB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
   - {name: 香港-298.1KB/s, server: hk04.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 瑞士-2.84MB/s, server: 94.131.12.245, port: 37726, type: ss, cipher: chacha20-ietf-poly1305, password: AK4J1sRt2v3dLDUVC2P5lj, udp: true}
-  - {name: 韩国-12.91MB/s, server: unlk5.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen, port: 25002, type: trojan, password: 92d3e5b6-6e8c-483b-a72b-000568d2e814, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-8.54MB/s, server: cm03.newcome.xyz, port: 6705, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 韩国-4.22MB/s, server: 3.36.92.179, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: JP, server: 120.233.43.29, port: 11019, type: vmess, uuid: 703e2cfe-23ce-391a-bc76-f46348254d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 印度-3.24MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-4.50MB/s, server: nc.cm.go002.xyz, port: 19511, type: ss, cipher: chacha20-ietf-poly1305, password: dcbc1c7f-c323-4365-bd48-cf767f9081ce, udp: true}
+  - {name: 新加坡-1.30MB/s, server: 52.221.240.143, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 韩国-135.0KB/s, server: 43.201.104.144, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-6.10MB/s, server: cm03.newcome.xyz, port: 6708, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
-  - {name: 美国-3.87MB/s, server: 104.219.54.187, port: 27112, type: trojan, password: hJG3wNfsVa, sni: android.googleapis.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-3.11MB/s, server: yes.cnmjcn.net, port: 16626, type: vmess, uuid: c2c76420-257f-492a-b20f-6560f3bfa78d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com}}, udp: true}
+  - {name: 美国-491.8KB/s, server: 47.76.185.99, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
   - {name: US, server: 154.194.2.28, port: 80, type: vmess, uuid: 0ece175a-58bb-4062-ec92-74e34f33f9e2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /0ece175a, headers: {Host: buyvm.nagisa.cyou}}, udp: true}
-  - {name: 香港-9.44MB/s, server: hk01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
-  - {name: 香港-167.6KB/s, server: download2hkt.windowsupdatea.com, port: 443, type: trojan, password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff, sni: glc-hkt2.windowsupdatea.com, skip-cert-verify: true, udp: true}
+  - {name: 印度-2.34MB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.81MB/s, server: zx01.endhigh.xyz, port: 2401, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 越南-971.0KB/s, server: vip.zinok.pro, port: 443, type: trojan, password: mothai3456789080898, skip-cert-verify: true, udp: true}
+  - {name: JP2, server: 36.139.61.145, port: 80, type: vmess, uuid: 42032450-0af0-4ab7-be1b-a7ce51554953, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: 英国-465.1KB/s, server: ru01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-14.63MB/s, server: cm03.newcome.xyz, port: 6705, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 美国-939.2KB/s, server: 47.76.189.253, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
+  - {name: 日本-1.59MB/s, server: 64.176.58.7, port: 14431, type: vmess, uuid: ff681ba6-55f5-4e79-8f40-ad6bbdf14044, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 美国-5.06MB/s, server: 198.2.200.37, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/1702215223320}, udp: true}
+  - {name: 台湾-4.51MB/s, server: tj-tw02.yiyo2way.xyz, port: 9980, type: trojan, password: e8d23f6d-b1b3-3bec-a67a-b8b3df55aa95, skip-cert-verify: true, udp: true}
+  - {name: 澳大利亚-345.7KB/s, server: 154.26.157.244, port: 80, type: vmess, uuid: 877aa2a8-5854-4cb2-9aba-4a1413a6b2de, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /takeshi.wiki}, udp: true}
+  - {name: 越南-4.14MB/s, server: hanoi4.5gsieutocdo.com, port: 443, type: trojan, password: c95357eb-2869-4511-8940-f0dc5e1ec9b1, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 俄罗斯联邦-2.73MB/s, server: ru-v2ray.ipracevpn.com, port: 8443, type: vmess, uuid: 6b65926e-110d-4728-a807-5670d8829e09, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 美国-122.9KB/s, server: 144.202.81.122, port: 25514, type: vmess, uuid: 13bf827e-55cd-4b46-e9f1-b7f9ffbe7955, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: HK, server: 120.233.43.29, port: 11001, type: vmess, uuid: 703e2cfe-23ce-391a-bc76-f46348254d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 乌克兰-240.6KB/s, server: 193.238.153.14, port: 8443, type: vmess, uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 英国-8.28MB/s, server: tw02.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, skip-cert-verify: true, udp: true}
+  - {name: 韩国-2.42MB/s, server: 13.124.93.250, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-3.93MB/s, server: cm03.newcome.xyz, port: 6706, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 美国-3.87MB/s, server: 104.219.54.187, port: 27112, type: trojan, password: hJG3wNfsVa, sni: android.googleapis.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-500.1KB/s, server: any.hmbiplc-02.com, port: 30374, type: ss, cipher: aes-128-gcm, password: 00266df31ee542f397068800c1b91e57, udp: true}
+  - {name: US2, server: 172.67.84.174, port: 443, type: vmess, uuid: D8813DCB-426C-4952-B384-8951B0444EC1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/speedtest?ed=2048", headers: {Host: kansas.Kotick.site}}, udp: true}
+  - {name: 越南-217.4KB/s, server: hanoi4.5gsieutocdo.com, port: 443, type: trojan, password: c95357eb-2869-4511-8940-f0dc5e1ec9b1, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-8.54MB/s, server: cm03.newcome.xyz, port: 6705, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 46961:1210-Tha, obfs-param: 5d3ee46961.microsoft.com, udp: true}
+  - {name: 越南-1.23MB/s, server: 5sao.5gtocdocao.com, port: 443, type: trojan, password: 7a2c5296-683d-48db-9856-373cafac48b5, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 越南-882.1KB/s, server: hanoi4.speed4g.click, port: 443, type: trojan, password: b379fd8e-75c6-4bd6-8a5b-88f3e64bb3fa, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.84MB/s, server: cm01.newcome.xyz, port: 5703, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 美国-606.5KB/s, server: 47.76.185.9, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
+  - {name: 加拿大-810.1KB/s, server: 38.91.107.37, port: 4444, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: 美国-425.4KB/s, server: 47.76.185.99, port: 80, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: obfs, plugin-opts: {mode: http, host: ""}, udp: true}
+  - {name: 韩国-188.2KB/s, server: 43.201.253.32, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 日本-2.67MB/s, server: 109.123.230.157, port: 80, type: vmess, uuid: 877aa2a8-5854-4cb2-9aba-4a1413a6b2de, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /takeshi.wiki, headers: {Host: dl.kgvn.garenanow.com}}, udp: true}
+  - {name: 香港-3.19MB/s, server: sk01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, sni: sk01.trojanyyds.xyz, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-2.91MB/s, server: 158.178.227.16, port: 30839, type: vmess, uuid: 19bf4866-54ce-4fc9-8903-db7e160c5b81, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-329.6KB/s, server: tw01.trojanyyds.xyz, port: 443, type: trojan, password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce, sni: tw01.trojanyyds.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-6.52MB/s, server: cm01.newcome.xyz, port: 5705, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 俄罗斯联邦-143.3KB/s, server: 45.8.159.66, port: 19966, type: ss, cipher: aes-256-ctr, password: lncn.org h8g, udp: true}
+  - {name: 印度-180.1KB/s, server: 103.82.133.201, port: 443, type: trojan, password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41, sni: dl.kgvn.garenanow.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-165.8KB/s, server: cm01.newcome.xyz, port: 5704, type: ssr, cipher: chacha20-ietf, password: jFa4F1, protocol: auth_aes128_sha1, obfs: plain, protocol-param: 84263:3gj7aB, obfs-param: TG@wangcai_1, udp: true}
+  - {name: 新加坡-2.34MB/s, server: 207.148.77.215, port: 2, type: trojan, password: uLMSiafRJ2, skip-cert-verify: true, udp: true}
+  - {name: 台湾-7.56MB/s, server: 3gzdx1.233235.xyz, port: 42311, type: trojan, password: ac0a45fa-d23d-4c44-bfba-371cc52f8267, sni: 3gzdx1.233235.xyz, skip-cert-verify: true, udp: true}
+  - {name: _US_美国_18 2, server: goodbooks.gygjggf7654e1.repl.co, port: 443, type: vmess, uuid: 0e42ab26-2273-4a85-9b47-bd11b9140d0d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/0e42ab26-2273-4a85-9b47-bd11b9140d0d-vm?ed=2048", headers: {Host: goodbooks.gygjggf7654e1.repl.co}}, udp: true}
+  - {name: 美国-1.27MB/s, server: vps-837611db.vps.ovh.us, port: 443, type: vmess, uuid: 3e1c1355-ffb5-48c3-8e7d-f6be7b8fece4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -432,431 +472,472 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-508.2KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 台湾-7.57MB/s
-      - 香港-3.19MB/s
-      - 香港-2.96MB/s
       - 香港-4.98MB/s
-      - 台湾-7.56MB/s
-      - 香港-329.6KB/s
-      - 香港-298.1KB/s
+      - 香港-2.96MB/s
       - 香港-9.44MB/s
+      - 台湾-1.68MB/s
+      - 台湾-7.57MB/s
+      - 台湾-6.35MB/s
       - 香港-167.6KB/s
+      - 香港-508.2KB/s
+      - 香港-298.1KB/s
+      - 台湾-4.51MB/s
+      - 香港-3.19MB/s
+      - 香港-329.6KB/s
+      - 台湾-7.56MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -872,104 +953,114 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-1.32MB/s
-      - 中转节点-4.50MB/s
-      - 中转节点-6.52MB/s
-      - 日本-3.03MB/s
-      - 香港-508.2KB/s
-      - 越南-4.14MB/s
-      - 韩国-5.83MB/s
-      - 菲律宾-123.5KB/s
-      - 越南-790.9KB/s
-      - 俄罗斯联邦-981.6KB/s
-      - 美国-1.27MB/s
-      - 韩国-10.33MB/s
-      - 芬兰-1.85MB/s
-      - 获取节点异常，请在下个时段重试
-      - 韩国-14.13MB/s
-      - 爱尔兰-152.4KB/s
-      - 英国-8.28MB/s
-      - 俄罗斯联邦-143.3KB/s
-      - 乌克兰-240.6KB/s
-      - 俄罗斯联邦-2.73MB/s
-      - 中转节点-14.63MB/s
-      - 印度-3.25MB/s
-      - 韩国-3.89MB/s
-      - 加拿大-810.1KB/s
-      - 英国-465.1KB/s
-      - 台湾-4.51MB/s
-      - 台湾-6.35MB/s
-      - 美国-1.73MB/s
-      - 台湾-7.57MB/s
-      - 日本-257.8KB/s
-      - 美国-122.9KB/s
-      - 香港-3.19MB/s
-      - 新加坡-1.30MB/s
-      - 加拿大-830.2KB/s
-      - 印度-180.1KB/s
-      - 韩国-188.2KB/s
-      - 香港-2.96MB/s
-      - 印度-3.14MB/s
-      - 新加坡-2.91MB/s
-      - 中转节点-2.84MB/s
-      - 美国-3.81MB/s
-      - 韩国-2.42MB/s
-      - 德国-204.9KB/s
-      - US2
       - 韩国-4.11MB/s
       - 香港-4.98MB/s
-      - 美国-606.5KB/s
-      - 台湾-7.56MB/s
-      - 韩国-4.22MB/s
-      - 中转节点-165.8KB/s
-      - JP2
-      - 越南-396.5KB/s
-      - 越南-1.90MB/s
-      - 中转节点-17.88MB/s
-      - 俄罗斯联邦-2.82MB/s
+      - 印度-3.14MB/s
       - 加拿大-826.7KB/s
-      - 中转节点-3.11MB/s
-      - 日本-1.59MB/s
-      - 中转节点-2.27MB/s
-      - 越南-1.23MB/s
-      - 中转节点-543.7KB/s
-      - 美国-491.8KB/s
-      - 澳大利亚-345.7KB/s
-      - 美国-5.06MB/s
-      - 美国-292.1KB/s
-      - 中转节点-2.81MB/s
-      - 香港-329.6KB/s
-      - 英国-3.18MB/s
-      - HK
-      - 俄罗斯联邦-3.22MB/s
-      - 爱沙尼亚-2.89MB/s
-      - 英国-8.02MB/s
-      - 中转节点-3.93MB/s
-      - 美国-425.4KB/s
-      - 越南-882.1KB/s
+      - 韩国-5.83MB/s
+      - 越南-396.5KB/s
+      - 中转节点-1.32MB/s
+      - 爱尔兰-152.4KB/s
+      - 美国-1.73MB/s
       - _US_美国_18
+      - 美国-3.89MB/s
+      - 香港-2.96MB/s
+      - 香港-9.44MB/s
+      - 越南-1.90MB/s
+      - 英国-8.02MB/s
+      - 日本-3.03MB/s
       - 中转节点-19.23MB/s
-      - 中转节点-9.68MB/s
-      - 越南-971.0KB/s
-      - 中转节点-16.97MB/s
-      - 日本-2.67MB/s
-      - JP
-      - 美国-939.2KB/s
-      - 印度-3.24MB/s
-      - _US_美国_18 2
-      - 中转节点-500.1KB/s
+      - 俄罗斯联邦-2.82MB/s
+      - 台湾-1.68MB/s
+      - 美国-4.94MB/s
+      - 俄罗斯联邦-3.22MB/s
+      - 英国-3.18MB/s
+      - 台湾-7.57MB/s
       - 新加坡-554.3KB/s
+      - 美国-3.98MB/s
+      - 中转节点-9.68MB/s
+      - 俄罗斯联邦-3.46MB/s
+      - 越南-790.9KB/s
+      - 德国-204.9KB/s
+      - 台湾-6.35MB/s
+      - 加拿大-830.2KB/s
+      - 韩国-12.91MB/s
+      - 瑞士-2.84MB/s
+      - 中转节点-6.10MB/s
+      - 菲律宾-123.5KB/s
+      - 中转节点-16.97MB/s
+      - 香港-167.6KB/s
+      - 印度-3.25MB/s
+      - 中转节点-17.88MB/s
+      - 美国-3.81MB/s
+      - 韩国-3.89MB/s
+      - 瑞典-2.82MB/s
+      - 中转节点-2.27MB/s
+      - 香港-508.2KB/s
+      - 美国-292.1KB/s
+      - 韩国-10.33MB/s
+      - 芬兰-1.85MB/s
+      - 中转节点-543.7KB/s
+      - 爱沙尼亚-2.89MB/s
+      - 俄罗斯联邦-981.6KB/s
+      - 日本-257.8KB/s
+      - 韩国-14.13MB/s
+      - 韩国-3.69MB/s
       - 英国-3.47MB/s
       - 香港-298.1KB/s
-      - 瑞士-2.84MB/s
-      - 韩国-12.91MB/s
-      - 中转节点-8.54MB/s
+      - 韩国-4.22MB/s
+      - JP
+      - 印度-3.24MB/s
+      - 中转节点-4.50MB/s
+      - 新加坡-1.30MB/s
       - 韩国-135.0KB/s
-      - 中转节点-6.10MB/s
-      - 美国-3.87MB/s
+      - 中转节点-3.11MB/s
+      - 美国-491.8KB/s
       - US
-      - 香港-9.44MB/s
-      - 香港-167.6KB/s
+      - 印度-2.34MB/s
+      - 中转节点-2.81MB/s
+      - 越南-971.0KB/s
+      - JP2
+      - 英国-465.1KB/s
+      - 中转节点-14.63MB/s
+      - 美国-939.2KB/s
+      - 获取节点异常，请在下个时段重试
+      - 日本-1.59MB/s
+      - 美国-5.06MB/s
+      - 台湾-4.51MB/s
+      - 澳大利亚-345.7KB/s
+      - 越南-4.14MB/s
+      - 俄罗斯联邦-2.73MB/s
+      - 美国-122.9KB/s
+      - HK
+      - 乌克兰-240.6KB/s
+      - 英国-8.28MB/s
+      - 韩国-2.42MB/s
+      - 中转节点-3.93MB/s
+      - 美国-3.87MB/s
+      - 中转节点-500.1KB/s
+      - US2
+      - 越南-217.4KB/s
+      - 中转节点-8.54MB/s
+      - 越南-1.23MB/s
+      - 越南-882.1KB/s
+      - 中转节点-2.84MB/s
+      - 美国-606.5KB/s
+      - 加拿大-810.1KB/s
+      - 美国-425.4KB/s
+      - 韩国-188.2KB/s
+      - 日本-2.67MB/s
+      - 香港-3.19MB/s
+      - 新加坡-2.91MB/s
+      - 香港-329.6KB/s
+      - 中转节点-6.52MB/s
+      - 俄罗斯联邦-143.3KB/s
+      - 印度-180.1KB/s
+      - 中转节点-165.8KB/s
+      - 新加坡-2.34MB/s
+      - 台湾-7.56MB/s
+      - _US_美国_18 2
+      - 美国-1.27MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
