@@ -7,32 +7,68 @@ external-controller: 127.0.0.1:9090
 proxies:
 - alterId: "0"
   cipher: none
-  name: 更新于:01-10 00:00 -by BuLink.xyz- 以下节点不计流量
+  name: 更新于:01-10 04:00 -by BuLink.xyz- 以下节点不计流量
   port: "0"
   server: 使用前记得更新订阅
   type: vmess
   uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
   ws-opts: {}
+- alterId: 0
+  cipher: auto
+  name: github.com/freefq - 乌克兰  1
+  network: ws
+  port: 80
+  server: 91.242.229.77
+  type: vmess
+  uuid: 56890326-df58-432d-be1e-67064e2b4355
+  ws-opts:
+    path: /vmess
+- cipher: chacha20-poly1305
+  name: github.com/freefq - 美国Amazon数据中心 2
+  password: Bog0ELmMM9DSxDdQ
+  port: "443"
+  server: series-a2-me.samanehha.co
+  type: ss
 - alterId: "0"
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 1
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 3
   network: ws
   port: "80"
-  server: 104.17.2.183
+  server: scadn.yydsii.com
   type: vmess
-  uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
+  uuid: 2b0c5996-216f-4933-9aed-92458ff4988f
   ws-opts:
     path: /
 - alterId: "0"
-  name: github.com/freefq - 塞尔维亚  2
+  cipher: none
+  name: github.com/freefq - 美国CloudFlare节点 4
   network: ws
-  port: "59492"
-  server: 89.23.86.189
+  port: "80"
+  server: 172.67.217.144
+  type: vmess
+  uuid: 85674552-ce41-44d9-bb2a-50f76450b3d8
+  ws-opts:
+    path: /
+- alterId: "0"
+  name: github.com/freefq - 塞尔维亚  5
+  network: ws
+  port: 59492
+  server: dm.imzcc.com
   type: vmess
   uuid: 3cd1a2f0-499f-4eb0-862a-cdd0ecd821c7
   ws-opts:
     path: /imzcc
 - alterId: 0
-  name: github.com/freefq - 美国CloudFlare节点 3
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 6
+  network: ws
+  port: 8880
+  server: 104.21.32.215
+  type: vmess
+  uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
+  ws-opts:
+    path: /
+- alterId: 0
+  name: github.com/freefq - 美国CloudFlare节点 7
   network: ws
   port: 443
   server: hexsen.com
@@ -43,7 +79,7 @@ proxies:
     path: /argo-vmess?ed=2048
 - alterId: 0
   cipher: none
-  name: github.com/freefq - 浙江省移动 4
+  name: github.com/freefq - 浙江省移动 8
   network: ws
   port: "20401"
   server: data-us-v1.shwjfkw.cn
@@ -51,21 +87,27 @@ proxies:
   uuid: b1478e24-4916-3abe-8f17-15931012ecbe
   ws-opts:
     path: /debian
+- alterId: "0"
+  name: github.com/freefq - 美国CloudFlare公司CDN节点 9
+  network: ws
+  port: "80"
+  server: 104.17.2.183
+  type: vmess
+  uuid: f256a3ae-0f85-4a1d-d0cd-2d0b4b73f4f1
+  ws-opts:
+    path: /
 - cipher: chacha20-ietf-poly1305
-  name: github.com/freefq - 广东省广州市移动 5
+  name: github.com/freefq - 广东省广州市移动 10
   password: 7f821ff8-2ef2-4433-b810-f0ce77fd5491
   port: "26667"
   server: service.ouluyun9803.com
   type: ss
-- alterId: 0
-  name: github.com/freefq - 美国CloudFlare公司CDN节点 6
-  network: ws
-  port: 8880
-  server: 104.21.32.215
-  type: vmess
-  uuid: ce9aadc8-8c6e-4867-d247-9a84b469ac27
-  ws-opts:
-    path: /
+- cipher: chacha20-ietf-poly1305
+  name: github.com/freefq - 广东省广州市移动 11
+  password: 7f821ff8-2ef2-4433-b810-f0ce77fd5491
+  port: "50002"
+  server: service.ouluyun9803.com
+  type: ss
 proxy-groups:
 - name: 节点选择
   proxies:
@@ -73,13 +115,18 @@ proxy-groups:
   - ✈ 手动选择
   - ✈ 故障切换
   - DIRECT
-  - 更新于:01-10 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 塞尔维亚  2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 浙江省移动 4
-  - github.com/freefq - 广东省广州市移动 5
+  - 更新于:01-10 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 乌克兰  1
+  - github.com/freefq - 美国Amazon数据中心 2
+  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 4
+  - github.com/freefq - 塞尔维亚  5
   - github.com/freefq - 美国CloudFlare公司CDN节点 6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 浙江省移动 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 广东省广州市移动 11
   type: select
 - name: 广告拦截
   proxies:
@@ -96,36 +143,51 @@ proxy-groups:
   type: select
 - name: ✈ 手动选择
   proxies:
-  - 更新于:01-10 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 塞尔维亚  2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 浙江省移动 4
-  - github.com/freefq - 广东省广州市移动 5
+  - 更新于:01-10 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 乌克兰  1
+  - github.com/freefq - 美国Amazon数据中心 2
+  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 4
+  - github.com/freefq - 塞尔维亚  5
   - github.com/freefq - 美国CloudFlare公司CDN节点 6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 浙江省移动 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 广东省广州市移动 11
   type: select
 - interval: 500
   name: ✈ 延迟最低
   proxies:
-  - 更新于:01-10 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 塞尔维亚  2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 浙江省移动 4
-  - github.com/freefq - 广东省广州市移动 5
+  - 更新于:01-10 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 乌克兰  1
+  - github.com/freefq - 美国Amazon数据中心 2
+  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 4
+  - github.com/freefq - 塞尔维亚  5
   - github.com/freefq - 美国CloudFlare公司CDN节点 6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 浙江省移动 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 广东省广州市移动 11
   type: url-test
   url: http://www.gstatic.com/generate_204
 - interval: 500
   name: ✈ 故障切换
   proxies:
-  - 更新于:01-10 00:00 -by BuLink.xyz- 以下节点不计流量
-  - github.com/freefq - 美国CloudFlare公司CDN节点 1
-  - github.com/freefq - 塞尔维亚  2
-  - github.com/freefq - 美国CloudFlare节点 3
-  - github.com/freefq - 浙江省移动 4
-  - github.com/freefq - 广东省广州市移动 5
+  - 更新于:01-10 04:00 -by BuLink.xyz- 以下节点不计流量
+  - github.com/freefq - 乌克兰  1
+  - github.com/freefq - 美国Amazon数据中心 2
+  - github.com/freefq - 美国CloudFlare公司CDN节点 3
+  - github.com/freefq - 美国CloudFlare节点 4
+  - github.com/freefq - 塞尔维亚  5
   - github.com/freefq - 美国CloudFlare公司CDN节点 6
+  - github.com/freefq - 美国CloudFlare节点 7
+  - github.com/freefq - 浙江省移动 8
+  - github.com/freefq - 美国CloudFlare公司CDN节点 9
+  - github.com/freefq - 广东省广州市移动 10
+  - github.com/freefq - 广东省广州市移动 11
   type: fallback
   url: http://www.gstatic.com/generate_204
 rules:
