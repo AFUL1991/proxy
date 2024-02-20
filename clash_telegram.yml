@@ -5,95 +5,139 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国-505.7KB/s, server: cf.openxai.link, port: 8080, type: vmess, uuid: c18beb85-c67b-46ed-b8cc-4cbfeae5f194, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: eu1.openxai.link}}, udp: true}
-  - {name: 未知国家-3.81MB/s, server: 104.19.159.144, port: 443, type: trojan, password: 4aec4e7f8cf8454ea4613659822e1a61, sni: avianrecruit.com, skip-cert-verify: true, network: ws, ws-opts: {path: 6b777a91, headers: {Host: avianrecruit.com}}, udp: true}
-  - {name: CN 中国 8, server: lhywain.cc, port: 9002, type: vmess, uuid: 16a27b46-6892-40f4-96cd-c7ebf2d39771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: 法国-2.99MB/s, server: 141.11.189.55, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
-  - {name: 英国-3.70MB/s, server: l2-uk-a.cmydns2.com, port: 443, type: trojan, password: 5b4c3ff4-16c7-35f5-97e9-68eb9a053815cmynw, sni: paydiu.com, skip-cert-verify: true, udp: true}
-  - {name: SG 新加坡 1, server: 18.140.65.78, port: 21347, type: vmess, uuid: 4f64e770-e7f1-4bee-b521-6624db528d97, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
   - {name: NL 荷兰 6, server: 91.228.56.194, port: 80, type: vmess, uuid: b106699a-9de4-4316-90b5-0cd55835fafb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: 英国-3.75MB/s, server: jseyu.arvancode.eu.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ, udp: true}
-  - {name: 香港-152.3KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 越南-1.91MB/s, server: 103.154.63.16, port: 443, type: trojan, password: 5bae27f5-3b8e-48f3-b91f-30fc680ea78f, skip-cert-verify: true, udp: true}
-  - {name: SG 新加坡 2, server: 18.140.65.78, port: 443, type: vmess, uuid: fc68212c-d22b-4976-fecb-f2e03b9c9700, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: CN 中国 4, server: 223.113.130.55, port: 80, type: vmess, uuid: 803c7369-444a-4495-b965-2b68611a983b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ll, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: FR 法国 5, server: 45.155.169.91, port: 80, type: vmess, uuid: eb5bf043-1840-4239-f724-5a758c53290e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: 日本-251.3KB/s, server: 13.231.224.133, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: CN 中国 3, server: 47.106.112.114, port: 80, type: vmess, uuid: 7c1d9869-ecac-4ca6-b7e7-ecb60f503078, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: DE 德国 7, server: 38.54.13.212, port: 23026, type: vmess, uuid: ef4d0930-3788-4410-9305-fae4ba652ede, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ef4d0930, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: 英国-3.70MB/s 2, server: series-a2-mec.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c, udp: true}
+  - {name: 香港-740.4KB/s, server: 8.217.145.134, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-505.7KB/s, server: cf.openxai.link, port: 8080, type: vmess, uuid: c18beb85-c67b-46ed-b8cc-4cbfeae5f194, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: eu1.openxai.link}}, udp: true}
+  - {name: CN 中国 8, server: lhywain.cc, port: 9002, type: vmess, uuid: 16a27b46-6892-40f4-96cd-c7ebf2d39771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
   - {name: 英国-3.77MB/s, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg, udp: true}
+  - {name: CN 中国 4, server: 223.113.130.55, port: 80, type: vmess, uuid: 803c7369-444a-4495-b965-2b68611a983b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ll, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 未知国家-3.81MB/s, server: 104.19.159.144, port: 443, type: trojan, password: 4aec4e7f8cf8454ea4613659822e1a61, sni: avianrecruit.com, skip-cert-verify: true, network: ws, ws-opts: {path: 6b777a91, headers: {Host: avianrecruit.com}}, udp: true}
+  - {name: 越南-1.91MB/s, server: 103.154.63.16, port: 443, type: trojan, password: 5bae27f5-3b8e-48f3-b91f-30fc680ea78f, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-368.0KB/s, server: 183.233.187.193, port: 45055, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: CN 中国 3, server: 47.106.112.114, port: 80, type: vmess, uuid: 7c1d9869-ecac-4ca6-b7e7-ecb60f503078, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 法国-2.99MB/s, server: 141.11.189.55, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
+  - {name: FR 法国 5, server: 45.155.169.91, port: 80, type: vmess, uuid: eb5bf043-1840-4239-f724-5a758c53290e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 英国-3.75MB/s, server: jseyu.arvancode.eu.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ, udp: true}
+  - {name: 未知国家-2.87MB/s, server: 104.21.225.184, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a.prapt5.ir}}, udp: true}
+  - {name: 韩国-6.85MB/s, server: p221.panda001.net, port: 53288, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
+  - {name: 日本-251.3KB/s, server: 13.231.224.133, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 未知国家-4.12MB/s, server: 104.21.225.88, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a.prapt5.ir}}, udp: true}
+  - {name: 香港-152.3KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 台湾-542.5KB/s, server: b23.ntbq.dynu.net, port: 5681, type: vmess, uuid: 814879ae-a670-4423-be9d-f4cbf4923ada, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 英国-3.70MB/s, server: series-a2-mec.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: u17T3BvpYaaiuW2c, udp: true}
+  - {name: SG 新加坡 2, server: 18.140.65.78, port: 443, type: vmess, uuid: fc68212c-d22b-4976-fecb-f2e03b9c9700, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: DE 德国 7, server: 38.54.13.212, port: 23026, type: vmess, uuid: ef4d0930-3788-4410-9305-fae4ba652ede, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ef4d0930, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 未知国家-468.9KB/s, server: 162.159.200.5, port: 80, type: vmess, uuid: 91fe996b-5f1b-42b5-9554-a892be98bc31, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ca3.889611.com}}, udp: true}
+  - {name: CN 中国 8 2, server: lhywain.cc, port: 9002, type: vmess, uuid: 16a27b46-6892-40f4-96cd-c7ebf2d39771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 英国-3.70MB/s 2, server: l2-uk-a.cmydns2.com, port: 443, type: trojan, password: 5b4c3ff4-16c7-35f5-97e9-68eb9a053815cmynw, sni: paydiu.com, skip-cert-verify: true, udp: true}
+  - {name: 未知国家-601.8KB/s, server: 104.21.225.99, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a.prapt5.ir}}, udp: true}
+  - {name: 中转节点-20.16MB/s, server: mysql.accessconnect.cc, port: 3212, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 132326:GeEHwW, obfs-param: 4960d132326.www.gov.hk, udp: true}
+  - {name: SG 新加坡 1, server: 18.140.65.78, port: 21347, type: vmess, uuid: 4f64e770-e7f1-4bee-b521-6624db528d97, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 中转节点-144.0KB/s, server: service.ouluyun9803.com, port: 20009, type: ss, cipher: chacha20-ietf-poly1305, password: cfa17a0d-5e7d-4871-976e-f116e0818123, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -112,100 +156,146 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 香港-740.4KB/s
       - 香港-152.3KB/s
+      - 台湾-542.5KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -221,24 +311,35 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-505.7KB/s
-      - 未知国家-3.81MB/s
-      - CN 中国 8
-      - 法国-2.99MB/s
-      - 英国-3.70MB/s
-      - SG 新加坡 1
       - NL 荷兰 6
-      - 英国-3.75MB/s
-      - 香港-152.3KB/s
-      - 越南-1.91MB/s
-      - SG 新加坡 2
-      - CN 中国 4
-      - FR 法国 5
-      - 日本-251.3KB/s
-      - CN 中国 3
-      - DE 德国 7
-      - 英国-3.70MB/s 2
+      - 香港-740.4KB/s
+      - 美国-505.7KB/s
+      - CN 中国 8
       - 英国-3.77MB/s
+      - CN 中国 4
+      - 未知国家-3.81MB/s
+      - 越南-1.91MB/s
+      - 中转节点-368.0KB/s
+      - CN 中国 3
+      - 法国-2.99MB/s
+      - FR 法国 5
+      - 英国-3.75MB/s
+      - 未知国家-2.87MB/s
+      - 韩国-6.85MB/s
+      - 日本-251.3KB/s
+      - 未知国家-4.12MB/s
+      - 香港-152.3KB/s
+      - 台湾-542.5KB/s
+      - 英国-3.70MB/s
+      - SG 新加坡 2
+      - DE 德国 7
+      - 未知国家-468.9KB/s
+      - CN 中国 8 2
+      - 英国-3.70MB/s 2
+      - 未知国家-601.8KB/s
+      - 中转节点-20.16MB/s
+      - SG 新加坡 1
+      - 中转节点-144.0KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
