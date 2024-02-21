@@ -5,75 +5,79 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-865.1KB/s, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true}
-  - {name: SG 新加坡 1, server: 18.140.65.78, port: 21347, type: vmess, uuid: 4f64e770-e7f1-4bee-b521-6624db528d97, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: 中转节点-2.55MB/s, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg, udp: true}
-  - {name: 中转节点-4.78MB/s, server: java.ct.arvancode.eu.Org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true}
-  - {name: 香港-573.7KB/s, server: 91.228.56.194, port: 80, type: vmess, uuid: b106699a-9de4-4316-90b5-0cd55835fafb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: SG 新加坡 2, server: 18.140.65.78, port: 443, type: vmess, uuid: fc68212c-d22b-4976-fecb-f2e03b9c9700, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: FR 法国 5, server: 45.155.169.91, port: 80, type: vmess, uuid: eb5bf043-1840-4239-f724-5a758c53290e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: CN 中国 8, server: lhywain.cc, port: 9002, type: vmess, uuid: 16a27b46-6892-40f4-96cd-c7ebf2d39771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: CN 中国 4, server: 223.113.130.55, port: 80, type: vmess, uuid: 803c7369-444a-4495-b965-2b68611a983b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ll, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: CN 中国 3, server: 47.106.112.114, port: 80, type: vmess, uuid: 7c1d9869-ecac-4ca6-b7e7-ecb60f503078, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
-  - {name: NL 荷兰 6, server: 91.228.56.194, port: 80, type: vmess, uuid: b106699a-9de4-4316-90b5-0cd55835fafb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
   - {name: DE 德国 7, server: 38.54.13.212, port: 23026, type: vmess, uuid: ef4d0930-3788-4410-9305-fae4ba652ede, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ef4d0930, headers: {Host: tms.dingtalk.com}}, udp: true}
   - {name: 未知国家-5.37MB/s, server: v1.arvancode.eu.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg, udp: true}
+  - {name: 香港-573.7KB/s, server: 91.228.56.194, port: 80, type: vmess, uuid: b106699a-9de4-4316-90b5-0cd55835fafb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 中转节点-4.78MB/s, server: java.ct.arvancode.eu.Org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true}
+  - {name: SG 新加坡 2, server: 18.140.65.78, port: 443, type: vmess, uuid: fc68212c-d22b-4976-fecb-f2e03b9c9700, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: CN 中国 3, server: 47.106.112.114, port: 80, type: vmess, uuid: 7c1d9869-ecac-4ca6-b7e7-ecb60f503078, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
+  - {name: NL 荷兰 6, server: 91.228.56.194, port: 80, type: vmess, uuid: b106699a-9de4-4316-90b5-0cd55835fafb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: SG 新加坡 1, server: 18.140.65.78, port: 21347, type: vmess, uuid: 4f64e770-e7f1-4bee-b521-6624db528d97, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: CN 中国 4, server: 223.113.130.55, port: 80, type: vmess, uuid: 803c7369-444a-4495-b965-2b68611a983b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /ll, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: 中转节点-865.1KB/s, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true}
+  - {name: 中转节点-2.55MB/s, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: mps3FwmDjLrWaOVg, udp: true}
+  - {name: FR 法国 5, server: 45.155.169.91, port: 80, type: vmess, uuid: eb5bf043-1840-4239-f724-5a758c53290e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
+  - {name: CN 中国 8, server: lhywain.cc, port: 9002, type: vmess, uuid: 16a27b46-6892-40f4-96cd-c7ebf2d39771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -92,19 +96,20 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -116,56 +121,59 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -181,19 +189,20 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-865.1KB/s
-      - SG 新加坡 1
-      - 中转节点-2.55MB/s
-      - 中转节点-4.78MB/s
-      - 香港-573.7KB/s
-      - SG 新加坡 2
-      - FR 法国 5
-      - CN 中国 8
-      - CN 中国 4
-      - CN 中国 3
-      - NL 荷兰 6
       - DE 德国 7
       - 未知国家-5.37MB/s
+      - 香港-573.7KB/s
+      - 中转节点-4.78MB/s
+      - SG 新加坡 2
+      - CN 中国 3
+      - 获取节点异常，请在下个时段重试
+      - NL 荷兰 6
+      - SG 新加坡 1
+      - CN 中国 4
+      - 中转节点-865.1KB/s
+      - 中转节点-2.55MB/s
+      - FR 法国 5
+      - CN 中国 8
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
