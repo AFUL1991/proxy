@@ -5,123 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 韩国-2.16MB/s, server: 13.209.11.98, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-17.51MB/s, server: 183.240.220.84, port: 11845, type: ssr, cipher: chacha20-ietf, password: Fhbe0z, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 9890:cqtnFi, obfs-param: ac3669890.microsoft.com, udp: true}
-  - {name: 未知国家-113.0KB/s, server: 78.111.102.232, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
-  - {name: 台湾-7.00MB/s, server: ty11t.twty.dynu.net, port: 13761, type: trojan, password: 4c1400d1-f58b-4551-8df7-c7e3557e1a98, sni: ty11t.twty.dynu.net, skip-cert-verify: true, udp: true}
-  - {name: 台湾-241.3KB/s, server: mahilu.site, port: 2052, type: vmess, uuid: 7a737f41-b792-4260-94ff-3d864da67b80, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: mahilu.site}}, udp: true}
-  - {name: 香港-1.69MB/s, server: 47.243.196.229, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: "", path: "", tls: false, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 未知国家-415.7KB/s, server: mahilu.site, port: 2052, type: vmess, uuid: 7a737f41-b792-4260-94ff-3d864da67b80, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: mahilu.site}}, udp: true}
-  - {name: 台湾-4.90MB/s, server: 3.34.200.94, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-17.40MB/s, server: 183.240.220.84, port: 11846, type: ssr, cipher: chacha20-ietf, password: Fhbe0z, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 9890:cqtnFi, obfs-param: ac3669890.microsoft.com, udp: true}
-  - {name: 中转节点-4.81MB/s, server: kr2.mhw7e2.online, port: 20020, type: ss, cipher: chacha20-ietf-poly1305, password: 66e030b0-e51c-11ee-b858-086e190000d9, udp: true}
-  - {name: 加拿大-3.50MB/s, server: 134.122.41.160, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
-  - {name: 美国-974.8KB/s, server: 43.207.80.176, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-117.1KB/s, server: cfcdn1.sanfencdn9.com, port: 2086, type: vmess, uuid: ba4e86e7-d4f7-4c4e-aa8f-a91b8cd9de8a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /video/Z7qdcrAGRw, headers: {Host: us77SmSk86j.fzbqfrse.xyz}}, udp: true}
-  - {name: 未知国家-5.40MB/s, server: 104.21.234.52, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a.prapt1.ir}}, udp: true}
-  - {name: 美国-151.7KB/s, server: 172.67.152.170, port: 2052, type: vmess, uuid: 7a737f41-b792-4260-94ff-3d864da67b80, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: mahilu.site}}, udp: true}
-  - {name: 英国-237.0KB/s, server: 51.143.142.225, port: 2104, type: ss, cipher: chacha20-ietf-poly1305, password: tWgBHRg1EzdeRha7R2A2Tp, udp: true}
-  - {name: 韩国-3.60MB/s, server: 43.203.201.192, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-10.57MB/s, server: gtm1.ktmwan.com, port: 27250, type: ss, cipher: chacha20-ietf-poly1305, password: 5b551c75-c002-46bf-8261-9b86f57aad37, udp: true}
-  - {name: 韩国-3.73MB/s, server: 3.34.200.94, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-4.48MB/s, server: 54.190.1.40, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-4.31MB/s, server: 54.213.221.39, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 新加坡-216.4KB/s, server: 52.221.183.250, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 新加坡-685.3KB/s, server: 54.169.201.145, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-2.16MB/s, server: us3.mhw7e2.online, port: 20017, type: ss, cipher: chacha20-ietf-poly1305, password: 66e030b0-e51c-11ee-b858-086e190000d9, udp: true}
-  - {name: 未知国家-5.24MB/s, server: 104.21.224.209, port: 80, type: vmess, uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a.prapt1.ir}}, udp: true}
+  - {name: 韩国-3.65MB/s, server: 43.201.15.202, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-4.68MB/s, server: 54.190.1.40, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-3.84MB/s, server: 108.162.192.100, port: 8080, type: vmess, uuid: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: d9c5ec6a-a8d8-4732-8447-56fbd2f93e96-vm}, udp: true}
+  - {name: 加拿大-112.0KB/s, server: 134.122.41.160, port: 3389, type: vmess, uuid: 9c050a86-d612-48f1-ec32-e573df08a1b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: http, http-opts: {method: GET, path: [/]}, udp: true}
+  - {name: 未知国家-1.58MB/s, server: yh1.dtku41.xyz, port: 8080, type: vmess, uuid: 34c0bb5e-c120-432d-9c58-bd7d82c7397b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: 34c0bb5e-c120-432d-9c58-bd7d82c7397b-vm, headers: {Host: uh-lawyers-instruments-kernel.trycloudflare.com}}, udp: true}
+  - {name: 中转节点-8.89MB/s, server: gtm1.ktmwan.com, port: 27259, type: ss, cipher: chacha20-ietf-poly1305, password: d6f0ebb1-cfc3-4f7b-ae8c-6a1374cfaa06, udp: true}
+  - {name: 台湾-4.30MB/s, server: 103.177.33.22, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/311227222808, headers: {Host: www.35709620.xyz}}, udp: true}
+  - {name: 美国-6.11MB/s, server: 172.67.132.209, port: 443, type: vmess, uuid: 33653184-91f3-4f3f-b707-2fc21e9adeb8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
+  - {name: 未知国家-13.32MB/s, server: 104.18.31.129, port: 2086, type: vmess, uuid: ba4e86e7-d4f7-4c4e-aa8f-a91b8cd9de8a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /video/Z7qdcrAGRw, headers: {Host: us77SmSk86j.fzbqfrse.xyz}}, udp: true}
+  - {name: 美国-16.04MB/s, server: 172.67.170.75, port: 80, type: vmess, uuid: 2a8a10fb-9ca3-367e-a234-cf09f841be4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /v149-dskds65, headers: {Host: us4e-20240111.v2freevpn.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -140,131 +80,68 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 台湾-4.90MB/s
+      - 台湾-4.30MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -280,31 +157,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 韩国-2.16MB/s
-      - 中转节点-17.51MB/s
-      - 未知国家-113.0KB/s
-      - 台湾-7.00MB/s
-      - 台湾-241.3KB/s
-      - 香港-1.69MB/s
-      - 未知国家-415.7KB/s
-      - 台湾-4.90MB/s
-      - 中转节点-17.40MB/s
-      - 中转节点-4.81MB/s
-      - 加拿大-3.50MB/s
-      - 美国-974.8KB/s
-      - 美国-117.1KB/s
-      - 未知国家-5.40MB/s
-      - 美国-151.7KB/s
-      - 英国-237.0KB/s
-      - 韩国-3.60MB/s
-      - 中转节点-10.57MB/s
-      - 韩国-3.73MB/s
-      - 美国-4.48MB/s
-      - 美国-4.31MB/s
-      - 新加坡-216.4KB/s
-      - 新加坡-685.3KB/s
-      - 中转节点-2.16MB/s
-      - 未知国家-5.24MB/s
+      - 韩国-3.65MB/s
+      - 美国-4.68MB/s
+      - 美国-3.84MB/s
+      - 加拿大-112.0KB/s
+      - 未知国家-1.58MB/s
+      - 中转节点-8.89MB/s
+      - 台湾-4.30MB/s
+      - 美国-6.11MB/s
+      - 未知国家-13.32MB/s
+      - 美国-16.04MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
