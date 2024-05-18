@@ -5,63 +5,103 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 新加坡-450.1KB/s, server: 103.172.116.94, port: 9027, type: ss, cipher: aes-256-cfb, password: EXN3S3eQpjE7EJu8, udp: true}
-  - {name: 新加坡-165.0KB/s, server: 103.172.116.94, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
   - {name: 新加坡-367.5KB/s, server: 103.172.116.94, port: 9014, type: ss, cipher: aes-256-cfb, password: KnJGad3FqTvjqbaX, udp: true}
-  - {name: 新加坡-195.2KB/s, server: 103.172.116.94, port: 9043, type: ss, cipher: aes-256-cfb, password: HSZuyJQcWe8dxNdF, udp: true}
-  - {name: 法国-592.3KB/s, server: 149.202.82.172, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: 新加坡-227.9KB/s, server: 103.172.116.94, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ, udp: true}
-  - {name: 新加坡-278.1KB/s, server: 103.172.116.94, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true}
-  - {name: 法国-612.9KB/s, server: 149.202.82.172, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: 新加坡-157.8KB/s, server: 103.172.116.94, port: 9038, type: ss, cipher: aes-256-cfb, password: gYCYXfkUQEs2TaJQ, udp: true}
+  - {name: 加拿大-161.7KB/s, server: 158.51.121.36, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws}, udp: true}
+  - {name: 中转节点-1.84MB/s, server: m.cnmjin.net, port: 16632, type: vmess, uuid: 2b8cfb7b-d3e7-4525-8418-e13a9b8fd73b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dcef278233434a15c3587ef998dd119d.mobgslb.tbcache.com}}, udp: true}
   - {name: 新加坡-134.9KB/s, server: 103.172.116.94, port: 9061, type: ss, cipher: aes-256-cfb, password: 4R3hUfZ2FHhDmNcP, udp: true}
+  - {name: 法国-592.3KB/s, server: 149.202.82.172, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: 韩国-1.54MB/s, server: 3.34.95.205, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 新加坡-157.8KB/s, server: 103.172.116.94, port: 9038, type: ss, cipher: aes-256-cfb, password: gYCYXfkUQEs2TaJQ, udp: true}
+  - {name: 法国-612.9KB/s, server: 149.202.82.172, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: 新加坡-195.2KB/s, server: 103.172.116.94, port: 9043, type: ss, cipher: aes-256-cfb, password: HSZuyJQcWe8dxNdF, udp: true}
+  - {name: 新加坡-450.1KB/s, server: 103.172.116.94, port: 9027, type: ss, cipher: aes-256-cfb, password: EXN3S3eQpjE7EJu8, udp: true}
+  - {name: 新加坡-278.1KB/s, server: 103.172.116.94, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true}
+  - {name: 美国-1.90MB/s, server: 35.91.178.223, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-3.69MB/s, server: 23.154.136.2, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws, headers: {Host: 23.154.136.2}}, udp: true}
+  - {name: 中转节点-307.5KB/s, server: 183.232.199.61, port: 15603, type: vmess, uuid: aaaaaaaa-aaaa-aaaa-aaaa-daaaaaaaaaad, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-227.9KB/s, server: 103.172.116.94, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ, udp: true}
+  - {name: 中转节点-14.17MB/s, server: hk6.gauss.life, port: 16323, type: ss, cipher: chacha20-ietf-poly1305, password: ab106898-96fb-46b3-9de1-cfdceeaab04b, udp: true}
+  - {name: 中转节点-134.4KB/s, server: 120.232.240.38, port: 8443, type: vmess, uuid: 39ef8f5d-7286-41b0-9c11-c976925d2931, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-1.45MB/s, server: 223.113.54.154, port: 30811, type: trojan, password: TNDSJfNv, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-165.0KB/s, server: 103.172.116.94, port: 9001, type: ss, cipher: aes-256-cfb, password: UkXRsXvR6buDMG2Y, udp: true}
+  - {name: 未知国家-5.29MB/s, server: cfcdn3.sanfencdn9.com, port: 2052, type: vmess, uuid: c74c2fd1-7e5b-4c20-be9f-f3c3b7fd6248, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /video/Zo98PYfE, headers: {Host: kvjqqknzjp6.yofnhkfc.xyz}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +120,26 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -100,47 +150,77 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -156,16 +236,26 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 新加坡-450.1KB/s
-      - 新加坡-165.0KB/s
       - 新加坡-367.5KB/s
-      - 新加坡-195.2KB/s
-      - 法国-592.3KB/s
-      - 新加坡-227.9KB/s
-      - 新加坡-278.1KB/s
-      - 法国-612.9KB/s
-      - 新加坡-157.8KB/s
+      - 加拿大-161.7KB/s
+      - 中转节点-1.84MB/s
       - 新加坡-134.9KB/s
+      - 法国-592.3KB/s
+      - 韩国-1.54MB/s
+      - 新加坡-157.8KB/s
+      - 法国-612.9KB/s
+      - 新加坡-195.2KB/s
+      - 新加坡-450.1KB/s
+      - 新加坡-278.1KB/s
+      - 美国-1.90MB/s
+      - 美国-3.69MB/s
+      - 中转节点-307.5KB/s
+      - 新加坡-227.9KB/s
+      - 中转节点-14.17MB/s
+      - 中转节点-134.4KB/s
+      - 中转节点-1.45MB/s
+      - 新加坡-165.0KB/s
+      - 未知国家-5.29MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
