@@ -5,143 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转节点-378.5KB/s, server: 36.151.195.48, port: 4603, type: trojan, password: TNDSJfNv, skip-cert-verify: true, udp: true}
-  - {name: 美国-302.4KB/s, server: 23.154.136.2, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws}, udp: true}
-  - {name: 法国-4.16MB/s, server: 13.38.150.70, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: 英国-3.39MB/s, server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
-  - {name: 德国-3.63MB/s, server: 52.57.33.126, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: 香港-374.7KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 美国-1.53MB/s, server: 172.67.124.123, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: any.ktsfd.shop, path: "", tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 法国-330.8KB/s, server: 149.202.82.172, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: 英国-124.9KB/s, server: 51.145.96.134, port: 18869, type: ss, cipher: chacha20-ietf-poly1305, password: V8QywnpW9gaAwJfzkStkVp, udp: true}
-  - {name: 美国-413.4KB/s, server: nagoya.meijireform.com, port: 28333, type: trojan, password: DyF9KXR8gx5EclDF6pT2lS3BejSRDazY7C0aYwaOApn33ZquZyIOex4CS83NAC, skip-cert-verify: true, udp: true}
-  - {name: 香港-130.7KB/s, server: 150.107.46.21, port: 8083, type: ssr, cipher: aes-256-cfb, password: iFqnzSscN, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 法国-426.7KB/s, server: 149.202.82.172, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
-  - {name: 法国-661.7KB/s, server: 149.202.82.172, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: 未知国家-732.2KB/s, server: 104.19.45.17, port: 2095, type: vmess, uuid: 7a737f41-b792-4260-94ff-3d864da67b80, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: onea.flha.ru}}, udp: true}
-  - {name: 未知国家-2.91MB/s, server: 104.17.156.224, port: 2052, type: vmess, uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: in4.wish.ml}}, udp: true}
-  - {name: 法国-452.7KB/s, server: 149.202.82.172, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: 未知国家-3.03MB/s, server: 104.17.156.224, port: 2052, type: vmess, uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: in4.wish.ml}}, udp: true}
-  - {name: 未知国家-3.36MB/s, server: hk.wish.ml, port: 2052, type: vmess, uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: in4.wish.ml}}, udp: true}
-  - {name: 爱尔兰-3.88MB/s, server: 99.80.246.139, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
-  - {name: 法国-557.3KB/s, server: 149.202.82.172, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: 美国-1.34MB/s, server: 205.134.180.139, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: lWaGPVFjmnag, udp: true}
-  - {name: 美国-290.8KB/s, server: 23.154.136.2, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws}, udp: true}
-  - {name: 英国-109.0KB/s, server: 52.151.99.42, port: 58939, type: ss, cipher: chacha20-ietf-poly1305, password: jha5ZXvI7J4CkWQn4iB3AF, udp: true}
-  - {name: 美国-1.65MB/s, server: 172.67.124.123, port: 443, type: ss, cipher: aes-128-gcm, password: a-wym4ovY4Yw, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: any.ktsfd.shop, path: "", tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-1.55MB/s, server: 120.236.196.21, port: 29529, type: trojan, password: TNDSJfNv, skip-cert-verify: true, udp: true}
-  - {name: 波兰-1.67MB/s, server: 217.30.10.18, port: 9033, type: ss, cipher: aes-256-cfb, password: UTJA57ypk2XKQpnm, udp: true}
-  - {name: 美国-252.3KB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
-  - {name: 中转节点-248.5KB/s, server: yes.cnmjcn.net, port: 16632, type: vmess, uuid: 2b8cfb7b-d3e7-4525-8418-e13a9b8fd73b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dcef278233434a15c3587ef998dd119d.mobgslb.tbcache.com}}, udp: true}
-  - {name: 美国-2.30MB/s, server: hk.wish.ml, port: 2052, type: vmess, uuid: c286daa2-59de-455c-8de8-ec032b6ce2e8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: in4.wish.ml}}, udp: true}
-  - {name: 法国-515.8KB/s, server: 149.202.82.172, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: 加拿大-1.06MB/s, server: 134.195.196.178, port: 808, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 中转节点-5.07MB/s, server: 183.232.199.28, port: 15603, type: vmess, uuid: aaaaaaaa-aaaa-aaaa-aaaa-daaaaaaaaaad, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 法国-549.4KB/s, server: 149.202.82.172, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: 中转节点-8.24MB/s, server: m.cnmjin.net, port: 16632, type: vmess, uuid: 2b8cfb7b-d3e7-4525-8418-e13a9b8fd73b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dcef278233434a15c3587ef998dd119d.mobgslb.tbcache.com}}, udp: true}
+  - {name: 美国-3.39MB/s, server: beedoost.org, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym, udp: true}
+  - {name: 法国-547.8KB/s, server: 149.202.82.172, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: 法国-300.8KB/s, server: 149.202.82.172, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: 法国-475.2KB/s, server: 149.202.82.172, port: 7002, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true}
+  - {name: 法国-541.7KB/s, server: 149.202.82.172, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: 台湾-469.1KB/s, server: tw1g.forlive.live, port: 80, type: vmess, uuid: bb7d0ae0-85bd-4d9f-8391-b3d927ccb497, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tms.dingtalk.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -160,149 +80,68 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-374.7KB/s
-      - 香港-130.7KB/s
+      - 台湾-469.1KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -318,36 +157,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转节点-378.5KB/s
-      - 美国-302.4KB/s
-      - 法国-4.16MB/s
-      - 英国-3.39MB/s
-      - 德国-3.63MB/s
-      - 香港-374.7KB/s
-      - 美国-1.53MB/s
-      - 法国-330.8KB/s
-      - 英国-124.9KB/s
-      - 美国-413.4KB/s
-      - 香港-130.7KB/s
-      - 法国-426.7KB/s
-      - 法国-661.7KB/s
-      - 未知国家-732.2KB/s
-      - 未知国家-2.91MB/s
-      - 法国-452.7KB/s
-      - 未知国家-3.03MB/s
-      - 未知国家-3.36MB/s
-      - 爱尔兰-3.88MB/s
-      - 法国-557.3KB/s
-      - 美国-1.34MB/s
-      - 美国-290.8KB/s
-      - 英国-109.0KB/s
-      - 美国-1.65MB/s
-      - 中转节点-1.55MB/s
-      - 波兰-1.67MB/s
-      - 美国-252.3KB/s
-      - 中转节点-248.5KB/s
-      - 美国-2.30MB/s
-      - 法国-515.8KB/s
+      - 加拿大-1.06MB/s
+      - 中转节点-5.07MB/s
+      - 法国-549.4KB/s
+      - 中转节点-8.24MB/s
+      - 美国-3.39MB/s
+      - 法国-547.8KB/s
+      - 法国-300.8KB/s
+      - 法国-475.2KB/s
+      - 法国-541.7KB/s
+      - 台湾-469.1KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
