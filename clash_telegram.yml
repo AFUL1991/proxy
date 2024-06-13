@@ -5,63 +5,103 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 日本-10.36MB/s, server: 212.50.254.55, port: 56893, type: vmess, uuid: 0a59a60b-526e-4378-f9cb-3485e688aa9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 英国-1.15MB/s, server: uk2-full.privateip.net, port: 443, type: trojan, password: 1ccce299-713e-466a-ba1e-0f2cef5ae0da, skip-cert-verify: true, udp: true}
   - {name: 法国-390.2KB/s, server: 149.202.82.172, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 日本-193.9KB/s, server: 13.113.253.68, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 波兰-405.0KB/s, server: 51.77.53.200, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-  - {name: 法国-185.7KB/s, server: 149.202.82.172, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 英国-1.15MB/s, server: uk2-full.privateip.net, port: 443, type: trojan, password: 1ccce299-713e-466a-ba1e-0f2cef5ae0da, skip-cert-verify: true, udp: true}
+  - {name: 法国-347.1KB/s, server: 149.202.82.172, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
   - {name: 法国-346.4KB/s, server: 149.202.82.172, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
   - {name: 英国-867.8KB/s, server: 178.79.139.233, port: 443, type: trojan, password: 1ccce299-713e-466a-ba1e-0f2cef5ae0da, skip-cert-verify: true, udp: true}
-  - {name: 法国-347.1KB/s, server: 149.202.82.172, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 新加坡-840.9KB/s, server: 103.172.116.103, port: 9073, type: ss, cipher: aes-256-cfb, password: daFYagqDdBdA6VTX, udp: true}
+  - {name: 新加坡-679.9KB/s, server: 103.172.116.103, port: 9046, type: ss, cipher: aes-256-cfb, password: NvS8N4Vf8qAGPSCL, udp: true}
+  - {name: 新加坡-694.3KB/s, server: 103.172.116.103, port: 9033, type: ss, cipher: aes-256-cfb, password: UTJA57ypk2XKQpnm, udp: true}
+  - {name: 新加坡-675.2KB/s, server: 103.172.116.103, port: 9058, type: ss, cipher: aes-256-cfb, password: dML2sfhbVwvtfNPe, udp: true}
+  - {name: 美国-808.2KB/s, server: 167.88.62.62, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 法国-185.7KB/s, server: 149.202.82.172, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 日本-10.36MB/s, server: 212.50.254.55, port: 56893, type: vmess, uuid: 0a59a60b-526e-4378-f9cb-3485e688aa9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
   - {name: 英国-273.9KB/s, server: 51.145.6.187, port: 30945, type: ss, cipher: chacha20-ietf-poly1305, password: JiRcBug3wO9r355wxzyqBB, udp: true}
-  - {name: 日本-193.9KB/s, server: 13.113.253.68, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 新加坡-686.9KB/s, server: 103.172.116.103, port: 9042, type: ss, cipher: aes-256-cfb, password: S7KwUu7yBy58S3Ga, udp: true}
+  - {name: 英国-246.1KB/s, server: 212.102.53.194, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: 未知国家-4.32MB/s, server: www.speedtest.net, port: 80, type: vmess, uuid: 1e99893d-8046-4825-9d28-f6de91147337, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: De2.vmess.site.}}, udp: true}
+  - {name: 英国-226.6KB/s, server: 212.102.53.195, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: 新加坡-671.1KB/s, server: 103.172.116.103, port: 9030, type: ss, cipher: aes-256-cfb, password: GeregetR8cvQHzYr, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +120,26 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -100,47 +150,77 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -156,16 +236,26 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 日本-10.36MB/s
-      - 英国-1.15MB/s
       - 法国-390.2KB/s
+      - 日本-193.9KB/s
       - 波兰-405.0KB/s
-      - 法国-185.7KB/s
+      - 英国-1.15MB/s
+      - 法国-347.1KB/s
       - 法国-346.4KB/s
       - 英国-867.8KB/s
-      - 法国-347.1KB/s
+      - 新加坡-840.9KB/s
+      - 新加坡-679.9KB/s
+      - 新加坡-694.3KB/s
+      - 新加坡-675.2KB/s
+      - 美国-808.2KB/s
+      - 法国-185.7KB/s
+      - 日本-10.36MB/s
       - 英国-273.9KB/s
-      - 日本-193.9KB/s
+      - 新加坡-686.9KB/s
+      - 英国-246.1KB/s
+      - 未知国家-4.32MB/s
+      - 英国-226.6KB/s
+      - 新加坡-671.1KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
