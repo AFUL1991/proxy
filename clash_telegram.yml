@@ -5,63 +5,83 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 土耳其-2.18MB/s, server: 5.188.168.230, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: OGKNzzOLNYCmjA03zWXRyIERaxDT93HiN0RGvYbJbaBcwjIn, udp: true}
-  - {name: 新加坡-248.5KB/s, server: 18.143.107.4, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-4.67MB/s, server: 183.232.139.22, port: 40081, type: trojan, password: GsKYmYOE, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-12.43MB/s, server: 183.232.139.22, port: 4027, type: trojan, password: RmdXQRXg, skip-cert-verify: true, udp: true}
   - {name: 新加坡-177.1KB/s, server: 13.250.116.168, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 韩国-197.6KB/s, server: 13.209.20.172, port: 80, type: ss, cipher: aes-256-gcm, password: amazonskr05, udp: true}
-  - {name: 中转节点-2.28MB/s, server: 120.232.153.71, port: 45972, type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 韩国-340.5KB/s, server: 3.39.227.28, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 中转节点-654.3KB/s, server: 183.240.235.166, port: 31778, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 加拿大-142.5KB/s, server: 162.221.207.62, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: XfEIbmLk4oOzhOntezoVCs, udp: true}
+  - {name: 荷兰-3.16MB/s, server: 188.114.97.3, port: 80, type: vmess, uuid: b79a6959-6feb-43ba-b3c7-f1afae9ea32c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: Uk2.vmess.site.}}, udp: true}
+  - {name: 未知国家-3.28MB/s, server: max.mankadmu.com, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws, headers: {Host: max.mankadmu.com}}, udp: true}
+  - {name: 美国-3.58MB/s, server: 38.99.82.160, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-248.5KB/s, server: 18.143.107.4, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 未知国家-4.29MB/s, server: mankadmu.com, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws, headers: {Host: mankadmu.com}}, udp: true}
+  - {name: 土耳其-2.18MB/s, server: 5.188.168.230, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: OGKNzzOLNYCmjA03zWXRyIERaxDT93HiN0RGvYbJbaBcwjIn, udp: true}
+  - {name: 韩国-340.5KB/s, server: 3.39.227.28, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-2.28MB/s, server: 120.232.153.71, port: 45972, type: vmess, uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-14.48MB/s, server: 4.forlive.live, port: 61001, type: ss, cipher: chacha20-ietf-poly1305, password: 3644bf1f-a8be-3b00-b902-984dda5f75a0, udp: true}
+  - {name: 韩国-197.6KB/s, server: 13.209.20.172, port: 80, type: ss, cipher: aes-256-gcm, password: amazonskr05, udp: true}
+  - {name: 中转节点-12.43MB/s, server: 183.232.139.22, port: 4027, type: trojan, password: RmdXQRXg, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-4.67MB/s, server: 183.232.139.22, port: 40081, type: trojan, password: GsKYmYOE, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +100,21 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -100,47 +125,62 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -156,16 +196,21 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 土耳其-2.18MB/s
-      - 新加坡-248.5KB/s
-      - 中转节点-4.67MB/s
-      - 中转节点-12.43MB/s
       - 新加坡-177.1KB/s
-      - 韩国-197.6KB/s
-      - 中转节点-2.28MB/s
-      - 韩国-340.5KB/s
       - 中转节点-654.3KB/s
+      - 加拿大-142.5KB/s
+      - 荷兰-3.16MB/s
+      - 未知国家-3.28MB/s
+      - 美国-3.58MB/s
+      - 新加坡-248.5KB/s
+      - 未知国家-4.29MB/s
+      - 土耳其-2.18MB/s
+      - 韩国-340.5KB/s
+      - 中转节点-2.28MB/s
       - 中转节点-14.48MB/s
+      - 韩国-197.6KB/s
+      - 中转节点-12.43MB/s
+      - 中转节点-4.67MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
