@@ -5,63 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 荷兰-163.0KB/s, server: 89.23.110.74, port: 61194, type: ss, cipher: chacha20-ietf-poly1305, password: b6c1SLjkYreTBKr8AnD3Op, udp: true}
-  - {name: 中转节点-14.49MB/s, server: 4.forlive.live, port: 61001, type: ss, cipher: chacha20-ietf-poly1305, password: 127e812d-4f78-4eb4-8c3c-4ae7ffe0368c, udp: true}
-  - {name: 荷兰-226.0KB/s, server: 89.23.110.74, port: 61194, type: ss, cipher: chacha20-ietf-poly1305, password: NA1xnGzBl2IpWboTyuTFq9, udp: true}
-  - {name: 芬兰-122.1KB/s, server: 185.247.141.87, port: 58454, type: ss, cipher: chacha20-ietf-poly1305, password: sWnY4GY3juVxkyfe7uA0CM, udp: true}
-  - {name: 加拿大-146.3KB/s, server: 38.114.114.158, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
-  - {name: 法国-284.2KB/s, server: 51.15.127.125, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ksZTX0013s3V3rccInIK42, udp: true}
-  - {name: 法国-2.72MB/s, server: indiavideo.sbs, port: 443, type: vmess, uuid: 425c5e6e-30a0-4984-8a13-ee6f72053162, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkws, headers: {Host: indiavideo.sbs}}, udp: true}
-  - {name: 未知国家-1.43MB/s, server: 104.19.51.232, port: 2086, type: vmess, uuid: 29eebb60-b27b-4a9d-bba5-947763d9205e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: github.com/Alvin9999, headers: {Host: ip005.dtku47.xyz}}, udp: true}
-  - {name: 荷兰-500.4KB/s, server: 154.85.0.232, port: 41002, type: vmess, uuid: 21155efd-8e29-43d2-95bc-fe3190ecb1c6, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/111900081435}, udp: true}
-  - {name: 英国-444.9KB/s, server: hk1.juelaohai.us.kg, port: 10001, type: trojan, password: 88242522-45be-49d3-af70-ae72c7f1a11a, sni: hk1.juelaohai.us.kg, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-3.46MB/s, server: 59.56.77.225, port: 15083, type: ss, cipher: aes-256-cfb, password: hGkQ6915tD, udp: true}
+  - {name: 德国-250.1KB/s, server: 80.92.204.106, port: 9080, type: ss, cipher: aes-256-cfb, password: VP8ZPxQpJtZRCjfZ, udp: true}
+  - {name: 美国-847.3KB/s, server: 142.202.49.68, port: 8000, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: 美国-764.0KB/s, server: 142.202.49.68, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: 美国-3.26MB/s, server: 193.17.183.40, port: 32563, type: ss, cipher: chacha20-ietf-poly1305, password: D3fEqUR2afq0QgkIx5SymE, udp: true}
+  - {name: 美国-740.2KB/s, server: 142.202.49.68, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: 美国-176.4KB/s, server: s1c.v2.v001sss.xyz, port: 2082, type: vmess, uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: s1c.v2.v001sss.xyz}}, udp: true}
+  - {name: 美国-4.91MB/s, server: 38.11.69.36, port: 30002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/052601062204}, udp: true}
+  - {name: 美国-3.94MB/s, server: 3.132.65.100, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: 英国-2.81MB/s, server: 82.152.166.163, port: 10000, type: trojan, password: 88242522-45be-49d3-af70-ae72c7f1a11a, sni: hk1.juelaohai.us.kg, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +80,16 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -100,47 +100,47 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -156,16 +156,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 荷兰-163.0KB/s
-      - 中转节点-14.49MB/s
-      - 荷兰-226.0KB/s
-      - 芬兰-122.1KB/s
-      - 加拿大-146.3KB/s
-      - 法国-284.2KB/s
-      - 法国-2.72MB/s
-      - 未知国家-1.43MB/s
-      - 荷兰-500.4KB/s
-      - 英国-444.9KB/s
+      - 中转节点-3.46MB/s
+      - 德国-250.1KB/s
+      - 美国-847.3KB/s
+      - 美国-764.0KB/s
+      - 美国-3.26MB/s
+      - 美国-740.2KB/s
+      - 美国-176.4KB/s
+      - 美国-4.91MB/s
+      - 美国-3.94MB/s
+      - 英国-2.81MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
