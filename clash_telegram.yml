@@ -5,15 +5,25 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国-116.8KB/s, server: 38.110.1.12, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
   - {name: 美国-654.5KB/s, server: 38.121.43.97, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: 美国-201.8KB/s, server: 69.50.95.39, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
-  - {name: 印度-364.6KB/s, server: 103.174.86.113, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: vZr8MlUXUihNEndqIpjDxQdSeqi37FbgoHBmQ1syy6ZjkbBn, udp: true}
+  - {name: 美国-75.1MB/s, server: 38.75.136.21, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: 美国-34.4MB/s, server: 38.75.136.21, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
   - {name: 美国-762.7KB/s, server: 38.121.43.97, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: 美国-282.6KB/s, server: 139.64.165.230, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: 美国-116.8KB/s, server: 38.110.1.12, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 印度-364.6KB/s, server: 103.174.86.113, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: vZr8MlUXUihNEndqIpjDxQdSeqi37FbgoHBmQ1syy6ZjkbBn, udp: true}
   - {name: 美国-733.9KB/s, server: 23.157.40.85, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
   - {name: 中转节点-70.0MB/s, server: 103.161.255.195, port: 16088, type: ss, cipher: aes-256-cfb, password: hGkQ6915tD, udp: true}
-  - {name: 美国-792.5KB/s, server: 139.64.165.230, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: 美国-559.3KB/s, server: 139.64.165.155, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: 美国-201.8KB/s, server: 69.50.95.39, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: 美国-32.5MB/s, server: 38.75.136.21, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 美国-27.4MB/s, server: 38.75.136.21, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: 美国-792.5KB/s, server: 139.64.165.230, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: 英国-175.9KB/s, server: 212.102.53.80, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: 美国-643.8KB/s, server: 139.64.165.155, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: 美国-72.7MB/s, server: 15.204.87.225, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: 加拿大-166.5KB/s, server: 23.162.200.94, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws}, udp: true}
+  - {name: 荷兰-125.6KB/s, server: 154.47.21.56, port: 8099, type: vmess, uuid: fa1897db-1925-4c86-a495-939a959af900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-10.27MB/s, server: naiu-hk.05vr9nyqg5.download, port: 13007, type: trojan, password: c471ef32-798d-40a0-a57c-acf3475a204e, sni: cloudflare.node-ssl.cdn-alibaba.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -21,30 +31,50 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: 🎥 NETFLIX
     type: select
@@ -52,15 +82,25 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -80,15 +120,25 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: 🌏 国内媒体
     type: select
@@ -100,30 +150,50 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: 🍎 苹果服务
     type: select
@@ -131,15 +201,25 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
   - name: 🎯 全球直连
     type: select
@@ -156,15 +236,25 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-116.8KB/s
       - 美国-654.5KB/s
-      - 美国-201.8KB/s
-      - 印度-364.6KB/s
+      - 美国-75.1MB/s
+      - 美国-34.4MB/s
       - 美国-762.7KB/s
+      - 美国-282.6KB/s
+      - 美国-116.8KB/s
+      - 印度-364.6KB/s
       - 美国-733.9KB/s
       - 中转节点-70.0MB/s
-      - 美国-792.5KB/s
       - 美国-559.3KB/s
+      - 美国-201.8KB/s
+      - 美国-32.5MB/s
+      - 美国-27.4MB/s
+      - 美国-792.5KB/s
+      - 英国-175.9KB/s
+      - 美国-643.8KB/s
+      - 美国-72.7MB/s
+      - 加拿大-166.5KB/s
+      - 荷兰-125.6KB/s
       - 中转节点-10.27MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
