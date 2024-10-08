@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-08 05:29:13
+# 生成时间：2024-10-08 15:29:27
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,68 +58,79 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇺🇸_US_美国_1
-    port: 8888
-    server: 69.50.95.203
+  - name: 🇷🇺_RU_俄罗斯
+    port: 9019
+    server: 217.30.10.18
     type: ss
     udp: true
-    password: Y6R9pAtvxxzmGC
+    password: GA9KzeEgvfxNrgmM
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_1
+    port: 8009
+    server: 23.157.40.101
+    type: ss
+    udp: true
+    password: XKFKl2rULjIp74
     cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_2
-    port: 9102
-    server: 69.50.92.55
+    port: 8008
+    server: 23.157.40.101
     type: ss
     udp: true
-    password: e4FCWrgpkji3QY
+    password: XKFKl2rULjIp74
     cipher: aes-256-gcm
-  - name: 🇬🇧_GB_英国->🇺🇸_US_美国
-    port: 22222
-    server: 3.9.224.104
-    type: trojan
-    udp: true
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
   - name: 🇺🇸_US_美国_3
-    port: 5499
-    server: 169.197.141.84
+    port: 443
+    server: 38.114.114.158
     type: ss
     udp: true
-    password: lGqs95QkFHo2NV
+    password: pKEW8JPByTVTLtM
     cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_4
     port: 5499
-    server: 69.50.95.203
+    server: 69.50.92.111
     type: ss
     udp: true
     password: lGqs95QkFHo2NV
     cipher: aes-256-gcm
+  - name: 🇯🇵_JP_日本->🇰🇷_KR_韩国
+    port: 21029
+    server: ent1.imyourdaddy.top
+    type: vmess
+    network: ws
+    udp: true
+    sni: ""
+    skip-cert-verify: true
+    ws-opts:
+      path: /
+      headers:
+        host: ent1.imyourdaddy.top
+    cipher: auto
+    uuid: 64f33df2-4f9d-4cf3-bb69-b82b08cf149a
+    alterId: 0
   - name: 🇺🇸_US_美国_5
-    port: 5499
-    server: 169.197.141.84
+    port: 5003
+    server: 23.150.152.24
     type: ss
     udp: true
-    password: lGqs95QkFHo2NV
+    password: g5MeD6Ft3CWlJId
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_6
-    port: 9101
-    server: 139.64.165.153
-    type: ss
-    udp: true
-    password: e4FCWrgpkji3QY
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_7
+  - name: 🇺🇸_US_美国->🇫🇷_FR_法国
     port: 22222
-    server: 18.217.112.24
+    server: 18.158.216.39
     type: trojan
+    network: tcp
     udp: true
     sni: trojan.burgerip.co.uk
     password: telegram-id-directvpn
-  - name: 🇨🇦_CA_加拿大
-    port: 5500
-    server: 23.154.136.176
+    alpn:
+      - http/1.1
+  - name: 🇺🇸_US_美国_7
+    port: 5498
+    server: 69.50.95.180
     type: ss
     udp: true
-    password: KixLvKzwjekG00rm
+    password: lGqs95QkFHo2NV
     cipher: aes-256-gcm
 proxy-groups:
   - name: 🚀 节点选择
@@ -127,87 +138,87 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -230,15 +241,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇷🇺_RU_俄罗斯
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
+      - 🇯🇵_JP_日本->🇰🇷_KR_韩国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
       - 🇺🇸_US_美国_7
-      - 🇨🇦_CA_加拿大
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
