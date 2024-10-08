@@ -5,63 +5,103 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 韩国-1.77MB/s, server: 52.78.63.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-761.3KB/s, server: 23.154.136.176, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
-  - {name: 中转节点-48.8MB/s, server: tw4.mhw7e2.online, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 70747514-fb14-4f31-8390-e1f0453eff6d, udp: true}
-  - {name: 美国-793.9KB/s, server: 23.154.136.176, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: 中转节点-183.3KB/s, server: tw1.mhw7e2.online, port: 20007, type: ss, cipher: chacha20-ietf-poly1305, password: 70747514-fb14-4f31-8390-e1f0453eff6d, udp: true}
-  - {name: 美国-796.6KB/s, server: 23.154.136.176, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
-  - {name: 美国-674.8KB/s, server: 69.50.92.111, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 韩国-399.4KB/s, server: 52.78.63.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 中转节点-28.4MB/s, server: sg2.mhw7e2.online, port: 20009, type: ss, cipher: chacha20-ietf-poly1305, password: 70747514-fb14-4f31-8390-e1f0453eff6d, udp: true}
+  - {name: 美国-183.7KB/s, server: 139.64.165.155, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: 美国-476.5KB/s, server: 23.157.40.101, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
-  - {name: 美国-800.4KB/s, server: 23.154.136.176, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: 美国-24.8MB/s, server: 23.150.152.24, port: 5600, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
   - {name: 美国-618.0KB/s, server: 23.150.152.24, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: 美国-698.8KB/s, server: 69.50.92.111, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 美国-796.6KB/s, server: 23.154.136.176, port: 8118, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true}
+  - {name: 中转节点-48.8MB/s, server: tw4.mhw7e2.online, port: 20004, type: ss, cipher: chacha20-ietf-poly1305, password: 70747514-fb14-4f31-8390-e1f0453eff6d, udp: true}
+  - {name: 韩国-1.77MB/s, server: 52.78.63.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-800.4KB/s, server: 23.154.136.176, port: 9102, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true}
+  - {name: 美国-46.3MB/s, server: 23.150.152.24, port: 9090, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 加拿大-555.1KB/s, server: 38.114.114.158, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: 美国-406.1KB/s, server: 23.154.136.176, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: 美国-854.0KB/s, server: 69.50.95.180, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 美国-793.9KB/s, server: 23.154.136.176, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: 美国-674.8KB/s, server: 69.50.92.111, port: 8888, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 美国-761.3KB/s, server: 23.154.136.176, port: 5500, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm, udp: true}
+  - {name: 加拿大-47.6MB/s, server: 23.162.200.94, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +120,26 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -100,47 +150,77 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -156,16 +236,26 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 韩国-1.77MB/s
-      - 美国-761.3KB/s
-      - 中转节点-48.8MB/s
-      - 美国-793.9KB/s
       - 中转节点-183.3KB/s
-      - 美国-796.6KB/s
-      - 美国-674.8KB/s
+      - 韩国-399.4KB/s
+      - 中转节点-28.4MB/s
+      - 美国-183.7KB/s
       - 美国-476.5KB/s
-      - 美国-800.4KB/s
+      - 美国-24.8MB/s
       - 美国-618.0KB/s
+      - 美国-698.8KB/s
+      - 美国-796.6KB/s
+      - 中转节点-48.8MB/s
+      - 韩国-1.77MB/s
+      - 美国-800.4KB/s
+      - 美国-46.3MB/s
+      - 加拿大-555.1KB/s
+      - 美国-406.1KB/s
+      - 美国-854.0KB/s
+      - 美国-793.9KB/s
+      - 美国-674.8KB/s
+      - 美国-761.3KB/s
+      - 加拿大-47.6MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
