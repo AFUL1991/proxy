@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-09 05:29:50
+# 生成时间：2024-10-09 15:28:46
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,83 +58,60 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇺🇸_US_美国_1
-    port: 8008
-    server: 23.157.40.101
-    type: ss
-    udp: true
-    password: XKFKl2rULjIp74
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_2
-    port: 6679
-    server: 69.50.95.203
-    type: ss
-    udp: true
-    password: TEzjfAYq2IjtuoS
-    cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_3
-    port: 7002
-    server: 38.68.134.9
-    type: ss
+    port: 22222
+    server: 18.156.90.44
+    type: trojan
+    network: tcp
     udp: true
-    password: RexnBgU7EV5ADxG
-    cipher: aes-256-gcm
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    alpn:
+      - http/1.1
   - name: 🇺🇸_US_美国_4
-    port: 8881
-    server: 23.150.152.24
-    type: ss
+    port: 22222
+    server: 18.156.90.44
+    type: trojan
+    network: tcp
     udp: true
-    password: kDWvXYZoTBcGkC4
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_5
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    alpn:
+      - http/1.1
+  - name: 🇺🇸_US_美国_6
     port: 8009
     server: 38.68.134.9
     type: ss
     udp: true
     password: XKFKl2rULjIp74
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_6
-    port: 8000
-    server: 15.204.87.222
-    type: ss
-    udp: true
-    password: KixLvKzwjekG00rm
-    cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_7
-    port: 5499
-    server: 15.204.87.222
-    type: ss
-    udp: true
-    password: lGqs95QkFHo2NV
-    cipher: aes-256-gcm
-  - name: 🇹🇷_TR_土耳其
-    port: 51348
-    server: 5.188.36.54
-    type: ss
-    udp: true
-    password: xeQxB7sMGptfFct2qk2ESLeCNLLhRRwXrkNZXCdLFYvYwPQD
-    cipher: chacha20-ietf-poly1305
-  - name: 🇺🇸_US_美国_8
-    port: 8118
+    port: 8009
     server: 38.68.134.9
     type: ss
     udp: true
-    password: cdBIDV42DCwnfIN
+    password: XKFKl2rULjIp74
     cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_8
+    port: 22222
+    server: 18.170.144.229
+    type: trojan
+    network: tcp
+    udp: true
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    alpn:
+      - http/1.1
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
   - name: ♻️ 自动选择
     type: url-test
@@ -142,14 +119,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
   - name: 🌍 国外媒体
     type: select
@@ -157,56 +130,40 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
   - name: 🎯 全球直连
     type: select
@@ -230,14 +187,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
       - 🇺🇸_US_美国_7
-      - 🇹🇷_TR_土耳其
       - 🇺🇸_US_美国_8
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
