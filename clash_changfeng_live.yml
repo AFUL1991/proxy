@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-10 05:29:34
+# 生成时间：2024-10-10 15:28:16
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,164 +58,173 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇬🇧_GB_英国
-    port: 22222
-    server: 51.21.62.18
-    type: trojan
-    network: tcp
-    udp: true
-    sni: trojan.burgerip.co.uk
-    password: telegram-id-privatevpns
-    alpn:
-      - http/1.1
-  - name: 🇺🇸_US_美国_1
-    port: 7001
-    server: 38.75.136.21
+  - name: 🇬🇧_GB_英国->🇺🇸_US_美国_1
+    port: 443
+    server: 212.102.53.195
     type: ss
     udp: true
-    password: RexnBgU7EV5ADxG
-    cipher: aes-256-gcm
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    port: 43526
-    server: 120.232.153.71
-    type: vmess
-    network: tcp
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: 未知_1
+    port: 443
+    server: present-blowfish.sunbeam921.monster
+    type: trojan
     udp: true
-    cipher: auto
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 64
+    sni: present-blowfish.sunbeam921.monster
+    password: "3672449442956713984"
+    skip-cert-verify: false
+  - name: 🇺🇸_US_美国_1
+    port: 9101
+    server: 142.202.49.122
+    type: ss
+    udp: true
+    password: e4FCWrgpkji3QY
+    cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_2
     port: 6679
-    server: 38.110.1.46
+    server: 169.197.142.216
     type: ss
     udp: true
     password: TEzjfAYq2IjtuoS
     cipher: aes-256-gcm
   - name: 🇺🇸_US_美国_3
-    port: 3389
-    server: 38.143.66.87
+    port: 9101
+    server: 142.202.49.122
     type: ss
     udp: true
-    password: Y6R9pAtvxxzmGC
+    password: e4FCWrgpkji3QY
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_4
-    port: 5004
-    server: 38.75.136.21
-    type: ss
-    udp: true
-    password: g5MeD6Ft3CWlJId
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_5
-    port: 6379
-    server: 38.110.1.46
-    type: ss
-    udp: true
-    password: zDNVedRFPQexG9v
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_6
-    port: 22222
-    server: 13.41.175.153
+  - name: 未知_2
+    port: 443
+    server: present-blowfish.sunbeam921.monster
     type: trojan
-    network: tcp
+    udp: true
+    sni: present-blowfish.sunbeam921.monster
+    password: "3672449442956713984"
+    skip-cert-verify: false
+  - name: 未知_3
+    port: 443
+    server: present-blowfish.sunbeam921.monster
+    type: trojan
+    udp: true
+    sni: present-blowfish.sunbeam921.monster
+    password: "3672449442956713984"
+    skip-cert-verify: false
+  - name: 🇺🇸_US_美国_4
+    port: 22222
+    server: 16.16.72.199
+    type: trojan
     udp: true
     sni: trojan.burgerip.co.uk
-    password: telegram-id-directvpn
-    alpn:
-      - http/1.1
-  - name: 🇺🇸_US_美国_7
-    port: 5000
-    server: 38.143.66.87
+    password: telegram-id-privatevpns
+    skip-cert-verify: false
+  - name: 🇺🇸_US_美国_5
+    port: 2376
+    server: 38.75.137.42
     type: ss
     udp: true
-    password: Y6R9pAtvxxzmGC
+    password: faBAoD54k87UJG7
     cipher: aes-256-gcm
+  - name: 🇬🇧_GB_英国->🇺🇸_US_美国_2
+    port: 443
+    server: 212.102.53.195
+    type: ss
+    udp: true
+    password: shadowsocks
+    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -238,15 +247,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇬🇧_GB_英国
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_1
+      - 未知_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
+      - 未知_2
+      - 未知_3
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
+      - 🇬🇧_GB_英国->🇺🇸_US_美国_2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
