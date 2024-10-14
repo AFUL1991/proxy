@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-14 05:28:16
+# 生成时间：2024-10-14 15:33:00
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,159 +58,91 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-    port: 8080
-    server: 45.87.175.192
-    type: ss
-    udp: true
-    password: gDFRe52uiIvVaxqPlqw439
-    cipher: chacha20-ietf-poly1305
-  - name: 🇺🇸_US_美国
-    port: 8008
-    server: 142.202.49.84
-    type: ss
-    udp: true
-    password: XKFKl2rULjIp74
-    cipher: aes-256-gcm
-  - name: 🇹🇷_TR_土耳其
-    port: 51348
-    server: 5.188.36.54
-    type: ss
-    udp: true
-    password: xeQxB7sMGptfFct2qk2ESLeCNLLhRRwXrkNZXCdLFYvYwPQD
-    cipher: chacha20-ietf-poly1305
-  - name: 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-    port: 8080
-    server: 45.87.175.192
-    type: ss
-    udp: true
-    password: gDFRe52uiIvVaxqPlqw439
-    cipher: chacha20-ietf-poly1305
-  - name: 🇬🇧_GB_英国
-    port: 443
-    server: 212.102.53.198
-    type: ss
-    udp: true
-    password: shadowsocks
-    cipher: aes-128-gcm
-  - name: 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-    port: 8080
-    server: 45.87.175.199
-    type: ss
-    udp: true
-    password: gDFRe52uiIvVaxqPlqw439
-    cipher: chacha20-ietf-poly1305
-  - name: 🇳🇱_NL_荷兰_1
-    port: 8080
-    server: 45.158.171.44
-    type: ss
-    udp: true
-    password: a8bt9fY0QsLS6eLnXUe0Ym
-    cipher: chacha20-ietf-poly1305
-  - name: 🇳🇱_NL_荷兰_2
-    port: 8080
-    server: 45.158.171.36
-    type: ss
-    udp: true
-    password: a8bt9fY0QsLS6eLnXUe0Ym
-    cipher: chacha20-ietf-poly1305
   - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    port: 43526
-    server: 120.232.153.71
-    type: vmess
-    network: tcp
+    port: 22064
+    server: 221.181.185.71
+    type: ss
     udp: true
-    sni: ""
-    cipher: auto
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 64
+    password: JN8psKoncqaqS4ul
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_2
+    port: 443
+    server: 54.244.188.170
+    type: ss
+    udp: true
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_3
+    port: 443
+    server: 54.244.188.170
+    type: ss
+    udp: true
+    password: amazonskr05
+    cipher: aes-256-cfb
+  - name: 🇺🇸_US_美国_5
+    port: 8888
+    server: 69.50.93.113
+    type: ss
+    udp: true
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -233,15 +165,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_1
-      - 🇺🇸_US_美国
-      - 🇹🇷_TR_土耳其
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_2
-      - 🇬🇧_GB_英国
-      - 🇩🇪_DE_德国->🇷🇺_RU_俄罗斯_3
-      - 🇳🇱_NL_荷兰_1
-      - 🇳🇱_NL_荷兰_2
       - 🇨🇳_CN_中国->🇺🇸_US_美国
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_5
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
