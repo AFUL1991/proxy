@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-18 15:29:46
+# 生成时间：2024-10-18 21:34:23
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,36 +58,74 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    port: 43526
-    server: 120.232.153.71
-    type: vmess
-    network: tcp
-    udp: true
-    sni: ""
-    cipher: auto
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 64
-  - name: 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
-    port: 9033
-    server: 217.30.10.18
+  - name: 🇺🇸_US_美国_1
+    port: 9102
+    server: 69.50.92.99
     type: ss
     udp: true
-    password: UTJA57ypk2XKQpnm
-    cipher: aes-256-cfb
-  - name: 🇺🇸_US_美国_5
-    port: 8882
+    password: e4FCWrgpkji3QY
+    cipher: aes-256-gcm
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
+    port: 40011
+    server: soonfrk.soon.guru
+    type: ss
+    udp: true
+    password: adb64f15-6d91-4950-824b-915f1842c1ca
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国->🇧🇭_BH_巴林
+    port: 443
+    server: series-a2-me.varzesh360.co
+    type: ss
+    udp: true
+    password: Bog0ELmMM9DSxDdQ
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国_2
+    port: 5500
+    server: 139.64.164.15
+    type: ss
+    udp: true
+    password: KixLvKzwjekG00rm
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国_3
+    port: 9102
+    server: 69.50.92.99
+    type: ss
+    udp: true
+    password: e4FCWrgpkji3QY
+    cipher: aes-256-gcm
+  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+    port: 2095
+    server: 172.64.166.32
+    type: vmess
+    network: ws
+    udp: true
+    ws-opts:
+      path: /github.com/Alvin9999
+      headers:
+        host: ip11.6016725.xyz
+    cipher: auto
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    alterId: 0
+  - name: 🇺🇸_US_美国_4
+    port: 5001
     server: 69.50.95.218
     type: ss
     udp: true
-    password: kDWvXYZoTBcGkC4
+    password: Y6R9pAtvxxzmGC
     cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_7
-    port: 6379
-    server: 69.50.95.179
+  - name: 🇬🇧_GB_英国->🇺🇸_US_美国
+    port: 443
+    server: series-a2.samanehha.co
     type: ss
     udp: true
-    password: zDNVedRFPQexG9v
+    password: mps3FwmDjLrWaOVg
+    cipher: chacha20-ietf-poly1305
+  - name: 🇺🇸_US_美国_5
+    port: 5001
+    server: 69.50.95.218
+    type: ss
+    udp: true
+    password: Y6R9pAtvxxzmGC
     cipher: aes-256-gcm
 proxy-groups:
   - name: 🚀 节点选择
@@ -95,57 +133,87 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -168,10 +236,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇺🇸_US_美国_1
       - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇷🇺_RU_俄罗斯->🇨🇳_CN_中国
+      - 🇺🇸_US_美国->🇧🇭_BH_巴林
+      - 🇺🇸_US_美国_2
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇺🇸_US_美国_4
+      - 🇬🇧_GB_英国->🇺🇸_US_美国
       - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
