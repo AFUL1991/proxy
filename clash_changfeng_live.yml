@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-22 15:32:11
+# 生成时间：2024-10-22 21:35:52
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -59,12 +59,12 @@ tun:
     - 1.0.0.1
 proxies:
   - name: 🇺🇸_US_美国_2
-    port: 9101
-    server: 69.50.93.113
-    type: ss
+    port: 22222
+    server: 18.169.250.165
+    type: trojan
     udp: true
-    password: e4FCWrgpkji3QY
-    cipher: aes-256-gcm
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
   - name: 🇺🇸_US_美国_3
     port: 8119
     server: 38.75.137.105
@@ -72,36 +72,60 @@ proxies:
     udp: true
     password: cdBIDV42DCwnfIN
     cipher: aes-256-gcm
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    port: 58831
-    server: 183.236.48.163
+  - name: 🇺🇸_US_美国_4
+    port: 22222
+    server: 18.169.250.165
+    type: trojan
+    udp: true
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+  - name: 🇺🇸_US_美国_5
+    port: 22222
+    server: 18.169.250.165
+    type: trojan
+    udp: true
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+  - name: 🇺🇸_US_美国_6
+    port: 3306
+    server: 23.150.248.29
+    type: ss
+    udp: true
+    password: Y6R9pAtvxxzmGC
+    cipher: aes-256-gcm
+  - name: 🇷🇺_RU_俄罗斯_1
+    port: 2098
+    server: f41.maryam1500.top
+    type: vmess
+    network: http
+    udp: true
+    sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    skip-cert-verify: false
+    http-opts: {}
+    cipher: auto
+    uuid: 83876222-64a4-4912-aa18-b7d9d34959de
+    alterId: 0
+  - name: 🇷🇺_RU_俄罗斯_2
+    port: 2098
+    server: f41.maryam1500.top
+    type: vmess
+    network: http
+    udp: true
+    sni: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc
+    skip-cert-verify: false
+    http-opts: {}
+    cipher: auto
+    uuid: 83876222-64a4-4912-aa18-b7d9d34959de
+    alterId: 0
+  - name: 🇨🇳_CN_中国->🇫🇷_FR_法国
+    port: 46665
+    server: 120.237.79.157
     type: vmess
     network: tcp
     udp: true
     cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 3ac820af-becb-45d7-9e7a-e33d02961bb3
     alterId: 64
-  - name: 🇺🇸_US_美国_4
-    port: 8882
-    server: 38.86.135.141
-    type: ss
-    udp: true
-    password: kDWvXYZoTBcGkC4
-    cipher: aes-256-gcm
-  - name: 🇺🇸_US_美国_5
-    port: 443
-    server: 216.128.147.13
-    type: trojan
-    udp: true
-    sni: z-v2-003274.kailib.com
-    password: wkmY1R4EcP
-  - name: 🇺🇸_US_美国_6
-    port: 8882
-    server: 38.86.135.141
-    type: ss
-    udp: true
-    password: kDWvXYZoTBcGkC4
-    cipher: aes-256-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -110,10 +134,12 @@ proxy-groups:
       - DIRECT
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -122,10 +148,12 @@ proxy-groups:
     proxies:
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -134,10 +162,12 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
   - name: 📲 电报信息
     type: select
     proxies:
@@ -145,10 +175,12 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -156,10 +188,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -167,10 +201,12 @@ proxy-groups:
       - 🎯 全球直连
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -195,10 +231,12 @@ proxy-groups:
       - ♻️ 自动选择
       - 🇺🇸_US_美国_2
       - 🇺🇸_US_美国_3
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_6
+      - 🇷🇺_RU_俄罗斯_1
+      - 🇷🇺_RU_俄罗斯_2
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
