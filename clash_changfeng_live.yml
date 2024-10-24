@@ -1,6 +1,6 @@
 # 生成地址：v2rayse.com
 # 模版名称：defaultName
-# 生成时间：2024-10-24 15:29:55
+# 生成时间：2024-10-24 21:35:28
 # 不要随意改变关键字，否则会导致出错
 # acl4SSR规则
 # 去广告：支持
@@ -58,27 +58,16 @@ tun:
     - 1.1.1.1
     - 1.0.0.1
 proxies:
-  - name: 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-    port: 25579
-    server: 13.74.71.116
-    type: ss
+  - name: 🇬🇧_GB_英国
+    port: 22222
+    server: 51.44.61.98
+    type: trojan
+    network: tcp
     udp: true
-    password: 1EDLaUEHX0a0Uvyjzmwjh3
-    cipher: chacha20-ietf-poly1305
-  - name: 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-    port: 25579
-    server: 13.74.71.116
-    type: ss
-    udp: true
-    password: 1EDLaUEHX0a0Uvyjzmwjh3
-    cipher: chacha20-ietf-poly1305
-  - name: 🇪🇸_ES_西班牙
-    port: 36792
-    server: 150.241.95.62
-    type: ss
-    udp: true
-    password: F%&MysMUY8
-    cipher: chacha20-ietf-poly1305
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-directvpn
+    alpn:
+      - http/1.1
   - name: 🇷🇺_RU_俄罗斯
     port: 2098
     server: f41.maryam1500.top
@@ -91,63 +80,137 @@ proxies:
     cipher: auto
     uuid: 83876222-64a4-4912-aa18-b7d9d34959de
     alterId: 0
+  - name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+    port: 2095
+    server: icook.tw
+    type: vmess
+    network: ws
+    udp: true
+    ws-opts:
+      path: /github.com/Alvin9999
+      headers:
+        host: ip15.6016725.xyz
+    cipher: auto
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    alterId: 0
+  - name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+    port: 2095
+    server: icook.tw
+    type: vmess
+    network: ws
+    udp: true
+    ws-opts:
+      path: /github.com/Alvin9999
+      headers:
+        host: ip15.6016725.xyz
+    cipher: auto
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    alterId: 0
+  - name: 🇺🇦_UA_乌克兰
+    port: 443
+    server: 37.19.198.244
+    type: ss
+    udp: true
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+    port: 2095
+    server: 104.19.47.65
+    type: vmess
+    network: ws
+    udp: true
+    ws-opts:
+      path: /github.com/Alvin9999
+      headers:
+        host: ip15.6016725.xyz
+    cipher: auto
+    uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
+    alterId: 0
+  - name: 🇩🇪_DE_德国
+    port: 22222
+    server: 35.159.56.144
+    type: trojan
+    network: tcp
+    udp: true
+    sni: trojan.burgerip.co.uk
+    password: telegram-id-privatevpns
+    alpn:
+      - http/1.1
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -170,10 +233,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_1
-      - 🇮🇪_IE_爱尔兰->🇨🇳_CN_中国_2
-      - 🇪🇸_ES_西班牙
+      - 🇬🇧_GB_英国
       - 🇷🇺_RU_俄罗斯
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_1
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_2
+      - 🇺🇦_UA_乌克兰
+      - 🇺🇸_US_美国->🇨🇦_CA_加拿大_3
+      - 🇩🇪_DE_德国
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
