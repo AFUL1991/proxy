@@ -5,43 +5,83 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国-2.96MB/s, server: 45.158.171.110, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
-  - {name: 中转节点-34.6MB/s, server: ti3hyra4.slashdevslashnetslashtun.net, port: 17002, type: ss, cipher: aes-256-gcm, password: FKCY4YH4V4EKLDLC, udp: true}
-  - {name: 中转节点-35.4MB/s, server: ti3hyra4.slashdevslashnetslashtun.net, port: 21006, type: ss, cipher: aes-256-gcm, password: BB9BXCELPCYBVJMY, udp: true}
   - {name: 中转节点-45.7MB/s, server: 120.232.81.50, port: 15084, type: ss, cipher: aes-256-cfb, password: hGkQ6915tD, udp: true}
+  - {name: 中转节点-14.4MB/s, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 15006, type: ss, cipher: aes-256-gcm, password: 2QV2IRXEKJIPNJV4, udp: true}
+  - {name: 中转节点-34.6MB/s, server: ti3hyra4.slashdevslashnetslashtun.net, port: 17002, type: ss, cipher: aes-256-gcm, password: FKCY4YH4V4EKLDLC, udp: true}
+  - {name: 中转节点-9.3MB/s, server: ti3hyra4.slashdevslashnetslashtun.net, port: 21006, type: ss, cipher: aes-256-gcm, password: BB9BXCELPCYBVJMY, udp: true}
+  - {name: 美国-2.96MB/s, server: 45.158.171.110, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
+  - {name: 中转节点-35.4MB/s, server: ti3hyra4.slashdevslashnetslashtun.net, port: 21006, type: ss, cipher: aes-256-gcm, password: BB9BXCELPCYBVJMY, udp: true}
+  - {name: 中转节点-2.69MB/s, server: 120.232.81.50, port: 15084, type: ss, cipher: aes-256-cfb, password: hGkQ6915tD, udp: true}
+  - {name: 中转节点-12.8MB/s, server: ti3hyra4.slashdevslashnetslashtun.net, port: 17002, type: ss, cipher: aes-256-gcm, password: FKCY4YH4V4EKLDLC, udp: true}
+  - {name: 日本-107.8KB/s, server: 35.77.94.139, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 波兰-50.8MB/s, server: 94.72.97.160, port: 11102, type: ss, cipher: chacha20-ietf-poly1305, password: 3b06f96b73d2584c, udp: true}
+  - {name: 美国-20.2MB/s, server: 45.10.154.245, port: 26268, type: ss, cipher: chacha20-ietf-poly1305, password: 11955ffa5b58cae3, udp: true}
+  - {name: 加拿大-15.9MB/s, server: 23.162.56.206, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 620c5b5108120a72, udp: true}
   - {name: 德国-2.90MB/s, server: 57.129.24.133, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /linkvws}, udp: true}
+  - {name: 中转节点-82.3MB/s, server: 183.236.51.38, port: 53902, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 俄罗斯联邦-1.52MB/s, server: 185.22.152.236, port: 23012, type: vmess, uuid: c1db97a7-0ba2-4ae0-a4db-d58deded1b39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,11 +100,21 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -75,32 +125,62 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -116,11 +196,21 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-2.96MB/s
-      - 中转节点-34.6MB/s
-      - 中转节点-35.4MB/s
       - 中转节点-45.7MB/s
+      - 中转节点-14.4MB/s
+      - 中转节点-34.6MB/s
+      - 中转节点-9.3MB/s
+      - 美国-2.96MB/s
+      - 中转节点-35.4MB/s
+      - 中转节点-2.69MB/s
+      - 中转节点-12.8MB/s
+      - 日本-107.8KB/s
+      - 波兰-50.8MB/s
+      - 美国-20.2MB/s
+      - 加拿大-15.9MB/s
       - 德国-2.90MB/s
+      - 中转节点-82.3MB/s
+      - 俄罗斯联邦-1.52MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
