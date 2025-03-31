@@ -5,63 +5,103 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国-1.05MB/s, server: 34.208.203.47, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 新加坡-618.6KB/s, server: 47.128.245.70, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 德国-240.5KB/s, server: 80.92.204.106, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9, udp: true}
-  - {name: 美国-94.3MB/s, server: 54.187.221.114, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 韩国-101.1KB/s, server: 3.38.92.181, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 新加坡-211.8KB/s, server: 54.179.52.175, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 德国-240.5KB/s, server: 80.92.204.106, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9, udp: true}
+  - {name: 美国-108.3KB/s, server: 34.219.71.252, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-250.3KB/s, server: 34.220.225.248, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 韩国-84.6MB/s, server: 3.34.253.95, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 新加坡-618.6KB/s, server: 47.128.245.70, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
   - {name: 新加坡-911.9KB/s, server: 47.129.38.96, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 中转节点-178.4KB/s, server: 183.240.228.139, port: 20012, type: trojan, password: 13c3cf97-5a4a-434f-880a-aecbd70c15bc, sni: 2.elk3b3nwfy.xyz, skip-cert-verify: true, udp: true}
+  - {name: 日本-103.5KB/s, server: 43.207.157.253, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 韩国-172.4KB/s, server: 3.36.72.86, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 新加坡-194.2KB/s, server: 47.129.38.96, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-1.05MB/s, server: 34.208.203.47, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 新加坡-369.5KB/s, server: 13.213.69.248, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 韩国-78.5MB/s, server: 43.202.67.225, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 日本-401.8KB/s, server: 54.178.177.97, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-94.3MB/s, server: 54.187.221.114, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 香港-118.7KB/s, server: 20.2.156.105, port: 443, type: trojan, password: 6557bf4a-852b-4a69-ad35-d53293386a13, sni: ru.mjt000.com, skip-cert-verify: true, udp: true}
   - {name: 香港-237.4KB/s, server: ru.mjt000.com, port: 443, type: trojan, password: 6557bf4a-852b-4a69-ad35-d53293386a13, sni: ru.mjt000.com, skip-cert-verify: true, udp: true}
   - {name: 中转节点-259.6KB/s, server: 111.62.241.211, port: 20087, type: trojan, password: 13c3cf97-5a4a-434f-880a-aecbd70c15bc, sni: 7.p5zqtpj2n7.xyz, skip-cert-verify: true, udp: true}
-  - {name: 香港-118.7KB/s, server: 20.2.156.105, port: 443, type: trojan, password: 6557bf4a-852b-4a69-ad35-d53293386a13, sni: ru.mjt000.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-178.4KB/s, server: 183.240.228.139, port: 20012, type: trojan, password: 13c3cf97-5a4a-434f-880a-aecbd70c15bc, sni: 2.elk3b3nwfy.xyz, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,69 +120,109 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-237.4KB/s
       - 香港-118.7KB/s
+      - 香港-237.4KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -158,16 +238,26 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-1.05MB/s
-      - 新加坡-618.6KB/s
-      - 德国-240.5KB/s
-      - 美国-94.3MB/s
       - 韩国-101.1KB/s
+      - 新加坡-211.8KB/s
+      - 德国-240.5KB/s
+      - 美国-108.3KB/s
+      - 美国-250.3KB/s
+      - 韩国-84.6MB/s
+      - 新加坡-618.6KB/s
       - 新加坡-911.9KB/s
-      - 中转节点-178.4KB/s
+      - 日本-103.5KB/s
+      - 韩国-172.4KB/s
+      - 新加坡-194.2KB/s
+      - 美国-1.05MB/s
+      - 新加坡-369.5KB/s
+      - 韩国-78.5MB/s
+      - 日本-401.8KB/s
+      - 美国-94.3MB/s
+      - 香港-118.7KB/s
       - 香港-237.4KB/s
       - 中转节点-259.6KB/s
-      - 香港-118.7KB/s
+      - 中转节点-178.4KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
