@@ -5,43 +5,55 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国-182.7KB/s, server: 137.131.180.87, port: 7703, type: ss, cipher: aes-256-gcm, password: 475ca001-22d2-4c3b-856c-a0e20453920e, udp: true}
   - {name: 美国-8.7MB/s, server: 156.231.104.22, port: 18012, type: ss, cipher: aes-256-gcm, password: LC0JUMZIUL16S24B, udp: true}
-  - {name: 英国-13.3MB/s, server: 206.245.211.24, port: 19014, type: ss, cipher: aes-256-gcm, password: QIXWUPZT9O5EUEWK, udp: true}
-  - {name: 英国-21.1MB/s, server: 45.154.207.246, port: 20030, type: ss, cipher: aes-256-gcm, password: B4SLT7LEQF46Y6Z6, udp: true}
+  - {name: 立陶宛-90.9MB/s, server: 45.87.175.192, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true}
+  - {name: 美国-182.7KB/s, server: 137.131.180.87, port: 7703, type: ss, cipher: aes-256-gcm, password: 475ca001-22d2-4c3b-856c-a0e20453920e, udp: true}
   - {name: 新加坡-203.6KB/s, server: 13.229.210.217, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 英国-21.1MB/s, server: 45.154.207.246, port: 20030, type: ss, cipher: aes-256-gcm, password: B4SLT7LEQF46Y6Z6, udp: true}
+  - {name: 英国-13.3MB/s, server: 206.245.211.24, port: 19014, type: ss, cipher: aes-256-gcm, password: QIXWUPZT9O5EUEWK, udp: true}
+  - {name: 美国-3.01MB/s, server: 38.14.107.228, port: 38003, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/181721272114}, udp: true}
+  - {name: 中转节点-4.9MB/s, server: 120.232.153.40, port: 41002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,11 +72,14 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -75,32 +90,41 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -116,11 +140,14 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-182.7KB/s
       - 美国-8.7MB/s
-      - 英国-13.3MB/s
-      - 英国-21.1MB/s
+      - 立陶宛-90.9MB/s
+      - 美国-182.7KB/s
       - 新加坡-203.6KB/s
+      - 英国-21.1MB/s
+      - 英国-13.3MB/s
+      - 美国-3.01MB/s
+      - 中转节点-4.9MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
