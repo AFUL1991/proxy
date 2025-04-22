@@ -5,103 +5,143 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 美国-2.92MB/s, server: 34.222.45.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 美国-20.8MB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
-  - {name: 美国-198.9KB/s, server: 97.107.140.236, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: !<str> 1234, udp: true}
+  - {name: 台湾-928.3KB/s, server: vps.200566.xyz, port: 30332, type: ss, cipher: aes-128-gcm, password: 79739832-b888-415a-a454-8b53911c944a, udp: true}
+  - {name: 美国-3.03MB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: 韩国-28.4MB/s, server: 3.36.57.145, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: !<str> 1234, udp: true}
   - {name: 韩国-27.5MB/s, server: 3.36.57.145, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: !<str> 1234, udp: true}
-  - {name: 香港-573.9KB/s, server: 542eb798-sv2sg0-szj6wo-8f7h.hk3.p5pv.com, port: 80, type: vmess, uuid: b1e0ecc4-c7af-11ed-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 542eb798-sv2sg0-szj6wo-8f7h.hk3.p5pv.com}}, udp: true}
-  - {name: 香港-5.69MB/s, server: a731a8b3-sv2sg0-sy1a0y-1iyov.hk3.p5pv.com, port: 80, type: vmess, uuid: 33629870-e57e-11ec-bb74-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a731a8b3-sv2sg0-sy1a0y-1iyov.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-6.86MB/s, server: 9e6c9676-sv6hs0-sv7acf-1qw0q.cm5.p5pv.com, port: 17233, type: vmess, uuid: d4fe3d0c-9043-11ef-8dc4-f23c91cfbbc9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-1.50MB/s, server: 8a823e91-sv0xs0-t8dih2-9kd8.hk3.p5pv.com, port: 80, type: vmess, uuid: 8bd4eef0-e4ad-11ef-b717-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 8a823e91-sv0xs0-t8dih2-9kd8.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-164.8KB/s, server: 120.234.102.229, port: 43674, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-120.4KB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-4.2MB/s, server: v6.heduian.link, port: 30806, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
-  - {name: 香港-3.97MB/s, server: 4f8acdc9-sv0xs0-sw5wi7-ufc0.hk3.p5pv.com, port: 80, type: vmess, uuid: 22308988-8548-11ea-a22e-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 4f8acdc9-sv0xs0-sw5wi7-ufc0.hk3.p5pv.com}}, udp: true}
-  - {name: 香港-933.3KB/s, server: 76f35804-sv4n40-t7uztx-1q41p.hk3.p5pv.com, port: 80, type: vmess, uuid: 3cc92f96-9f36-11ee-9144-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 76f35804-sv4n40-t7uztx-1q41p.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-996.4KB/s, server: 183.236.51.38, port: 41291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-721.0KB/s, server: 183.236.51.38, port: 41291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-4.00MB/s, server: 25109257-sv4n40-t5qfe2-1khwf.hk3.p5pv.com, port: 80, type: vmess, uuid: 92bd8c68-6434-11ee-b644-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 25109257-sv4n40-t5qfe2-1khwf.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-43.9MB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-3.27MB/s, server: bbaaa4cd-sv2sg0-sw3x6h-1ndin.hk3.p5pv.com, port: 80, type: vmess, uuid: 1a7f2766-e24d-11ed-98a7-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: bbaaa4cd-sv2sg0-sw3x6h-1ndin.hk3.p5pv.com}}, udp: true}
+  - {name: 中转节点-17.98MB/s, server: okanc.node-is.green, port: 21114, type: ss, cipher: aes-256-gcm, password: 9acfc574-acc3-4c2b-ab3b-491d43a6eb83, udp: true}
+  - {name: 美国-20.8MB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: 美国-2.92MB/s, server: 34.222.45.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 美国-198.9KB/s, server: 97.107.140.236, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: !<str> 1234, udp: true}
   - {name: 香港-7.10MB/s, server: 7513a0b2-sv4n40-sxx3hh-1m7j8.hk3.p5pv.com, port: 80, type: vmess, uuid: 91acf762-a4ea-11ef-b090-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 7513a0b2-sv4n40-sxx3hh-1m7j8.hk3.p5pv.com}}, udp: true}
+  - {name: 中转节点-164.8KB/s, server: 120.234.102.229, port: 43674, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-933.3KB/s, server: 76f35804-sv4n40-t7uztx-1q41p.hk3.p5pv.com, port: 80, type: vmess, uuid: 3cc92f96-9f36-11ee-9144-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 76f35804-sv4n40-t7uztx-1q41p.hk3.p5pv.com}}, udp: true}
+  - {name: 香港-573.9KB/s, server: 542eb798-sv2sg0-szj6wo-8f7h.hk3.p5pv.com, port: 80, type: vmess, uuid: b1e0ecc4-c7af-11ed-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 542eb798-sv2sg0-szj6wo-8f7h.hk3.p5pv.com}}, udp: true}
+  - {name: 香港-1.50MB/s, server: 8a823e91-sv0xs0-t8dih2-9kd8.hk3.p5pv.com, port: 80, type: vmess, uuid: 8bd4eef0-e4ad-11ef-b717-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 8a823e91-sv0xs0-t8dih2-9kd8.hk3.p5pv.com}}, udp: true}
+  - {name: 中转节点-43.9MB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-996.4KB/s, server: 183.236.51.38, port: 41291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-56.7MB/s, server: 183.236.51.38, port: 41902, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-152.7KB/s, server: 120.234.102.229, port: 43674, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-5.69MB/s, server: a731a8b3-sv2sg0-sy1a0y-1iyov.hk3.p5pv.com, port: 80, type: vmess, uuid: 33629870-e57e-11ec-bb74-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a731a8b3-sv2sg0-sy1a0y-1iyov.hk3.p5pv.com}}, udp: true}
+  - {name: 中转节点-71.3MB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-120.4KB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-3.97MB/s, server: 4f8acdc9-sv0xs0-sw5wi7-ufc0.hk3.p5pv.com, port: 80, type: vmess, uuid: 22308988-8548-11ea-a22e-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 4f8acdc9-sv0xs0-sw5wi7-ufc0.hk3.p5pv.com}}, udp: true}
+  - {name: 中转节点-721.0KB/s, server: 183.236.51.38, port: 41291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-4.2MB/s, server: v6.heduian.link, port: 30806, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 中转节点-6.86MB/s, server: 9e6c9676-sv6hs0-sv7acf-1qw0q.cm5.p5pv.com, port: 17233, type: vmess, uuid: d4fe3d0c-9043-11ef-8dc4-f23c91cfbbc9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-3.27MB/s, server: bbaaa4cd-sv2sg0-sw3x6h-1ndin.hk3.p5pv.com, port: 80, type: vmess, uuid: 1a7f2766-e24d-11ed-98a7-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: bbaaa4cd-sv2sg0-sw3x6h-1ndin.hk3.p5pv.com}}, udp: true}
+  - {name: 中转节点-487.3KB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港-4.00MB/s, server: 25109257-sv4n40-t5qfe2-1khwf.hk3.p5pv.com, port: 80, type: vmess, uuid: 92bd8c68-6434-11ee-b644-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 25109257-sv4n40-t5qfe2-1khwf.hk3.p5pv.com}}, udp: true}
   - {name: 中转节点-121.0KB/s, server: 183.236.51.38, port: 41902, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-4.67MB/s, server: v29.heduian.link, port: 30829, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: v29.heduian.link}}, udp: true}
+  - {name: 香港-2.36MB/s, server: 45.146.232.173, port: 42883, type: trojan, password: 502ce857-5d5d-4acd-9c5c-f62a9acfa54e, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -120,115 +160,157 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 香港-1.50MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 香港-4.00MB/s
-      - 香港-3.27MB/s
+      - 台湾-928.3KB/s
       - 香港-7.10MB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 香港-5.69MB/s
+      - 香港-3.97MB/s
+      - 香港-3.27MB/s
+      - 香港-4.00MB/s
+      - 香港-2.36MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -244,26 +326,36 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 美国-2.92MB/s
-      - 美国-20.8MB/s
-      - 美国-198.9KB/s
+      - 台湾-928.3KB/s
+      - 美国-3.03MB/s
+      - 韩国-28.4MB/s
       - 韩国-27.5MB/s
-      - 香港-573.9KB/s
-      - 香港-5.69MB/s
-      - 中转节点-6.86MB/s
-      - 香港-1.50MB/s
-      - 中转节点-164.8KB/s
-      - 中转节点-120.4KB/s
-      - 中转节点-4.2MB/s
-      - 香港-3.97MB/s
-      - 香港-933.3KB/s
-      - 中转节点-996.4KB/s
-      - 中转节点-721.0KB/s
-      - 香港-4.00MB/s
-      - 中转节点-43.9MB/s
-      - 香港-3.27MB/s
+      - 中转节点-17.98MB/s
+      - 美国-20.8MB/s
+      - 美国-2.92MB/s
+      - 美国-198.9KB/s
       - 香港-7.10MB/s
+      - 中转节点-164.8KB/s
+      - 香港-933.3KB/s
+      - 香港-573.9KB/s
+      - 香港-1.50MB/s
+      - 中转节点-43.9MB/s
+      - 中转节点-996.4KB/s
+      - 中转节点-56.7MB/s
+      - 中转节点-152.7KB/s
+      - 香港-5.69MB/s
+      - 中转节点-71.3MB/s
+      - 中转节点-120.4KB/s
+      - 香港-3.97MB/s
+      - 中转节点-721.0KB/s
+      - 中转节点-4.2MB/s
+      - 中转节点-6.86MB/s
+      - 香港-3.27MB/s
+      - 中转节点-487.3KB/s
+      - 香港-4.00MB/s
       - 中转节点-121.0KB/s
+      - 中转节点-4.67MB/s
+      - 香港-2.36MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
