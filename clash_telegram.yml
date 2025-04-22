@@ -5,43 +5,55 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 荷兰-382.3KB/s, server: 195.85.250.173, port: 5555, type: ss, cipher: chacha20-ietf-poly1305, password: 4QbzZcp6q7kg0LCrZfyQ9w, udp: true}
   - {name: 美国-27.9MB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
   - {name: 香港-4.77MB/s, server: e215a802-sv2sg0-t6lmal-1f1f.hk.p5pv.com, port: 80, type: vmess, uuid: 99b6c418-d4f5-ab83-cf93-4d7b38fed6f6, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: e215a802-sv2sg0-t6lmal-1f1f.hk.p5pv.com}}, udp: true}
-  - {name: 中转节点-10.6MB/s, server: 120.232.153.40, port: 36609, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 香港-3.75MB/s, server: d076cd1f-sv2sg0-sxs5em-1igr4.hk.p5pv.com, port: 80, type: vmess, uuid: 57269f80-e0e8-11ec-bb74-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: d076cd1f-sv2sg0-sxs5em-1igr4.hk.p5pv.com}}, udp: true}
+  - {name: 中转节点-179.9KB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-10.6MB/s, server: 120.232.153.40, port: 36609, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 香港-1.32MB/s, server: 11b435e2-sv6hs0-tdmh9i-1qu3l.hk.p5pv.com, port: 80, type: vmess, uuid: fb5ef4a6-dfad-11ee-975b-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 11b435e2-sv6hs0-tdmh9i-1qu3l.hk.p5pv.com}}, udp: true}
+  - {name: 中转节点-355.3KB/s, server: 183.236.51.38, port: 41902, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,11 +72,14 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -78,32 +93,41 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -119,11 +143,14 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 荷兰-382.3KB/s
       - 美国-27.9MB/s
       - 香港-4.77MB/s
-      - 中转节点-10.6MB/s
       - 香港-3.75MB/s
+      - 中转节点-179.9KB/s
+      - 中转节点-10.6MB/s
       - 香港-1.32MB/s
+      - 中转节点-355.3KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
