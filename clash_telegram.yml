@@ -5,143 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 香港-389.7KB/s, server: hkkh11v1.xpmc.cc, port: 50101, type: ss, cipher: chacha20-ietf-poly1305, password: 91a41f4e02dc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkkh11v1.xpmc.cc, path: /utvbnrzejpmt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 香港-1.22MB/s, server: hkkh11v1.xpmc.cc, port: 50101, type: ss, cipher: chacha20-ietf-poly1305, password: 91a41f4e02dc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkkh11v1.xpmc.cc, path: /utvbnrzejpmt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 新加坡-1.24MB/s, server: 18.142.242.5, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: 冰岛-216.9KB/s, server: 37.235.49.152, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: 中转节点-5.79MB/s, server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202504221857755-wjQtxZzCYu.download.microsoft.com}, udp: true}
-  - {name: 日本-25.8MB/s, server: jp06v1.xmsj.red, port: 55958, type: ss, cipher: chacha20-ietf-poly1305, password: 9befc9a342e2, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jp06v1.xmsj.red, path: /plxbuqyt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 日本-29.1MB/s, server: jp06v1.xmsj.red, port: 55958, type: ss, cipher: chacha20-ietf-poly1305, password: 9befc9a342e2, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jp06v1.xmsj.red, path: /plxbuqyt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 香港-3.57MB/s, server: bcda8de7-sv2sg0-t7uztx-1q41p.hk3.p5pv.com, port: 80, type: vmess, uuid: 3cc92f96-9f36-11ee-9144-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: bcda8de7-sv2sg0-t7uztx-1q41p.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-2.51MB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-1.90MB/s, server: bed31eab-sv0xs0-t2hqlr-1s3mx.hk.p5pv.com, port: 80, type: vmess, uuid: b58095f0-52dc-11ef-bc74-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: bed31eab-sv0xs0-t2hqlr-1s3mx.hk.p5pv.com}}, udp: true}
-  - {name: 中转节点-305.3KB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-352.8KB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-2.88MB/s, server: 12988683-sv2sg0-t2whio-1jcwu.hk3.p5pv.com, port: 80, type: vmess, uuid: f93486ce-cc84-11ed-9e98-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 12988683-sv2sg0-t2whio-1jcwu.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-4.11MB/s, server: afc8577f-svc1s0-tc67m2-1tjc4.cm5.p5pv.com, port: 17232, type: vmess, uuid: fac704ae-0304-11f0-a2ef-f23c91cfbbc9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-1.37MB/s, server: 183.236.51.38, port: 41291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-291.1KB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-1.18MB/s, server: 5c4dc91c-sv2sg0-tbnucr-1thfv.hk3.p5pv.com, port: 80, type: vmess, uuid: 0a4d1c88-fb3a-11ef-8c3f-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 5c4dc91c-sv2sg0-tbnucr-1thfv.hk3.p5pv.com}}, udp: true}
-  - {name: 中转节点-492.9KB/s, server: 120.234.102.229, port: 43674, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-152.0KB/s, server: e0f8cbba-sv0xs0-tdb09u-1thl3.hk3.p5pv.com, port: 80, type: vmess, uuid: 15d92b4e-fd53-11ef-bea4-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: e0f8cbba-sv0xs0-tdb09u-1thl3.hk3.p5pv.com}}, udp: true}
-  - {name: 香港-125.9KB/s, server: e205fda2-sv2sg0-swocza-1d3bw.hk3.p5pv.com, port: 80, type: vmess, uuid: 0fcf5a7a-e1b7-11ec-a352-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: e205fda2-sv2sg0-swocza-1d3bw.hk3.p5pv.com}}, udp: true}
-  - {name: 卢森堡-659.3KB/s, server: choice-gar.dolphin109.quest, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: choice-gar.dolphin109.quest, skip-cert-verify: true, udp: true}
-  - {name: 英国-85.9MB/s, server: 202.78.163.146, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: immense-goose.dolphin109.quest, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-1.91MB/s, server: sla.cn.964e995b760.gogodns.xin, port: 43586, type: trojan, password: 2440a39c-2e5e-4e76-96e1-46412298c1a0, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
-  - {name: 荷兰-164.9KB/s, server: 109.104.153.229, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: exotic-wahoo.dolphin109.quest, skip-cert-verify: true, udp: true}
-  - {name: 荷兰-314.8KB/s, server: 109.104.153.229, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: exotic-wahoo.dolphin109.quest, skip-cert-verify: true, udp: true}
-  - {name: 塞舌尔-1.51MB/s, server: 156.244.11.62, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: fit-bengal.dolphin109.quest, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-296.4KB/s, server: sla.cn.964e995b760.gogodns.xin, port: 46668, type: trojan, password: 8e603038-3713-4c74-9b9c-43ad4cc15650, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
-  - {name: 巴勒斯坦-2.01MB/s, server: 212.192.2.202, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: lucky-lynx.dolphin109.quest, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-822.6KB/s, server: sla.cn.964e995b760.gogodns.xin, port: 43395, type: trojan, password: 5d84f3b9-fb95-45ac-8e53-2e396bc19fa1, skip-cert-verify: true, udp: true}
-  - {name: 英国-746.1KB/s, server: blessed-opossum.dolphin109.quest, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: blessed-opossum.dolphin109.quest, skip-cert-verify: true, udp: true}
+  - {name: 冰岛-12.4MB/s, server: 37.235.49.152, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 中转节点-15.98MB/s, server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202504231516596-2ovXmdP1DN.download.microsoft.com}, udp: true}
+  - {name: 中转节点-4.67MB/s, server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202504231516596-2ovXmdP1DN.download.microsoft.com}, udp: true}
+  - {name: 日本-753.9KB/s, server: jp06v1.xmsj.red, port: 32747, type: ss, cipher: chacha20-ietf-poly1305, password: 9befc9a342e2, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jp06v1.xmsj.red, path: /plxbuqyt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-88.2MB/s, server: 222.186.20.102, port: 41228, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 165400:Hr2aXO, obfs-param: data.bilibili.com/ed5a2165400, udp: true}
+  - {name: 中转节点-39.9MB/s, server: 120.234.102.229, port: 43674, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-21.9MB/s, server: 120.232.153.40, port: 36609, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 克罗地亚-2.34MB/s, server: 89.18.58.206, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 卢森堡-116.5KB/s, server: 109.104.154.201, port: 443, type: trojan, password: !<str> 3828095943467868160, sni: choice-gar.dolphin109.quest, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-4.43MB/s, server: sla.cn.964e995b760.gogodns.xin, port: 46668, type: trojan, password: 74fa3b6c-e333-49f4-ab15-9549fc53cf42, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -160,155 +80,67 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 香港-3.57MB/s
-      - 香港-1.90MB/s
-      - 香港-2.88MB/s
-      - 香港-1.18MB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -324,36 +156,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 香港-389.7KB/s
-      - 香港-1.22MB/s
-      - 新加坡-1.24MB/s
-      - 冰岛-216.9KB/s
-      - 中转节点-5.79MB/s
-      - 日本-25.8MB/s
-      - 日本-29.1MB/s
-      - 香港-3.57MB/s
-      - 中转节点-2.51MB/s
-      - 香港-1.90MB/s
-      - 中转节点-305.3KB/s
-      - 中转节点-352.8KB/s
-      - 香港-2.88MB/s
-      - 中转节点-4.11MB/s
-      - 中转节点-1.37MB/s
-      - 中转节点-291.1KB/s
-      - 香港-1.18MB/s
-      - 中转节点-492.9KB/s
-      - 香港-152.0KB/s
-      - 香港-125.9KB/s
-      - 卢森堡-659.3KB/s
-      - 英国-85.9MB/s
-      - 中转节点-1.91MB/s
-      - 荷兰-164.9KB/s
-      - 荷兰-314.8KB/s
-      - 塞舌尔-1.51MB/s
-      - 中转节点-296.4KB/s
-      - 巴勒斯坦-2.01MB/s
-      - 中转节点-822.6KB/s
-      - 英国-746.1KB/s
+      - 冰岛-12.4MB/s
+      - 中转节点-15.98MB/s
+      - 中转节点-4.67MB/s
+      - 日本-753.9KB/s
+      - 中转节点-88.2MB/s
+      - 中转节点-39.9MB/s
+      - 中转节点-21.9MB/s
+      - 克罗地亚-2.34MB/s
+      - 卢森堡-116.5KB/s
+      - 中转节点-4.43MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
