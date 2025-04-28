@@ -5,43 +5,83 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 英国-68.0MB/s, server: 85.234.65.100, port: 11359, type: ss, cipher: aes-256-gcm, password: XaAIkJjp, udp: true}
   - {name: 西班牙-76.5MB/s, server: 150.241.91.184, port: 8724, type: ss, cipher: chacha20-ietf-poly1305, password: hY4vxI8XY3YJghRe4Gp2g2, udp: true}
+  - {name: 保加利亚-43.9MB/s, server: 89.44.197.181, port: 31348, type: ss, cipher: chacha20-ietf-poly1305, password: oJ7xnUknEuMScM21clCyEit66JRhmZrArRSE0xeapGR24HqH, udp: true}
+  - {name: 罗马尼亚-254.1KB/s, server: 93.114.98.34, port: 7713, type: ss, cipher: aes-256-gcm, password: aCRNijIj, udp: true}
   - {name: 香港-31.2MB/s, server: 154.223.16.212, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
-  - {name: 香港-6.71MB/s, server: baeb9e1b-sv6hs0-svewl8-xu74.hk.p5pv.com, port: 80, type: vmess, uuid: 715a2574-9c25-11eb-8673-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: baeb9e1b-sv6hs0-svewl8-xu74.hk.p5pv.com}}, udp: true}
+  - {name: 中转节点-139.5KB/s, server: 120.198.71.214, port: 42375, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-9.79MB/s, server: 13.wogg1.top, port: 11213, type: vmess, uuid: 48af369b-07f9-30f3-9210-354bd85eea27, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-11.0MB/s, server: 120.232.153.40, port: 57852, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-94.4MB/s, server: v37.heduian.link, port: 30837, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: v37.heduian.link}}, udp: true}
+  - {name: 香港-6.71MB/s, server: baeb9e1b-sv6hs0-svewl8-xu74.hk.p5pv.com, port: 80, type: vmess, uuid: 715a2574-9c25-11eb-8673-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: baeb9e1b-sv6hs0-svewl8-xu74.hk.p5pv.com}}, udp: true}
+  - {name: 美国-4.44MB/s, server: node4.ourfast.asia, port: 443, type: vmess, uuid: 1cbaf54b-146a-4eb6-9f99-0842fed243d0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 香港-4.66MB/s, server: 45.146.232.171, port: 43499, type: trojan, password: d1eb768f-b132-4bc4-8256-a042a87b623f, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
   - {name: 新加坡-106.2KB/s, server: grown-doberman.shiner427.skin, port: 443, type: trojan, password: !<str> 74260678056890000, sni: grown-doberman.shiner427.skin, skip-cert-verify: true, udp: true}
+  - {name: 香港-1.21MB/s, server: 45.146.232.171, port: 27002, type: trojan, password: fffddde3-e433-47a0-87b7-a21f3ab4a9dc, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
+  - {name: 香港-4.87MB/s, server: 45.146.232.171, port: 43395, type: trojan, password: 5d84f3b9-fb95-45ac-8e53-2e396bc19fa1, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,49 +100,92 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 香港-31.2MB/s
       - 香港-6.71MB/s
+      - 香港-4.66MB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,11 +201,21 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 英国-68.0MB/s
       - 西班牙-76.5MB/s
+      - 保加利亚-43.9MB/s
+      - 罗马尼亚-254.1KB/s
       - 香港-31.2MB/s
-      - 香港-6.71MB/s
+      - 中转节点-139.5KB/s
       - 中转节点-9.79MB/s
+      - 中转节点-11.0MB/s
+      - 中转节点-94.4MB/s
+      - 香港-6.71MB/s
+      - 美国-4.44MB/s
+      - 香港-4.66MB/s
       - 新加坡-106.2KB/s
+      - 香港-1.21MB/s
+      - 香港-4.87MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
