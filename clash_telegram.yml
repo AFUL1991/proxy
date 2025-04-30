@@ -5,115 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 加拿大-1.31MB/s, server: 15.156.196.38, port: 24119, type: ss, cipher: aes-256-gcm, password: pHvYevSM, udp: true}
-  - {name: 法国-453.2KB/s, server: 51.195.119.47, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: qXvO7zYU7KeaB0Md7DQLow, udp: true}
-  - {name: 越南-21.2MB/s, server: 103.186.154.24, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
-  - {name: 中转节点-1.26MB/s, server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202504281461390-eUluP1Ncv7.download.microsoft.com}, udp: true}
-  - {name: 德国-129.2KB/s, server: 45.151.62.54, port: 28825, type: ss, cipher: chacha20-ietf-poly1305, password: 0zyDRZ1XmNXaaCAN7KEA8a, udp: true}
-  - {name: 德国-261.1KB/s, server: 45.151.62.54, port: 28825, type: ss, cipher: chacha20-ietf-poly1305, password: 0zyDRZ1XmNXaaCAN7KEA8a, udp: true}
-  - {name: 韩国-5.85MB/s, server: 125.141.26.12, port: 4857, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
-  - {name: 中转节点-10.4MB/s, server: v7.heduian.link, port: 30807, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
-  - {name: 中转节点-4.72MB/s, server: 73618903-svhls0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-228.9KB/s, server: 183.236.51.38, port: 41291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.46MB/s, server: b3e1a577-svjgg0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港-5.96MB/s, server: 0ea1c2b6-sv6hs0-sv5jys-1t926.hk.p5pv.com, port: 80, type: vmess, uuid: 921bd912-ef8a-11ef-8eaf-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 0ea1c2b6-sv6hs0-sv5jys-1t926.hk.p5pv.com}}, udp: true}
-  - {name: 中转节点-237.1KB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-1.86MB/s, server: 73618903-svhls0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-4.08MB/s, server: e890417c-svc1s0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-2.15MB/s, server: e890417c-svc1s0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-13.0MB/s, server: 120.232.153.40, port: 59082, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-6.2MB/s, server: v7.heduian.link, port: 30807, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
-  - {name: 中转节点-10.6MB/s, server: v7.heduian.link, port: 30807, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
-  - {name: 中转节点-271.4KB/s, server: 120.232.220.45, port: 27401, type: trojan, password: 7eccaecb-10ea-460f-975a-77a9cdc1fea7, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-127.7KB/s, server: 183.2.150.98, port: 27201, type: trojan, password: 8e189046-034d-47b6-9448-7edde2689568, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-18.44MB/s, server: dozo01.flztjc.top, port: 8313, type: trojan, password: 2c605663-b89a-5734-a9d6-97d4743d72cf, sni: hk-13-568.flztjc.net, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-7.01MB/s, server: 125.94.40.162, port: 21125, type: trojan, password: f57f01e6-9bb1-4277-a5cb-75ad0ce1fa11, sni: k12.tudou211.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-5.46MB/s, server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202504291524969-6n5EJXeCf0.download.microsoft.com}, udp: true}
+  - {name: 越南-26.3MB/s, server: 103.186.154.24, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 中转节点-193.7KB/s, server: cn01.efan8867801.xyz, port: 8766, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202504291524969-6n5EJXeCf0.download.microsoft.com}, udp: true}
+  - {name: 日本-27.7MB/s, server: 103.140.136.242, port: 15991, type: ss, cipher: chacha20-ietf-poly1305, password: b1878a5bf148, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jp06v1.3ci.xyz, path: /udjsamdxq, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 法国-37.4MB/s, server: 51.15.15.82, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 中转节点-2.52MB/s, server: 6faf81e8-svdwg0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.41MB/s, server: b3e1a577-svjgg0-t1bnjq-1krtb.cu.plebai.net, port: 5229, type: vmess, uuid: 60f6b4c4-9d70-11ed-a4d2-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-145.4KB/s, server: 120.198.71.219, port: 44015, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-79.2MB/s, server: aafrtpfxr.jpl01i9zjfegelp.5xfsur8v62.gosdk.xyz, port: 34017, type: trojan, password: 65261f67-2b9b-4ed0-ac4e-a6d02a43c630, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
+  - {name: 香港-2.73MB/s, server: 45.146.232.171, port: 43592, type: trojan, password: 51a668c6-d1bb-4e7e-aca3-125349f779fd, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -132,120 +80,68 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港-5.96MB/s
+      - 香港-2.73MB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -261,29 +157,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 加拿大-1.31MB/s
-      - 法国-453.2KB/s
-      - 越南-21.2MB/s
-      - 中转节点-1.26MB/s
-      - 德国-129.2KB/s
-      - 德国-261.1KB/s
-      - 韩国-5.85MB/s
-      - 中转节点-10.4MB/s
-      - 中转节点-4.72MB/s
-      - 中转节点-228.9KB/s
-      - 中转节点-2.46MB/s
-      - 香港-5.96MB/s
-      - 中转节点-237.1KB/s
-      - 中转节点-1.86MB/s
-      - 中转节点-4.08MB/s
-      - 中转节点-2.15MB/s
-      - 中转节点-13.0MB/s
-      - 中转节点-6.2MB/s
-      - 中转节点-10.6MB/s
-      - 中转节点-271.4KB/s
-      - 中转节点-127.7KB/s
-      - 中转节点-18.44MB/s
-      - 中转节点-7.01MB/s
+      - 中转节点-5.46MB/s
+      - 越南-26.3MB/s
+      - 中转节点-193.7KB/s
+      - 日本-27.7MB/s
+      - 法国-37.4MB/s
+      - 中转节点-2.52MB/s
+      - 中转节点-2.41MB/s
+      - 中转节点-145.4KB/s
+      - 中转节点-79.2MB/s
+      - 香港-2.73MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
