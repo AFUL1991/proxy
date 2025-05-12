@@ -5,10 +5,20 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 越南-11.4MB/s, server: 103.186.154.20, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 越南-23.4MB/s, server: 103.186.154.20, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
-  - {name: 中转节点-6.2MB/s, server: v32.heduian.link, port: 30832, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
+  - {name: 中转节点-186.9KB/s, server: 120.198.71.216, port: 35921, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 香港-1.44MB/s, server: 338b2185-sw1z40-sw51rj-hkb8.hgc1.tcpbbr.net, port: 8080, type: vmess, uuid: 21a70fd2-c69c-11eb-8673-f23c9164ca5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 338b2185-sw1z40-sw51rj-hkb8.hgc1.tcpbbr.net}}, udp: true}
+  - {name: 中转节点-14.5MB/s, server: 120.232.153.40, port: 36609, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-48.4MB/s, server: 120.232.153.40, port: 56152, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 美国-250.2KB/s, server: FfFgTYY.7282728.XyZ, port: 80, type: vmess, uuid: 3d4ad187-b554-4300-bf71-d26c71962504, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /NiNQyrcaIIJ3WqRcOEICAwmfH7, headers: {Host: FfFgTYY.7282728.XyZ}}, udp: true}
+  - {name: 中转节点-89.0MB/s, server: tk.hzlt.tkddns.xyz, port: 22643, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: tk.hzlt.tkddns.xyz}}, udp: true}
+  - {name: 中转节点-3.4MB/s, server: v12.heduian.link, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 中转节点-11.1MB/s, server: 120.232.153.40, port: 59082, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-6.2MB/s, server: v32.heduian.link, port: 30832, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
   - {name: 中转节点-9.6MB/s, server: 120.232.153.40, port: 36609, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-78.1MB/s, server: tk.hzlt.tkddns.xyz, port: 22642, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: zxjp-b.tkong.cc}}, udp: true}
+  - {name: 美国-1.07MB/s, server: 154.17.30.58, port: 28332, type: trojan, password: a5DnyYNIexIzS2Xg3YYlg9Ol0SgEpyCj5ZCSBanD88eOpwOC4aEzDyTjY0nxBDjzSaACSTqSE223C83, sni: phooey.starspace.link, skip-cert-verify: true, udp: true}
   - {name: 德国-211.9KB/s, server: 3.74.76.122, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -16,20 +26,40 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: 🎥 NETFLIX
     type: select
@@ -37,10 +67,20 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -60,10 +100,20 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: 🌏 国内媒体
     type: select
@@ -76,20 +126,40 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: 🍎 苹果服务
     type: select
@@ -97,10 +167,20 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
   - name: 🎯 全球直连
     type: select
@@ -117,10 +197,20 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 越南-11.4MB/s
       - 越南-23.4MB/s
-      - 中转节点-6.2MB/s
+      - 中转节点-186.9KB/s
       - 香港-1.44MB/s
+      - 中转节点-14.5MB/s
+      - 中转节点-48.4MB/s
+      - 美国-250.2KB/s
+      - 中转节点-89.0MB/s
+      - 中转节点-3.4MB/s
+      - 中转节点-11.1MB/s
+      - 中转节点-6.2MB/s
       - 中转节点-9.6MB/s
+      - 中转节点-78.1MB/s
+      - 美国-1.07MB/s
       - 德国-211.9KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
