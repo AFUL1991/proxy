@@ -8,13 +8,18 @@ proxies:
   - {name: 美国-2.10MB/s, server: 34.217.73.72, port: 443, type: ss, cipher: aes-256-cfb, password: awsps0501, udp: true}
   - {name: 美国-40.1MB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
   - {name: 韩国-86.9MB/s, server: p080.panda001.net, port: 36379, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
+  - {name: 台湾-318.8KB/s, server: 118.163.198.43, port: 2377, type: ss, cipher: chacha20-ietf-poly1305, password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv, plugin: obfs, plugin-opts: {mode: tls, host: 88a027c.dl.microsoft.lu:14333}, udp: true}
   - {name: 香港-30.2MB/s, server: hkkh11v1.xpmc.cc, port: 31785, type: ss, cipher: chacha20-ietf-poly1305, password: 91a41f4e02dc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkkh11v1.xpmc.cc, path: /utvbnrzejpmt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-46.3MB/s, server: 184.170.241.194, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true}
+  - {name: 中转节点-201.6KB/s, server: 183.237.84.53, port: 55002, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-47.7MB/s, server: tk.hzlt.tkddns.xyz, port: 22642, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: zxjp-b.tkong.cc}}, udp: true}
   - {name: 香港-4.06MB/s, server: fa013a4d-swd340-t2fqpv-11vcy.hgc1.tcpbbr.net, port: 8080, type: vmess, uuid: 99a5f570-7fe4-11ef-aaa7-f23c91cfbbc9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}, udp: true}
   - {name: 中转节点-4.4MB/s, server: v32.heduian.link, port: 30832, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
+  - {name: 中转节点-80.3MB/s, server: tk.hzlt.tkddns.xyz, port: 22641, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: zxjp-a.tkong.cc}}, udp: true}
   - {name: 中转节点-58.2MB/s, server: 54.223.46.105, port: 22643, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: zxjp-c.tkong.cc}}, udp: true}
   - {name: 台湾-54.3MB/s, server: green.cdntencentmusic.com, port: 28505, type: trojan, password: feac8d6d-8fcf-4ef1-9ad0-18833c9fca11, sni: green.cdntencentmusic.com, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-349.8KB/s, server: 183.240.116.224, port: 33505, type: trojan, password: 482194f6-8ca3-4c53-b43e-150f51efda7f, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
   - {name: 中转节点-575.3KB/s, server: 219.135.197.214, port: 27301, type: trojan, password: 482194f6-8ca3-4c53-b43e-150f51efda7f, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-349.8KB/s, server: 183.240.116.224, port: 33505, type: trojan, password: 482194f6-8ca3-4c53-b43e-150f51efda7f, sni: q08m.vgraxiw73s.hasyaf.cn, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -24,13 +29,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -39,13 +49,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -55,13 +70,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -83,17 +103,23 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
       - 香港-4.06MB/s
       - 台湾-54.3MB/s
@@ -106,13 +132,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: 📲 电报信息
     type: select
     proxies:
@@ -121,13 +152,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -137,13 +173,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -162,13 +203,18 @@ proxy-groups:
       - 美国-2.10MB/s
       - 美国-40.1MB/s
       - 韩国-86.9MB/s
+      - 台湾-318.8KB/s
       - 香港-30.2MB/s
+      - 美国-46.3MB/s
+      - 中转节点-201.6KB/s
+      - 中转节点-47.7MB/s
       - 香港-4.06MB/s
       - 中转节点-4.4MB/s
+      - 中转节点-80.3MB/s
       - 中转节点-58.2MB/s
       - 台湾-54.3MB/s
-      - 中转节点-349.8KB/s
       - 中转节点-575.3KB/s
+      - 中转节点-349.8KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
