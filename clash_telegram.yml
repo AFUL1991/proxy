@@ -6,10 +6,20 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 英国-4.00MB/s, server: 85.210.120.237, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ, udp: true}
-  - {name: 香港-294.3KB/s, server: hkkh11v1.xpmc.cc, port: 40527, type: ss, cipher: chacha20-ietf-poly1305, password: 91a41f4e02dc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkkh11v1.xpmc.cc, path: /utvbnrzejpmt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 斯洛伐克-35.4MB/s, server: 156.146.40.194, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
   - {name: 中转节点-561.6KB/s, server: 120.233.147.197, port: 23340, type: ss, cipher: chacha20-ietf-poly1305, password: 0fbed6c9-0fb4-4ec3-8582-f569f8d773d5, udp: true}
+  - {name: 日本-1.15MB/s, server: 54.248.176.238, port: 443, type: ss, cipher: aes-256-cfb, password: awsps0501, udp: true}
+  - {name: 香港-294.3KB/s, server: hkkh11v1.xpmc.cc, port: 40527, type: ss, cipher: chacha20-ietf-poly1305, password: 91a41f4e02dc, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkkh11v1.xpmc.cc, path: /utvbnrzejpmt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-5.43MB/s, server: cn01.efan8867801.xyz, port: 8774, type: ss, cipher: rc4-md5, password: efanccyun, plugin: obfs, plugin-opts: {mode: http, host: 202505251086349-HhwPvtLlML.download.microsoft.com}, udp: true}
+  - {name: 韩国-418.6KB/s, server: p231.panda004.net, port: 11389, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
   - {name: 英国-33.0MB/s, server: series-a2-me.varzesh360.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Bog0ELmMM9DSxDdQ, udp: true}
+  - {name: 中转节点-4.4MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
+  - {name: 中转节点-7.55MB/s, server: sslvpn.51job.com, port: 1443, type: vmess, uuid: a6a0d901-67e9-460a-90b5-634c5c4f9782, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /634c5c4f9782, headers: {Host: centos7}}, udp: true}
+  - {name: 中转节点-132.1KB/s, server: 120.232.153.40, port: 52182, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-232.3KB/s, server: 183.236.51.38, port: 49121, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-224.4KB/s, server: 120.232.153.40, port: 43292, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-385.8KB/s, server: 183.236.51.38, port: 49291, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-3.4MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -17,20 +27,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -38,10 +68,20 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -61,10 +101,20 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -77,20 +127,40 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -98,10 +168,20 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,10 +198,20 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 英国-4.00MB/s
-      - 香港-294.3KB/s
+      - 斯洛伐克-35.4MB/s
       - 中转节点-561.6KB/s
+      - 日本-1.15MB/s
+      - 香港-294.3KB/s
+      - 中转节点-5.43MB/s
+      - 韩国-418.6KB/s
       - 英国-33.0MB/s
+      - 中转节点-4.4MB/s
+      - 中转节点-7.55MB/s
+      - 中转节点-132.1KB/s
       - 中转节点-232.3KB/s
+      - 中转节点-224.4KB/s
+      - 中转节点-385.8KB/s
+      - 中转节点-3.4MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
