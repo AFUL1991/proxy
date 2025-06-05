@@ -6,10 +6,20 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 台湾-898.6KB/s, server: 103.137.62.194, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 937f6b6168b6, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: wt8v1.kvote.cn, path: /oqhygtklyhwi, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 香港-13.5MB/s, server: 121.127.231.217, port: 17161, type: ss, cipher: chacha20-ietf-poly1305, password: 1450cecfb93f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: kh36v1.pmxiaonan.xyz, path: /simieepvt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 香港-97.5MB/s, server: 121.127.231.217, port: 17161, type: ss, cipher: chacha20-ietf-poly1305, password: 1450cecfb93f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: kh36v1.pmxiaonan.xyz, path: /simieepvt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-6.7MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 中转节点-2.03MB/s, server: f8cwp-g04.ua01-ae5.entry.v50307shvkaa.art, port: 20072, type: ss, cipher: aes-256-gcm, password: 6a828f44-0434-3bd4-aca5-a90b696a910c, udp: true}
+  - {name: 香港-248.2KB/s, server: 43.226.17.11, port: 43361, type: ss, cipher: chacha20-ietf-poly1305, password: 60a930c17ff0, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: kr6v1.xpmc.cc, path: /matwnpkhug, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-178.0KB/s, server: 183.236.51.38, port: 33919, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.2MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 中转节点-6.4MB/s, server: 120.232.153.40, port: 31209, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-3.0MB/s, server: v32.heduian.link, port: 30832, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
+  - {name: 中转节点-136.9KB/s, server: 183.236.51.38, port: 59652, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-3.4MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
   - {name: 中转节点-123.3KB/s, server: 183.236.51.38, port: 33919, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-6.7MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
   - {name: 中转节点-2.12MB/s, server: c5d812aa-sx4v40-sx7hbg-1mmbp.cu.plebai.net, port: 15229, type: trojan, password: 607d365e-7ea1-11ee-95e9-f23c913c8d2b, sni: c5d812aa-sx4v40-sx7hbg-1mmbp.cu.plebai.net, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-150.4KB/s, server: 3050cfd7-sx6ps0-sydxa9-fa3p.cm5.cnkuaishou.com, port: 27231, type: trojan, password: 905fcd78-866c-81e1-3cb8-1beb59d661ab, sni: 3050cfd7-sx6ps0-sydxa9-fa3p.cm5.cnkuaishou.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -17,20 +27,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -38,10 +68,20 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -61,16 +101,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
+      - 香港-248.2KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
@@ -78,20 +130,40 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -99,10 +171,20 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -119,10 +201,20 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 台湾-898.6KB/s
+      - 香港-13.5MB/s
       - 香港-97.5MB/s
-      - 中转节点-6.7MB/s
+      - 中转节点-2.03MB/s
+      - 香港-248.2KB/s
+      - 中转节点-178.0KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-6.4MB/s
+      - 中转节点-3.0MB/s
+      - 中转节点-136.9KB/s
+      - 中转节点-3.4MB/s
       - 中转节点-123.3KB/s
+      - 中转节点-6.7MB/s
       - 中转节点-2.12MB/s
+      - 中转节点-150.4KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
