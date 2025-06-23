@@ -5,63 +5,99 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 挪威-1.51MB/s, server: 185.90.61.157, port: 20034, type: ss, cipher: aes-256-gcm, password: MYR5ITDFIAN6Q8QI, udp: true}
   - {name: 韩国-126.8KB/s, server: 125.141.31.72, port: 15098, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
+  - {name: 中转节点-82.5MB/s, server: 112.54.161.141, port: 20406, type: ss, cipher: aes-256-gcm, password: dwz1GtF7, udp: true}
+  - {name: 美国-19.1MB/s, server: 198.211.104.229, port: 60573, type: ss, cipher: chacha20-ietf-poly1305, password: akcHVt9bPh8DCk6jMKz62j, udp: true}
   - {name: 葡萄牙-11.1MB/s, server: 185.231.233.112, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 俄罗斯联邦-17.6MB/s, server: 185.22.153.67, port: 50120, type: ss, cipher: aes-256-gcm, password: b55c7e84afdd52cb, udp: true}
+  - {name: 中转节点-61.5MB/s, server: 120.233.128.98, port: 30015, type: ss, cipher: aes-256-gcm, password: dwz1GtF7, udp: true}
   - {name: 加拿大-27.4MB/s, server: 162.221.207.189, port: 8443, type: ss, cipher: chacha20-ietf-poly1305, password: 3qbOlPe0SbNGznFQmGt6FA, udp: true}
   - {name: 香港-76.7MB/s, server: kr6v1.dashengjs.net, port: 443, type: ss, cipher: aes-256-gcm, password: 8360adcea0b1, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: kr6v1.dashengjs.net, path: /bylnxldqaquw, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 挪威-1.51MB/s, server: 185.90.61.157, port: 20034, type: ss, cipher: aes-256-gcm, password: MYR5ITDFIAN6Q8QI, udp: true}
-  - {name: 中转节点-82.5MB/s, server: 112.54.161.141, port: 20406, type: ss, cipher: aes-256-gcm, password: dwz1GtF7, udp: true}
+  - {name: 日本-1001.0KB/s, server: 43.207.110.197, port: 443, type: ss, cipher: aes-256-cfb, password: awsps0501, udp: true}
+  - {name: 中转节点-16.0MB/s, server: 120.232.153.40, port: 31209, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 香港-2.82MB/s, server: 43.247.135.170, port: 46210, type: vmess, uuid: d1eca706-1aae-42d3-bab0-69995d7b023d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-2.9MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
   - {name: 中转节点-547.3KB/s, server: 183.236.51.38, port: 49154, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-8.19MB/s, server: 120.233.44.201, port: 21017, type: trojan, password: 2b1ed981-6547-4094-998b-06a3323d6f6c, sni: 120.233.44.201, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-550.8KB/s, server: 183.236.51.38, port: 49154, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-246.3KB/s, server: 120.234.102.229, port: 41174, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 法国-810.5KB/s, server: 13.38.159.113, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-1.49MB/s, server: 116.31.75.150, port: 39001, type: trojan, password: 85f133142f04dbf6547da33895cfabb3, sni: www.yrtok.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-8.19MB/s, server: 120.233.44.201, port: 21017, type: trojan, password: 2b1ed981-6547-4094-998b-06a3323d6f6c, sni: 120.233.44.201, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -80,16 +116,25 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -102,47 +147,74 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -158,16 +230,25 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 挪威-1.51MB/s
       - 韩国-126.8KB/s
+      - 中转节点-82.5MB/s
+      - 美国-19.1MB/s
       - 葡萄牙-11.1MB/s
+      - 俄罗斯联邦-17.6MB/s
+      - 中转节点-61.5MB/s
       - 加拿大-27.4MB/s
       - 香港-76.7MB/s
-      - 挪威-1.51MB/s
-      - 中转节点-82.5MB/s
+      - 日本-1001.0KB/s
+      - 中转节点-16.0MB/s
       - 香港-2.82MB/s
+      - 中转节点-2.9MB/s
       - 中转节点-547.3KB/s
-      - 中转节点-8.19MB/s
+      - 中转节点-550.8KB/s
+      - 中转节点-246.3KB/s
       - 法国-810.5KB/s
+      - 中转节点-1.49MB/s
+      - 中转节点-8.19MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
