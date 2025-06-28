@@ -5,10 +5,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 越南-16.1MB/s, server: 103.163.218.2, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 中转节点-71.0MB/s, server: 120.233.128.98, port: 30015, type: ss, cipher: aes-256-gcm, password: dwz1GtF7, udp: true}
   - {name: 香港-27.7MB/s, server: 121.127.231.200, port: 995, type: ss, cipher: aes-256-gcm, password: d2bcd45faee2, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkxwv1-5.dsjsapi.com, path: /mupbpzjvwhcm, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-18.16MB/s, server: 8tv68qhq.slashdevslashnetslashtun.net, port: 15010, type: ss, cipher: aes-256-gcm, password: E0WVOGJRKOQVV98Q, udp: true}
+  - {name: 越南-16.1MB/s, server: 103.163.218.2, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 中转节点-24.0MB/s, server: pr.fastsoonlink.com, port: 40030, type: ss, cipher: chacha20-ietf-poly1305, password: 7905a32b-012c-4711-89e2-73b6713eca75, udp: true}
+  - {name: 中转节点-11.0MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
   - {name: 中转节点-2.2MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
   - {name: 中转节点-2.1MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 中转节点-672.2KB/s, server: 203.156.253.12, port: 39001, type: trojan, password: 85f133142f04dbf6547da33895cfabb3, sni: www.yrtok.com, skip-cert-verify: true, udp: true}
   - {name: 中转节点-169.1KB/s, server: 203.156.253.12, port: 39001, type: trojan, password: 85f133142f04dbf6547da33895cfabb3, sni: www.yrtok.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -16,20 +21,30 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: 🎥 NETFLIX
     type: select
@@ -37,10 +52,15 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -60,10 +80,15 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: 🌏 国内媒体
     type: select
@@ -76,20 +101,30 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: 🍎 苹果服务
     type: select
@@ -97,10 +132,15 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
   - name: 🎯 全球直连
     type: select
@@ -117,10 +157,15 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 越南-16.1MB/s
+      - 中转节点-71.0MB/s
       - 香港-27.7MB/s
+      - 中转节点-18.16MB/s
+      - 越南-16.1MB/s
+      - 中转节点-24.0MB/s
+      - 中转节点-11.0MB/s
       - 中转节点-2.2MB/s
       - 中转节点-2.1MB/s
+      - 中转节点-672.2KB/s
       - 中转节点-169.1KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
