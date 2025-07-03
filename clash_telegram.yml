@@ -5,43 +5,83 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 越南-30.2MB/s, server: 103.186.155.23, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
-  - {name: 美国-287.5KB/s, server: 156.251.179.139, port: 636, type: ss, cipher: aes-256-gcm, password: 0b191076d18f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hk6v1.dsjsapp.com, path: /ugiibpkbca, tls: true, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 日本-340.5KB/s, server: 137.220.142.143, port: 636, type: ss, cipher: aes-256-gcm, password: 887bfcf43b52, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: jp6v1.lingjfjkm002.com, path: /svynueogf, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 美国-357.1KB/s, server: 156.251.179.139, port: 636, type: ss, cipher: aes-256-gcm, password: 0b191076d18f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hk6v1.dsjsapp.com, path: /ugiibpkbca, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 俄罗斯联邦-19.5MB/s, server: 87.251.79.34, port: 20684, type: ss, cipher: chacha20-ietf-poly1305, password: zQYy8iXZHAQnWnmSUl2J2m, udp: true}
+  - {name: 越南-50.6MB/s, server: 103.163.218.2, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 美国-287.5KB/s, server: 156.251.179.139, port: 636, type: ss, cipher: aes-256-gcm, password: 0b191076d18f, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hk6v1.dsjsapp.com, path: /ugiibpkbca, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 越南-30.2MB/s, server: 103.186.155.23, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 越南-20.7MB/s, server: 103.186.155.23, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 越南-46.5MB/s, server: 103.186.154.29, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 韩国-149.0KB/s, server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
+  - {name: 香港-739.1KB/s, server: hkt.gotochinatown.net, port: 80, type: vmess, uuid: 24e32978-4858-11eb-8684-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hkt.gotochinatown.net}}, udp: true}
+  - {name: 香港-633.4KB/s, server: hkt.gotochinatown.net, port: 80, type: vmess, uuid: 3085fcf8-a69c-11ec-bd7c-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hkt.gotochinatown.net}}, udp: true}
+  - {name: 中转节点-2.2MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 中转节点-2.2MB/s 2, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
   - {name: 香港-2.18MB/s, server: hkt.gotochinatown.net, port: 80, type: vmess, uuid: 9b604194-17b7-11ef-80b0-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: broadcastlv.chat.bilibili.com}}, udp: true}
+  - {name: 香港-696.3KB/s, server: 194.104.147.74, port: 1066, type: trojan, password: dda4f3bf-85fb-41bd-9d8e-77a8a02dbd59, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,48 +100,91 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -117,11 +200,21 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 越南-30.2MB/s
-      - 美国-287.5KB/s
       - 日本-340.5KB/s
+      - 美国-357.1KB/s
+      - 俄罗斯联邦-19.5MB/s
+      - 越南-50.6MB/s
+      - 美国-287.5KB/s
+      - 越南-30.2MB/s
+      - 越南-20.7MB/s
+      - 越南-46.5MB/s
       - 韩国-149.0KB/s
+      - 香港-739.1KB/s
+      - 香港-633.4KB/s
+      - 中转节点-2.2MB/s
+      - 中转节点-2.2MB/s 2
       - 香港-2.18MB/s
+      - 香港-696.3KB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
