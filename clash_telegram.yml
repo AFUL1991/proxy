@@ -6,9 +6,19 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 立陶宛-105.5KB/s, server: 45.87.175.58, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
-  - {name: 立陶宛-69.2MB/s, server: 45.87.175.92, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
+  - {name: 新加坡-179.6KB/s, server: 134.122.155.213, port: 10349, type: ss, cipher: aes-256-gcm, password: fd86b4005afd, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: hkxwv1-5.dsjsapi.com, path: /bxpuuxbqsxeb, tls: true, mux: true, skip-cert-verify: true}, udp: true}
   - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
+  - {name: 巴西-202.0KB/s, server: 38.54.57.90, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 立陶宛-69.2MB/s, server: 45.87.175.92, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true}
+  - {name: 中转节点-37.5MB/s, server: h.cm2.xiaomi-api.xyz, port: 19852, type: ss, cipher: chacha20-ietf-poly1305, password: feafc2ef-d5fd-4f6d-803b-fad4a5cc1f0e, udp: true}
   - {name: 美国-20.8MB/s, server: 107.148.6.67, port: 30001, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/170733132233, headers: {Host: www.53865734.xyz}}, udp: true}
+  - {name: 中转节点-18.6MB/s, server: 111.26.109.79, port: 30828, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
+  - {name: 美国-41.2MB/s, server: 107.148.6.67, port: 30001, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/170733132233}, udp: true}
+  - {name: 美国-3.05MB/s, server: 89.187.181.172, port: 43118, type: trojan, password: ypDt8RkT7J, sni: egcmi.phooeyunfold.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-19.32MB/s, server: 36.151.192.10, port: 9141, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-8.83MB/s, server: 36.151.251.29, port: 53067, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
+  - {name: 美国-34.1MB/s, server: us.blazeppn.info, port: 443, type: trojan, password: xxoo, sni: us.blazeppn.info, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-83.4MB/s, server: 13.215.50.90, port: 6668, type: trojan, password: 1a17b19d-4896-4531-af79-6e91d8ef8228, sni: baidu.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -16,18 +26,38 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -35,9 +65,19 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -57,9 +97,19 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -71,18 +121,38 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -90,9 +160,19 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -109,9 +189,19 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 立陶宛-105.5KB/s
-      - 立陶宛-69.2MB/s
+      - 新加坡-179.6KB/s
       - 获取节点异常，请在下个时段重试
+      - 巴西-202.0KB/s
+      - 立陶宛-69.2MB/s
+      - 中转节点-37.5MB/s
       - 美国-20.8MB/s
+      - 中转节点-18.6MB/s
+      - 美国-41.2MB/s
+      - 美国-3.05MB/s
+      - 中转节点-19.32MB/s
+      - 中转节点-8.83MB/s
+      - 美国-34.1MB/s
+      - 新加坡-83.4MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
