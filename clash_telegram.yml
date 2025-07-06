@@ -5,43 +5,63 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 越南-15.0MB/s, server: 103.186.154.28, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 越南-420.2KB/s, server: 103.186.154.32, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 荷兰-23.9MB/s, server: 194.87.31.68, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: R2UGad61FGO5, udp: true}
-  - {name: 中转节点-1.83MB/s, server: 36.151.251.61, port: 45203, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-5.78MB/s, server: 36.151.251.33, port: 19577, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
+  - {name: 越南-306.2KB/s, server: 103.186.155.23, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 越南-318.1KB/s, server: 103.186.154.26, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 越南-120.4KB/s, server: 103.186.154.38, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 韩国-24.0MB/s, server: 43.203.122.115, port: 6668, type: trojan, password: 1a17b19d-4896-4531-af79-6e91d8ef8228, sni: baidu.com, skip-cert-verify: true, udp: true}
   - {name: 中转节点-14.06MB/s, server: 36.151.192.10, port: 9141, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-5.78MB/s, server: 36.151.251.33, port: 19577, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-1.83MB/s, server: 36.151.251.61, port: 45203, type: trojan, password: d0d08cddacc3190ea81b1b792e1b5fde, sni: www.baidu.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,11 +80,16 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -75,32 +100,47 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -116,11 +156,16 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 越南-15.0MB/s
+      - 越南-420.2KB/s
       - 荷兰-23.9MB/s
-      - 中转节点-1.83MB/s
-      - 中转节点-5.78MB/s
+      - 越南-306.2KB/s
+      - 越南-318.1KB/s
+      - 越南-120.4KB/s
       - 韩国-24.0MB/s
       - 中转节点-14.06MB/s
+      - 中转节点-5.78MB/s
+      - 中转节点-1.83MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
