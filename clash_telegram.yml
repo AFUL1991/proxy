@@ -5,11 +5,12 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
   - {name: 越南-27.5MB/s, server: 103.186.154.27, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 香港-561.2KB/s, server: 103.103.245.158, port: 636, type: ss, cipher: aes-256-gcm, password: 9bfdde71b4c0, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /cauejypbltqt, tls: true, mux: true, skip-cert-verify: true}, udp: true}
-  - {name: 中转节点-50.5MB/s, server: pr.fastsoonlink.com, port: 40030, type: ss, cipher: chacha20-ietf-poly1305, password: ae6e933b-8874-4bf4-a384-0de216ef2bf4, udp: true}
+  - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
   - {name: 越南-20.6MB/s, server: 103.186.154.32, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 中转节点-50.5MB/s, server: pr.fastsoonlink.com, port: 40030, type: ss, cipher: chacha20-ietf-poly1305, password: ae6e933b-8874-4bf4-a384-0de216ef2bf4, udp: true}
+  - {name: 获取节点异常，请在下个时段重试 2, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
   - {name: 中转节点-4.62MB/s, server: v29.heduian.link, port: 30829, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: ocbc.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -17,22 +18,24 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: 🎥 NETFLIX
     type: select
@@ -40,11 +43,12 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -64,11 +68,12 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: 🌏 国内媒体
     type: select
@@ -81,22 +86,24 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: 🍎 苹果服务
     type: select
@@ -104,11 +111,12 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
   - name: 🎯 全球直连
     type: select
@@ -125,11 +133,12 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 获取节点异常，请在下个时段重试
       - 越南-27.5MB/s
       - 香港-561.2KB/s
-      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试
       - 越南-20.6MB/s
+      - 中转节点-50.5MB/s
+      - 获取节点异常，请在下个时段重试 2
       - 中转节点-4.62MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
