@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 获取节点异常，请在下个时段重试, server: 1.1.1.1, port: 6666, type: ss, cipher: none, password: "@buliang00", udp: true}
   - {name: 香港-151.2KB/s, server: hkt.gotochinatown.net, port: 80, type: vmess, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hkt.gotochinatown.net}}, udp: true}
   - {name: 香港-376.8KB/s, server: hkt.gotochinatown.net, port: 80, type: vmess, uuid: de003c72-0157-11ef-86da-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hkt.gotochinatown.net}}, udp: true}
 proxy-groups:
@@ -13,6 +14,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: ♻️ 自动选择
@@ -20,6 +22,7 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: 🎥 NETFLIX
@@ -28,6 +31,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: ⛔️ 广告拦截
@@ -48,6 +52,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: 🌏 国内媒体
@@ -62,6 +67,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: 📲 电报信息
@@ -69,6 +75,7 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: 🍎 苹果服务
@@ -77,6 +84,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
   - name: 🎯 全球直连
@@ -94,6 +102,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 获取节点异常，请在下个时段重试
       - 香港-151.2KB/s
       - 香港-376.8KB/s
 rules:
