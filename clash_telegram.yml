@@ -5,43 +5,47 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 俄罗斯联邦-1.41MB/s, server: 95.163.176.37, port: 8506, type: ss, cipher: chacha20-ietf-poly1305, password: eUh4lSpi7nOYj0vSrqLUh0, udp: true}
   - {name: 斯洛伐克-1.38MB/s, server: 156.146.40.194, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 俄罗斯联邦-1.41MB/s, server: 95.163.176.37, port: 8506, type: ss, cipher: chacha20-ietf-poly1305, password: eUh4lSpi7nOYj0vSrqLUh0, udp: true}
   - {name: 中转节点-187.9KB/s, server: 183.240.245.250, port: 47272, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转节点-1.3MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
   - {name: 中转节点-15.0MB/s, server: v24.heduian.link, port: 30824, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: v24.heduian.link}}, udp: true}
+  - {name: 中转节点-3.1MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
+  - {name: 中转节点-1.3MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -60,11 +64,12 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -75,32 +80,35 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -116,11 +124,12 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 俄罗斯联邦-1.41MB/s
       - 斯洛伐克-1.38MB/s
+      - 俄罗斯联邦-1.41MB/s
       - 中转节点-187.9KB/s
-      - 中转节点-1.3MB/s
       - 中转节点-15.0MB/s
+      - 中转节点-3.1MB/s
+      - 中转节点-1.3MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
