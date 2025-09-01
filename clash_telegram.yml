@@ -8,6 +8,7 @@ proxies:
   - {name: 斯洛文尼亚-19.3MB/s, server: 91.132.94.200, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
   - {name: 越南-30.0MB/s, server: 103.186.154.19, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 香港-11.51MB/s, server: c004e6fe-t1i9s0-tm53cm-1ol97.hkt.tcpbbr.net, port: 80, type: vmess, uuid: 93fb69fc-77cf-11ee-85ee-f23c91369f2d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: c004e6fe-t1i9s0-tm53cm-1ol97.hkt.tcpbbr.net}}, udp: true}
+  - {name: 中转节点-1.34MB/s, server: 183.237.27.69, port: 41442, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -17,6 +18,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,6 +27,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -34,6 +37,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -55,6 +59,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -69,6 +74,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: 📲 电报信息
     type: select
     proxies:
@@ -77,6 +83,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -86,6 +93,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -104,6 +112,7 @@ proxy-groups:
       - 斯洛文尼亚-19.3MB/s
       - 越南-30.0MB/s
       - 香港-11.51MB/s
+      - 中转节点-1.34MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
