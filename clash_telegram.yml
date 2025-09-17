@@ -9,6 +9,7 @@ proxies:
   - {name: 越南-52.9MB/s, server: 103.186.154.29, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 越南-27.1MB/s, server: 103.186.154.27, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
   - {name: 新加坡-25.5MB/s, server: 202.79.161.192, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: path/170733132233}, udp: true}
+  - {name: 中转节点-53.2MB/s, server: 183.240.180.47, port: 52512, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转节点-20.1MB/s, server: v39.heduian.link, port: 30839, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -20,6 +21,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: ♻️ 自动选择
     type: url-test
@@ -30,6 +32,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: 🎥 NETFLIX
     type: select
@@ -41,6 +44,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -64,6 +68,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: 🌏 国内媒体
     type: select
@@ -79,6 +84,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: 📲 电报信息
     type: select
@@ -89,6 +95,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: 🍎 苹果服务
     type: select
@@ -100,6 +107,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
   - name: 🎯 全球直连
     type: select
@@ -120,6 +128,7 @@ proxy-groups:
       - 越南-52.9MB/s
       - 越南-27.1MB/s
       - 新加坡-25.5MB/s
+      - 中转节点-53.2MB/s
       - 中转节点-20.1MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
