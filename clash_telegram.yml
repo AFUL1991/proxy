@@ -6,7 +6,10 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 摩尔多瓦-20.5MB/s, server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
+  - {name: 香港-311.0KB/s, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-1.2MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
   - {name: 中转节点-64.1MB/s, server: 36.156.102.86, port: 26295, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: www.nintendogames.net, skip-cert-verify: true, udp: true}
+  - {name: 中转节点-74.6MB/s, server: 36.156.102.86, port: 26295, type: trojan, password: 253bc477d4e43c209f2d427272968280, sni: www.nintendogames.net, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -14,14 +17,20 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -29,7 +38,10 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -49,11 +61,15 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
+      - 香港-311.0KB/s
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
@@ -61,14 +77,20 @@ proxy-groups:
       - 🎯 全球直连
       - 🔰 节点选择
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -76,7 +98,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,7 +118,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 摩尔多瓦-20.5MB/s
+      - 香港-311.0KB/s
+      - 中转节点-1.2MB/s
       - 中转节点-64.1MB/s
+      - 中转节点-74.6MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
