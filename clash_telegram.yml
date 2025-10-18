@@ -5,8 +5,13 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 越南-347.2KB/s, server: 103.186.154.38, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 韩国-5.85MB/s, server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
   - {name: 新加坡-38.8MB/s, server: 174.138.29.1, port: 60523, type: ss, cipher: chacha20-ietf-poly1305, password: X2UQXuTGxwxE1ZMaTQwtxS, udp: true}
+  - {name: 韩国-6.84MB/s, server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true}
+  - {name: 匈牙利-151.7KB/s, server: 109.61.39.28, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=, udp: true}
   - {name: 香港-150.2KB/s, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-668.4KB/s, server: v8.heduian.link, port: 30808, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: v8.heduian.link}}, udp: true}
   - {name: 中转节点-1.4MB/s, server: v9.heduian.link, port: 30809, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /oooo, headers: {Host: baidu.com}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -14,16 +19,26 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: 🎥 NETFLIX
     type: select
@@ -31,8 +46,13 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -52,8 +72,13 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: 🌏 国内媒体
     type: select
@@ -66,16 +91,26 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: 🍎 苹果服务
     type: select
@@ -83,8 +118,13 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
   - name: 🎯 全球直连
     type: select
@@ -101,8 +141,13 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 越南-347.2KB/s
+      - 韩国-5.85MB/s
       - 新加坡-38.8MB/s
+      - 韩国-6.84MB/s
+      - 匈牙利-151.7KB/s
       - 香港-150.2KB/s
+      - 中转节点-668.4KB/s
       - 中转节点-1.4MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
