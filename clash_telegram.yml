@@ -5,9 +5,10 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 摩尔多瓦-16.3MB/s, server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
   - {name: 越南-12.5MB/s, server: 103.186.154.217, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true}
+  - {name: 摩尔多瓦-16.3MB/s, server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true}
   - {name: 香港-112.9KB/s, server: 103.103.245.158, port: 443, type: ss, cipher: aes-256-gcm, password: ccf426f1fe78, plugin: v2ray-plugin, plugin-opts: {mode: websocket, host: newroot2v1.dsjsapp.com, path: /zksuapgx, tls: true, mux: true, skip-cert-verify: true}, udp: true}
+  - {name: 中转节点-1.35MB/s, server: 36.151.195.112, port: 4556, type: trojan, password: BxceQaOe, skip-cert-verify: true, udp: true}
   - {name: 中转节点-6.46MB/s, server: 36.151.195.112, port: 4556, type: trojan, password: BxceQaOe, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
@@ -15,18 +16,20 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: 🎥 NETFLIX
     type: select
@@ -34,9 +37,10 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: ⛔️ 广告拦截
     type: select
@@ -56,9 +60,10 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: 🌏 国内媒体
     type: select
@@ -71,18 +76,20 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: 🍎 苹果服务
     type: select
@@ -90,9 +97,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
   - name: 🎯 全球直连
     type: select
@@ -109,9 +117,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 摩尔多瓦-16.3MB/s
       - 越南-12.5MB/s
+      - 摩尔多瓦-16.3MB/s
       - 香港-112.9KB/s
+      - 中转节点-1.35MB/s
       - 中转节点-6.46MB/s
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
