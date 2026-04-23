@@ -17,230 +17,155 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 proxies:
+  - name: 🇪🇨_EC_厄瓜多尔
+    type: ss
+    server: 38.165.231.25
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  - name: 🇪🇸_ES_西班牙
+    type: vless
+    server: 45.12.150.145
+    port: 15470
+    uuid: ecc97810-557a-44ef-9957-ba078d0ac414
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Io59wtB0RP01ty3SWv8Hn-z84vrckaEPVJi6SRBqFXY
+      short-id: e08a28
+  - name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
+    type: trojan
+    server: d1.catcat321.com
+    port: 45330
+    password: 3ffee9f4-256b-40c7-b9b5-321dcd3ba588
+    sni: r.US5.cat.bilibili.com
+    skip-cert-verify: true
+    tls: false
   - name: 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
     type: vless
-    server: 46.8.229.26
-    port: 8443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.army
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.army
-  - name: 🇱🇻_LV_拉脱维亚
-    type: vless
-    server: 45.43.79.225
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.rocks
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.rocks
-  - name: 🇺🇸_US_美国
-    type: vless
-    server: 162.159.36.5
-    port: 2096
+    server: 146.103.100.127
+    port: 2053
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
     servername: sni.111000.indevs.in
     tls: true
-    client-fingerprint: chrome
     ws-opts:
+      path: /?Telegram🇨🇳+@WangCai2=
       headers:
         Host: sni.111000.indevs.in
-  - name: 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
+  - name: 🇯🇵_JP_日本
     type: vless
-    server: 91.84.100.104
+    server: 141.147.159.250
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: snippet.danfeng.com.cfd
+    tls: true
+    client-fingerprint: random
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: snippet.danfeng.com.cfd
+  - name: 🇯🇵_JP_日本_1
+    type: hysteria2
+    server: vpn-jp-003.fastervpn.world
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    sni: vpn-jp-003.fastervpn.world
+    skip-cert-verify: true
+  - name: 🇩🇰_DK_丹麦
+    type: vless
+    server: 95.164.85.109
+    port: 59374
+    uuid: bfc78cd8-5951-4803-8d6c-4cedef8cd420
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: ZsswZuBV8bEGQWFrpShCilSytnDUj0kwHFhTSLXzOwc
+      short-id: d21e7c
+  - name: 🇫🇷_FR_法国
+    type: vless
+    server: 51.77.140.38
     port: 8443
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
-    servername: sni.111000.v6.army
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?Telegram🇨🇳@WangCai2=
+      headers:
+        Host: sni.111000.indevs.in
+  - name: 🇨🇳_CN_中国
+    type: vless
+    server: 176.124.223.238
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.jpmj.dev
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.jpmj.dev
+  - name: 🇵🇰_PK_巴基斯坦
+    type: ss
+    server: 156.59.243.6
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  - name: 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+    type: trojan
+    server: d1.catcat321.com
+    port: 44782
+    password: 3ffee9f4-256b-40c7-b9b5-321dcd3ba588
+    sni: r.KR1.cat.bilibili.com
+    skip-cert-verify: true
+    tls: false
+  - name: 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+    type: vless
+    server: 82.117.84.161
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.rocks
     tls: true
     client-fingerprint: chrome
     ws-opts:
       path: /?ed=2560&https://t.me/WangCai2🇨🇳
       headers:
-        Host: sni.111000.v6.army
-  - name: 🇺🇸_US_美国_1
-    type: vless
-    server: 104.16.164.44
-    port: 80
-    uuid: 0ca855d9-7c03-40eb-929b-919f934abdc3
-    network: ws
-    tls: false
-    ws-opts:
-      path: /
-      headers:
-        Host: amirvpn.amirhm00100.workers.dev
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
-    type: vless
-    server: 104.17.15.87
-    port: 80
-    uuid: f929cc78-e2a1-4ce3-8051-3e9538405144
-    network: ws
-    tls: false
-    ws-opts:
-      headers:
-        Host: germany.xydcqd.workers.dev
-  - name: 🇺🇸_US_美国_2
+        Host: sni.111000.v6.rocks
+  - name: 🇩🇪_DE_德国
+    type: ss
+    server: 38.60.250.107
+    port: 990
+    cipher: chacha20-ietf-poly1305
+    password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  - name: 🇨🇦_CA_加拿大
     type: vmess
-    server: 10.a400.top
-    port: 44742
-    uuid: 691ebfe7-756a-4b7d-836a-f292ef3b2146
+    server: 134.195.198.147
+    port: 443
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
     alterId: 0
     cipher: auto
     tls: true
-    skip-cert-verify: false
-    servername: 10.a400.top
+    skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /linkvws
       headers:
-        Host: 10.a400.top
-  - name: 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-    type: vless
-    server: 217.144.190.230
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.latonyamadeline.ndjp.net
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.latonyamadeline.ndjp.net
-  - name: 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-    type: vless
-    server: 85.92.108.39
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.army
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.army
-  - name: 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-    type: vless
-    server: 83.147.252.92
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.rocks
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.rocks
-  - name: 🇻🇳_VN_越南
+        Host: inna.cfd
+  - name: 🇹🇼_TW_中国台湾
     type: ss
-    server: 103.186.155.4
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇳🇱_NL_荷兰
-    type: vless
-    server: download.lastilhame.monster
-    port: 443
-    uuid: a8da758c-510d-4827-83cf-2f2b51c49c5b
-    servername: www.techradar.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: WOPZy8oOnvHN21pLYobZAGa7sVp7op3q575B5BaFxkU
-      short-id: faa900664bad
-  - name: 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-    type: vless
-    server: 151.243.101.49
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.rocks
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.rocks
-  - name: 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-    type: vless
-    server: 130.49.176.227
-    port: 8443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.army
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.army
-  - name: 🇨🇭_CH_瑞士
-    type: vless
-    server: 138.124.98.9
-    port: 443
-    uuid: 913c6074-a747-492b-a7e9-5abfcad6369d
-    servername: nl.milas.click
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: DoZSKLwNQjogQMlE7oEEuB8TqpNa-umXzG-2Q6dTTEY
-      short-id: 4fa44664f6a566d3
-  - name: 🇭🇰_HK_中国香港
-    type: vmess
-    server: v10.zgtfqs.click
-    port: 30807
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-  - name: 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-    type: vless
-    server: 151.242.69.214
-    port: 2053
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.army
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.army
-  - name: 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-    type: vless
-    server: 103.71.22.186
-    port: 443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.v6.rocks
-    tls: true
-    client-fingerprint: chrome
-    ws-opts:
-      path: /?ed=2560&https://t.me/WangCai2🇨🇳
-      headers:
-        Host: sni.111000.v6.rocks
-  - name: 🇳🇱_NL_荷兰_1
-    type: ss
-    server: 82.38.31.202
-    port: 8080
+    server: 403880e.r8.gladns.com
+    port: 2377
     cipher: chacha20-ietf-poly1305
-    password: k1dBOmOB4oqi7Ump37a1bQ
-  - name: 🇺🇸_US_美国_3
+    password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: 403880e.default.nintendo.eu:164892
+  - name: 🇺🇸_US_美国
     type: vmess
     server: ae135.cowjump.site
     port: 443
@@ -255,73 +180,227 @@ proxies:
       path: /
       headers:
         Host: ae135.cowjump.site
-  - name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
-    type: trojan
-    server: 95.40.58.97
-    port: 4019
-    password: 1774240c00db2b77d5a99f6540c47b69
-    sni: www.nintendogames.net
-    skip-cert-verify: false
+  - name: 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+    type: vless
+    server: 83.147.254.238
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.rocks
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&https://t.me/WangCai2🇨🇳
+      headers:
+        Host: sni.111000.v6.rocks
+  - name: 🇭🇰_HK_中国香港
+    type: vmess
+    server: planb.mojcn.com
+    port: 16632
+    uuid: 255456b5-4b3e-449f-8dd1-99fd7d21415a
+    alterId: 0
+    cipher: auto
     tls: false
-  - name: 🇹🇼_TW_中国台湾
-    type: ss
-    server: r3mrcg0011499tl.cybervena.com
-    port: 50099
-    cipher: chacha20-ietf-poly1305
-    password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: "%2F"
+      headers:
+        Host: 37461892546988f67a6acfbe937e161b.mobgslb.tbcache.com
+  - name: 🇱🇹_LT_立陶宛
+    type: vless
+    server: 86.38.214.43
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.cc.cd
+    tls: true
+    ws-opts:
+      path: /?https%3A%2F%2Ft.me%2Fwangcai2%F0%9F%87%A8%F0%9F%87%B3=
+      headers:
+        Host: sni.111000.cc.cd
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: jp.111000.cc.cd
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&proxyip=ip.111000.de5.net:443
+      headers:
+        Host: sni.111000.dynv6.net
+  - name: 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+    type: vless
+    server: 193.29.224.224
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.latonyamadeline.ndjp.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&https://t.me/WangCai2🇨🇳
+      headers:
+        Host: sni.latonyamadeline.ndjp.net
+  - name: 🇫🇷_FR_法国_1
+    type: hysteria2
+    server: vpn-fr-002.fastervpn.world
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    sni: vpn-fr-002.fastervpn.world
+    skip-cert-verify: true
+  - name: 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+    type: vless
+    server: 193.23.219.205
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.latonyamadeline.ndjp.net
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&https://t.me/WangCai2🇨🇳
+      headers:
+        Host: sni.latonyamadeline.ndjp.net
+  - name: 🇭🇰_HK_中国香港_1
+    type: vmess
+    server: planb.mojcn.com
+    port: 16622
+    uuid: f365630d-15b5-4bd4-ad55-aa6284d7be30
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: "%2F"
+      headers:
+        Host: 8a687da9458cc46e80abc85ec8d8ada7.mobgslb.tbcache.com
+  - name: 🇺🇸_US_美国->🇸🇬_SG_新加坡
+    type: vless
+    server: unpkg.com
+    port: 443
+    uuid: 26524cce-d514-4014-a426-365fb266a14d
+    network: ws
+    servername: l1ibp8ly.backend-node.gfw.hidns.co
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /danfeng?ed=2560
+      headers:
+        Host: l1ibp8ly.backend-node.gfw.hidns.co
+  - name: 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+    type: vless
+    server: 47.76.61.218
+    port: 5483
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.rocks
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&https://t.me/WangCai2🇨🇳
+      headers:
+        Host: sni.111000.v6.rocks
+  - name: 🇩🇪_DE_德国_1
+    type: hysteria2
+    server: vpn-de-002.fastervpn.world
+    port: 443
+    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+    sni: vpn-de-002.fastervpn.world
+    skip-cert-verify: true
+  - name: 🇭🇰_HK_中国香港_2
+    type: vmess
+    server: v10.zgtfqs.click
+    port: 30807
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
+    type: vless
+    server: 130.185.249.75
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.rocks
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /?ed=2560&https://t.me/WangCai2🇨🇳
+      headers:
+        Host: sni.111000.v6.rocks
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -331,109 +410,137 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -456,28 +563,35 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
-      - 🇱🇻_LV_拉脱维亚
-      - 🇺🇸_US_美国
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_1
-      - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
-      - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_2
-      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
-      - 🇻🇳_VN_越南
-      - 🇳🇱_NL_荷兰
-      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_3
-      - 🇨🇭_CH_瑞士
-      - 🇭🇰_HK_中国香港
-      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚_4
-      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
-      - 🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_3
+      - 🇪🇨_EC_厄瓜多尔
+      - 🇪🇸_ES_西班牙
       - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰->🇱🇻_LV_拉脱维亚
+      - 🇯🇵_JP_日本
+      - 🇯🇵_JP_日本_1
+      - 🇩🇰_DK_丹麦
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国
+      - 🇵🇰_PK_巴基斯坦
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国
+      - 🇨🇦_CA_加拿大
       - 🇹🇼_TW_中国台湾
+      - 🇺🇸_US_美国
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚
+      - 🇭🇰_HK_中国香港
+      - 🇱🇹_LT_立陶宛
+      - 🇺🇸_US_美国_1
+      - 🇫🇮_FI_芬兰->🇱🇻_LV_拉脱维亚_1
+      - 🇫🇷_FR_法国_1
+      - 🇩🇪_DE_德国->🇱🇻_LV_拉脱维亚_1
+      - 🇭🇰_HK_中国香港_1
+      - 🇺🇸_US_美国->🇸🇬_SG_新加坡
+      - 🇭🇰_HK_中国香港->🇱🇻_LV_拉脱维亚
+      - 🇩🇪_DE_德国_1
+      - 🇭🇰_HK_中国香港_2
+      - 🇬🇧_GB_英国->🇱🇻_LV_拉脱维亚
 rule-providers:
   LocalAreaNetwork:
     type: http
