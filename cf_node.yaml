@@ -17,22 +17,9 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 proxies:
-  - name: 🇩🇪_DE_德国
-    type: vless
-    server: 57.129.63.149
-    port: 8443
-    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-    network: ws
-    servername: sni.111000.indevs.in
-    tls: true
-    ws-opts:
-      path: /?Telegram🇨🇳@WangCai2=
-      headers:
-        Host: sni.111000.indevs.in
-    udp: true
   - name: 🇺🇸_US_美国
     type: vless
-    server: 172.64.158.90
+    server: 104.18.191.0
     port: 443
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
@@ -43,9 +30,47 @@ proxies:
       headers:
         Host: sni.latonyamadeline.ndjp.net
     udp: true
-  - name: 🇦🇹_AT_奥地利
+  - name: 🇺🇸_US_美国_1
     type: vless
-    server: 212.183.88.231
+    server: 172.64.152.23
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.dynv6.net
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.111000.dynv6.net
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+    type: vless
+    server: usa.spectrumproxy.shop
+    port: 443
+    uuid: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc
+    servername: usa.spectrumproxy.shop
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: XtQ3m_8a_LWCiVVEKu7cZxvJCdKnjShteUAtZ3EOlko
+      short-id: a3a7c2d9f1a4
+    udp: true
+  - name: 🇫🇷_FR_法国
+    type: vless
+    server: 141.94.79.161
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
+      headers:
+        Host: sni.111000.indevs.in
+    udp: true
+  - name: 🇺🇸_US_美国_2
+    type: vless
+    server: 92.53.190.231
     port: 443
     uuid: 981fca81-5be1-41f8-ac9b-d138e8109943
     network: ws
@@ -56,183 +81,230 @@ proxies:
       headers:
         Host: babayaga-6i7.pages.dev
     udp: true
-  - name: 🇺🇸_US_美国_1
+  - name: 🇳🇱_NL_荷兰
     type: vless
-    server: 104.18.251.45
+    server: 195.200.30.230
     port: 443
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
-    servername: sni.latonyamadeline.ndjp.net
+    servername: sni.111000.v6.navy
     tls: true
     ws-opts:
-      path: /?https%3A%2F%2Ft.me%2Fwangcai2%F0%9F%87%A8%F0%9F%87%B3=
+      path: /?ed=2560&Telegram🇨🇳 @WangCai2
       headers:
-        Host: sni.latonyamadeline.ndjp.net
+        Host: sni.111000.v6.navy
     udp: true
   - name: 🇻🇳_VN_越南
     type: ss
-    server: 103.186.155.141
+    server: 103.186.154.29
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
     udp: true
-  - name: 🇺🇸_US_美国_2
+  - name: 🇺🇸_US_美国_3
     type: vless
-    server: 162.159.36.20
+    server: 167.68.5.191
+    port: 443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.my111000.tech
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.my111000.tech
+    udp: true
+  - name: 🇬🇧_GB_英国
+    type: vless
+    server: 45.12.30.238
     port: 2096
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
     servername: sni.jpmj.dev
     tls: true
     ws-opts:
-      path: /?Telegram%F0%9F%87%A8%F0%9F%87%B3%40WangCai2=
       headers:
         Host: sni.jpmj.dev
     udp: true
-  - name: 🇬🇧_GB_英国->🇺🇸_US_美国
+  - name: 🇬🇧_GB_英国_1
     type: vless
-    server: 164.38.155.138
+    server: 46.226.163.108
     port: 443
+    uuid: 5eab8baa-c421-4b0f-aeb2-8e58255d7e96
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: yGaMRYMZOQ8GjQ6_4TW8GfEUv1-4u1P53eNezhlKpmk
+      short-id: 7f81
+    udp: true
+  - name: 🇩🇪_DE_德国
+    type: vless
+    server: 82.117.245.166
+    port: 2053
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
     servername: sni.111000.indevs.in
     tls: true
-    ws-opts:
-      headers:
-        Host: sni.111000.indevs.in
-    udp: true
-  - name: 🇺🇸_US_美国_3
-    type: vless
-    server: cf8.danfeng.eu.org
-    port: 2096
-    uuid: bafacd98-136a-4530-838d-4e5c51838dac
-    network: ws
-    servername: juzi8186.qea.ccwu.cc
-    tls: true
-    client-fingerprint: firefox
-    ws-opts:
-      path: /show/about/juzibaipiao?ed=2560
-      headers:
-        Host: juzi8186.qea.ccwu.cc
-    udp: true
-  - name: 🇯🇵_JP_日本
-    type: ss
-    server: 47.79.144.115
-    port: 40003
-    cipher: aes-256-gcm
-    password: GTZI5AbjNAeWQG0oVNptvWJogHNKiiKA
-    udp: true
-  - name: 🇺🇸_US_美国_4
-    type: vless
-    server: 104.24.45.247
-    port: 80
-    uuid: 2e71d8fc-d2e8-44fc-89bd-c8a449a193aa
-    network: ws
-    tls: false
+    client-fingerprint: chrome
     ws-opts:
       path: /
       headers:
-        Host: odd-bread-435d.ahmadrezasteamacc.workers.dev
+        Host: sni.111000.indevs.in
     udp: true
-  - name: 🇺🇸_US_美国_5
+  - name: 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
     type: vless
-    server: 104.19.56.154
+    server: 5.188.140.166
     port: 443
-    uuid: ae0dd58e-e222-40bf-84ae-365a97532737
-    network: ws
-    servername: pagescm.freen8.cc.cd
+    uuid: b6ce8a51-19b9-4979-91ba-b4298c26d5fc
+    network: "#🇷🇺 Россия "
+    servername: max.ru
     tls: true
-    ws-opts:
-      path: /resource/linksfp=chrome
-      headers:
-        Host: pagescm.freen8.cc.cd
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: mAu8QDi3pbmMCFg9kKC-ZBIHdtnXeCuZt3VnAw6vlH4
+      short-id: ad7dab462a323acb
     udp: true
-  - name: 🇺🇸_US_美国_6
+  - name: 🇳🇱_NL_荷兰->🇺🇸_US_美国
     type: vless
-    server: 198.41.222.191
-    port: 80
-    uuid: e388fffb-03b0-4227-ac2c-2b5cec1f5c34
-    network: ws
-    tls: false
-    ws-opts:
-      headers:
-        Host: leecher56.matinheydri.workers.dev
-    udp: true
-  - name: 🇻🇳_VN_越南_1
-    type: ss
-    server: 103.186.154.170
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-    udp: true
-  - name: 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-    type: vless
-    server: 45.131.7.138
-    port: 443
+    server: 185.170.166.138
+    port: 2096
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
     servername: sni.111000.indevs.in
     tls: true
     ws-opts:
+      path: /
       headers:
         Host: sni.111000.indevs.in
     udp: true
-  - name: 🇻🇳_VN_越南_2
+  - name: 🇺🇸_US_美国_4
+    type: vless
+    server: 104.18.13.149
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.navy
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.111000.v6.navy
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+    type: vless
+    server: 178.154.208.143
+    port: 443
+    uuid: 5f5114c6-ad1f-4e4a-baad-aacb4634f275
+    servername: ads.x5.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: _IQWmaU9lcBkuzTNPN3Mvdwu1FkvJy6tSavzVnd7N0o
+      short-id: 832d0444ad39bedf
+    udp: true
+  - name: 🇹🇼_TW_中国台湾
     type: ss
-    server: 103.186.154.224
+    server: r3mrcg001287h3p.cybervena.com
+    port: 50099
+    cipher: chacha20-ietf-poly1305
+    password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+    udp: true
+  - name: 🇻🇳_VN_越南_1
+    type: ss
+    server: 103.186.155.226
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
     udp: true
-  - name: 🇦🇪_AE_阿拉伯联合酋长国
+  - name: 🇳🇱_NL_荷兰_1
     type: vless
-    server: 77.232.140.43
+    server: 5.101.101.166
     port: 443
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
-    servername: sni.111000.cc.cd
+    servername: sni.111000.dns.army
     tls: true
     ws-opts:
       headers:
-        Host: sni.111000.cc.cd
+        Host: sni.111000.dns.army
     udp: true
-  - name: 🇬🇧_GB_英国
+  - name: 🇺🇸_US_美国_5
     type: vless
-    server: 134.209.27.216
-    port: 2083
+    server: 172.64.155.209
+    port: 8443
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
-    servername: sni.latonyamadeline.ndjp.net
+    servername: sni.111000.dynv6.net
     tls: true
     ws-opts:
-      path: /?https%3A%2F%2Ft.me%2FWangCai2%F0%9F%87%A8%F0%9F%87%B3=
+      path: /?Telegram🇨🇳 @WangCai2
       headers:
-        Host: sni.latonyamadeline.ndjp.net
+        Host: sni.111000.dynv6.net
     udp: true
-  - name: 🇭🇰_HK_中国香港
-    type: hysteria2
-    server: 202.146.222.13
+  - name: 🇧🇿_BZ_伯利兹
+    type: vless
+    server: 45.131.211.138
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.111000.indevs.in
+    udp: true
+  - name: 🇺🇸_US_美国_6
+    type: vless
+    server: 135.84.74.47
     port: 443
-    password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-    skip-cert-verify: true
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.navy
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.111000.v6.navy
     udp: true
-  - name: 🇫🇷_FR_法国->🇩🇪_DE_德国
-    type: tuic
-    server: ip1.758733.xyz
-    port: 10088
-    uuid: 9bbd1f42-7ae7-4239-bd10-a68de95e3295
-    password: dongtaiwang.com
-    sni: apple.com
-    alpn:
-      - h3
-    congestion-controller: bbr
-    udp-relay-mode: native
-    skip-cert-verify: true
-    disable-sni: false
+  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vless
+    server: render.com
+    port: 2053
+    uuid: 8c4604ef-749c-4b56-adf1-7da405002a21
+    network: ws
+    servername: qyi.fqjd663.ggff.net
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: qyi.fqjd663.ggff.net
+    udp: true
+  - name: 🇬🇧_GB_英国_2
+    type: vless
+    server: 57.129.137.80
+    port: 8443
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.v6.navy
+    tls: true
+    ws-opts:
+      headers:
+        Host: sni.111000.v6.navy
     udp: true
   - name: 🇺🇸_US_美国_7
+    type: hysteria2
+    server: 166.88.142.205
+    port: 2056
+    password: 4d092122-268a-4a1a-b23f-83931c5abc3a
+    sni: mg6.mangshe.xyz
+    skip-cert-verify: true
+    udp: true
+  - name: 🇧🇿_BZ_伯利兹_1
     type: vless
-    server: 209.94.90.238
+    server: 45.131.209.238
     port: 2096
     uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
@@ -244,16 +316,39 @@ proxies:
     udp: true
   - name: 🇺🇸_US_美国_8
     type: vless
-    server: 172.67.134.82
-    port: 443
-    uuid: a73b8135-ec7a-4f70-bac6-81fbccad4515
+    server: 104.18.32.47
+    port: 2053
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
     network: ws
-    servername: labeller.neonime83.workers.dev
+    servername: sni.111000.indevs.in
     tls: true
     ws-opts:
       path: /
       headers:
-        Host: labeller.neonime83.workers.dev
+        Host: sni.111000.indevs.in
+    udp: true
+  - name: 🇫🇷_FR_法国_1
+    type: hysteria2
+    server: 167.17.178.128
+    port: 10086
+    password: 2545ab46-6306-4f2b-badd-5531f384d55f
+    sni: fr1.xiaoliyu.cyou
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: T@T*FP7uq=!t
+    udp: true
+  - name: 🇺🇸_US_美国_9
+    type: vless
+    server: 199.181.197.138
+    port: 2096
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    network: ws
+    servername: sni.111000.indevs.in
+    tls: true
+    ws-opts:
+      path: /
+      headers:
+        Host: sni.111000.indevs.in
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -261,51 +356,65 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -315,105 +424,133 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -436,27 +573,34 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国
-      - 🇦🇹_AT_奥地利
       - 🇺🇸_US_美国_1
-      - 🇻🇳_VN_越南
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰
+      - 🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国->🇺🇸_US_美国
+      - 🇳🇱_NL_荷兰
+      - 🇻🇳_VN_越南
       - 🇺🇸_US_美国_3
-      - 🇯🇵_JP_日本
-      - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国_6
-      - 🇻🇳_VN_越南_1
-      - 🇧🇿_BZ_伯利兹->🇱🇻_LV_拉脱维亚
-      - 🇻🇳_VN_越南_2
-      - 🇦🇪_AE_阿拉伯联合酋长国
       - 🇬🇧_GB_英国
-      - 🇭🇰_HK_中国香港
-      - 🇫🇷_FR_法国->🇩🇪_DE_德国
+      - 🇬🇧_GB_英国_1
+      - 🇩🇪_DE_德国
+      - 🇷🇺_RU_俄罗斯->🇫🇮_FI_芬兰
+      - 🇳🇱_NL_荷兰->🇺🇸_US_美国
+      - 🇺🇸_US_美国_4
+      - 🇷🇺_RU_俄罗斯->🇳🇱_NL_荷兰_1
+      - 🇹🇼_TW_中国台湾
+      - 🇻🇳_VN_越南_1
+      - 🇳🇱_NL_荷兰_1
+      - 🇺🇸_US_美国_5
+      - 🇧🇿_BZ_伯利兹
+      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      - 🇬🇧_GB_英国_2
       - 🇺🇸_US_美国_7
+      - 🇧🇿_BZ_伯利兹_1
       - 🇺🇸_US_美国_8
+      - 🇫🇷_FR_法国_1
+      - 🇺🇸_US_美国_9
 rule-providers:
   LocalAreaNetwork:
     type: http
