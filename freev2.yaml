@@ -17,7 +17,7 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
 proxies:
-- name: 节点日期：2026-06-08
+- name: 节点日期：2026-06-09
   type: vmess
   server: 82.198.246.214
   port: 180
@@ -25,16 +25,25 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: NL【机场推荐：https://a9a.xyz】3
-  type: ss
-  server: 185.159.75.36
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: bMOjdiDLkOSVgioc_0-YUg
-- name: SG【机场推荐：https://a9a.xyz】5
+- name: US【机场推荐：https://a9a.xyz】1
   type: vmess
-  server: 1b267619c4812cc46ee281747884ca50.qos.onl
-  port: 10056
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  servername: fra35.chasem2026sud.com
+- name: TW【机场推荐：https://a9a.xyz】2
+  type: ss
+  server: chengbai02.ascwt179.com
+  port: 13223
+  cipher: aes-128-gcm
+  password: JVrsLLN1tkN8oXZO
+- name: SG【机场推荐：https://a9a.xyz】3
+  type: vmess
+  server: 6654c734ccab8f440ff0825eb443dc7f.qos.onl
+  port: 10049
   uuid: 52f9cbfb-5bb3-3dd3-b947-725e365c59f3
   alterId: 0
   cipher: auto
@@ -44,21 +53,46 @@ proxies:
     path: /
     headers:
       Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
+- name: SG【机场推荐：https://a9a.xyz】4
+  type: vmess
+  server: 6654c734ccab8f440ff0825eb443dc7f.qos.onl
+  port: 10123
+  uuid: 52f9cbfb-5bb3-3dd3-b947-725e365c59f3
+  alterId: 0
+  cipher: auto
+  network: ws
+  servername: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
+  ws-opts:
+    path: /
+    headers:
+      Host: v2pr9feoh0z86anj2gz9onnjg9viuev0j.mobgslb.tbcache.com
+- name: FR【机场推荐：https://a9a.xyz】5
+  type: ss
+  server: 45.67.139.93
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: xs-h9TyN3xE21ntt8osfVg
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -68,65 +102,89 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: 📲 电报信息
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: 🎯 全球直连
   type: select
   proxies:
   - DIRECT
   - 🚀 节点选择
   - ♻️ 自动选择
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: 🛑 全球拦截
   type: select
   proxies:
   - DIRECT
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: 🍃 应用净化
   type: select
   proxies:
   - DIRECT
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 - name: 🐟 漏网之鱼
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 节点日期：2026-06-08
-  - NL【机场推荐：https://a9a.xyz】3
-  - SG【机场推荐：https://a9a.xyz】5
+  - 节点日期：2026-06-09
+  - US【机场推荐：https://a9a.xyz】1
+  - TW【机场推荐：https://a9a.xyz】2
+  - SG【机场推荐：https://a9a.xyz】3
+  - SG【机场推荐：https://a9a.xyz】4
+  - FR【机场推荐：https://a9a.xyz】5
 rule-providers:
   LocalAreaNetwork:
     type: http
