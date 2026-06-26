@@ -17,23 +17,23 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
 proxies:
-- name: 节点日期：2026-06-26
+- name: IR【机场推荐：https://a9a.xyz】2
   type: ss
-  server: e1.cover20.ir
-  port: 51570
-  cipher: chacha20-ietf-poly1305
-  password: 6SjeAjXcDrovE45S0NyCGgQfIQLSFV04JyMhMtmZiGQ=
+  server: 193.151.128.97
+  port: 443
+  cipher: 2022-blake3-chacha20-poly1305
+  password: iFxltqscJVLJdHunZXPCmb4ToHN7LhkoeYwpQcU/Pbo=
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -43,49 +43,54 @@ proxy-groups:
   - 🚀 节点选择
   - ♻️ 自动选择
   - 🎯 全球直连
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: 📲 电报信息
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - 🚀 节点选择
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: 🍎 苹果服务
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: 🎯 全球直连
   type: select
   proxies:
   - DIRECT
   - 🚀 节点选择
   - ♻️ 自动选择
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: 🛑 全球拦截
   type: select
   proxies:
   - DIRECT
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 - name: 🍃 应用净化
   type: select
   proxies:
   - DIRECT
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
+- name: 🆎 AdBlock
+  type: select
+  proxies:
+  - DIRECT
+  - IR【机场推荐：https://a9a.xyz】2
 - name: 🐟 漏网之鱼
   type: select
   proxies:
   - 🚀 节点选择
   - 🎯 全球直连
   - ♻️ 自动选择
-  - 节点日期：2026-06-26
+  - IR【机场推荐：https://a9a.xyz】2
 rule-providers:
   LocalAreaNetwork:
     type: http
@@ -102,6 +107,21 @@ rule-providers:
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
     path: ./rules/BanProgramAD.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyList.list
+    path: ./rules/BanEasyList.yaml
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list
+    path: ./rules/BanEasyListChina.yaml
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyPrivacy.list
+    path: ./rules/BanEasyPrivacy.yaml
   GoogleCN:
     type: http
     behavior: classical
@@ -151,6 +171,9 @@ rules:
 - RULE-SET,LocalAreaNetwork,🎯 全球直连
 - RULE-SET,BanAD,🛑 全球拦截
 - RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,BanEasyList,🆎 AdBlock
+- RULE-SET,BanEasyListChina,🆎 AdBlock
+- RULE-SET,BanEasyPrivacy,🆎 AdBlock
 - RULE-SET,GoogleCN,🎯 全球直连
 - RULE-SET,SteamCN,🎯 全球直连
 - RULE-SET,Microsoft,Ⓜ️ 微软服务
