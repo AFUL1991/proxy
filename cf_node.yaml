@@ -24,6 +24,16 @@ dns:
       - https://1.1.1.1/dns-query#🚀 节点选择
       - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
+  - name: 🇨🇳_CN_中国
+    type: vmess
+    server: 112.132.215.108
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: 🇺🇸_US_美国
     type: vmess
     server: guanwang.awsno.com
@@ -40,101 +50,70 @@ proxies:
       headers:
         Host: guanwang.awsno.com
     udp: true
-  - name: 🇨🇳_CN_中国
+  - name: 🇨🇳_CN_中国->🇬🇧_GB_英国
     type: vmess
-    server: v29.hdacd.com
-    port: 30829
+    server: v36.hdacd.com
+    port: 30836
     uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
     alterId: 2
     cipher: auto
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇮🇪_IE_爱尔兰
-    type: vless
-    server: 34.245.208.137
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇰🇷_KR_韩国
-    type: vless
-    server: 13.124.9.166
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇮🇪_IE_爱尔兰_1
-    type: vless
-    server: 34.253.212.171
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vless
-    server: jp.sofast.live
-    port: 52683
-    uuid: 399b6b23-cc40-4831-a494-61948e2df133
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇵🇱_PL_波兰
-    type: trojan
-    server: 78.17.171.62
-    port: 443
-    password: u93yPGuY2zgIsisJZKS2QzJzg
-    sni: FREETOPLAY-2.TETRIS-GAME.WORLD
-    skip-cert-verify: true
-    udp: true
-  - name: 🇩🇪_DE_德国
-    type: vless
-    server: 3.124.195.79
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇪🇸_ES_西班牙
-    type: vless
-    server: 18.100.47.39
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇰🇷_KR_韩国_1
-    type: vless
-    server: 43.203.219.68
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇬🇧_GB_英国
-    type: vless
-    server: 18.171.245.198
-    port: 443
-    uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-    network: http
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国_1
+  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
     type: vmess
-    server: 112.132.215.108
-    port: 50002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    server: v6.hdacd.com
+    port: 30806
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_CN_中国->🇫🇷_FR_法国
+    type: vmess
+    server: v35.hdacd.com
+    port: 30835
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+    type: vless
+    server: z1q3pv4g78.rucdncomp.pro
+    port: 443
+    uuid: c720cb74-4c84-4fce-b8ae-637dbaa16199
+    network: ws
+    servername: z1q3pv4g78.rucdncomp.pro
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /useraction/events/b892639b7195/
+      headers:
+        Host: z1q3pv4g78.rucdncomp.pro
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇷_FR_法国
+    type: vless
+    server: farancenew.mamadhpbot.ir
+    port: 8080
+    uuid: 732ec777-bf4a-4fee-835a-25d6a8b58563
+    network: ws
+    tls: false
+    ws-opts:
+      path: /real
+      headers:
+        Host: farancenew.mamadhpbot.ir
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+    type: vmess
+    server: v4.hdacd.com
+    port: 30804
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
     cipher: auto
     tls: false
     skip-cert-verify: true
@@ -145,33 +124,25 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -181,69 +152,53 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -271,18 +226,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸_US_美国
       - 🇨🇳_CN_中国
-      - 🇮🇪_IE_爱尔兰
-      - 🇰🇷_KR_韩国
-      - 🇮🇪_IE_爱尔兰_1
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇵🇱_PL_波兰
-      - 🇩🇪_DE_德国
-      - 🇪🇸_ES_西班牙
-      - 🇰🇷_KR_韩国_1
-      - 🇬🇧_GB_英国
-      - 🇨🇳_CN_中国_1
+      - 🇺🇸_US_美国
+      - 🇨🇳_CN_中国->🇬🇧_GB_英国
+      - 🇨🇳_CN_中国->🇯🇵_JP_日本
+      - 🇨🇳_CN_中国->🇫🇷_FR_法国
+      - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+      - 🇫🇷_FR_法国
+      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
 rule-providers:
   LocalAreaNetwork:
     type: http
