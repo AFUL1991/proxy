@@ -1,155 +1,181 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: info
-ipv6: false
-external-controller: 127.0.0.1:9090
+log-level: warning
 dns:
   enable: true
   listen: 127.0.0.1:1053
   ipv6: false
+  prefer-h3: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - localhost
+    - +.localhost
+    - +.lan
+    - +.local
+    - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
   default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://1.1.1.1/dns-query#DIRECT
+    - https://1.0.0.1/dns-query#DIRECT
   proxy-server-nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  nameserver-policy:
-    geosite:geolocation-!cn:
-      - https://1.1.1.1/dns-query#🚀 节点选择
-      - https://8.8.8.8/dns-query#🚀 节点选择
+    - https://1.1.1.1/dns-query#DIRECT
+    - https://1.0.0.1/dns-query#DIRECT
+  direct-nameserver:
+    - https://1.1.1.1/dns-query#DIRECT
+    - https://1.0.0.1/dns-query#DIRECT
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
 proxies:
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
-    type: vless
-    server: us22.sofast.live
-    port: 58011
-    uuid: 0afc6426-606c-48e7-bd70-3c424a416842
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇩🇪_DE_德国
-    type: vless
-    server: 5.175.205.190
-    port: 27774
-    uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - name: 未知97
     type: vmess
-    server: v24.hdacd.com
-    port: 30824
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸_US_美国
-    type: vmess
-    server: guanwang.awsno.com
+    server: 162.4.136.79
     port: 443
-    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    uuid: db50a20e-7ff5-4e70-948f-17cc9ca7c154
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: guanwang.awsno.com
     network: ws
     ws-opts:
-      path: /hls/cctv5phd.m3u8
-      headers:
-        Host: guanwang.awsno.com
+      path: /api/v1/gpu-stream/socket
     udp: true
-  - name: 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-    type: vmess
-    server: v29.hdacd.com
-    port: 30829
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
+  - name: v2go 🇬🇧 GB SS 163
+    type: ss
+    server: 82.38.31.211
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: k1dBOmOB4oqi7Ump37a1bQ
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
-    type: vless
-    server: jp.sofast.live
-    port: 52683
-    uuid: 399b6b23-cc40-4831-a494-61948e2df133
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国
+  - name: 未知141
     type: vmess
-    server: 120.48.133.162
-    port: 10086
-    uuid: a01e5d56-464f-45b9-b600-164db4700162
+    server: ninja.jahanatlas.top
+    port: 80
+    uuid: 952a2fc1-1b1e-4779-b8e4-09eb98a55167
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 未知27
+    type: vmess
+    server: 104.19.138.197
+    port: 443
+    uuid: 09bbac20-2c64-4af5-b116-6c8867f10227
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: xhttp
+    udp: true
+  - name: v2go 🇳🇱 NL SS 423
+    type: ss
+    server: 82.38.31.200
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: k1dBOmOB4oqi7Ump37a1bQ
+    skip-cert-verify: true
+    udp: true
+  - name: v2go 🇳🇱 NL SS 146
+    type: ss
+    server: 82.38.31.178
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: k1dBOmOB4oqi7Ump37a1bQ
+    skip-cert-verify: true
+    udp: true
+  - name: 未知64
+    type: vmess
+    server: c63.halrex.ir
+    port: 827
+    uuid: 0dea087c-b1ce-4d23-b773-b6dc09d639f3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: httpupgrade
+    udp: true
+  - name: 未知153
+    type: vmess
+    server: 51.75.74.253
+    port: 10000
+    uuid: 678a8a2c-aca8-11f1-b342-afa6288e22f8
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
     network: ws
+    ws-opts:
+      path: /vpnjantit
     udp: true
-  - name: 🇨🇳_CN_中国->🇫🇷_FR_法国
-    type: vmess
-    server: v35.hdacd.com
-    port: 30835
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇮🇹_IT_意大利
+  - name: v2go 🇳🇱 NL SS 385
     type: ss
-    server: 202.50.253.81
-    port: 19999
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    server: 82.38.31.201
+    port: 8080
+    cipher: chacha20-ietf-poly1305
+    password: k1dBOmOB4oqi7Ump37a1bQ
     skip-cert-verify: true
     udp: true
-  - name: 🇮🇹_IT_意大利_1
-    type: ss
-    server: 202.50.253.72
-    port: 19999
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: 🇩🇪 德国 DEU
+    type: vless
+    server: de7.pad-sservice.lat
+    port: 443
+    uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+    servername: de7.pad-service.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: VQ_YLtFuq-mKdLTWXl1FHJoiIVVRHBRs8koxxKFEtzM
+      short-id: 9af4ce6e28a5fa00
     skip-cert-verify: true
     udp: true
-  - name: 🇮🇹_IT_意大利_2
-    type: ss
-    server: 202.50.253.45
-    port: 19999
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  - name: 🇷🇺 俄罗斯 RUS (2)
+    type: vless
+    server: 193.160.141.27
+    port: 443
+    uuid: fd0a5c32-afc0-4d57-b95a-ca6ec8f93e87
+    servername: abuse.ozon.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国_1
+  - name: US
     type: vmess
-    server: 112.132.215.108
-    port: 50002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-    type: vmess
-    server: 45.144.48.32
-    port: 56080
-    uuid: f4daaec7-0e1e-4c8e-97e8-cff5347c2dae
+    server: jahfkjha.cfd
+    port: 443
+    uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /linkws
     udp: true
-  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - name: 未知21
+    type: vmess
+    server: 20.235.220.189
+    port: 443
+    uuid: f23bb427c1f94373876c2f43e9f790f3
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+    udp: true
+  - name: 🇮🇷IR_52
     type: vmess
     server: v6.hdacd.com
     port: 30806
@@ -159,47 +185,150 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇮🇹_IT_意大利_3
-    type: ss
-    server: 202.50.253.90
-    port: 19999
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    skip-cert-verify: true
-    udp: true
-  - name: 🇯🇵_JP_日本
-    type: ss
-    server: 154.36.158.197
-    port: 8388
-    cipher: aes-256-gcm
-    password: BeaUf9c0AEWH40Pu
-    skip-cert-verify: true
-    udp: true
-  - name: 🇮🇹_IT_意大利_4
-    type: ss
-    server: 202.50.253.99
-    port: 19999
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    skip-cert-verify: true
-    udp: true
-  - name: 🇵🇱_PL_波兰
+  - name: 🇩🇪 德国 DEU (8)
     type: vless
-    server: 2.26.6.1
-    port: 2087
-    uuid: b9fdc03f-389b-4cda-9be4-155b623bee15
+    server: 94.156.181.168
+    port: 443
+    uuid: 30572b57-f5ab-4eb8-82d4-a24d399b99f6
+    servername: math.videoticher.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: edge
+    reality-opts:
+      public-key: Buy9pirx5Ih_LHwc6R3BCmvRL4g4Ljx6B3MEsZfIZhU
+    skip-cert-verify: true
+    udp: true
+  - name: 未知55
+    type: vmess
+    server: poeiLD4YbYshwTWI.v.3dns.vip
+    port: 443
+    uuid: c136b8f3095941b499dbb7078290a142
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+    udp: true
+  - name: 🇩🇪 德国 DEU (3)
+    type: vless
+    server: 94.228.167.12
+    port: 443
+    uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
+    servername: washingphonicseatable.solsticedigest.me
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: dCaQHVtwEPBeiH3ivVU9ycGJZ8uCO2JaIVjYBnfaTWY
+      short-id: c13c9bd7bd45847d
+    skip-cert-verify: true
+    udp: true
+  - name: 🇦🇹 奥地利 AUT
+    type: vless
+    server: softice.net
+    port: 443
+    uuid: ef328563-cda1-4530-9b0a-988cc5a74d78
+    servername: softice.net
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
+    udp: true
+  - name: 未知114
+    type: vmess
+    server: tun.xelnivo.ir
+    port: 33625
+    uuid: 243bb526-ced4-4508-b0c3-e6442caadf57
+    alterId: 0
+    cipher: auto
     tls: true
     skip-cert-verify: true
     udp: true
-  - name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-    type: vmess
-    server: v4.hdacd.com
-    port: 30804
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
+  - name: 🇺🇸US_110
+    type: trojan
+    server: 64.176.36.61
+    port: 443
+    password: 8r%3C%5B9%27l6hAO%238ZQi
     skip-cert-verify: true
+    udp: true
+  - name: DE>美国 聖地牙哥 (2)
+    type: vmess
+    server: 165.22.73.136
+    port: 2087
+    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: afrhms16v.bestxray.buzz
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: afrhms16v.bestxray.buzz
+    udp: true
+  - name: 未知118
+    type: vmess
+    server: varzesh3.com
+    port: 8080
+    uuid: 5c7ba12d-dff4-4309-ba83-ec0597ea4d96
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: xhttp
+    udp: true
+  - name: 🇺🇸US_107
+    type: trojan
+    server: bbbnhj.131.pp.ua
+    port: 443
+    password: 98b419ef-83a2-4d1b-a23d-566b7f24477b
+    skip-cert-verify: true
+    udp: true
+  - name: 美国+北卡罗来纳(美国邮政局) (2)
+    type: vless
+    server: funagfrdfs.alixxplay.com
+    port: 54528
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+    servername: www.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    reality-opts:
+      public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
+      short-id: 54cca3c1c1c7
+    skip-cert-verify: true
+    udp: true
+  - name: US19
+    type: vmess
+    server: XSmlqR4AuuOPMsMN.v.3dns.vip
+    port: 443
+    uuid: edd281f6-71e4-4c1e-ac6b-a1c52e2e1270
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+    udp: true
+  - name: 未知16
+    type: vmess
+    server: 104.17.77.77
+    port: 8443
+    uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /lMnsZUN4/
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -207,47 +336,61 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -257,97 +400,125 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -364,36 +535,38 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
-  - name: 🆎 AdBlock
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
   - name: 🐟 漏网之鱼
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳_CN_中国->🇺🇸_US_美国
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-      - 🇺🇸_US_美国
-      - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
-      - 🇨🇳_CN_中国->🇺🇸_US_美国_2
-      - 🇨🇳_CN_中国
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
-      - 🇮🇹_IT_意大利_1
-      - 🇮🇹_IT_意大利_2
-      - 🇨🇳_CN_中国_1
-      - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_3
-      - 🇯🇵_JP_日本
-      - 🇮🇹_IT_意大利_4
-      - 🇵🇱_PL_波兰
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - 未知97
+      - v2go 🇬🇧 GB SS 163
+      - 未知141
+      - 未知27
+      - v2go 🇳🇱 NL SS 423
+      - v2go 🇳🇱 NL SS 146
+      - 未知64
+      - 未知153
+      - v2go 🇳🇱 NL SS 385
+      - 🇩🇪 德国 DEU
+      - 🇷🇺 俄罗斯 RUS (2)
+      - US
+      - 未知21
+      - 🇮🇷IR_52
+      - 🇩🇪 德国 DEU (8)
+      - 未知55
+      - 🇩🇪 德国 DEU (3)
+      - 🇦🇹 奥地利 AUT
+      - 未知114
+      - 🇺🇸US_110
+      - DE>美国 聖地牙哥 (2)
+      - 未知118
+      - 🇺🇸US_107
+      - 美国+北卡罗来纳(美国邮政局) (2)
+      - US19
+      - 未知16
 rule-providers:
   LocalAreaNetwork:
     type: http
@@ -410,21 +583,6 @@ rule-providers:
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
     path: ./rules/BanProgramAD.yaml
-  BanEasyList:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyList.list
-    path: ./rules/BanEasyList.yaml
-  BanEasyListChina:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list
-    path: ./rules/BanEasyListChina.yaml
-  BanEasyPrivacy:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyPrivacy.list
-    path: ./rules/BanEasyPrivacy.yaml
   GoogleCN:
     type: http
     behavior: classical
@@ -474,9 +632,6 @@ rules:
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
   - RULE-SET,BanAD,🛑 全球拦截
   - RULE-SET,BanProgramAD,🍃 应用净化
-  - RULE-SET,BanEasyList,🆎 AdBlock
-  - RULE-SET,BanEasyListChina,🆎 AdBlock
-  - RULE-SET,BanEasyPrivacy,🆎 AdBlock
   - RULE-SET,GoogleCN,🎯 全球直连
   - RULE-SET,SteamCN,🎯 全球直连
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
